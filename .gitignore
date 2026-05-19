@@ -23,8 +23,12 @@ logs/
 *.safetensors
 *.bin
 
-# Large sampled datasets from the transfer mirror
-Sa2VA/data/video_datas/
+# Large sampled datasets from the transfer mirror.
+# Keep the original dataset directory skeleton and documentation in git.
+Sa2VA/data/video_datas/**/*
+!Sa2VA/data/video_datas/**/
+!Sa2VA/data/video_datas/**/README.md
+!Sa2VA/data/video_datas/**/.gitkeep
 
 # Large raster/video artifacts. Keep JSON/YAML metadata and evaluation summaries in git.
 *.png
