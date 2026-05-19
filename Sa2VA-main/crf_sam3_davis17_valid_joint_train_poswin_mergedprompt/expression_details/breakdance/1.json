@@ -1,0 +1,58 @@
+{
+  "video_id": "breakdance",
+  "exp_id": "1",
+  "expression": "a boy in a red tshirt performing a breakdance",
+  "category": "boy",
+  "primary_category": "boy",
+  "backup_categories": [
+    "person",
+    "dancer",
+    "breakdancer"
+  ],
+  "category_candidates": [
+    "boy",
+    "person",
+    "dancer",
+    "breakdancer"
+  ],
+  "used_category_query": "boy",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "wearing red t-shirt",
+    "performing breakdance"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 2,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    8
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 8,
+      "score": 0.0009110512328334153,
+      "prob_yes": 0.0009110512328334153,
+      "prob_partial": 0.0,
+      "prob_no": 0.9990890026092529,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 9,
+      "score": 0.0008040859247557819,
+      "prob_yes": 0.0008040859247557819,
+      "prob_partial": 0.0,
+      "prob_no": 0.9991958737373352,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

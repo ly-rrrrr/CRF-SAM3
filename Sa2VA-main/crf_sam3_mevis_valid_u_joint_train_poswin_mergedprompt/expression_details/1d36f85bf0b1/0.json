@@ -1,0 +1,90 @@
+{
+  "video_id": "1d36f85bf0b1",
+  "exp_id": "0",
+  "expression": "Horses standing still",
+  "category": "horse",
+  "primary_category": "horse",
+  "backup_categories": [
+    "animal",
+    "equine",
+    "mammal"
+  ],
+  "category_candidates": [
+    "horse",
+    "animal",
+    "equine",
+    "mammal"
+  ],
+  "used_category_query": "horse",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "standing still"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 5,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9399133324623108,
+      "prob_yes": 0.9399133324623108,
+      "prob_partial": 0.0,
+      "prob_no": 0.06008664891123772,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.02595735527575016,
+      "prob_yes": 0.02595735527575016,
+      "prob_partial": 0.0,
+      "prob_no": 0.9740425944328308,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.9626730680465698,
+      "prob_yes": 0.9626730680465698,
+      "prob_partial": 0.0,
+      "prob_no": 0.037326883524656296,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.04208773002028465,
+      "prob_yes": 0.04208773002028465,
+      "prob_partial": 0.0,
+      "prob_no": 0.957912266254425,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.8354835510253906,
+      "prob_yes": 0.8354835510253906,
+      "prob_partial": 0.0,
+      "prob_no": 0.16451646387577057,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    2
+  ],
+  "gt_obj_ids": []
+}

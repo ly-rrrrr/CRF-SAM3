@@ -1,0 +1,146 @@
+{
+  "video_id": "scooter-black",
+  "exp_id": "1",
+  "expression": "a man in a suit riding on a black scooter",
+  "category": "man",
+  "primary_category": "man",
+  "backup_categories": [
+    "person",
+    "driver",
+    "cyclist"
+  ],
+  "category_candidates": [
+    "man",
+    "person",
+    "driver",
+    "cyclist"
+  ],
+  "used_category_query": "man",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "man in suit",
+    "riding a black scooter"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 10,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.00247262348420918,
+      "prob_yes": 0.00247262348420918,
+      "prob_partial": 0.0,
+      "prob_no": 0.9975274205207825,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9947799444198608,
+      "prob_yes": 0.9947799444198608,
+      "prob_partial": 0.0,
+      "prob_no": 0.005220125894993544,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.0015011822106316686,
+      "prob_yes": 0.0015011822106316686,
+      "prob_partial": 0.0,
+      "prob_no": 0.998498797416687,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.0010322310263291001,
+      "prob_yes": 0.0010322310263291001,
+      "prob_partial": 0.0,
+      "prob_no": 0.9989677667617798,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.0013250223128125072,
+      "prob_yes": 0.0013250223128125072,
+      "prob_partial": 0.0,
+      "prob_no": 0.9986749291419983,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 6,
+      "score": 0.002800926798954606,
+      "prob_yes": 0.002800926798954606,
+      "prob_partial": 0.0,
+      "prob_no": 0.9971990585327148,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 7,
+      "score": 0.0006263342220336199,
+      "prob_yes": 0.0006263342220336199,
+      "prob_partial": 0.0,
+      "prob_no": 0.999373733997345,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 8,
+      "score": 0.0006263342220336199,
+      "prob_yes": 0.0006263342220336199,
+      "prob_partial": 0.0,
+      "prob_no": 0.999373733997345,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 9,
+      "score": 0.0010322310263291001,
+      "prob_yes": 0.0010322310263291001,
+      "prob_partial": 0.0,
+      "prob_no": 0.9989677667617798,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 10,
+      "score": 0.000552778597921133,
+      "prob_yes": 0.000552778597921133,
+      "prob_partial": 0.0,
+      "prob_no": 0.9994471669197083,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

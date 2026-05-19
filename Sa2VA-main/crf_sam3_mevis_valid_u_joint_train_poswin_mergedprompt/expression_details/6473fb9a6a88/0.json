@@ -1,0 +1,91 @@
+{
+  "video_id": "6473fb9a6a88",
+  "exp_id": "0",
+  "expression": "Cow walking and then drinking from a pail",
+  "category": "cow",
+  "primary_category": "cow",
+  "backup_categories": [
+    "animal",
+    "bovine",
+    "cattle"
+  ],
+  "category_candidates": [
+    "cow",
+    "animal",
+    "bovine",
+    "cattle"
+  ],
+  "used_category_query": "cow",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "walking",
+    "drinking from a pail"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 5,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 1,
+      "score": 0.9669140577316284,
+      "prob_yes": 0.9669140577316284,
+      "prob_partial": 0.0,
+      "prob_no": 0.03308597952127457,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.08509904891252518,
+      "prob_yes": 0.08509904891252518,
+      "prob_partial": 0.0,
+      "prob_no": 0.9149009585380554,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.9241418242454529,
+      "prob_yes": 0.9241418242454529,
+      "prob_partial": 0.0,
+      "prob_no": 0.07585818320512772,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.06008664891123772,
+      "prob_yes": 0.06008664891123772,
+      "prob_partial": 0.0,
+      "prob_no": 0.9399133324623108,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 6,
+      "score": 0.02931223064661026,
+      "prob_yes": 0.02931223064661026,
+      "prob_partial": 0.0,
+      "prob_no": 0.970687747001648,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": []
+}

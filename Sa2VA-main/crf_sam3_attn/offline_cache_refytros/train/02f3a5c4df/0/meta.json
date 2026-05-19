@@ -1,0 +1,48 @@
+{
+  "video_id": "02f3a5c4df",
+  "exp_id": 0,
+  "expression": "man with an earring using his hands next to an inside tree",
+  "category": "person",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "person",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/02f3a5c4df",
+  "frame_pad": 5,
+  "obj_ids": [
+    0,
+    1
+  ],
+  "iou_map": {
+    "0": 0.0,
+    "1": 0.9788186024391841
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "max_j": 0.9788186024391841,
+  "sum_j": 0.9788186024391841,
+  "mean_j": 0.48940930121959203,
+  "num_candidates": 2
+}

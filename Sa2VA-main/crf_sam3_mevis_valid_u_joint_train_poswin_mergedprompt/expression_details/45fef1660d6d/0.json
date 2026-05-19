@@ -1,0 +1,67 @@
+{
+  "video_id": "45fef1660d6d",
+  "exp_id": "0",
+  "expression": "Bear jumping up and clawing around",
+  "category": "bear",
+  "primary_category": "bear",
+  "backup_categories": [
+    "animal",
+    "mammal"
+  ],
+  "category_candidates": [
+    "bear",
+    "animal",
+    "mammal"
+  ],
+  "used_category_query": "bear",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "one bear is visible in motion",
+    "bear is jumping and clawing"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.22270014882087708,
+      "prob_yes": 0.22270014882087708,
+      "prob_partial": 0.0,
+      "prob_no": 0.7772998809814453,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9241418242454529,
+      "prob_yes": 0.9241418242454529,
+      "prob_partial": 0.0,
+      "prob_no": 0.07585818320512772,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.008577484637498856,
+      "prob_yes": 0.008577484637498856,
+      "prob_partial": 0.0,
+      "prob_no": 0.9914224743843079,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": []
+}

@@ -1,0 +1,39 @@
+{
+  "video_id": "03fe6115d4",
+  "exp_id": "0",
+  "expression": "a hat is weared by the person who is standing second from the left in the front row",
+  "category": "hat",
+  "primary_category": "hat",
+  "backup_categories": [
+    "helmet",
+    "cap"
+  ],
+  "category_candidates": [
+    "hat",
+    "helmet",
+    "cap"
+  ],
+  "used_category_query": "hat",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "person standing second from left in front row"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.020332353189587593,
+      "prob_yes": 0.020332353189587593,
+      "prob_partial": 0.0,
+      "prob_no": 0.9796676635742188,
+      "prediction": "No",
+      "is_selected": true
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "video_id": "0620b43a31",
+  "exp_id": "0",
+  "expression": "a black bear",
+  "category": "bear",
+  "primary_category": "bear",
+  "backup_categories": [
+    "animal",
+    "mammal",
+    "ursine"
+  ],
+  "category_candidates": [
+    "bear",
+    "animal",
+    "mammal",
+    "ursine"
+  ],
+  "used_category_query": "bear",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "single animal in frame",
+    "black fur",
+    "standing on rocks in water"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9914224743843079,
+      "prob_yes": 0.9914224743843079,
+      "prob_partial": 0.0,
+      "prob_no": 0.008577484637498856,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

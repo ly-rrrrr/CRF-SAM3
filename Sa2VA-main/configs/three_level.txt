@@ -1,0 +1,21 @@
+prompt = f"""Please observe the following video frames arranged in chronological order.
+The object marked by the mask is the **protagonist** (focus subject), while everything outside the mask is the background/context.
+
+Referring Expression: "{referring_expression}"
+
+Question: Is the masked protagonist the exact target described?
+
+Please strictly follow this reasoning process:
+
+1. **Visual Verification (Appearance)**: Does the protagonist's physical appearance (color, clothing, object type) match the text?
+   - If the appearance is completely wrong (e.g., wrong color), the answer must be 'No'.
+2. **Action Alignment (Event)**: Is the protagonist **performing the action** or **involved in the event** described?
+   - If the protagonist is just standing nearby watching the action (Bystander), the answer is 'Partial'.
+3. **Exclusivity**: If the description includes positional information, it is a critical clue, and if the position is incorrect, the answer must be "No".
+
+Rating Criteria:
+- "Yes" = Perfect Match. The protagonist matches BOTH the appearance and the action described.
+- "Partial" = Distractor/Bystander. The protagonist has similar appearance OR similar location, but is NOT the one doing the main action (e.g., just watching or walking by).
+- "No" = Mismatch. Clearly wrong object, wrong color, or unrelated action.
+
+Answer with one word only: Yes, Partial, or No:"""

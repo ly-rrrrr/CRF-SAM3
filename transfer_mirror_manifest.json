@@ -1,0 +1,24 @@
+{
+  "output_root": "/mnt/csip-500/share/kongjiawei/Sa2VA-main/transfer_mirror_crf_sam3_attn_20260518",
+  "raw_dataset_sample_counts": {
+    "mevis": {
+      "eval": 67,
+      "train": 67
+    },
+    "davis17": {
+      "eval": 67,
+      "train": 67
+    },
+    "refytros": {
+      "eval": 66,
+      "train": 66
+    }
+  },
+  "offline_cache_sample_counts": {
+    "mevis": 67,
+    "davis17": 67,
+    "refytros": 66
+  },
+  "notes_file": "README_transfer_mirror.txt",
+  "inventory_file": "sample_inventory.json"
+}

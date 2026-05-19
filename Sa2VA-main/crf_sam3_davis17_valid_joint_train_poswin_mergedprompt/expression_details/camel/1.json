@@ -1,0 +1,66 @@
+{
+  "video_id": "camel",
+  "exp_id": "1",
+  "expression": "a camel moving",
+  "category": "camel",
+  "primary_category": "camel",
+  "backup_categories": [
+    "animal",
+    "dromedary"
+  ],
+  "category_candidates": [
+    "camel",
+    "animal",
+    "dromedary"
+  ],
+  "used_category_query": "camel",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "camel is in motion"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9626730680465698,
+      "prob_yes": 0.9626730680465698,
+      "prob_partial": 0.0,
+      "prob_no": 0.037326883524656296,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.01798621006309986,
+      "prob_yes": 0.01798621006309986,
+      "prob_partial": 0.0,
+      "prob_no": 0.9820137619972229,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.004609571769833565,
+      "prob_yes": 0.004609571769833565,
+      "prob_partial": 0.0,
+      "prob_no": 0.9953904151916504,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

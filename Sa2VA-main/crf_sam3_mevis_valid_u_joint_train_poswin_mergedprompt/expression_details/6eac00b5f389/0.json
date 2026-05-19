@@ -1,0 +1,47 @@
+{
+  "video_id": "6eac00b5f389",
+  "exp_id": "0",
+  "expression": "Dog walking then turn around",
+  "category": "dog",
+  "primary_category": "dog",
+  "backup_categories": [
+    "animal",
+    "pet",
+    "canine"
+  ],
+  "category_candidates": [
+    "dog",
+    "animal",
+    "pet",
+    "canine"
+  ],
+  "used_category_query": "dog",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "walking",
+    "turn around"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.977022647857666,
+      "prob_yes": 0.977022647857666,
+      "prob_partial": 0.0,
+      "prob_no": 0.022977370768785477,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": []
+}

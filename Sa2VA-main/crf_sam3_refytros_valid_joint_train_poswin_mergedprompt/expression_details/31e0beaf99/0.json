@@ -1,0 +1,43 @@
+{
+  "video_id": "31e0beaf99",
+  "exp_id": "0",
+  "expression": "a small brown animal walking down the branch of a tree",
+  "category": "animal",
+  "primary_category": "animal",
+  "backup_categories": [
+    "red panda",
+    "mammal",
+    "creature"
+  ],
+  "category_candidates": [
+    "animal",
+    "red panda",
+    "mammal",
+    "creature"
+  ],
+  "used_category_query": "animal",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "small",
+    "brown",
+    "walking down the branch of a tree"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9875683188438416,
+      "prob_yes": 0.9875683188438416,
+      "prob_partial": 0.0,
+      "prob_no": 0.012431650422513485,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

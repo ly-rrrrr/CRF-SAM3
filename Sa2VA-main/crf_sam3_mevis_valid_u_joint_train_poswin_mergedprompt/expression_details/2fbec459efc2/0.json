@@ -1,0 +1,92 @@
+{
+  "video_id": "2fbec459efc2",
+  "exp_id": "0",
+  "expression": "Moving cars",
+  "category": "car",
+  "primary_category": "car",
+  "backup_categories": [
+    "vehicle",
+    "automobile",
+    "truck"
+  ],
+  "category_candidates": [
+    "car",
+    "vehicle",
+    "automobile",
+    "truck"
+  ],
+  "used_category_query": "car",
+  "category_fallback_used": false,
+  "num_targets": 3,
+  "sub_conditions": [
+    "vehicles in motion across the intersection"
+  ],
+  "final_rule_applied": "plural without strong constraints",
+  "num_candidates": 5,
+  "num_selected": 3,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9324532747268677,
+      "prob_yes": 0.9324532747268677,
+      "prob_partial": 0.0,
+      "prob_no": 0.06754668802022934,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.08509904891252518,
+      "prob_yes": 0.08509904891252518,
+      "prob_partial": 0.0,
+      "prob_no": 0.9149009585380554,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.957912266254425,
+      "prob_yes": 0.957912266254425,
+      "prob_partial": 0.0,
+      "prob_no": 0.04208773002028465,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.9525741338729858,
+      "prob_yes": 0.9525741338729858,
+      "prob_partial": 0.0,
+      "prob_no": 0.04742587357759476,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.01798621006309986,
+      "prob_yes": 0.01798621006309986,
+      "prob_partial": 0.0,
+      "prob_no": 0.9820137619972229,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    2,
+    3,
+    0
+  ],
+  "gt_obj_ids": []
+}

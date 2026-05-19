@@ -1,0 +1,42 @@
+{
+  "video_id": "06a5dfb511",
+  "exp_id": "0",
+  "expression": "a red tennis racket",
+  "category": "tennis racket",
+  "primary_category": "tennis racket",
+  "backup_categories": [
+    "racket",
+    "sports equipment",
+    "tennis equipment"
+  ],
+  "category_candidates": [
+    "tennis racket",
+    "racket",
+    "sports equipment",
+    "tennis equipment"
+  ],
+  "used_category_query": "tennis racket",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "red color",
+    "tennis racket"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9859364032745361,
+      "prob_yes": 0.9859364032745361,
+      "prob_partial": 0.0,
+      "prob_no": 0.014063626527786255,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "video_id": "bike-packing",
+  "exp_id": "1",
+  "expression": "black and white coloured bike",
+  "category": "bike",
+  "primary_category": "bike",
+  "backup_categories": [
+    "cycle",
+    "bicycle",
+    "road bike"
+  ],
+  "category_candidates": [
+    "bike",
+    "cycle",
+    "bicycle",
+    "road bike"
+  ],
+  "used_category_query": "bike",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "black and white colours",
+    "one bike"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.18242551386356354,
+      "prob_yes": 0.18242551386356354,
+      "prob_partial": 0.0,
+      "prob_no": 0.8175744414329529,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

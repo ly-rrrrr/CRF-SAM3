@@ -1,0 +1,59 @@
+{
+  "video_id": "69022e1f8fe3",
+  "exp_id": "0",
+  "expression": "two dogs fighting",
+  "category": "dog",
+  "primary_category": "dog",
+  "backup_categories": [
+    "canine",
+    "animal",
+    "puppy"
+  ],
+  "category_candidates": [
+    "dog",
+    "canine",
+    "animal",
+    "puppy"
+  ],
+  "used_category_query": "dog",
+  "category_fallback_used": false,
+  "num_targets": 2,
+  "sub_conditions": [
+    "two animals engaged in physical interaction",
+    "both animals are dogs"
+  ],
+  "final_rule_applied": "plural without strong constraints",
+  "num_candidates": 2,
+  "num_selected": 2,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9740425944328308,
+      "prob_yes": 0.9740425944328308,
+      "prob_partial": 0.0,
+      "prob_no": 0.02595735527575016,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.977022647857666,
+      "prob_yes": 0.977022647857666,
+      "prob_partial": 0.0,
+      "prob_no": 0.022977370768785477,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1,
+    0
+  ],
+  "gt_obj_ids": []
+}

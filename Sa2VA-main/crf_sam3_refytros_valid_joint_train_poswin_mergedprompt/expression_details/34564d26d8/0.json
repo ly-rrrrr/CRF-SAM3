@@ -1,0 +1,41 @@
+{
+  "video_id": "34564d26d8",
+  "exp_id": "0",
+  "expression": "a shark swimming in deep water",
+  "category": "shark",
+  "primary_category": "shark",
+  "backup_categories": [
+    "fish",
+    "marine animal",
+    "predator"
+  ],
+  "category_candidates": [
+    "shark",
+    "fish",
+    "marine animal",
+    "predator"
+  ],
+  "used_category_query": "shark",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "swimming in deep water"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.8354835510253906,
+      "prob_yes": 0.8354835510253906,
+      "prob_partial": 0.0,
+      "prob_no": 0.16451646387577057,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

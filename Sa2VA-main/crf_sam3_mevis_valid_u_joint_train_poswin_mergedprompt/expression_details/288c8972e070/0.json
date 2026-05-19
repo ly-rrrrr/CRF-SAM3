@@ -1,0 +1,100 @@
+{
+  "video_id": "288c8972e070",
+  "exp_id": "0",
+  "expression": "the little walks back and away",
+  "category": "dog",
+  "primary_category": "dog",
+  "backup_categories": [
+    "puppy",
+    "canine"
+  ],
+  "category_candidates": [
+    "dog",
+    "puppy",
+    "canine"
+  ],
+  "used_category_query": "dog",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "small size",
+    "walking away"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 6,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.02595735527575016,
+      "prob_yes": 0.02595735527575016,
+      "prob_partial": 0.0,
+      "prob_no": 0.9740425944328308,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.8670357465744019,
+      "prob_yes": 0.8670357465744019,
+      "prob_partial": 0.0,
+      "prob_no": 0.13296423852443695,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.014063626527786255,
+      "prob_yes": 0.014063626527786255,
+      "prob_partial": 0.0,
+      "prob_no": 0.9859364032745361,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.6513549089431763,
+      "prob_yes": 0.6513549089431763,
+      "prob_partial": 0.0,
+      "prob_no": 0.3486451804637909,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.02931223064661026,
+      "prob_yes": 0.02931223064661026,
+      "prob_partial": 0.0,
+      "prob_no": 0.970687747001648,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.24508501589298248,
+      "prob_yes": 0.24508501589298248,
+      "prob_partial": 0.0,
+      "prob_no": 0.7549149990081787,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": []
+}

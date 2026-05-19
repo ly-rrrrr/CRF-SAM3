@@ -1,0 +1,96 @@
+{
+  "video_id": "0358b938c1",
+  "exp_id": 0,
+  "expression": "an elephant third from the right",
+  "category": "elephant",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "elephant",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/0358b938c1",
+  "frame_pad": 5,
+  "obj_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "iou_map": {
+    "0": 0.0,
+    "1": 0.9320194629273796,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "2": [
+      0,
+      1,
+      2
+    ],
+    "3": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "4": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "5": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "max_j": 0.9320194629273796,
+  "sum_j": 0.9320194629273796,
+  "mean_j": 0.15533657715456325,
+  "num_candidates": 6
+}

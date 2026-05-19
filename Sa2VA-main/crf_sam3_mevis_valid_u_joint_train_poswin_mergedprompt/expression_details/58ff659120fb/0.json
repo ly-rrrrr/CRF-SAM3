@@ -1,0 +1,59 @@
+{
+  "video_id": "58ff659120fb",
+  "exp_id": "0",
+  "expression": "Persons riding bicycle forward",
+  "category": "person",
+  "primary_category": "person",
+  "backup_categories": [
+    "cyclist",
+    "biker",
+    "mountain biker"
+  ],
+  "category_candidates": [
+    "person",
+    "cyclist",
+    "biker",
+    "mountain biker"
+  ],
+  "used_category_query": "person",
+  "category_fallback_used": false,
+  "num_targets": 2,
+  "sub_conditions": [
+    "two individuals visible on bicycles",
+    "both moving forward along dirt path"
+  ],
+  "final_rule_applied": "plural without strong constraints",
+  "num_candidates": 2,
+  "num_selected": 2,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.970687747001648,
+      "prob_yes": 0.970687747001648,
+      "prob_partial": 0.0,
+      "prob_no": 0.02931223064661026,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0,
+    1
+  ],
+  "gt_obj_ids": []
+}

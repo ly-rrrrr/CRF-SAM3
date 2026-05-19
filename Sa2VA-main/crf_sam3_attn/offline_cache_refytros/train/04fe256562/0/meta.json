@@ -1,0 +1,44 @@
+{
+  "video_id": "04fe256562",
+  "exp_id": 0,
+  "expression": "a motorcycle seen from the pov of the driver",
+  "category": "motorcycle",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "motorcycle",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/04fe256562",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.953895650145137
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "max_j": 0.953895650145137,
+  "sum_j": 0.953895650145137,
+  "mean_j": 0.953895650145137,
+  "num_candidates": 1
+}

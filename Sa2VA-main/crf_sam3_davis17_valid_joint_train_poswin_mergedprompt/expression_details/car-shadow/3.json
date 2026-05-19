@@ -1,0 +1,135 @@
+{
+  "video_id": "car-shadow",
+  "exp_id": "3",
+  "expression": "a sliver car going from shade to sunlight",
+  "category": "car",
+  "primary_category": "car",
+  "backup_categories": [
+    "vehicle",
+    "automobile",
+    "sedan"
+  ],
+  "category_candidates": [
+    "car",
+    "vehicle",
+    "automobile",
+    "sedan"
+  ],
+  "used_category_query": "car",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "silver color",
+    "moving from shaded area to sunlit area"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 9,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9525741338729858,
+      "prob_yes": 0.9525741338729858,
+      "prob_partial": 0.0,
+      "prob_no": 0.04742587357759476,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.14804719388484955,
+      "prob_yes": 0.14804719388484955,
+      "prob_partial": 0.0,
+      "prob_no": 0.8519527316093445,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.007577241398394108,
+      "prob_yes": 0.007577241398394108,
+      "prob_partial": 0.0,
+      "prob_no": 0.9924227595329285,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.06754668802022934,
+      "prob_yes": 0.06754668802022934,
+      "prob_partial": 0.0,
+      "prob_no": 0.9324532747268677,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.02595735527575016,
+      "prob_yes": 0.02595735527575016,
+      "prob_partial": 0.0,
+      "prob_no": 0.9740425944328308,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.04742587357759476,
+      "prob_yes": 0.04742587357759476,
+      "prob_partial": 0.0,
+      "prob_no": 0.9525741338729858,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 6,
+      "score": 0.053403329104185104,
+      "prob_yes": 0.053403329104185104,
+      "prob_partial": 0.0,
+      "prob_no": 0.9465966820716858,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 7,
+      "score": null,
+      "prob_yes": 0.0,
+      "prob_partial": 0.0,
+      "prob_no": 0.0,
+      "prediction": "SKIPPED",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 8,
+      "score": null,
+      "prob_yes": 0.0,
+      "prob_partial": 0.0,
+      "prob_no": 0.0,
+      "prediction": "SKIPPED",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

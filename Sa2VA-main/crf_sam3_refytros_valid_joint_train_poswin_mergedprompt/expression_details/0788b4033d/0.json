@@ -1,0 +1,61 @@
+{
+  "video_id": "0788b4033d",
+  "exp_id": "0",
+  "expression": "a stuffed white and blue costume",
+  "category": "costume",
+  "primary_category": "costume",
+  "backup_categories": [
+    "lion",
+    "mask",
+    "dancer"
+  ],
+  "category_candidates": [
+    "costume",
+    "lion",
+    "mask",
+    "dancer"
+  ],
+  "used_category_query": "costume",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "white and blue coloration",
+    "stuffed material",
+    "lion dance costume"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9669140577316284,
+      "prob_yes": 0.9669140577316284,
+      "prob_partial": 0.0,
+      "prob_no": 0.03308597952127457,
+      "prediction": "Yes",
+      "is_selected": true
+    },
+    {
+      "obj_id": 1,
+      "score": 0.08509904891252518,
+      "prob_yes": 0.08509904891252518,
+      "prob_partial": 0.0,
+      "prob_no": 0.9149009585380554,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 2,
+      "score": 0.0031726828310638666,
+      "prob_yes": 0.0031726828310638666,
+      "prob_partial": 0.0,
+      "prob_no": 0.9968273043632507,
+      "prediction": "No",
+      "is_selected": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+Please observe the following consecutive video frames.
+The object marked by the mask is the candidate object.
+
+Referring Expression: "{referring_expression}"
+
+Think step-by-step:
+1. What category of object is mentioned? Does the masked object match?
+2. What action/behavior is described? Is the masked object performing it?
+3. What location is specified (if any)? Is the masked object in that location?
+4. Are there any other constraints? Does the masked object satisfy them?
+
+Based on your analysis:
+- If the masked object satisfies ALL requirements → Yes
+- If it's similar but not performing the main action → Partial
+- If it's clearly wrong → No
+
+**Answer with one word only: Yes, Partial, or No**

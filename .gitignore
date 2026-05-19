@@ -1,0 +1,43 @@
+# Python/cache artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Runtime outputs and logs
+logs/
+*.log
+*_outputs*/
+*_debug*/
+
+# Model/checkpoint artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+
+# Large sampled datasets from the transfer mirror
+Sa2VA/data/video_datas/
+
+# Large raster/video artifacts. Keep JSON/YAML metadata and evaluation summaries in git.
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.webp
+*.mp4
+*.avi
+*.mov
+
+# Large serialized dataset masks
+*.pkl
+
+# Offline cache mask payloads are reproducible artifacts; keep meta.json files.
+Sa2VA-main/crf_sam3_attn/offline_cache_*/**/masks/

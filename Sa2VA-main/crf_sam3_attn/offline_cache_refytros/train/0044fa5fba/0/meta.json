@@ -1,0 +1,42 @@
+{
+  "video_id": "0044fa5fba",
+  "exp_id": 0,
+  "expression": "a panda eating",
+  "category": "panda",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "panda",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/0044fa5fba",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.6295224457829905
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ]
+  },
+  "max_j": 0.6295224457829905,
+  "sum_j": 0.6295224457829905,
+  "mean_j": 0.6295224457829905,
+  "num_candidates": 1
+}

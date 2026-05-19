@@ -1,0 +1,483 @@
+{
+  "video_id": "3f4bacb16a",
+  "exp_id": "1",
+  "expression": "a person in a yellow and blue shirt with no helmet",
+  "category": "person",
+  "primary_category": "person",
+  "backup_categories": [
+    "cyclist",
+    "athlete",
+    "participant"
+  ],
+  "category_candidates": [
+    "person",
+    "cyclist",
+    "athlete",
+    "participant"
+  ],
+  "used_category_query": "person",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "wearing yellow and blue shirt",
+    "no helmet"
+  ],
+  "final_rule_applied": "constraint filtering",
+  "num_candidates": 50,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    44
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.014063626527786255,
+      "prob_yes": 0.014063626527786255,
+      "prob_partial": 0.0,
+      "prob_no": 0.9859364032745361,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 1,
+      "score": 0.00970847625285387,
+      "prob_yes": 0.00970847625285387,
+      "prob_partial": 0.0,
+      "prob_no": 0.9902915358543396,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 2,
+      "score": 0.11920291185379028,
+      "prob_yes": 0.11920291185379028,
+      "prob_partial": 0.0,
+      "prob_no": 0.8807970285415649,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 3,
+      "score": 0.01798621006309986,
+      "prob_yes": 0.01798621006309986,
+      "prob_partial": 0.0,
+      "prob_no": 0.9820137619972229,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 4,
+      "score": 0.04208773002028465,
+      "prob_yes": 0.04208773002028465,
+      "prob_partial": 0.0,
+      "prob_no": 0.957912266254425,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 5,
+      "score": 0.010986942797899246,
+      "prob_yes": 0.010986942797899246,
+      "prob_partial": 0.0,
+      "prob_no": 0.9890130758285522,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 6,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 7,
+      "score": 0.8519527316093445,
+      "prob_yes": 0.8519527316093445,
+      "prob_partial": 0.0,
+      "prob_no": 0.14804719388484955,
+      "prediction": "Yes",
+      "is_selected": false
+    },
+    {
+      "obj_id": 8,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 9,
+      "score": 0.9241418242454529,
+      "prob_yes": 0.9241418242454529,
+      "prob_partial": 0.0,
+      "prob_no": 0.07585818320512772,
+      "prediction": "Yes",
+      "is_selected": false
+    },
+    {
+      "obj_id": 10,
+      "score": 0.00970847625285387,
+      "prob_yes": 0.00970847625285387,
+      "prob_partial": 0.0,
+      "prob_no": 0.9902915358543396,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 11,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 12,
+      "score": 0.010986942797899246,
+      "prob_yes": 0.010986942797899246,
+      "prob_partial": 0.0,
+      "prob_no": 0.9890130758285522,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 13,
+      "score": 0.02931223064661026,
+      "prob_yes": 0.02931223064661026,
+      "prob_partial": 0.0,
+      "prob_no": 0.970687747001648,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 14,
+      "score": 0.9149009585380554,
+      "prob_yes": 0.9149009585380554,
+      "prob_partial": 0.0,
+      "prob_no": 0.08509904891252518,
+      "prediction": "Yes",
+      "is_selected": false
+    },
+    {
+      "obj_id": 15,
+      "score": 0.010986942797899246,
+      "prob_yes": 0.010986942797899246,
+      "prob_partial": 0.0,
+      "prob_no": 0.9890130758285522,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 16,
+      "score": 0.012431650422513485,
+      "prob_yes": 0.012431650422513485,
+      "prob_partial": 0.0,
+      "prob_no": 0.9875683188438416,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 17,
+      "score": 0.022977370768785477,
+      "prob_yes": 0.022977370768785477,
+      "prob_partial": 0.0,
+      "prob_no": 0.977022647857666,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 18,
+      "score": 0.022977370768785477,
+      "prob_yes": 0.022977370768785477,
+      "prob_partial": 0.0,
+      "prob_no": 0.977022647857666,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 19,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 20,
+      "score": 0.020332353189587593,
+      "prob_yes": 0.020332353189587593,
+      "prob_partial": 0.0,
+      "prob_no": 0.9796676635742188,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 21,
+      "score": 0.02595735527575016,
+      "prob_yes": 0.02595735527575016,
+      "prob_partial": 0.0,
+      "prob_no": 0.9740425944328308,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 22,
+      "score": 0.006692850962281227,
+      "prob_yes": 0.006692850962281227,
+      "prob_partial": 0.0,
+      "prob_no": 0.9933071732521057,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 23,
+      "score": 0.622459352016449,
+      "prob_yes": 0.622459352016449,
+      "prob_partial": 0.0,
+      "prob_no": 0.3775406777858734,
+      "prediction": "Yes",
+      "is_selected": false
+    },
+    {
+      "obj_id": 24,
+      "score": 0.4687906503677368,
+      "prob_yes": 0.4687906503677368,
+      "prob_partial": 0.0,
+      "prob_no": 0.531209409236908,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 25,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 26,
+      "score": 0.010986942797899246,
+      "prob_yes": 0.010986942797899246,
+      "prob_partial": 0.0,
+      "prob_no": 0.9890130758285522,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 27,
+      "score": 0.03308597952127457,
+      "prob_yes": 0.03308597952127457,
+      "prob_partial": 0.0,
+      "prob_no": 0.9669140577316284,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 28,
+      "score": 0.04742587357759476,
+      "prob_yes": 0.04742587357759476,
+      "prob_partial": 0.0,
+      "prob_no": 0.9525741338729858,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 29,
+      "score": 0.9149009585380554,
+      "prob_yes": 0.9149009585380554,
+      "prob_partial": 0.0,
+      "prob_no": 0.08509904891252518,
+      "prediction": "Yes",
+      "is_selected": false
+    },
+    {
+      "obj_id": 30,
+      "score": 0.5,
+      "prob_yes": 0.5,
+      "prob_partial": 0.0,
+      "prob_no": 0.5,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 31,
+      "score": 0.053403329104185104,
+      "prob_yes": 0.053403329104185104,
+      "prob_partial": 0.0,
+      "prob_no": 0.9465966820716858,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 32,
+      "score": 0.022977370768785477,
+      "prob_yes": 0.022977370768785477,
+      "prob_partial": 0.0,
+      "prob_no": 0.977022647857666,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 33,
+      "score": 0.02931223064661026,
+      "prob_yes": 0.02931223064661026,
+      "prob_partial": 0.0,
+      "prob_no": 0.970687747001648,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 34,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 35,
+      "score": 0.006692850962281227,
+      "prob_yes": 0.006692850962281227,
+      "prob_partial": 0.0,
+      "prob_no": 0.9933071732521057,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 36,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 37,
+      "score": 0.00970847625285387,
+      "prob_yes": 0.00970847625285387,
+      "prob_partial": 0.0,
+      "prob_no": 0.9902915358543396,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 38,
+      "score": 0.09534946084022522,
+      "prob_yes": 0.09534946084022522,
+      "prob_partial": 0.0,
+      "prob_no": 0.9046505093574524,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 39,
+      "score": 0.0031726828310638666,
+      "prob_yes": 0.0031726828310638666,
+      "prob_partial": 0.0,
+      "prob_no": 0.9968273043632507,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 40,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 41,
+      "score": 0.012431650422513485,
+      "prob_yes": 0.012431650422513485,
+      "prob_partial": 0.0,
+      "prob_no": 0.9875683188438416,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 42,
+      "score": 0.037326883524656296,
+      "prob_yes": 0.037326883524656296,
+      "prob_partial": 0.0,
+      "prob_no": 0.9626730680465698,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 43,
+      "score": 0.562176525592804,
+      "prob_yes": 0.562176525592804,
+      "prob_partial": 0.0,
+      "prob_no": 0.4378235340118408,
+      "prediction": "Yes",
+      "is_selected": false
+    },
+    {
+      "obj_id": 44,
+      "score": 0.9525741338729858,
+      "prob_yes": 0.9525741338729858,
+      "prob_partial": 0.0,
+      "prob_no": 0.04742587357759476,
+      "prediction": "Yes",
+      "is_selected": true
+    },
+    {
+      "obj_id": 45,
+      "score": 0.01798621006309986,
+      "prob_yes": 0.01798621006309986,
+      "prob_partial": 0.0,
+      "prob_no": 0.9820137619972229,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 46,
+      "score": 0.005911069456487894,
+      "prob_yes": 0.005911069456487894,
+      "prob_partial": 0.0,
+      "prob_no": 0.9940890073776245,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 47,
+      "score": null,
+      "prob_yes": 0.0,
+      "prob_partial": 0.0,
+      "prob_no": 0.0,
+      "prediction": "SKIPPED",
+      "is_selected": false
+    },
+    {
+      "obj_id": 48,
+      "score": null,
+      "prob_yes": 0.0,
+      "prob_partial": 0.0,
+      "prob_no": 0.0,
+      "prediction": "SKIPPED",
+      "is_selected": false
+    },
+    {
+      "obj_id": 49,
+      "score": null,
+      "prob_yes": 0.0,
+      "prob_partial": 0.0,
+      "prob_no": 0.0,
+      "prediction": "SKIPPED",
+      "is_selected": false
+    }
+  ]
+}

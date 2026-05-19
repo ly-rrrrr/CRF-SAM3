@@ -1,0 +1,6835 @@
+[
+  {
+    "video_id": "bike-packing",
+    "exp_id": "0",
+    "expression": "a black bike",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "cycle",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "bike",
+      "cycle",
+      "vehicle"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "bike-packing",
+    "exp_id": "1",
+    "expression": "black and white coloured bike",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "cycle",
+      "bicycle",
+      "road bike"
+    ],
+    "category_candidates": [
+      "bike",
+      "cycle",
+      "bicycle",
+      "road bike"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black and white colours",
+      "one bike"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "bike-packing",
+    "exp_id": "2",
+    "expression": "a black bike upside-down",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "cycle",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "bike",
+      "cycle",
+      "vehicle"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black",
+      "upside-down"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "bike-packing",
+    "exp_id": "3",
+    "expression": "an upside-down bike",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "cycle",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "bike",
+      "cycle",
+      "vehicle"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "bike is upside-down"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "bike-packing",
+    "exp_id": "4",
+    "expression": "a man wearing a cap",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "individual",
+      "athlete"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "individual",
+      "athlete"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a cap"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "bike-packing",
+    "exp_id": "5",
+    "expression": "a man holding a bike",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "cyclist",
+      "athlete"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "cyclist",
+      "athlete"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man is present",
+      "man is holding a bike"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "bike-packing",
+    "exp_id": "6",
+    "expression": "a man",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "individual",
+      "adult"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "individual",
+      "adult"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "bike-packing",
+    "exp_id": "7",
+    "expression": "a man wearing a cap and shorts",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "cyclist",
+      "athlete"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "cyclist",
+      "athlete"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a cap",
+      "wearing shorts"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "blackswan",
+    "exp_id": "0",
+    "expression": "a black swan",
+    "status": "ok",
+    "category": "swan",
+    "primary_category": "swan",
+    "backup_categories": [
+      "bird",
+      "waterfowl",
+      "duck"
+    ],
+    "category_candidates": [
+      "swan",
+      "bird",
+      "waterfowl",
+      "duck"
+    ],
+    "used_category_query": "swan",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black plumage",
+      "long neck",
+      "red beak"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "blackswan",
+    "exp_id": "1",
+    "expression": "a black feathered swan",
+    "status": "ok",
+    "category": "swan",
+    "primary_category": "swan",
+    "backup_categories": [
+      "bird",
+      "waterfowl",
+      "duck"
+    ],
+    "category_candidates": [
+      "swan",
+      "bird",
+      "waterfowl",
+      "duck"
+    ],
+    "used_category_query": "swan",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black",
+      "feathered",
+      "swan"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "blackswan",
+    "exp_id": "2",
+    "expression": "a swan",
+    "status": "ok",
+    "category": "swan",
+    "primary_category": "swan",
+    "backup_categories": [
+      "bird",
+      "waterfowl",
+      "duck"
+    ],
+    "category_candidates": [
+      "swan",
+      "bird",
+      "waterfowl",
+      "duck"
+    ],
+    "used_category_query": "swan",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "blackswan",
+    "exp_id": "3",
+    "expression": "a black swan",
+    "status": "ok",
+    "category": "swan",
+    "primary_category": "swan",
+    "backup_categories": [
+      "bird",
+      "waterfowl",
+      "duck"
+    ],
+    "category_candidates": [
+      "swan",
+      "bird",
+      "waterfowl",
+      "duck"
+    ],
+    "used_category_query": "swan",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black plumage",
+      "long neck",
+      "red beak"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "bmx-trees",
+    "exp_id": "0",
+    "expression": "a red bmx bike",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "bicycle",
+      "cycle",
+      "bmx"
+    ],
+    "category_candidates": [
+      "bike",
+      "bicycle",
+      "cycle",
+      "bmx"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "red",
+      "bmx"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "bmx-trees",
+    "exp_id": "1",
+    "expression": "a black bike",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "cycle",
+      "bicycle",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "bike",
+      "cycle",
+      "bicycle",
+      "vehicle"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "bike"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "bmx-trees",
+    "exp_id": "2",
+    "expression": "a bmx bike",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "bicycle",
+      "cycle",
+      "bmx"
+    ],
+    "category_candidates": [
+      "bike",
+      "bicycle",
+      "cycle",
+      "bmx"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "child riding a red bike with BMX features"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "bmx-trees",
+    "exp_id": "3",
+    "expression": "a bicycle",
+    "status": "ok",
+    "category": "bicycle",
+    "primary_category": "bicycle",
+    "backup_categories": [
+      "bike",
+      "cycle"
+    ],
+    "category_candidates": [
+      "bicycle",
+      "bike",
+      "cycle"
+    ],
+    "used_category_query": "bicycle",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "bmx-trees",
+    "exp_id": "4",
+    "expression": "a boy wearing a white tshirt",
+    "status": "ok",
+    "category": "boy",
+    "primary_category": "boy",
+    "backup_categories": [
+      "child",
+      "young man"
+    ],
+    "category_candidates": [
+      "boy",
+      "child",
+      "young man"
+    ],
+    "used_category_query": "boy",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a white tshirt"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "bmx-trees",
+    "exp_id": "5",
+    "expression": "a boy riding a bicycle",
+    "status": "ok",
+    "category": "boy",
+    "primary_category": "boy",
+    "backup_categories": [
+      "child",
+      "young person",
+      "person"
+    ],
+    "category_candidates": [
+      "boy",
+      "child",
+      "young person",
+      "person"
+    ],
+    "used_category_query": "boy",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single boy",
+      "riding a bicycle"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "bmx-trees",
+    "exp_id": "6",
+    "expression": "a boy riding a bmx bike",
+    "status": "ok",
+    "category": "boy",
+    "primary_category": "boy",
+    "backup_categories": [
+      "child",
+      "young person",
+      "person"
+    ],
+    "category_candidates": [
+      "boy",
+      "child",
+      "young person",
+      "person"
+    ],
+    "used_category_query": "boy",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "riding a bmx bike"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "bmx-trees",
+    "exp_id": "7",
+    "expression": "a man in a white shirt and shorts",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "boy",
+      "child"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "boy",
+      "child"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing white shirt",
+      "wearing shorts"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "breakdance",
+    "exp_id": "0",
+    "expression": "a man in a red sweatshirt performing breakdance",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "dancer",
+      "breakdancer",
+      "performer"
+    ],
+    "category_candidates": [
+      "man",
+      "dancer",
+      "breakdancer",
+      "performer"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing red sweatshirt",
+      "performing breakdance"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "breakdance",
+    "exp_id": "1",
+    "expression": "a boy in a red tshirt performing a breakdance",
+    "status": "ok",
+    "category": "boy",
+    "primary_category": "boy",
+    "backup_categories": [
+      "person",
+      "dancer",
+      "breakdancer"
+    ],
+    "category_candidates": [
+      "boy",
+      "person",
+      "dancer",
+      "breakdancer"
+    ],
+    "used_category_query": "boy",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing red t-shirt",
+      "performing breakdance"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "breakdance",
+    "exp_id": "2",
+    "expression": "a man performing a headspin",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "dancer",
+      "breakdancer"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "dancer",
+      "breakdancer"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "performing a headspin"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "breakdance",
+    "exp_id": "3",
+    "expression": "a guy in a brown shirt and blue jeans breakdancing",
+    "status": "ok",
+    "category": "guy",
+    "primary_category": "guy",
+    "backup_categories": [
+      "person",
+      "dancer",
+      "breakdancer"
+    ],
+    "category_candidates": [
+      "guy",
+      "person",
+      "dancer",
+      "breakdancer"
+    ],
+    "used_category_query": "guy",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing brown shirt",
+      "wearing blue jeans",
+      "performing breakdancing"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "camel",
+    "exp_id": "0",
+    "expression": "a brown camel in the front",
+    "status": "ok",
+    "category": "camel",
+    "primary_category": "camel",
+    "backup_categories": [
+      "animal",
+      "dromedary"
+    ],
+    "category_candidates": [
+      "camel",
+      "animal",
+      "dromedary"
+    ],
+    "used_category_query": "camel",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown",
+      "in the front"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "camel",
+    "exp_id": "1",
+    "expression": "a camel moving",
+    "status": "ok",
+    "category": "camel",
+    "primary_category": "camel",
+    "backup_categories": [
+      "animal",
+      "dromedary"
+    ],
+    "category_candidates": [
+      "camel",
+      "animal",
+      "dromedary"
+    ],
+    "used_category_query": "camel",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "camel is in motion"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "camel",
+    "exp_id": "2",
+    "expression": "a camel walking",
+    "status": "runtime_error",
+    "error": "stack expects each tensor to be equal size, but got [3, 480, 640] at entry 0 and [3, 480, 854] at entry 1",
+    "category": null,
+    "num_targets": null,
+    "sub_conditions": [],
+    "final_rule_applied": null,
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "camel",
+    "exp_id": "3",
+    "expression": "a brown camel walking",
+    "status": "ok",
+    "category": "camel",
+    "primary_category": "camel",
+    "backup_categories": [
+      "animal",
+      "dromedary"
+    ],
+    "category_candidates": [
+      "camel",
+      "animal",
+      "dromedary"
+    ],
+    "used_category_query": "camel",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown",
+      "walking"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "car-roundabout",
+    "exp_id": "0",
+    "expression": "a black car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "suv"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "suv"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "car type"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "car-roundabout",
+    "exp_id": "1",
+    "expression": "a black car moving through a roundabout",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "suv"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "suv"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "moving through a roundabout"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "car-roundabout",
+    "exp_id": "2",
+    "expression": "a black car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "suv"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "suv"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "car type"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "car-roundabout",
+    "exp_id": "3",
+    "expression": "a space-grey car in a roundabout",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "suv"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "suv"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "space-grey color",
+      "in a roundabout"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "car-shadow",
+    "exp_id": "0",
+    "expression": "a silver car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "sedan"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "sedan"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "car-shadow",
+    "exp_id": "1",
+    "expression": "a white car crossing a signal",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "sedan"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "sedan"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white vehicle",
+      "crossing a signal"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "car-shadow",
+    "exp_id": "2",
+    "expression": "a car on the road",
+    "status": "runtime_error",
+    "error": "stack expects each tensor to be equal size, but got [3, 480, 854] at entry 0 and [3, 480, 640] at entry 1",
+    "category": null,
+    "num_targets": null,
+    "sub_conditions": [],
+    "final_rule_applied": null,
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "car-shadow",
+    "exp_id": "3",
+    "expression": "a sliver car going from shade to sunlight",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "sedan"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "sedan"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "silver color",
+      "moving from shaded area to sunlit area"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "cows",
+    "exp_id": "0",
+    "expression": "a cow with a bell around its neck",
+    "status": "ok",
+    "category": "cow",
+    "primary_category": "cow",
+    "backup_categories": [
+      "animal",
+      "bovine",
+      "mammal"
+    ],
+    "category_candidates": [
+      "cow",
+      "animal",
+      "bovine",
+      "mammal"
+    ],
+    "used_category_query": "cow",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a cow",
+      "with a bell around its neck"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "cows",
+    "exp_id": "1",
+    "expression": "a cow in the field",
+    "status": "ok",
+    "category": "cow",
+    "primary_category": "cow",
+    "backup_categories": [
+      "animal",
+      "bovine",
+      "mammal"
+    ],
+    "category_candidates": [
+      "cow",
+      "animal",
+      "bovine",
+      "mammal"
+    ],
+    "used_category_query": "cow",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "one cow visible",
+      "in a grassy field"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "cows",
+    "exp_id": "2",
+    "expression": "a white cow with brown patches",
+    "status": "ok",
+    "category": "cow",
+    "primary_category": "cow",
+    "backup_categories": [
+      "animal",
+      "bovine",
+      "cattle"
+    ],
+    "category_candidates": [
+      "cow",
+      "animal",
+      "bovine",
+      "cattle"
+    ],
+    "used_category_query": "cow",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white and brown patches on body",
+      "standing in field"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "cows",
+    "exp_id": "3",
+    "expression": "a brown and white cow",
+    "status": "ok",
+    "category": "cow",
+    "primary_category": "cow",
+    "backup_categories": [
+      "animal",
+      "bovine",
+      "mammal"
+    ],
+    "category_candidates": [
+      "cow",
+      "animal",
+      "bovine",
+      "mammal"
+    ],
+    "used_category_query": "cow",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown and white coloring",
+      "single animal in frame"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dance-twirl",
+    "exp_id": "0",
+    "expression": "a girl with blonde hair dressed in blue",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "dancer",
+      "performer"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "dancer",
+      "performer"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "blonde hair",
+      "dressed in blue"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dance-twirl",
+    "exp_id": "1",
+    "expression": "a girl in a blue dress twirling",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "dancer",
+      "performer",
+      "woman"
+    ],
+    "category_candidates": [
+      "girl",
+      "dancer",
+      "performer",
+      "woman"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing blue dress",
+      "twirling"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dance-twirl",
+    "exp_id": "2",
+    "expression": "girl dancing in blue",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "dancer",
+      "woman",
+      "performer"
+    ],
+    "category_candidates": [
+      "girl",
+      "dancer",
+      "woman",
+      "performer"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "dancing",
+      "in blue"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dance-twirl",
+    "exp_id": "3",
+    "expression": "a blonde haired girl dancing in a blue dress",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "dancer",
+      "woman",
+      "performer"
+    ],
+    "category_candidates": [
+      "girl",
+      "dancer",
+      "woman",
+      "performer"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "blonde hair",
+      "dancing",
+      "blue dress"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dog",
+    "exp_id": "0",
+    "expression": "a golden retriever walking in the grass",
+    "status": "ok",
+    "category": "golden retriever",
+    "primary_category": "golden retriever",
+    "backup_categories": [
+      "dog",
+      "retriever",
+      "canine"
+    ],
+    "category_candidates": [
+      "golden retriever",
+      "dog",
+      "retriever",
+      "canine"
+    ],
+    "used_category_query": "golden retriever",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single dog",
+      "walking in grass"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dog",
+    "exp_id": "1",
+    "expression": "a dog walking",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "category_candidates": [
+      "dog",
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single dog",
+      "walking in the grass"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "dog",
+    "exp_id": "2",
+    "expression": "a dog with a ball in its mouth",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "category_candidates": [
+      "dog",
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a dog",
+      "with a ball in its mouth"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "dog",
+    "exp_id": "3",
+    "expression": "a dog looking for something ",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "animal",
+      "pet",
+      "canine"
+    ],
+    "category_candidates": [
+      "dog",
+      "animal",
+      "pet",
+      "canine"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single dog",
+      "looking for something"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "0",
+    "expression": "a white dog with black patches",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "category_candidates": [
+      "dog",
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white dog",
+      "with black patches"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "1",
+    "expression": "a white dog with black patches",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "category_candidates": [
+      "dog",
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white dog",
+      "with black patches"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "2",
+    "expression": "a white dog with black patches",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "category_candidates": [
+      "dog",
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white dog",
+      "with black patches"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "3",
+    "expression": "a dog jumping for a snack going to the left",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "category_candidates": [
+      "dog",
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "dog",
+      "jumping",
+      "going to the left"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "4",
+    "expression": "a white dog with gray patches",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "category_candidates": [
+      "dog",
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white dog",
+      "with gray patches"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "5",
+    "expression": "a white dog with grey patches",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "category_candidates": [
+      "dog",
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white dog",
+      "with grey patches"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "6",
+    "expression": "a white dog with grey patches",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "category_candidates": [
+      "dog",
+      "canine",
+      "pet",
+      "animal"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white dog",
+      "with grey patches"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "7",
+    "expression": "a dog jumping for a snack going to the right",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "category_candidates": [
+      "dog",
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "dog jumping",
+      "going to the right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "8",
+    "expression": "a woman in a yellow jacket",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "adult",
+      "human"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "adult",
+      "human"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a yellow jacket"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "9",
+    "expression": "a woman in a yellow jacket and mustered trousers",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "adult",
+      "human"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "adult",
+      "human"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing yellow jacket",
+      "wearing mustered trousers"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "10",
+    "expression": "a woman",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "adult",
+      "human"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "adult",
+      "human"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "dogs-jump",
+    "exp_id": "11",
+    "expression": "a woman in a yellow shirt throwing dog snacks",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "trainer",
+      "handler"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "trainer",
+      "handler"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing yellow shirt",
+      "throwing dog snacks"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "drift-chicane",
+    "exp_id": "0",
+    "expression": "a red and white car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "sports car",
+      "drift car"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "sports car",
+      "drift car"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "red and white color scheme",
+      "drifting on track"
+    ],
+    "final_rule_applied": "singular reference with visual confirmation",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "drift-chicane",
+    "exp_id": "1",
+    "expression": "a car racing",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "auto",
+      "sports car"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "auto",
+      "sports car"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single car is visible in motion on the track"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "drift-chicane",
+    "exp_id": "2",
+    "expression": "a sport car",
+    "status": "ok",
+    "category": "sport car",
+    "primary_category": "sport car",
+    "backup_categories": [
+      "car",
+      "vehicle",
+      "automobile"
+    ],
+    "category_candidates": [
+      "sport car",
+      "car",
+      "vehicle",
+      "automobile"
+    ],
+    "used_category_query": "sport car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "drifting on track",
+      "smoke from tires",
+      "modified bodywork"
+    ],
+    "final_rule_applied": "singular reference with visual confirmation",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "drift-chicane",
+    "exp_id": "3",
+    "expression": "a white sport car drifting at turns",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "sports car",
+      "drift car"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "sports car",
+      "drift car"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white",
+      "sport car",
+      "drifting at turns"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "drift-straight",
+    "exp_id": "0",
+    "expression": "a drift car on a straight road",
+    "status": "ok",
+    "category": "drift car",
+    "primary_category": "drift car",
+    "backup_categories": [
+      "car",
+      "vehicle",
+      "race car"
+    ],
+    "category_candidates": [
+      "drift car",
+      "car",
+      "vehicle",
+      "race car"
+    ],
+    "used_category_query": "drift car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on a straight road"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "drift-straight",
+    "exp_id": "1",
+    "expression": "a car in a racing track",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "sports car"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "sports car"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single red car visible in motion on the track"
+    ],
+    "final_rule_applied": "singular reference to one car",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "drift-straight",
+    "exp_id": "2",
+    "expression": "a red car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "truck"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "truck"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "red color",
+      "on track"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "drift-straight",
+    "exp_id": "3",
+    "expression": "a red sport car drifting on a race track",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "automobile",
+      "race car"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "automobile",
+      "race car"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "red",
+      "sport car",
+      "drifting",
+      "on a race track"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "goat",
+    "exp_id": "0",
+    "expression": "a goat walking on rocks",
+    "status": "ok",
+    "category": "goat",
+    "primary_category": "goat",
+    "backup_categories": [
+      "animal",
+      "mountain goat",
+      "livestock"
+    ],
+    "category_candidates": [
+      "goat",
+      "animal",
+      "mountain goat",
+      "livestock"
+    ],
+    "used_category_query": "goat",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "one goat visible",
+      "walking on rocky terrain"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "goat",
+    "exp_id": "1",
+    "expression": "a goat walking in the hilly area",
+    "status": "ok",
+    "category": "goat",
+    "primary_category": "goat",
+    "backup_categories": [
+      "animal",
+      "mountain goat",
+      "livestock"
+    ],
+    "category_candidates": [
+      "goat",
+      "animal",
+      "mountain goat",
+      "livestock"
+    ],
+    "used_category_query": "goat",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single goat",
+      "walking",
+      "in hilly terrain"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "goat",
+    "exp_id": "2",
+    "expression": "a gray goat",
+    "status": "ok",
+    "category": "goat",
+    "primary_category": "goat",
+    "backup_categories": [
+      "animal",
+      "mammal",
+      "livestock"
+    ],
+    "category_candidates": [
+      "goat",
+      "animal",
+      "mammal",
+      "livestock"
+    ],
+    "used_category_query": "goat",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "one goat",
+      "gray coloration"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "goat",
+    "exp_id": "3",
+    "expression": "a grey colored mountain goat",
+    "status": "ok",
+    "category": "mountain goat",
+    "primary_category": "mountain goat",
+    "backup_categories": [
+      "goat",
+      "animal",
+      "wild animal"
+    ],
+    "category_candidates": [
+      "mountain goat",
+      "goat",
+      "animal",
+      "wild animal"
+    ],
+    "used_category_query": "mountain goat",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "grey colored",
+      "mountain goat"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "0",
+    "expression": "a largest orange goldfish",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "carp"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "carp"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "orange",
+      "goldfish",
+      "largest"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "1",
+    "expression": "the largest orange goldfish",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "carp"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "carp"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "orange",
+      "goldfish",
+      "largest"
+    ],
+    "final_rule_applied": "constraint filtering",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "2",
+    "expression": "the biggest goldfish",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "goldfish",
+      "biggest"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "3",
+    "expression": "a gold fish facing towards the top right of the frame",
+    "status": "ok",
+    "category": "fish",
+    "primary_category": "gold fish",
+    "backup_categories": [
+      "fish",
+      "goldfish",
+      "aquarium fish"
+    ],
+    "category_candidates": [
+      "gold fish",
+      "fish",
+      "goldfish",
+      "aquarium fish"
+    ],
+    "used_category_query": "fish",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "facing towards the top right of the frame"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "4",
+    "expression": "an orange goldfish in the center next to the largest fish",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium fish"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium fish"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "orange color",
+      "center position",
+      "next to the largest fish"
+    ],
+    "final_rule_applied": "singular reference with visual confirmation",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "5",
+    "expression": "an orange goldfish with a white stripe in the center",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "carp"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "carp"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "orange",
+      "with a white stripe in the center"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "6",
+    "expression": "an orange goldfish in the center next to the largest fish",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium fish"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium fish"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "orange color",
+      "center position",
+      "next to the largest fish"
+    ],
+    "final_rule_applied": "singular reference with visual confirmation",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "7",
+    "expression": "a gold fish swimming towards the camera",
+    "status": "ok",
+    "category": "fish",
+    "primary_category": "gold fish",
+    "backup_categories": [
+      "fish",
+      "goldfish",
+      "carp"
+    ],
+    "category_candidates": [
+      "gold fish",
+      "fish",
+      "goldfish",
+      "carp"
+    ],
+    "used_category_query": "fish",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "gold fish",
+      "swimming towards the camera"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "8",
+    "expression": "a smallest goldfish",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "smallest in size among goldfish"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "9",
+    "expression": "a smallest goldfish on the bottom half",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium fish"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium fish"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "smallest in size among visible goldfish",
+      "located on bottom half of frame"
+    ],
+    "final_rule_applied": "singular reference with visual confirmation",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "10",
+    "expression": "the smallest goldfish",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "goldfish",
+      "smallest"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "11",
+    "expression": "a gold fish in the middle swimming towards down-right",
+    "status": "ok",
+    "category": "fish",
+    "primary_category": "gold fish",
+    "backup_categories": [
+      "fish",
+      "goldfish",
+      "carp"
+    ],
+    "category_candidates": [
+      "gold fish",
+      "fish",
+      "goldfish",
+      "carp"
+    ],
+    "used_category_query": "fish",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "gold fish",
+      "in the middle",
+      "swimming towards down-right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "12",
+    "expression": "a goldfish at the end",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "goldfish",
+      "at the end"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "13",
+    "expression": "a small orange goldfish on the top half",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium fish"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium fish"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "small orange",
+      "goldfish",
+      "on the top half"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "14",
+    "expression": "a small goldfish in the end",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "small",
+      "goldfish",
+      "in the end"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "15",
+    "expression": "a gold fish on the left swimming towards the top right",
+    "status": "ok",
+    "category": "fish",
+    "primary_category": "gold fish",
+    "backup_categories": [
+      "fish",
+      "goldfish",
+      "carp"
+    ],
+    "category_candidates": [
+      "gold fish",
+      "fish",
+      "goldfish",
+      "carp"
+    ],
+    "used_category_query": "fish",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on the left",
+      "swimming towards the top right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "16",
+    "expression": "a goldfish at the bottom",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium fish"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium fish"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "goldfish",
+      "at the bottom"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "17",
+    "expression": "a goldfish at the bottom",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium fish"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium fish"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "goldfish",
+      "at the bottom"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "18",
+    "expression": "goldfish on the bottom",
+    "status": "ok",
+    "category": "goldfish",
+    "primary_category": "goldfish",
+    "backup_categories": [
+      "fish",
+      "aquarium fish",
+      "carp"
+    ],
+    "category_candidates": [
+      "goldfish",
+      "fish",
+      "aquarium fish",
+      "carp"
+    ],
+    "used_category_query": "goldfish",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "goldfish",
+      "on the bottom"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "gold-fish",
+    "exp_id": "19",
+    "expression": "a gold fish in the middle swimming bottom right and leaving the frame partially",
+    "status": "ok",
+    "category": "fish",
+    "primary_category": "gold fish",
+    "backup_categories": [
+      "fish",
+      "goldfish",
+      "aquarium fish"
+    ],
+    "category_candidates": [
+      "gold fish",
+      "fish",
+      "goldfish",
+      "aquarium fish"
+    ],
+    "used_category_query": "fish",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "in the middle",
+      "swimming bottom right",
+      "leaving the frame partially"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "horsejump-high",
+    "exp_id": "0",
+    "expression": "a horse doing high jumps",
+    "status": "ok",
+    "category": "horse",
+    "primary_category": "horse",
+    "backup_categories": [
+      "animal",
+      "equine",
+      "jumping horse"
+    ],
+    "category_candidates": [
+      "horse",
+      "animal",
+      "equine",
+      "jumping horse"
+    ],
+    "used_category_query": "horse",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a horse",
+      "doing high jumps"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "horsejump-high",
+    "exp_id": "1",
+    "expression": "a horse jumping over obstacles",
+    "status": "ok",
+    "category": "horse",
+    "primary_category": "horse",
+    "backup_categories": [
+      "animal",
+      "equine",
+      "jumping horse"
+    ],
+    "category_candidates": [
+      "horse",
+      "animal",
+      "equine",
+      "jumping horse"
+    ],
+    "used_category_query": "horse",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "horse is in mid-air",
+      "horse is jumping over a barrier"
+    ],
+    "final_rule_applied": "singular reference to one horse",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "horsejump-high",
+    "exp_id": "2",
+    "expression": "a horse ridden by a woman",
+    "status": "ok",
+    "category": "horse",
+    "primary_category": "horse",
+    "backup_categories": [
+      "animal",
+      "equine"
+    ],
+    "category_candidates": [
+      "horse",
+      "animal",
+      "equine"
+    ],
+    "used_category_query": "horse",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a woman riding a horse"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "horsejump-high",
+    "exp_id": "3",
+    "expression": "a brown colored horse",
+    "status": "ok",
+    "category": "horse",
+    "primary_category": "horse",
+    "backup_categories": [
+      "animal",
+      "equine"
+    ],
+    "category_candidates": [
+      "horse",
+      "animal",
+      "equine"
+    ],
+    "used_category_query": "horse",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown color",
+      "horse"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "horsejump-high",
+    "exp_id": "4",
+    "expression": "a woman riding a horse",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "rider",
+      "jockey",
+      "horseback rider"
+    ],
+    "category_candidates": [
+      "woman",
+      "rider",
+      "jockey",
+      "horseback rider"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "one woman in riding gear",
+      "on a horse"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "horsejump-high",
+    "exp_id": "5",
+    "expression": "a jockey wearing a white uniform",
+    "status": "ok",
+    "category": "jockey",
+    "primary_category": "jockey",
+    "backup_categories": [
+      "rider",
+      "horseback rider",
+      "athlete"
+    ],
+    "category_candidates": [
+      "jockey",
+      "rider",
+      "horseback rider",
+      "athlete"
+    ],
+    "used_category_query": "jockey",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person riding horse",
+      "wearing white uniform"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "horsejump-high",
+    "exp_id": "6",
+    "expression": "a girl riding a horse",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "person",
+      "rider",
+      "jockey"
+    ],
+    "category_candidates": [
+      "girl",
+      "person",
+      "rider",
+      "jockey"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a girl",
+      "riding a horse"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "horsejump-high",
+    "exp_id": "7",
+    "expression": "a woman in a black and white dress riding a horse",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "rider",
+      "jockey",
+      "horseback rider"
+    ],
+    "category_candidates": [
+      "woman",
+      "rider",
+      "jockey",
+      "horseback rider"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person wearing black and white dress",
+      "riding a horse"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "0",
+    "expression": "a woman in a yellow salwar suit",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "adult"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "adult"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing yellow salwar suit"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "1",
+    "expression": "a woman on the left wearing a yellow dress",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "female"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "female"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on the left",
+      "wearing a yellow dress"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "2",
+    "expression": "a woman in a yellow sari",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "female",
+      "individual"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "female",
+      "individual"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing yellow sari"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "3",
+    "expression": "a woman in yellow on the left",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "adult"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "adult"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing yellow attire",
+      "positioned on the left side of the frame"
+    ],
+    "final_rule_applied": "singular reference with visual confirmation",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "4",
+    "expression": "a woman in a red sari in the middle",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "female"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "female"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a red sari",
+      "positioned in the middle of the frame"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "5",
+    "expression": "a woman in the middle wearing a red dress",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "adult"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "adult"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "in the middle",
+      "wearing a red dress"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "6",
+    "expression": "a woman in a red sari",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "female"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "female"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a red sari"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "7",
+    "expression": "a woman in a red dress in the middle",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "female"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "female"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing red dress",
+      "positioned in the middle of the frame"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "8",
+    "expression": "a lady in a black salwar on the right",
+    "status": "ok",
+    "category": "lady",
+    "primary_category": "lady",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "lady",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "lady",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing black salwar",
+      "on the right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "9",
+    "expression": "a woman on right wearing a black dress",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "female"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "female"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on right",
+      "wearing a black dress"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "10",
+    "expression": "a woman in black on the right",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "adult"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "adult"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing black clothing",
+      "positioned on the right side of the frame"
+    ],
+    "final_rule_applied": "singular reference with visual confirmation",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "india",
+    "exp_id": "11",
+    "expression": "a woman on the right wearing a pink and black dress carrying a shopping bag",
+    "status": "ok",
+    "category": "woman",
+    "primary_category": "woman",
+    "backup_categories": [
+      "person",
+      "individual",
+      "female"
+    ],
+    "category_candidates": [
+      "woman",
+      "person",
+      "individual",
+      "female"
+    ],
+    "used_category_query": "woman",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on the right",
+      "wearing a pink and black dress",
+      "carrying a shopping bag"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "judo",
+    "exp_id": "0",
+    "expression": "a man with a blue belt on the right",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "practitioner",
+      "judo practitioner"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "practitioner",
+      "judo practitioner"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "with a blue belt",
+      "on the right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "judo",
+    "exp_id": "1",
+    "expression": "a man with a blue belt on the right",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "practitioner",
+      "judo practitioner"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "practitioner",
+      "judo practitioner"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "with a blue belt",
+      "on the right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "judo",
+    "exp_id": "2",
+    "expression": "a man fighting on the right",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "athlete",
+      "judo practitioner"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "athlete",
+      "judo practitioner"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "fighting",
+      "on the right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "judo",
+    "exp_id": "3",
+    "expression": "a man in the middle wearing a blue belt teaching judo",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "instructor",
+      "teacher",
+      "practitioner"
+    ],
+    "category_candidates": [
+      "man",
+      "instructor",
+      "teacher",
+      "practitioner"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man in the middle",
+      "wearing a blue belt",
+      "teaching judo"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "judo",
+    "exp_id": "4",
+    "expression": "a bald man with a black belt in the center",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "practitioner",
+      "judo practitioner"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "practitioner",
+      "judo practitioner"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "bald",
+      "black belt",
+      "in the center"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "judo",
+    "exp_id": "5",
+    "expression": "a bald man with a black belt in the center of the mat",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "practitioner",
+      "judo practitioner"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "practitioner",
+      "judo practitioner"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "bald",
+      "black belt",
+      "in the center of the mat"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "judo",
+    "exp_id": "6",
+    "expression": "a man fighting on the left",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "athlete",
+      "judo practitioner"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "athlete",
+      "judo practitioner"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "fighting",
+      "on the left"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "judo",
+    "exp_id": "7",
+    "expression": "a bald man in the middle wearing a black belt falling down",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "individual",
+      "practitioner"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "individual",
+      "practitioner"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "bald",
+      "wearing a black belt",
+      "falling down",
+      "in the middle"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "0",
+    "expression": "a power kite with blue handles",
+    "status": "ok",
+    "category": "surfboard",
+    "primary_category": "kite",
+    "backup_categories": [
+      "parasail",
+      "surfboard",
+      "wetsuit"
+    ],
+    "category_candidates": [
+      "kite",
+      "parasail",
+      "surfboard",
+      "wetsuit"
+    ],
+    "used_category_query": "surfboard",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "blue handles visible on the kite"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "1",
+    "expression": "a power kite with blue handles",
+    "status": "ok",
+    "category": "surfboard",
+    "primary_category": "kite",
+    "backup_categories": [
+      "parasail",
+      "surfboard",
+      "wetsuit"
+    ],
+    "category_candidates": [
+      "kite",
+      "parasail",
+      "surfboard",
+      "wetsuit"
+    ],
+    "used_category_query": "surfboard",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "blue handles visible on the kite"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "2",
+    "expression": "a kite",
+    "status": "ok",
+    "category": "surfboard",
+    "primary_category": "kite",
+    "backup_categories": [
+      "parasail",
+      "surfboard",
+      "water ski"
+    ],
+    "category_candidates": [
+      "kite",
+      "parasail",
+      "surfboard",
+      "water ski"
+    ],
+    "used_category_query": "surfboard",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "3",
+    "expression": "a surfing rope attached to a person",
+    "status": "ok",
+    "category": "rope",
+    "primary_category": "rope",
+    "backup_categories": [
+      "line",
+      "cord",
+      "string"
+    ],
+    "category_candidates": [
+      "rope",
+      "line",
+      "cord",
+      "string"
+    ],
+    "used_category_query": "rope",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person is kitesurfing",
+      "rope is connected to harness"
+    ],
+    "final_rule_applied": "singular reference to one person with rope",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "4",
+    "expression": "a surf-board",
+    "status": "ok",
+    "category": "surf-board",
+    "primary_category": "surf-board",
+    "backup_categories": [
+      "board",
+      "surfboard"
+    ],
+    "category_candidates": [
+      "surf-board",
+      "board",
+      "surfboard"
+    ],
+    "used_category_query": "surf-board",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "5",
+    "expression": "a surf-board",
+    "status": "ok",
+    "category": "surf-board",
+    "primary_category": "surf-board",
+    "backup_categories": [
+      "board",
+      "surfboard"
+    ],
+    "category_candidates": [
+      "surf-board",
+      "board",
+      "surfboard"
+    ],
+    "used_category_query": "surf-board",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "6",
+    "expression": "a surf-board",
+    "status": "ok",
+    "category": "surf-board",
+    "primary_category": "surf-board",
+    "backup_categories": [
+      "board",
+      "surfboard"
+    ],
+    "category_candidates": [
+      "surf-board",
+      "board",
+      "surfboard"
+    ],
+    "used_category_query": "surf-board",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "7",
+    "expression": "a surfboard",
+    "status": "ok",
+    "category": "surfboard",
+    "primary_category": "surfboard",
+    "backup_categories": [
+      "board",
+      "wakeboard"
+    ],
+    "category_candidates": [
+      "surfboard",
+      "board",
+      "wakeboard"
+    ],
+    "used_category_query": "surfboard",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "8",
+    "expression": "a man wearing a black vest",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "individual",
+      "athlete"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "individual",
+      "athlete"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a black vest"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "9",
+    "expression": "a person surfing",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "surfer",
+      "individual",
+      "athlete"
+    ],
+    "category_candidates": [
+      "person",
+      "surfer",
+      "individual",
+      "athlete"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person in water",
+      "holding surfboard",
+      "wearing helmet and life vest"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "10",
+    "expression": "a man in a black vest",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "athlete",
+      "surfer"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "athlete",
+      "surfer"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a black vest"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "kite-surf",
+    "exp_id": "11",
+    "expression": "a person wearing a black helmet surfing",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "surfer",
+      "kitesurfer",
+      "athlete"
+    ],
+    "category_candidates": [
+      "person",
+      "surfer",
+      "kitesurfer",
+      "athlete"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing black helmet",
+      "engaged in surfing activity"
+    ],
+    "final_rule_applied": "singular reference to one person",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "0",
+    "expression": "a white cell phone in a left hand",
+    "status": "ok",
+    "category": "cell phone",
+    "primary_category": "cell phone",
+    "backup_categories": [
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "category_candidates": [
+      "cell phone",
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "used_category_query": "cell phone",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white object",
+      "held in left hand"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "1",
+    "expression": "a pink cell phone in a girl's hand",
+    "status": "ok",
+    "category": "cell phone",
+    "primary_category": "cell phone",
+    "backup_categories": [
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "category_candidates": [
+      "cell phone",
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "used_category_query": "cell phone",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "pink color",
+      "held by a girl"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "2",
+    "expression": "a pink cell phone",
+    "status": "ok",
+    "category": "cell phone",
+    "primary_category": "cell phone",
+    "backup_categories": [
+      "phone",
+      "mobile phone",
+      "device"
+    ],
+    "category_candidates": [
+      "cell phone",
+      "phone",
+      "mobile phone",
+      "device"
+    ],
+    "used_category_query": "cell phone",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "pink color",
+      "cell phone"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "3",
+    "expression": "a white colored mobile phone on the left",
+    "status": "ok",
+    "category": "mobile phone",
+    "primary_category": "mobile phone",
+    "backup_categories": [
+      "phone",
+      "device"
+    ],
+    "category_candidates": [
+      "mobile phone",
+      "phone",
+      "device"
+    ],
+    "used_category_query": "mobile phone",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white colored",
+      "on the left"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "4",
+    "expression": "a pink cell phone in a girl's hand",
+    "status": "ok",
+    "category": "cell phone",
+    "primary_category": "cell phone",
+    "backup_categories": [
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "category_candidates": [
+      "cell phone",
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "used_category_query": "cell phone",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "pink color",
+      "held by a girl"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "5",
+    "expression": "a white cell phone in a left hand",
+    "status": "ok",
+    "category": "cell phone",
+    "primary_category": "cell phone",
+    "backup_categories": [
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "category_candidates": [
+      "cell phone",
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "used_category_query": "cell phone",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white object",
+      "held in left hand"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "6",
+    "expression": "a white cell phone",
+    "status": "ok",
+    "category": "cell phone",
+    "primary_category": "cell phone",
+    "backup_categories": [
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "category_candidates": [
+      "cell phone",
+      "phone",
+      "device",
+      "mobile phone"
+    ],
+    "used_category_query": "cell phone",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "white color",
+      "cell phone"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "7",
+    "expression": "a pink colored mobile phone in the hands of the girl on the left",
+    "status": "ok",
+    "category": "mobile phone",
+    "primary_category": "mobile phone",
+    "backup_categories": [
+      "phone",
+      "device",
+      "cell phone"
+    ],
+    "category_candidates": [
+      "mobile phone",
+      "phone",
+      "device",
+      "cell phone"
+    ],
+    "used_category_query": "mobile phone",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "pink colored",
+      "in the hands of the girl on the left"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "8",
+    "expression": "a girl on the right with blonde hair",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on the right",
+      "with blonde hair"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "9",
+    "expression": "a girl on the right with blonde hair",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on the right",
+      "with blonde hair"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "10",
+    "expression": "a girl on the right",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "right side of the frame"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "11",
+    "expression": "a girl on the right wearing light brown boots",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on the right",
+      "wearing light brown boots"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "12",
+    "expression": "a girl in the middle wearing a lab-coat and a black shirt",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "in the middle",
+      "wearing a lab-coat",
+      "wearing a black shirt"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "13",
+    "expression": "a girl in the middle wearing a lab-coat and a black shirt",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "in the middle",
+      "wearing a lab-coat",
+      "wearing a black shirt"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "14",
+    "expression": "a girl in the middle",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "three girls standing side by side",
+      "middle position among the three"
+    ],
+    "final_rule_applied": "singular reference with visual confirmation",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "15",
+    "expression": "a girl in the middle wearing dark brown boots and a black shirt",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "in the middle",
+      "wearing dark brown boots",
+      "wearing a black shirt"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "16",
+    "expression": "a girl on the left holding 2 cell phones",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "person",
+      "woman",
+      "student"
+    ],
+    "category_candidates": [
+      "girl",
+      "person",
+      "woman",
+      "student"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "girl",
+      "on the left",
+      "holding 2 cell phones"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "17",
+    "expression": "a girl on the left holding two cell phones",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "person",
+      "woman",
+      "student"
+    ],
+    "category_candidates": [
+      "girl",
+      "person",
+      "woman",
+      "student"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on the left",
+      "holding two cell phones"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "18",
+    "expression": "a girl on the left",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "leftmost position in the frame"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "lab-coat",
+    "exp_id": "19",
+    "expression": "a girl on the left with goggles on her forehead",
+    "status": "ok",
+    "category": "girl",
+    "primary_category": "girl",
+    "backup_categories": [
+      "woman",
+      "person"
+    ],
+    "category_candidates": [
+      "girl",
+      "woman",
+      "person"
+    ],
+    "used_category_query": "girl",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "girl",
+      "on the left",
+      "with goggles on her forehead"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "libby",
+    "exp_id": "0",
+    "expression": "a dog running in the garden",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "animal",
+      "pet",
+      "canine"
+    ],
+    "category_candidates": [
+      "dog",
+      "animal",
+      "pet",
+      "canine"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single dog",
+      "running",
+      "in the garden"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "libby",
+    "exp_id": "1",
+    "expression": "a dog running",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "category_candidates": [
+      "dog",
+      "animal",
+      "canine",
+      "pet"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a single dog",
+      "running motion visible"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "libby",
+    "exp_id": "2",
+    "expression": "a dog",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "animal",
+      "pet",
+      "canine"
+    ],
+    "category_candidates": [
+      "dog",
+      "animal",
+      "pet",
+      "canine"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "libby",
+    "exp_id": "3",
+    "expression": "a black and brown dog running",
+    "status": "ok",
+    "category": "dog",
+    "primary_category": "dog",
+    "backup_categories": [
+      "canine",
+      "puppy",
+      "animal"
+    ],
+    "category_candidates": [
+      "dog",
+      "canine",
+      "puppy",
+      "animal"
+    ],
+    "used_category_query": "dog",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black and brown",
+      "running"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "0",
+    "expression": "a fat man on the right in a black jacket",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "customer",
+      "employee"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "customer",
+      "employee"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "fat",
+      "on the right",
+      "in a black jacket"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "1",
+    "expression": "a big man on the right in a black jacket",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "customer",
+      "employee"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "customer",
+      "employee"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "big man",
+      "on the right",
+      "in a black jacket"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "2",
+    "expression": "a man on the right",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "customer",
+      "employee"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "customer",
+      "employee"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "on the right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "3",
+    "expression": "a man in a black jacket wearing glasses",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "customer",
+      "employee"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "customer",
+      "employee"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing glasses",
+      "in a black jacket"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "4",
+    "expression": "a cardboard box held by a man",
+    "status": "ok",
+    "category": "box",
+    "primary_category": "box",
+    "backup_categories": [
+      "package",
+      "carton"
+    ],
+    "category_candidates": [
+      "box",
+      "package",
+      "carton"
+    ],
+    "used_category_query": "box",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a cardboard box",
+      "held by a man"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "5",
+    "expression": "a cardboard box held by a man",
+    "status": "ok",
+    "category": "box",
+    "primary_category": "box",
+    "backup_categories": [
+      "package",
+      "carton"
+    ],
+    "category_candidates": [
+      "box",
+      "package",
+      "carton"
+    ],
+    "used_category_query": "box",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a cardboard box",
+      "held by a man"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "6",
+    "expression": "a cardboard box held by a man",
+    "status": "runtime_error",
+    "error": "stack expects each tensor to be equal size, but got [3, 544, 960] at entry 0 and [3, 480, 854] at entry 6",
+    "category": null,
+    "num_targets": null,
+    "sub_conditions": [],
+    "final_rule_applied": null,
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "7",
+    "expression": "a box in the hands of a man wearing glasses",
+    "status": "ok",
+    "category": "box",
+    "primary_category": "box",
+    "backup_categories": [
+      "package",
+      "item",
+      "product"
+    ],
+    "category_candidates": [
+      "box",
+      "package",
+      "item",
+      "product"
+    ],
+    "used_category_query": "box",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man wearing glasses",
+      "holding a box"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "8",
+    "expression": "a man on the left with a beard wearing jeans",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "customer",
+      "employee"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "customer",
+      "employee"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "on the left",
+      "with a beard",
+      "wearing jeans"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "9",
+    "expression": "a man on the left with a beard wearing jeans",
+    "status": "runtime_error",
+    "error": "stack expects each tensor to be equal size, but got [3, 480, 854] at entry 0 and [3, 544, 960] at entry 1",
+    "category": null,
+    "num_targets": null,
+    "sub_conditions": [],
+    "final_rule_applied": null,
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "10",
+    "expression": "a man on the left",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "customer",
+      "employee"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "customer",
+      "employee"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "on the left"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "loading",
+    "exp_id": "11",
+    "expression": "a man in the center wearing a blue and black jacket",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "customer",
+      "employee"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "customer",
+      "employee"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "center of frame",
+      "wearing blue and black jacket"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "mbike-trick",
+    "exp_id": "0",
+    "expression": "a biker man in a white tshirt",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "biker",
+      "motorcyclist",
+      "person"
+    ],
+    "category_candidates": [
+      "man",
+      "biker",
+      "motorcyclist",
+      "person"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing white t-shirt",
+      "riding motorcycle"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "mbike-trick",
+    "exp_id": "1",
+    "expression": "a person performing bike tricks",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "motorcyclist",
+      "rider",
+      "cyclist"
+    ],
+    "category_candidates": [
+      "person",
+      "motorcyclist",
+      "rider",
+      "cyclist"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person wearing helmet and riding motorcycle",
+      "performing drift with smoke"
+    ],
+    "final_rule_applied": "singular reference to one person",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "mbike-trick",
+    "exp_id": "2",
+    "expression": "a man on a bike",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man wearing helmet and riding motorcycle"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "mbike-trick",
+    "exp_id": "3",
+    "expression": "a person in a white helmet riding a bike",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "motorcyclist",
+      "rider",
+      "cyclist"
+    ],
+    "category_candidates": [
+      "person",
+      "motorcyclist",
+      "rider",
+      "cyclist"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person wearing white helmet",
+      "riding a bike"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "mbike-trick",
+    "exp_id": "4",
+    "expression": "a black stunt bike",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "motorcycle",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "bike",
+      "motorcycle",
+      "vehicle"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "stunt bike"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "mbike-trick",
+    "exp_id": "5",
+    "expression": "a black bike moving",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "motorcycle"
+    ],
+    "category_candidates": [
+      "bike",
+      "motorcycle"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "moving"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "mbike-trick",
+    "exp_id": "6",
+    "expression": "a bike",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "motorcycle",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "bike",
+      "motorcycle",
+      "vehicle"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "mbike-trick",
+    "exp_id": "7",
+    "expression": "a black motorbike with golden rims",
+    "status": "ok",
+    "category": "motorbike",
+    "primary_category": "motorbike",
+    "backup_categories": [
+      "bike",
+      "motorcycle",
+      "two-wheeler"
+    ],
+    "category_candidates": [
+      "motorbike",
+      "bike",
+      "motorcycle",
+      "two-wheeler"
+    ],
+    "used_category_query": "motorbike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "golden rims"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "motocross-jump",
+    "exp_id": "0",
+    "expression": "a man riding a motorbike",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "rider",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "category_candidates": [
+      "man",
+      "rider",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "one person on a motorbike",
+      "in motocross context"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "motocross-jump",
+    "exp_id": "1",
+    "expression": "a man riding a motorbike",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "rider",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "category_candidates": [
+      "man",
+      "rider",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "one person on a motorbike",
+      "in motocross context"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "motocross-jump",
+    "exp_id": "2",
+    "expression": "a man riding a motorbike",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "rider",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "category_candidates": [
+      "man",
+      "rider",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "one person on a motorbike",
+      "in motocross context"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "motocross-jump",
+    "exp_id": "3",
+    "expression": "a man wearing a green helmet",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "rider",
+      "motorcyclist",
+      "biker"
+    ],
+    "category_candidates": [
+      "man",
+      "rider",
+      "motorcyclist",
+      "biker"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a green helmet"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "motocross-jump",
+    "exp_id": "4",
+    "expression": "a green motorbike",
+    "status": "ok",
+    "category": "motorbike",
+    "primary_category": "motorbike",
+    "backup_categories": [
+      "bike",
+      "motorcycle",
+      "dirt bike"
+    ],
+    "category_candidates": [
+      "motorbike",
+      "bike",
+      "motorcycle",
+      "dirt bike"
+    ],
+    "used_category_query": "motorbike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "green color",
+      "motorbike type"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "motocross-jump",
+    "exp_id": "5",
+    "expression": "a green motorbike",
+    "status": "ok",
+    "category": "motorbike",
+    "primary_category": "motorbike",
+    "backup_categories": [
+      "bike",
+      "motorcycle",
+      "dirt bike"
+    ],
+    "category_candidates": [
+      "motorbike",
+      "bike",
+      "motorcycle",
+      "dirt bike"
+    ],
+    "used_category_query": "motorbike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "green color",
+      "motorbike type"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "motocross-jump",
+    "exp_id": "6",
+    "expression": "a motorbike",
+    "status": "ok",
+    "category": "motorbike",
+    "primary_category": "motorbike",
+    "backup_categories": [
+      "bike",
+      "motorcycle",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "motorbike",
+      "bike",
+      "motorcycle",
+      "vehicle"
+    ],
+    "used_category_query": "motorbike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "motocross-jump",
+    "exp_id": "7",
+    "expression": "a motor-bike",
+    "status": "ok",
+    "category": "motor-bike",
+    "primary_category": "motor-bike",
+    "backup_categories": [
+      "bike",
+      "motorcycle",
+      "dirt bike"
+    ],
+    "category_candidates": [
+      "motor-bike",
+      "bike",
+      "motorcycle",
+      "dirt bike"
+    ],
+    "used_category_query": "motor-bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "0",
+    "expression": "a black harness with an airbag",
+    "status": "ok",
+    "category": "parachute",
+    "primary_category": "harness",
+    "backup_categories": [
+      "parachute",
+      "gear",
+      "equipment"
+    ],
+    "category_candidates": [
+      "harness",
+      "parachute",
+      "gear",
+      "equipment"
+    ],
+    "used_category_query": "parachute",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "harness shape",
+      "airbag attached"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "1",
+    "expression": "a black harness",
+    "status": "ok",
+    "category": "paragliding gear",
+    "primary_category": "harness",
+    "backup_categories": [
+      "equipment",
+      "gear",
+      "paragliding gear"
+    ],
+    "category_candidates": [
+      "harness",
+      "equipment",
+      "gear",
+      "paragliding gear"
+    ],
+    "used_category_query": "paragliding gear",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "worn by person"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "2",
+    "expression": "a harness",
+    "status": "ok",
+    "category": "paragliding gear",
+    "primary_category": "harness",
+    "backup_categories": [
+      "equipment",
+      "gear",
+      "paragliding gear"
+    ],
+    "category_candidates": [
+      "harness",
+      "equipment",
+      "gear",
+      "paragliding gear"
+    ],
+    "used_category_query": "paragliding gear",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "3",
+    "expression": "a backpack",
+    "status": "ok",
+    "category": "backpack",
+    "primary_category": "backpack",
+    "backup_categories": [
+      "bag",
+      "pack",
+      "satchel"
+    ],
+    "category_candidates": [
+      "backpack",
+      "bag",
+      "pack",
+      "satchel"
+    ],
+    "used_category_query": "backpack",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "4",
+    "expression": "a man launching a paraglider",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "paraglider",
+      "skydiver"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "paraglider",
+      "skydiver"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person wearing helmet and gear",
+      "holding paraglider lines",
+      "on grassy hilltop"
+    ],
+    "final_rule_applied": "singular reference to one person",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "5",
+    "expression": "a person launching paragliding",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "paraglider",
+      "individual",
+      "athlete"
+    ],
+    "category_candidates": [
+      "person",
+      "paraglider",
+      "individual",
+      "athlete"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person wearing helmet and gear",
+      "person holding paragliding lines",
+      "person in motion preparing to launch"
+    ],
+    "final_rule_applied": "singular reference to one person",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "6",
+    "expression": "a man with the paraglider",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "individual",
+      "paraglider"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "individual",
+      "paraglider"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "one person wearing helmet and gear",
+      "attached to paraglider equipment"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "7",
+    "expression": "a person wearing a backpack",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "individual",
+      "human",
+      "athlete"
+    ],
+    "category_candidates": [
+      "person",
+      "individual",
+      "human",
+      "athlete"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a backpack"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "8",
+    "expression": "wing risers with cascade",
+    "status": "ok",
+    "category": "parachute",
+    "primary_category": "wing risers",
+    "backup_categories": [
+      "paraglider",
+      "parachute",
+      "wing"
+    ],
+    "category_candidates": [
+      "wing risers",
+      "paraglider",
+      "parachute",
+      "wing"
+    ],
+    "used_category_query": "parachute",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "person wearing paragliding gear",
+      "lines extending from person to wing"
+    ],
+    "final_rule_applied": "singular reference to one person with paragliding equipment",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "9",
+    "expression": "paraglider lines",
+    "status": "ok",
+    "category": "line",
+    "primary_category": "line",
+    "backup_categories": [
+      "string",
+      "cable",
+      "cord"
+    ],
+    "category_candidates": [
+      "line",
+      "string",
+      "cable",
+      "cord"
+    ],
+    "used_category_query": "line",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "lines attached to paraglider"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "10",
+    "expression": "paraglider lines",
+    "status": "ok",
+    "category": "line",
+    "primary_category": "line",
+    "backup_categories": [
+      "string",
+      "cable",
+      "cord"
+    ],
+    "category_candidates": [
+      "line",
+      "string",
+      "cable",
+      "cord"
+    ],
+    "used_category_query": "line",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "lines attached to paraglider"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "paragliding-launch",
+    "exp_id": "11",
+    "expression": "strings of a parachute",
+    "status": "ok",
+    "category": "parachute",
+    "primary_category": "string",
+    "backup_categories": [
+      "line",
+      "cord",
+      "parachute"
+    ],
+    "category_candidates": [
+      "string",
+      "line",
+      "cord",
+      "parachute"
+    ],
+    "used_category_query": "parachute",
+    "category_fallback_used": true,
+    "num_targets": 1,
+    "sub_conditions": [
+      "parachute is visible with strings attached"
+    ],
+    "final_rule_applied": "singular reference to a single set of strings",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "parkour",
+    "exp_id": "0",
+    "expression": "a man jumping across fences",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "individual",
+      "athlete"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "individual",
+      "athlete"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "jumping across fences"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "parkour",
+    "exp_id": "1",
+    "expression": "a person crossing over obstacles",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "individual",
+      "human",
+      "athlete"
+    ],
+    "category_candidates": [
+      "person",
+      "individual",
+      "human",
+      "athlete"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "crossing over obstacles"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "parkour",
+    "exp_id": "2",
+    "expression": "a parkour guy",
+    "status": "ok",
+    "category": "guy",
+    "primary_category": "guy",
+    "backup_categories": [
+      "person",
+      "athlete",
+      "man"
+    ],
+    "category_candidates": [
+      "guy",
+      "person",
+      "athlete",
+      "man"
+    ],
+    "used_category_query": "guy",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "a person performing parkour"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "parkour",
+    "exp_id": "3",
+    "expression": "a person in a greyish blue shirt",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "individual",
+      "human",
+      "man"
+    ],
+    "category_candidates": [
+      "person",
+      "individual",
+      "human",
+      "man"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing greyish blue shirt"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "0",
+    "expression": "a brown and white colored piglet",
+    "status": "ok",
+    "category": "piglet",
+    "primary_category": "piglet",
+    "backup_categories": [
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "category_candidates": [
+      "piglet",
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "used_category_query": "piglet",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown and white colored",
+      "piglet"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "1",
+    "expression": "a brown and white coloured piglet",
+    "status": "ok",
+    "category": "piglet",
+    "primary_category": "piglet",
+    "backup_categories": [
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "category_candidates": [
+      "piglet",
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "used_category_query": "piglet",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown and white coloured",
+      "piglet"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "2",
+    "expression": "a brown and white colored piglet",
+    "status": "ok",
+    "category": "piglet",
+    "primary_category": "piglet",
+    "backup_categories": [
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "category_candidates": [
+      "piglet",
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "used_category_query": "piglet",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown and white colored",
+      "piglet"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "3",
+    "expression": "a brown and white pig",
+    "status": "ok",
+    "category": "pig",
+    "primary_category": "pig",
+    "backup_categories": [
+      "animal",
+      "piglet",
+      "boar"
+    ],
+    "category_candidates": [
+      "pig",
+      "animal",
+      "piglet",
+      "boar"
+    ],
+    "used_category_query": "pig",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown and white coloration",
+      "pig"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "4",
+    "expression": "a brown piglet in the middle",
+    "status": "ok",
+    "category": "piglet",
+    "primary_category": "piglet",
+    "backup_categories": [
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "category_candidates": [
+      "piglet",
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "used_category_query": "piglet",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown",
+      "in the middle"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "5",
+    "expression": "a brown piglet",
+    "status": "ok",
+    "category": "piglet",
+    "primary_category": "piglet",
+    "backup_categories": [
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "category_candidates": [
+      "piglet",
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "used_category_query": "piglet",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown coloration",
+      "piglet size"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "6",
+    "expression": "a brown piglet in the middle",
+    "status": "ok",
+    "category": "piglet",
+    "primary_category": "piglet",
+    "backup_categories": [
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "category_candidates": [
+      "piglet",
+      "pig",
+      "pork",
+      "boar"
+    ],
+    "used_category_query": "piglet",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "brown",
+      "in the middle"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "7",
+    "expression": "a fully brown pig in the centre",
+    "status": "ok",
+    "category": "pig",
+    "primary_category": "pig",
+    "backup_categories": [
+      "animal",
+      "piglet",
+      "boar"
+    ],
+    "category_candidates": [
+      "pig",
+      "animal",
+      "piglet",
+      "boar"
+    ],
+    "used_category_query": "pig",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "fully brown",
+      "in the centre"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "8",
+    "expression": "an adult pig on the right",
+    "status": "ok",
+    "category": "pig",
+    "primary_category": "pig",
+    "backup_categories": [
+      "animal",
+      "boar",
+      "sow"
+    ],
+    "category_candidates": [
+      "pig",
+      "animal",
+      "boar",
+      "sow"
+    ],
+    "used_category_query": "pig",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "adult",
+      "on the right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "9",
+    "expression": "an adult pig",
+    "status": "ok",
+    "category": "pig",
+    "primary_category": "pig",
+    "backup_categories": [
+      "boar",
+      "sow"
+    ],
+    "category_candidates": [
+      "pig",
+      "boar",
+      "sow"
+    ],
+    "used_category_query": "pig",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "larger pig with black and white markings"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "10",
+    "expression": "a pig on the right",
+    "status": "ok",
+    "category": "pig",
+    "primary_category": "pig",
+    "backup_categories": [
+      "animal",
+      "boar",
+      "sow"
+    ],
+    "category_candidates": [
+      "pig",
+      "animal",
+      "boar",
+      "sow"
+    ],
+    "used_category_query": "pig",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "pig",
+      "on the right"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "pigs",
+    "exp_id": "11",
+    "expression": "a black colored pig",
+    "status": "ok",
+    "category": "pig",
+    "primary_category": "pig",
+    "backup_categories": [
+      "animal",
+      "boar",
+      "sow"
+    ],
+    "category_candidates": [
+      "pig",
+      "animal",
+      "boar",
+      "sow"
+    ],
+    "used_category_query": "pig",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black colored"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "scooter-black",
+    "exp_id": "0",
+    "expression": "a man in a suit riding a scooter",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "driver",
+      "cyclist"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "driver",
+      "cyclist"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "in a suit",
+      "riding a scooter"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "scooter-black",
+    "exp_id": "1",
+    "expression": "a man in a suit riding on a black scooter",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "driver",
+      "cyclist"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "driver",
+      "cyclist"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man in suit",
+      "riding a black scooter"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "scooter-black",
+    "exp_id": "2",
+    "expression": "a man riding a scooter",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "riding a scooter"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "scooter-black",
+    "exp_id": "3",
+    "expression": "a man wearing a white helmet riding a scooter",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "cyclist",
+      "motorcyclist"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "wearing a white helmet",
+      "riding a scooter"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "scooter-black",
+    "exp_id": "4",
+    "expression": "a black scooter ridden by a man",
+    "status": "ok",
+    "category": "scooter",
+    "primary_category": "scooter",
+    "backup_categories": [
+      "motorcycle",
+      "bike",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "scooter",
+      "motorcycle",
+      "bike",
+      "vehicle"
+    ],
+    "used_category_query": "scooter",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black scooter",
+      "ridden by a man"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "scooter-black",
+    "exp_id": "5",
+    "expression": "a black scooter being ridden in a street",
+    "status": "ok",
+    "category": "scooter",
+    "primary_category": "scooter",
+    "backup_categories": [
+      "motorcycle",
+      "vehicle",
+      "bike"
+    ],
+    "category_candidates": [
+      "scooter",
+      "motorcycle",
+      "vehicle",
+      "bike"
+    ],
+    "used_category_query": "scooter",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black",
+      "being ridden",
+      "in a street"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "scooter-black",
+    "exp_id": "6",
+    "expression": "a black scooter",
+    "status": "runtime_error",
+    "error": "stack expects each tensor to be equal size, but got [3, 1080, 1920] at entry 0 and [3, 480, 854] at entry 1",
+    "category": null,
+    "num_targets": null,
+    "sub_conditions": [],
+    "final_rule_applied": null,
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "scooter-black",
+    "exp_id": "7",
+    "expression": "a black heavy bike with a bmw logo in the middle of the road",
+    "status": "ok",
+    "category": "bike",
+    "primary_category": "bike",
+    "backup_categories": [
+      "motorcycle",
+      "scooter",
+      "vehicle"
+    ],
+    "category_candidates": [
+      "bike",
+      "motorcycle",
+      "scooter",
+      "vehicle"
+    ],
+    "used_category_query": "bike",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black",
+      "heavy",
+      "with a bmw logo",
+      "in the middle of the road"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "0",
+    "expression": "a black shooting gun",
+    "status": "ok",
+    "category": "gun",
+    "primary_category": "gun",
+    "backup_categories": [
+      "weapon",
+      "firearm",
+      "rifle"
+    ],
+    "category_candidates": [
+      "gun",
+      "weapon",
+      "firearm",
+      "rifle"
+    ],
+    "used_category_query": "gun",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black color",
+      "shooting action"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "1",
+    "expression": "a black rifle",
+    "status": "ok",
+    "category": "rifle",
+    "primary_category": "rifle",
+    "backup_categories": [
+      "gun",
+      "weapon",
+      "assault rifle"
+    ],
+    "category_candidates": [
+      "rifle",
+      "gun",
+      "weapon",
+      "assault rifle"
+    ],
+    "used_category_query": "rifle",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "object is a rifle",
+      "object is black"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "2",
+    "expression": "a gun",
+    "status": "ok",
+    "category": "gun",
+    "primary_category": "gun",
+    "backup_categories": [
+      "weapon",
+      "firearm",
+      "rifle"
+    ],
+    "category_candidates": [
+      "gun",
+      "weapon",
+      "firearm",
+      "rifle"
+    ],
+    "used_category_query": "gun",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "3",
+    "expression": "an automatic rifle",
+    "status": "ok",
+    "category": "rifle",
+    "primary_category": "rifle",
+    "backup_categories": [
+      "gun",
+      "weapon",
+      "firearm"
+    ],
+    "category_candidates": [
+      "rifle",
+      "gun",
+      "weapon",
+      "firearm"
+    ],
+    "used_category_query": "rifle",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "held by person",
+      "visible in frame"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "4",
+    "expression": "a black man",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "individual",
+      "human"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "individual",
+      "human"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "black",
+      "man"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "5",
+    "expression": "a person shooting with a rifle",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "soldier",
+      "fighter",
+      "agent"
+    ],
+    "category_candidates": [
+      "person",
+      "soldier",
+      "fighter",
+      "agent"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "holding a rifle",
+      "shooting action visible"
+    ],
+    "final_rule_applied": "singular reference to one person",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "6",
+    "expression": "a man",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "soldier",
+      "agent"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "soldier",
+      "agent"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "7",
+    "expression": "a person holding a rifle",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "individual",
+      "human",
+      "soldier"
+    ],
+    "category_candidates": [
+      "person",
+      "individual",
+      "human",
+      "soldier"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "holding a rifle"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "8",
+    "expression": "a rope",
+    "status": "ok",
+    "category": "rope",
+    "primary_category": "rope",
+    "backup_categories": [
+      "string",
+      "cord",
+      "line"
+    ],
+    "category_candidates": [
+      "rope",
+      "string",
+      "cord",
+      "line"
+    ],
+    "used_category_query": "rope",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "9",
+    "expression": "a rope which the guy is hanging on",
+    "status": "ok",
+    "category": "rope",
+    "primary_category": "rope",
+    "backup_categories": [
+      "cord",
+      "line",
+      "string"
+    ],
+    "category_candidates": [
+      "rope",
+      "cord",
+      "line",
+      "string"
+    ],
+    "used_category_query": "rope",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "guy is hanging on the rope"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "10",
+    "expression": "a rope",
+    "status": "ok",
+    "category": "rope",
+    "primary_category": "rope",
+    "backup_categories": [
+      "string",
+      "cord",
+      "line"
+    ],
+    "category_candidates": [
+      "rope",
+      "string",
+      "cord",
+      "line"
+    ],
+    "used_category_query": "rope",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "shooting",
+    "exp_id": "11",
+    "expression": "a rope",
+    "status": "ok",
+    "category": "rope",
+    "primary_category": "rope",
+    "backup_categories": [
+      "string",
+      "cord",
+      "line"
+    ],
+    "category_candidates": [
+      "rope",
+      "string",
+      "cord",
+      "line"
+    ],
+    "used_category_query": "rope",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "0",
+    "expression": "a blue wooden car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "cart",
+      "wagon"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "cart",
+      "wagon"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "blue",
+      "wooden",
+      "car"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "1",
+    "expression": "a blue wooden car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "cart",
+      "wagon"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "cart",
+      "wagon"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "blue",
+      "wooden",
+      "car"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "2",
+    "expression": "a blue car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "cart",
+      "barrel"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "cart",
+      "barrel"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "blue color",
+      "cart-like structure with wheels"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "3",
+    "expression": "a go-cart type car",
+    "status": "ok",
+    "category": "car",
+    "primary_category": "car",
+    "backup_categories": [
+      "vehicle",
+      "cart",
+      "race car"
+    ],
+    "category_candidates": [
+      "car",
+      "vehicle",
+      "cart",
+      "race car"
+    ],
+    "used_category_query": "car",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "blue vehicle with wheels and driver",
+      "constructed from barrels and metal",
+      "on a ramp in street setting"
+    ],
+    "final_rule_applied": "singular reference to one object",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "4",
+    "expression": "a man in a white helmet driving a wooden car",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "driver",
+      "person",
+      "individual"
+    ],
+    "category_candidates": [
+      "man",
+      "driver",
+      "person",
+      "individual"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man wearing white helmet",
+      "driving wooden car"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "5",
+    "expression": "a man in a white helmet driving a wooden car",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "driver",
+      "person",
+      "individual"
+    ],
+    "category_candidates": [
+      "man",
+      "driver",
+      "person",
+      "individual"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man wearing white helmet",
+      "driving wooden car"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "6",
+    "expression": "a man driving a car",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "driver",
+      "person"
+    ],
+    "category_candidates": [
+      "man",
+      "driver",
+      "person"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man wearing helmet and driving blue cart",
+      "man seated in vehicle with steering wheel"
+    ],
+    "final_rule_applied": "singular reference to one man driving a car",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "7",
+    "expression": "a person driving the go cart",
+    "status": "runtime_error",
+    "error": "stack expects each tensor to be equal size, but got [3, 648, 1280] at entry 0 and [3, 480, 854] at entry 1",
+    "category": null,
+    "num_targets": null,
+    "sub_conditions": [],
+    "final_rule_applied": null,
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "8",
+    "expression": "a man wearing a white shirt on a wooden car without a helmet",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "driver",
+      "participant"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "driver",
+      "participant"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a white shirt",
+      "on a wooden car",
+      "without a helmet"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "9",
+    "expression": "a man wearing a white shirt on a wooden car without a helmet",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "driver",
+      "participant"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "driver",
+      "participant"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "wearing a white shirt",
+      "on a wooden car",
+      "without a helmet"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "10",
+    "expression": "a man in a white shirt standing on a car",
+    "status": "ok",
+    "category": "man",
+    "primary_category": "man",
+    "backup_categories": [
+      "person",
+      "individual",
+      "driver"
+    ],
+    "category_candidates": [
+      "man",
+      "person",
+      "individual",
+      "driver"
+    ],
+    "used_category_query": "man",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "man",
+      "in white shirt",
+      "standing on a car"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "bbox"
+  },
+  {
+    "video_id": "soapbox",
+    "exp_id": "11",
+    "expression": "person at the back of the go-cart without a helmet",
+    "status": "ok",
+    "category": "person",
+    "primary_category": "person",
+    "backup_categories": [
+      "driver",
+      "participant",
+      "racer"
+    ],
+    "category_candidates": [
+      "person",
+      "driver",
+      "participant",
+      "racer"
+    ],
+    "used_category_query": "person",
+    "category_fallback_used": false,
+    "num_targets": 1,
+    "sub_conditions": [
+      "at the back of the go-cart",
+      "without a helmet"
+    ],
+    "final_rule_applied": "singular reference",
+    "visualization_style_config": "mask",
+    "effective_visualization_style": "mask"
+  }
+]

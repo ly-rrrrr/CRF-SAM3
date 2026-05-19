@@ -1,0 +1,147 @@
+CRF-SAM3-ATTN 论文参数汇总（可直接用于 Method/Experiment）
+
+说明
+- 本文件汇总“建议在论文中明确汇报”的关键参数。
+- 主要正式配置来源：crf_sam3_attn/config.yaml。
+- tiny 调试配置来源：crf_sam3_attn/config_tiny.yaml（仅用于小规模调试/排错）。
+
+==================================================
+1. 主干模型与训练方式
+==================================================
+- Backbone: Qwen3-VL（路径由 base_config 中 model.mllm_path 指定）
+- 训练范式: LoRA 参数高效微调（PEFT）
+- 视觉编码器冻结: freeze_visual_encoder = true
+- 训练脚本优化器: AdamW
+- 精度: dtype 由 base_config.pipeline.dtype 指定（常用 bfloat16）
+- 设备: 支持单卡/多卡（device_map 可设为 auto）
+
+==================================================
+2. LoRA 参数（model.lora）
+==================================================
+- rank (r): 16
+- alpha: 32
+- dropout: 0.05
+- bias: none（代码固定）
+- task_type: CAUSAL_LM（代码固定）
+- target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+==================================================
+3. 损失设计与关键超参数
+==================================================
+总损失:
+- L_total = L_cls + lambda * L_align
+- lambda = attn_loss_weight = 0.3
+
+3.1 Listwise 排序损失（L_cls）
+- listwise 模式: data.listwise = true
+- 温度系数: listwise_tau = 1.0
+- 负样本策略: listwise_neg_policy = all
+- 无正样本兜底: listwise_force_pos = true
+- 公式（实现）:
+  L_cls = logsumexp(s/tau) - logsumexp(s_pos/tau)
+
+3.2 软掩码对齐损失（L_align）
+- loss_type = feature（当前主用）
+- 对齐层: attn_loss_layer = -1（最后一层）
+- 稳定项: attn_loss_eps = 1e-6
+- 相似度类型: align_similarity = cosine
+- softmax 温度: align_tau = 1.0
+
+3.3 候选打分形式（与推理一致性相关）
+- score_type = prob（使用 Yes/No 概率）
+- p_yes = softmax([logit_yes, logit_no])[Yes]
+- mask_context_alpha = 0.8（仅 score_type=mask_align 时生效）
+- context_mode = full（仅 score_type=mask_align 时生效）
+
+==================================================
+4. 数据构造与监督阈值（data）
+==================================================
+- 训练 split:
+  - config.yaml: split = null（跟随 base_config.dataset.split）
+  - config_tiny.yaml: split = train
+- 每个样本帧数 num_frames:
+  - config.yaml: 8
+  - config_tiny.yaml: 4
+- 候选可视化方式: mask_style = mask
+- 正样本阈值: pos_iou = 0.5
+- 负样本阈值: neg_iou = 0.1
+- 单样本负采样概率: sample_neg_prob = 0.5（仅非 listwise 模式显著）
+- listwise 候选上限:
+  - config.yaml: listwise_max_candidates = null（不限制）
+  - config_tiny.yaml: listwise_max_candidates = 10
+
+离线数据模式
+- offline_mode = true
+- offline_prepare = false（训练阶段）
+- offline_cache_root = crf_sam3_attn/offline_cache
+- offline_strict = true
+- offline_overwrite = false
+- max_video_frames:
+  - config_tiny.yaml: 200（用于离线构建时跳过超长视频）
+
+==================================================
+5. 训练超参数（train）
+==================================================
+- epochs: 1
+- batch_size: 1（脚本当前固定仅支持 1）
+- learning_rate: 1e-5
+- weight_decay: 0.0
+- grad_accum: 1
+- max_steps: -1（全量）
+
+I/O 与保存
+- config.yaml:
+  - output_dir: crf_sam3_attn_outputs
+  - save_every: 200
+  - save_merged: true
+  - merged_output_dir: crf_sam3_attn_outputs_merged
+- config_tiny.yaml:
+  - output_dir: crf_sam3_attn_outputs_tiny
+  - save_every: 0
+  - save_merged: true
+  - merged_output_dir: crf_sam3_attn_outputs_tiny_merged
+
+数据加载
+- num_workers:
+  - config.yaml: 2
+  - config_tiny.yaml: 0
+
+==================================================
+6. 注意力后端与显存相关参数（model）
+==================================================
+- attn_implementation:
+  - 当前配置: sdpa（更省显存，默认不导出显式 attention map）
+- device_map: auto（多卡切分）
+- max_memory: null（可按卡设置显存上限）
+- offload_folder: null
+- offload_state_dict: true
+- low_cpu_mem_usage: true
+
+==================================================
+7. 训练期提示词（固定模板）
+==================================================
+训练代码中使用固定 Yes/No 模板（model._build_prompt）：
+"Given the referring expression, judge whether the masked object in the frames matches it. Answer Yes or No.\nExpression: {expression}"
+
+建议论文中说明：
+- 训练与推理应保持 Yes/No 语义与评分口径一致（使用 P(Yes) 作为排序分数）。
+
+==================================================
+8. 论文建议最少汇报项（可直接放表格）
+==================================================
+- Backbone / 参数规模
+- LoRA: r, alpha, dropout, target_modules
+- 损失: lambda(attn_loss_weight), listwise_tau, align_tau, align_similarity
+- 监督阈值: pos_iou, neg_iou
+- 数据帧数: num_frames
+- 候选策略: listwise + listwise_max_candidates
+- 优化器: AdamW + lr + weight_decay + grad_accum + epochs
+- 精度与并行: dtype, device_map
+- 训练/推理评分口径: score_type=prob, 分数=P(Yes)

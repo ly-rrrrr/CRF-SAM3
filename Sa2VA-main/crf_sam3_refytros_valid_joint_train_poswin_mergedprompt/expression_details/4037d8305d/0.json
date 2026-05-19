@@ -1,0 +1,42 @@
+{
+  "video_id": "4037d8305d",
+  "exp_id": "0",
+  "expression": "a lizard on the floor smells the foot of a person with socks",
+  "category": "lizard",
+  "primary_category": "lizard",
+  "backup_categories": [
+    "reptile",
+    "iguana",
+    "animal"
+  ],
+  "category_candidates": [
+    "lizard",
+    "reptile",
+    "iguana",
+    "animal"
+  ],
+  "used_category_query": "lizard",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "lizard on the floor",
+    "smells the foot of a person with socks"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.970687747001648,
+      "prob_yes": 0.970687747001648,
+      "prob_partial": 0.0,
+      "prob_no": 0.02931223064661026,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

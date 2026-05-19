@@ -1,0 +1,58 @@
+{
+  "video_id": "1c30621ee530",
+  "exp_id": "0",
+  "expression": "Two black bears fighting",
+  "category": "bear",
+  "primary_category": "bear",
+  "backup_categories": [
+    "animal",
+    "mammal"
+  ],
+  "category_candidates": [
+    "bear",
+    "animal",
+    "mammal"
+  ],
+  "used_category_query": "bear",
+  "category_fallback_used": false,
+  "num_targets": 2,
+  "sub_conditions": [
+    "two animals",
+    "black fur",
+    "fighting"
+  ],
+  "final_rule_applied": "plural without strong constraints",
+  "num_candidates": 2,
+  "num_selected": 2,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.037326883524656296,
+      "prob_yes": 0.037326883524656296,
+      "prob_partial": 0.0,
+      "prob_no": 0.9626730680465698,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.3775406777858734,
+      "prob_yes": 0.3775406777858734,
+      "prob_partial": 0.0,
+      "prob_no": 0.622459352016449,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1,
+    0
+  ],
+  "gt_obj_ids": []
+}

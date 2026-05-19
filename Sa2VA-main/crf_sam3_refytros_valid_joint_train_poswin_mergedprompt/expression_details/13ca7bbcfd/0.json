@@ -1,0 +1,40 @@
+{
+  "video_id": "13ca7bbcfd",
+  "exp_id": "0",
+  "expression": "the white toilet is behind the two sinks in the bathroom",
+  "category": "toilet",
+  "primary_category": "toilet",
+  "backup_categories": [
+    "bathroom fixture",
+    "sanitaryware"
+  ],
+  "category_candidates": [
+    "toilet",
+    "bathroom fixture",
+    "sanitaryware"
+  ],
+  "used_category_query": "toilet",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "white",
+    "behind the two sinks"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9740425944328308,
+      "prob_yes": 0.9740425944328308,
+      "prob_partial": 0.0,
+      "prob_no": 0.02595735527575016,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

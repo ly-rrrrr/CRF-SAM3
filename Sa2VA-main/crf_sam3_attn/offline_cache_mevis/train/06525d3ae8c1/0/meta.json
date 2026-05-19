@@ -1,0 +1,1 @@
+{"video_id": "06525d3ae8c1", "exp_id": 0, "expression": "Cow standing still", "category": "buffalo", "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/mevis/train/JPEGImages/06525d3ae8c1", "frame_pad": 5, "obj_ids": [0], "iou_map": {"0": 0.9615605045567074}, "frame_indices": {"0": [22, 23, 24]}}

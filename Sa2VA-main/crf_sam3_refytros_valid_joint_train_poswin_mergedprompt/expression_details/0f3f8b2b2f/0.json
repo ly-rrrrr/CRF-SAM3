@@ -1,0 +1,42 @@
+{
+  "video_id": "0f3f8b2b2f",
+  "exp_id": "0",
+  "expression": "a black and white pointy lizard is sitting on brown rocks",
+  "category": "reptile",
+  "primary_category": "lizard",
+  "backup_categories": [
+    "reptile",
+    "creature",
+    "animal"
+  ],
+  "category_candidates": [
+    "lizard",
+    "reptile",
+    "creature",
+    "animal"
+  ],
+  "used_category_query": "reptile",
+  "category_fallback_used": true,
+  "num_targets": 1,
+  "sub_conditions": [
+    "black and white pointy",
+    "sitting on brown rocks"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9875683188438416,
+      "prob_yes": 0.9875683188438416,
+      "prob_partial": 0.0,
+      "prob_no": 0.012431650422513485,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

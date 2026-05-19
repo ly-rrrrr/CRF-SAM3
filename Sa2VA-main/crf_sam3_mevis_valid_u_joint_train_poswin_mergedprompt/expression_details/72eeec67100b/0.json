@@ -1,0 +1,68 @@
+{
+  "video_id": "72eeec67100b",
+  "exp_id": "0",
+  "expression": "Three dogs constantly moving.",
+  "category": "dog",
+  "primary_category": "dog",
+  "backup_categories": [
+    "canine",
+    "animal",
+    "pet"
+  ],
+  "category_candidates": [
+    "dog",
+    "canine",
+    "animal",
+    "pet"
+  ],
+  "used_category_query": "dog",
+  "category_fallback_used": false,
+  "num_targets": 3,
+  "sub_conditions": [],
+  "final_rule_applied": "explicit number in the expression",
+  "num_candidates": 3,
+  "num_selected": 3,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9626730680465698,
+      "prob_yes": 0.9626730680465698,
+      "prob_partial": 0.0,
+      "prob_no": 0.037326883524656296,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.977022647857666,
+      "prob_yes": 0.977022647857666,
+      "prob_partial": 0.0,
+      "prob_no": 0.022977370768785477,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.957912266254425,
+      "prob_yes": 0.957912266254425,
+      "prob_partial": 0.0,
+      "prob_no": 0.04208773002028465,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1,
+    0,
+    2
+  ],
+  "gt_obj_ids": []
+}

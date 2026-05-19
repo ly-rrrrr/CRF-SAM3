@@ -1,0 +1,69 @@
+{
+  "video_id": "4395aaf49024",
+  "exp_id": "0",
+  "expression": "The dog lying down in the first frame",
+  "category": "dog",
+  "primary_category": "dog",
+  "backup_categories": [
+    "canine",
+    "pet",
+    "animal"
+  ],
+  "category_candidates": [
+    "dog",
+    "canine",
+    "pet",
+    "animal"
+  ],
+  "used_category_query": "dog",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "lying down",
+    "in the first frame"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.06008664891123772,
+      "prob_yes": 0.06008664891123772,
+      "prob_partial": 0.0,
+      "prob_no": 0.9399133324623108,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9859364032745361,
+      "prob_yes": 0.9859364032745361,
+      "prob_partial": 0.0,
+      "prob_no": 0.014063626527786255,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.053403329104185104,
+      "prob_yes": 0.053403329104185104,
+      "prob_partial": 0.0,
+      "prob_no": 0.9465966820716858,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": []
+}

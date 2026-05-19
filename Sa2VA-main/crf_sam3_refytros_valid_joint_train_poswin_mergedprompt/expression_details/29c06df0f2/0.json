@@ -1,0 +1,39 @@
+{
+  "video_id": "29c06df0f2",
+  "exp_id": "0",
+  "expression": "the eyeglasses are being worn by a person wearing a yellow shirt and tan coat",
+  "category": "eyeglasses",
+  "primary_category": "eyeglasses",
+  "backup_categories": [
+    "glasses",
+    "spectacles"
+  ],
+  "category_candidates": [
+    "eyeglasses",
+    "glasses",
+    "spectacles"
+  ],
+  "used_category_query": "eyeglasses",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "person wearing yellow shirt and tan coat"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9820137619972229,
+      "prob_yes": 0.9820137619972229,
+      "prob_partial": 0.0,
+      "prob_no": 0.01798621006309986,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

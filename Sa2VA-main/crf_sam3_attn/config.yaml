@@ -1,0 +1,79 @@
+base_config: configs/crf_sam3_config.yaml  # base config path
+
+seed: 42  # random seed
+
+model:
+  attn_loss_weight: 0.3  # weight for attn/feature loss
+  attn_loss_layer: -1  # which layer to hook (-1 = last)
+  attn_loss_eps: 1e-6  # numerical stability for loss
+  freeze_visual_encoder: true  # freeze vision encoder
+  attn_implementation: sdpa  # attention backend
+  loss_type: feature  # attn or feature
+  align_tau: 1.0  # temperature for feature align
+  align_similarity: cosine  # cosine or dot
+  score_type: prob  # mask_align (mask池化相似度) / logit / prob
+  mask_context_alpha: 0.8  # mask相似度权重 (1-alpha 给背景)
+  context_mode: full  # full (全图) or outside (mask外区域)
+  listwise_tau: 1.0  # listwise温度系数
+  listwise_neg_policy: all  # all=非正样本都作为负样本, threshold=仅neg_iou以下
+  listwise_force_pos: true  # 无正样本时用最大IoU兜底
+  debug_logits: false  # 打印logits信息用于调试
+  debug_logits_topk: 5  # logits top-k tokens
+  device_map: auto  # auto=多卡切分, null/none=单卡
+  max_memory: null  # 可选: {cuda:0: "20GiB", cuda:1: "20GiB"}
+  offload_folder: null  # 可选: CPU offload 目录
+  offload_state_dict: true  # 允许 CPU offload
+  low_cpu_mem_usage: true  # 降低CPU占用
+  lora:  # LoRA config
+    r: 16  # LoRA rank
+    alpha: 32  # LoRA alpha
+    dropout: 0.05  # LoRA dropout
+    target_modules:  # LoRA target module keywords
+      - q_proj
+      - k_proj
+      - v_proj
+      - o_proj
+      - gate_proj
+      - up_proj
+      - down_proj
+
+train:
+  epochs: 1  # training epochs
+  batch_size: 1  # batch size (fixed to 1)
+  lr: 1e-5  # learning rate
+  weight_decay: 0.0  # weight decay
+  grad_accum: 1  # gradient accumulation steps
+  num_workers: 2  # dataloader workers
+  max_steps: -1  # max steps (-1 for full)
+  log_every: 10  # log frequency
+  save_every: 200  # checkpoint frequency
+  output_dir: crf_sam3_attn_outputs  # output directory
+  save_merged: true  # save merged full model
+  merged_output_dir: crf_sam3_attn_outputs_merged  # merged output dir
+
+data:
+  split: null  # use base config split
+  num_frames: 8  # frames per sample
+  mask_style: mask  # mask or bbox overlay
+  pos_iou: 0.5  # positive IoU threshold
+  neg_iou: 0.1  # negative IoU threshold
+  sample_neg_prob: 0.5  # negative sampling prob
+  listwise: true  # 返回该表达式的全部候选
+  listwise_max_candidates: null  # null=不限制候选数量
+  max_videos: null  # limit videos
+  max_expressions: null  # limit expressions
+  cache_sam3: false  # cache SAM3 results (online)
+  category_source: concept  # concept or expression
+  offline_mode: true  # read offline cache
+  offline_cache_root: crf_sam3_attn/offline_cache  # offline cache root
+  offline_prepare: false  # true to prepare cache
+  offline_overwrite: false  # overwrite cache
+  offline_strict: true  # error if cache missing
+
+debug:
+  enable: false  # enable debug logging
+  log_every: 50  # debug log frequency
+  save_every: 0  # save debug frames frequency
+  max_save: 0  # max debug saves
+  save_dir: crf_sam3_attn_debug  # debug output dir
+  log_prompt: false  # print prompt text

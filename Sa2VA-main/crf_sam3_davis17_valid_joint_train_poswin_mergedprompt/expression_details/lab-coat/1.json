@@ -1,0 +1,58 @@
+{
+  "video_id": "lab-coat",
+  "exp_id": "1",
+  "expression": "a pink cell phone in a girl's hand",
+  "category": "cell phone",
+  "primary_category": "cell phone",
+  "backup_categories": [
+    "phone",
+    "device",
+    "mobile phone"
+  ],
+  "category_candidates": [
+    "cell phone",
+    "phone",
+    "device",
+    "mobile phone"
+  ],
+  "used_category_query": "cell phone",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "pink color",
+    "held by a girl"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 2,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.005911069456487894,
+      "prob_yes": 0.005911069456487894,
+      "prob_partial": 0.0,
+      "prob_no": 0.9940890073776245,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.020332353189587593,
+      "prob_yes": 0.020332353189587593,
+      "prob_partial": 0.0,
+      "prob_no": 0.9796676635742188,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

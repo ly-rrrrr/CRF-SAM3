@@ -1,0 +1,44 @@
+{
+  "video_id": "1723c3e35cc7",
+  "exp_id": "0",
+  "expression": "Human hand moving inside birdcage",
+  "category": "hand",
+  "primary_category": "hand",
+  "backup_categories": [
+    "finger",
+    "arm",
+    "wrist"
+  ],
+  "category_candidates": [
+    "hand",
+    "finger",
+    "arm",
+    "wrist"
+  ],
+  "used_category_query": "hand",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9669140577316284,
+      "prob_yes": 0.9669140577316284,
+      "prob_partial": 0.0,
+      "prob_no": 0.03308597952127457,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": []
+}

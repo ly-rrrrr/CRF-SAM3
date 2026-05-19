@@ -1,0 +1,12 @@
+{
+  "videos_total_in_meta": 30,
+  "videos_processed": 30,
+  "expressions_processed": 238,
+  "expressions_skipped_existing": 0,
+  "missing_frames_filled_as_background": 1250,
+  "output_dir": "/mnt/csip-500/share/kongjiawei/Sa2VA-main/crf_sam3_davis17_valid_joint_train_poswin_mergedprompt",
+  "scores_path": "/mnt/csip-500/share/kongjiawei/Sa2VA-main/crf_sam3_davis17_valid_joint_train_poswin_mergedprompt/scores.json",
+  "frame_coverage_path": "/mnt/csip-500/share/kongjiawei/Sa2VA-main/crf_sam3_davis17_valid_joint_train_poswin_mergedprompt/frame_coverage.json",
+  "video_filter": null,
+  "expression_category_path": "/mnt/csip-500/share/kongjiawei/Sa2VA-main/crf_sam3_davis17_valid_joint_train_poswin_mergedprompt/expression_category_info.json"
+}

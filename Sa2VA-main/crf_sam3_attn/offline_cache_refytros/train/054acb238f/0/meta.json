@@ -1,0 +1,60 @@
+{
+  "video_id": "054acb238f",
+  "exp_id": 0,
+  "expression": "a grey, white and brown owl standing in front of a garage door",
+  "category": "owl",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "owl",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/054acb238f",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.9667929003688813
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "max_j": 0.9667929003688813,
+  "sum_j": 0.9667929003688813,
+  "mean_j": 0.9667929003688813,
+  "num_candidates": 1
+}

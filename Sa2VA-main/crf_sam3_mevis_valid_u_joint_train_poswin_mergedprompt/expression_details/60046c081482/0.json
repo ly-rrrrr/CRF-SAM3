@@ -1,0 +1,79 @@
+{
+  "video_id": "60046c081482",
+  "exp_id": "0",
+  "expression": "giraffe resting on the ground",
+  "category": "giraffe",
+  "primary_category": "giraffe",
+  "backup_categories": [
+    "animal",
+    "mammal",
+    "herbivore"
+  ],
+  "category_candidates": [
+    "giraffe",
+    "animal",
+    "mammal",
+    "herbivore"
+  ],
+  "used_category_query": "giraffe",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "resting on the ground"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 4,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.00970847625285387,
+      "prob_yes": 0.00970847625285387,
+      "prob_partial": 0.0,
+      "prob_no": 0.9902915358543396,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9241418242454529,
+      "prob_yes": 0.9241418242454529,
+      "prob_partial": 0.0,
+      "prob_no": 0.07585818320512772,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.00970847625285387,
+      "prob_yes": 0.00970847625285387,
+      "prob_partial": 0.0,
+      "prob_no": 0.9902915358543396,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.006692850962281227,
+      "prob_yes": 0.006692850962281227,
+      "prob_partial": 0.0,
+      "prob_no": 0.9933071732521057,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": []
+}

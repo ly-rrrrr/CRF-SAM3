@@ -1,0 +1,79 @@
+{
+  "video_id": "04735c5030",
+  "exp_id": 0,
+  "expression": "a cat playing with a toy on a chair",
+  "category": "cat",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "cat",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/04735c5030",
+  "frame_pad": 5,
+  "obj_ids": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "iou_map": {
+    "0": 1.4971335133187242e-07,
+    "1": 0.9162788036508678,
+    "2": 0.0,
+    "3": 0.0
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "2": [
+      3
+    ],
+    "3": [
+      3,
+      16,
+      17,
+      18
+    ]
+  },
+  "max_j": 0.9162788036508678,
+  "sum_j": 0.9162789533642192,
+  "mean_j": 0.2290697383410548,
+  "num_candidates": 4
+}

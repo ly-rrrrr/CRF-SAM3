@@ -1,0 +1,21 @@
+Please observe the following image pairs.
+
+For each pair:
+- Image G_i is the full global scene.
+- Image L_i is a close-up crop of the candidate object from Image G_i.
+
+Use Image L_i as the primary evidence to judge the object's attributes, actions, and identity.
+Use Image G_i only for spatial context and relationships.
+
+Number of image pairs: {num_pairs}
+
+Referring Expression: "{referring_expression}"
+
+Question: Does the cropped object match the referring expression?
+
+Decision rules:
+1. Yes (Perfect Match): All core conditions are satisfied.
+2. Partial (Near Match): Core conditions are satisfied, but minor details are uncertain or slightly mismatched.
+3. No (Mismatch): Any core condition is violated or the object is clearly different.
+
+Answer with one word only: Yes, Partial, or No.

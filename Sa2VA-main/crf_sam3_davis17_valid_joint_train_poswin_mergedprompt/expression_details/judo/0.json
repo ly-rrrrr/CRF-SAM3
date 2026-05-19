@@ -1,0 +1,103 @@
+{
+  "video_id": "judo",
+  "exp_id": "0",
+  "expression": "a man with a blue belt on the right",
+  "category": "man",
+  "primary_category": "man",
+  "backup_categories": [
+    "person",
+    "practitioner",
+    "judo practitioner"
+  ],
+  "category_candidates": [
+    "man",
+    "person",
+    "practitioner",
+    "judo practitioner"
+  ],
+  "used_category_query": "man",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "man",
+    "with a blue belt",
+    "on the right"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 6,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    5
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.03308597952127457,
+      "prob_yes": 0.03308597952127457,
+      "prob_partial": 0.0,
+      "prob_no": 0.9669140577316284,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.04208773002028465,
+      "prob_yes": 0.04208773002028465,
+      "prob_partial": 0.0,
+      "prob_no": 0.957912266254425,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.0035936026833951473,
+      "prob_yes": 0.0035936026833951473,
+      "prob_partial": 0.0,
+      "prob_no": 0.9964063763618469,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.007577241398394108,
+      "prob_yes": 0.007577241398394108,
+      "prob_partial": 0.0,
+      "prob_no": 0.9924227595329285,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.02931223064661026,
+      "prob_yes": 0.02931223064661026,
+      "prob_partial": 0.0,
+      "prob_no": 0.970687747001648,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.9241418242454529,
+      "prob_yes": 0.9241418242454529,
+      "prob_partial": 0.0,
+      "prob_no": 0.07585818320512772,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

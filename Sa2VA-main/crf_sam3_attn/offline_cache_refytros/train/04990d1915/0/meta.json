@@ -1,0 +1,43 @@
+{
+  "video_id": "04990d1915",
+  "exp_id": 0,
+  "expression": "a vintage car moves past a green bus",
+  "category": "vintage car",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "vintage car",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/04990d1915",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.9549810489755707
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "max_j": 0.9549810489755707,
+  "sum_j": 0.9549810489755707,
+  "mean_j": 0.9549810489755707,
+  "num_candidates": 1
+}

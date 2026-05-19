@@ -1,0 +1,70 @@
+{
+  "video_id": "1e0257109e",
+  "exp_id": "0",
+  "expression": "a red bus driving down a road",
+  "category": "bus",
+  "primary_category": "bus",
+  "backup_categories": [
+    "vehicle",
+    "transport",
+    "coach"
+  ],
+  "category_candidates": [
+    "bus",
+    "vehicle",
+    "transport",
+    "coach"
+  ],
+  "used_category_query": "bus",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "red vehicle",
+    "on road",
+    "moving"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 4,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9933071732521057,
+      "prob_yes": 0.9933071732521057,
+      "prob_partial": 0.0,
+      "prob_no": 0.006692850962281227,
+      "prediction": "Yes",
+      "is_selected": true
+    },
+    {
+      "obj_id": 1,
+      "score": 0.0031726828310638666,
+      "prob_yes": 0.0031726828310638666,
+      "prob_partial": 0.0,
+      "prob_no": 0.9968273043632507,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 2,
+      "score": null,
+      "prob_yes": 0.0,
+      "prob_partial": 0.0,
+      "prob_no": 0.0,
+      "prediction": "SKIPPED",
+      "is_selected": false
+    },
+    {
+      "obj_id": 3,
+      "score": null,
+      "prob_yes": 0.0,
+      "prob_partial": 0.0,
+      "prob_no": 0.0,
+      "prediction": "SKIPPED",
+      "is_selected": false
+    }
+  ]
+}

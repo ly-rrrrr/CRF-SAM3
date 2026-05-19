@@ -1,0 +1,42 @@
+{
+  "video_id": "1e20ceafae",
+  "exp_id": "0",
+  "expression": "a lizar with its torso outside of an egg",
+  "category": "lizard",
+  "primary_category": "lizar",
+  "backup_categories": [
+    "bearded dragon",
+    "lizard",
+    "reptile"
+  ],
+  "category_candidates": [
+    "lizar",
+    "bearded dragon",
+    "lizard",
+    "reptile"
+  ],
+  "used_category_query": "lizard",
+  "category_fallback_used": true,
+  "num_targets": 1,
+  "sub_conditions": [
+    "a lizard",
+    "torso outside of an egg"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9399133324623108,
+      "prob_yes": 0.9399133324623108,
+      "prob_partial": 0.0,
+      "prob_no": 0.06008664891123772,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

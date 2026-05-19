@@ -1,0 +1,43 @@
+{
+  "video_id": "1a894a8f98",
+  "exp_id": "0",
+  "expression": "a brown kangaroo is on the green grass looking behind",
+  "category": "kangaroo",
+  "primary_category": "kangaroo",
+  "backup_categories": [
+    "animal",
+    "marsupial",
+    "rodent"
+  ],
+  "category_candidates": [
+    "kangaroo",
+    "animal",
+    "marsupial",
+    "rodent"
+  ],
+  "used_category_query": "kangaroo",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "brown",
+    "on green grass",
+    "looking behind"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9626730680465698,
+      "prob_yes": 0.9626730680465698,
+      "prob_partial": 0.0,
+      "prob_no": 0.037326883524656296,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

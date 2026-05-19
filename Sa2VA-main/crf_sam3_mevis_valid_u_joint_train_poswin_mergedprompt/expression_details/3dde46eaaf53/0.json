@@ -1,0 +1,91 @@
+{
+  "video_id": "3dde46eaaf53",
+  "exp_id": "0",
+  "expression": "The monkey sitting crouched at the center of the hole.",
+  "category": "monkey",
+  "primary_category": "monkey",
+  "backup_categories": [
+    "primate",
+    "animal",
+    "ape"
+  ],
+  "category_candidates": [
+    "monkey",
+    "primate",
+    "animal",
+    "ape"
+  ],
+  "used_category_query": "monkey",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "sitting crouched",
+    "at the center of the hole"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 5,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.02595735527575016,
+      "prob_yes": 0.02595735527575016,
+      "prob_partial": 0.0,
+      "prob_no": 0.9740425944328308,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.008577484637498856,
+      "prob_yes": 0.008577484637498856,
+      "prob_partial": 0.0,
+      "prob_no": 0.9914224743843079,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.010986942797899246,
+      "prob_yes": 0.010986942797899246,
+      "prob_partial": 0.0,
+      "prob_no": 0.9890130758285522,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.9669140577316284,
+      "prob_yes": 0.9669140577316284,
+      "prob_partial": 0.0,
+      "prob_no": 0.03308597952127457,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.00970847625285387,
+      "prob_yes": 0.00970847625285387,
+      "prob_partial": 0.0,
+      "prob_no": 0.9902915358543396,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    3
+  ],
+  "gt_obj_ids": []
+}

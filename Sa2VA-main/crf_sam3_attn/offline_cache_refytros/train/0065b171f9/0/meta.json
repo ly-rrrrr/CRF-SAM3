@@ -1,0 +1,60 @@
+{
+  "video_id": "0065b171f9",
+  "exp_id": 0,
+  "expression": "a giant panda sitting in a caged area chewing on a stick and breaking it",
+  "category": "panda",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "panda",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/0065b171f9",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.9277978382615643
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "max_j": 0.9277978382615643,
+  "sum_j": 0.9277978382615643,
+  "mean_j": 0.9277978382615643,
+  "num_candidates": 1
+}

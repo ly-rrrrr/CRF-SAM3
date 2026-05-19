@@ -1,0 +1,68 @@
+{
+  "video_id": "01c76f0a82",
+  "exp_id": 0,
+  "expression": "a white car",
+  "category": "white car",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "white car",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/01c76f0a82",
+  "frame_pad": 5,
+  "obj_ids": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "iou_map": {
+    "1": 0.9581958687018961,
+    "2": 4.531836148946348e-05,
+    "3": 0.0,
+    "4": 0.0
+  },
+  "frame_indices": {
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "2": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "3": [
+      15,
+      16,
+      17
+    ],
+    "4": [
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "max_j": 0.9581958687018961,
+  "sum_j": 0.9582411870633856,
+  "mean_j": 0.2395602967658464,
+  "num_candidates": 4
+}

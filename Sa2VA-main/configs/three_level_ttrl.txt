@@ -1,0 +1,70 @@
+Please observe the following consecutive video frames.
+The object marked by the mask is the **protagonist** (focus subject), while everything outside the mask is the background/context.
+
+Referring Expression: "{referring_expression}"
+
+Question: Does the masked protagonist exactly match the referring expression?
+
+**CRITICAL: Use step-by-step verification to ensure accuracy.**
+
+═══════════════════════════════════════════════════════════
+STEP 1: DECOMPOSE THE EXPRESSION INTO SUB-CONDITIONS
+═══════════════════════════════════════════════════════════
+
+Break down the referring expression into individual, verifiable conditions.
+
+Example Decompositions:
+- "black rabbit eating" → ["black", "rabbit", "eating"]
+- "person on the left walking" → ["person", "on the left", "walking"]
+- "The rabbit enjoying its food in the right-bottom corner" →
+  ["rabbit", "enjoying food/eating", "right-bottom corner"]
+
+Sub-conditions for "{referring_expression}":
+[List all atomic conditions that must be verified]
+
+═══════════════════════════════════════════════════════════
+STEP 2: VERIFY EACH SUB-CONDITION INDEPENDENTLY
+═══════════════════════════════════════════════════════════
+
+For each sub-condition, check if the protagonist satisfies it:
+
+Condition 1: [First condition]
+- Check frames: [Does the protagonist satisfy this?]
+- Result: ✓ Satisfied / ✗ Not Satisfied
+
+Condition 2: [Second condition]
+- Check frames: [Does the protagonist satisfy this?]
+- Result: ✓ Satisfied / ✗ Not Satisfied
+
+Condition 3: [Third condition]
+- Check frames: [Does the protagonist satisfy this?]
+- Result: ✓ Satisfied / ✗ Not Satisfied
+
+[Continue for all conditions...]
+
+═══════════════════════════════════════════════════════════
+STEP 3: APPLY LOGICAL COMBINATION (AND LOGIC)
+═══════════════════════════════════════════════════════════
+
+Combine the results using AND logic:
+- If ALL conditions are satisfied (✓✓✓...) → "Yes"
+- If MOST conditions are satisfied but 1-2 minor conditions unclear → "Partial"
+- If ANY critical condition is not satisfied (✗) → "No"
+
+Final Judgment Logic:
+- Total conditions: [N]
+- Satisfied: [M]
+- Not satisfied: [N-M]
+
+Decision Rule:
+- M = N (100%) → "Yes"
+- M ≥ N-1 and unsatisfied are minor attributes → "Partial"
+- M < N-1 or core conditions failed → "No"
+
+═══════════════════════════════════════════════════════════
+FINAL ANSWER
+═══════════════════════════════════════════════════════════
+
+Based on the step-by-step verification above:
+
+**Answer with one word only: Yes, Partial, or No:**

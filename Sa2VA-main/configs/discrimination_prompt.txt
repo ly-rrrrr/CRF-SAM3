@@ -1,0 +1,22 @@
+prompt = f"""You are an expert in the field of Referring Video Object Segmentation (RVOS).
+Your task is to evaluate if the object marked with a **GLOWING OUTER CONTOUR** in the provided video frames matches the "Referring Expression".
+
+Referring Expression: "{referring_expression}"
+
+Please follow this "Thinking Process" to evaluate:
+
+1. **Occlusion Handling**: If the marked object is occluded, the glowing outline might appear fragmented. You must understand that the marked object is a SINGLE entity and clearly identify its object category despite breaks in the outline.
+2. **Spatiotemporal Analysis**: These frames are sequential. Analyze the marked object from a spatiotemporal perspective; treat all frames as a single temporal trajectory centered on the marked object.
+3. **Foreground vs. Background**: If you see a frame that perfectly matches the referring expression, be very careful to distinguish between the **Foreground (the marked object)** and the **Background (other objects)**.
+   - If the action/attribute belongs to the marked object (foreground), it is Correct.
+   - If it is happening in the background (unmarked objects), it is a Distractor.
+4. **Intent Understanding**: Be sure to clearly infer the underlying intent of the referring expression.
+5. **Scoring**: Finally, provide a confidence score from 0 to 100.
+
+**Output Format (JSON only):**
+{{
+    "visual_summary": "<Describe the temporal trajectory of the outlined object>",
+    "text_requirements": "<Infer the intent of the referring expression>",
+    "confidence_score": <Integer between 0 and 100>
+}}
+"""

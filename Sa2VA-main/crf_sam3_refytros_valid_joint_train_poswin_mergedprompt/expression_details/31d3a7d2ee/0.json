@@ -1,0 +1,59 @@
+{
+  "video_id": "31d3a7d2ee",
+  "exp_id": "0",
+  "expression": "a red airplane on the far left of two airplanes",
+  "category": "airplane",
+  "primary_category": "airplane",
+  "backup_categories": [
+    "jet",
+    "plane"
+  ],
+  "category_candidates": [
+    "airplane",
+    "jet",
+    "plane"
+  ],
+  "used_category_query": "airplane",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "red airplane",
+    "on the far left",
+    "of two airplanes"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.7057850360870361,
+      "prob_yes": 0.7057850360870361,
+      "prob_partial": 0.0,
+      "prob_no": 0.29421496391296387,
+      "prediction": "Yes",
+      "is_selected": true
+    },
+    {
+      "obj_id": 1,
+      "score": 0.01798621006309986,
+      "prob_yes": 0.01798621006309986,
+      "prob_partial": 0.0,
+      "prob_no": 0.9820137619972229,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 2,
+      "score": 0.4378235340118408,
+      "prob_yes": 0.4378235340118408,
+      "prob_partial": 0.0,
+      "prob_no": 0.562176525592804,
+      "prediction": "No",
+      "is_selected": false
+    }
+  ]
+}

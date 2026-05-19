@@ -1,0 +1,43 @@
+{
+  "video_id": "352ad66724",
+  "exp_id": "0",
+  "expression": "the small brown mouse is jumping up to the bowl of food",
+  "category": "mouse",
+  "primary_category": "mouse",
+  "backup_categories": [
+    "rodent",
+    "animal",
+    "pet"
+  ],
+  "category_candidates": [
+    "mouse",
+    "rodent",
+    "animal",
+    "pet"
+  ],
+  "used_category_query": "mouse",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "small",
+    "brown",
+    "jumping up to the bowl of food"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9241418242454529,
+      "prob_yes": 0.9241418242454529,
+      "prob_partial": 0.0,
+      "prob_no": 0.07585818320512772,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "video_id": "motocross-jump",
+  "exp_id": "0",
+  "expression": "a man riding a motorbike",
+  "category": "man",
+  "primary_category": "man",
+  "backup_categories": [
+    "rider",
+    "cyclist",
+    "motorcyclist"
+  ],
+  "category_candidates": [
+    "man",
+    "rider",
+    "cyclist",
+    "motorcyclist"
+  ],
+  "used_category_query": "man",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "one person on a motorbike",
+    "in motocross context"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 6,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9940890073776245,
+      "prob_yes": 0.9940890073776245,
+      "prob_partial": 0.0,
+      "prob_no": 0.005911069456487894,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.0011695101857185364,
+      "prob_yes": 0.0011695101857185364,
+      "prob_partial": 0.0,
+      "prob_no": 0.9988304972648621,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.0007096704212017357,
+      "prob_yes": 0.0007096704212017357,
+      "prob_partial": 0.0,
+      "prob_no": 0.9992903470993042,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.00247262348420918,
+      "prob_yes": 0.00247262348420918,
+      "prob_partial": 0.0,
+      "prob_no": 0.9975274205207825,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.00970847625285387,
+      "prob_yes": 0.00970847625285387,
+      "prob_partial": 0.0,
+      "prob_no": 0.9902915358543396,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.0015011822106316686,
+      "prob_yes": 0.0015011822106316686,
+      "prob_partial": 0.0,
+      "prob_no": 0.998498797416687,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

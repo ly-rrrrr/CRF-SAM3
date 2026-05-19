@@ -1,0 +1,46 @@
+{
+  "video_id": "bmx-trees",
+  "exp_id": "2",
+  "expression": "a bmx bike",
+  "category": "bike",
+  "primary_category": "bike",
+  "backup_categories": [
+    "bicycle",
+    "cycle",
+    "bmx"
+  ],
+  "category_candidates": [
+    "bike",
+    "bicycle",
+    "cycle",
+    "bmx"
+  ],
+  "used_category_query": "bike",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "child riding a red bike with BMX features"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.010986942797899246,
+      "prob_yes": 0.010986942797899246,
+      "prob_partial": 0.0,
+      "prob_no": 0.9890130758285522,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

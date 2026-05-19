@@ -1,0 +1,179 @@
+{
+  "video_id": "dance-twirl",
+  "exp_id": "1",
+  "expression": "a girl in a blue dress twirling",
+  "category": "girl",
+  "primary_category": "girl",
+  "backup_categories": [
+    "dancer",
+    "performer",
+    "woman"
+  ],
+  "category_candidates": [
+    "girl",
+    "dancer",
+    "performer",
+    "woman"
+  ],
+  "used_category_query": "girl",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "wearing blue dress",
+    "twirling"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 13,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    8
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 1,
+      "score": 0.00023050671734381467,
+      "prob_yes": 0.00023050671734381467,
+      "prob_partial": 0.0,
+      "prob_no": 0.9997695088386536,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.00033535013790242374,
+      "prob_yes": 0.00033535013790242374,
+      "prob_partial": 0.0,
+      "prob_no": 0.9996646642684937,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.00029595711384899914,
+      "prob_yes": 0.00029595711384899914,
+      "prob_partial": 0.0,
+      "prob_no": 0.9997040629386902,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 6,
+      "score": 0.0004878571489825845,
+      "prob_yes": 0.0004878571489825845,
+      "prob_partial": 0.0,
+      "prob_no": 0.9995121955871582,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 7,
+      "score": 0.00037998449988663197,
+      "prob_yes": 0.00037998449988663197,
+      "prob_partial": 0.0,
+      "prob_no": 0.9996199607849121,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 8,
+      "score": 0.9940890073776245,
+      "prob_yes": 0.9940890073776245,
+      "prob_partial": 0.0,
+      "prob_no": 0.005911069456487894,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 9,
+      "score": 0.00033535013790242374,
+      "prob_yes": 0.00033535013790242374,
+      "prob_partial": 0.0,
+      "prob_no": 0.9996646642684937,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 10,
+      "score": 0.0009110512328334153,
+      "prob_yes": 0.0009110512328334153,
+      "prob_partial": 0.0,
+      "prob_no": 0.9990890026092529,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 11,
+      "score": 0.0008040859247557819,
+      "prob_yes": 0.0008040859247557819,
+      "prob_partial": 0.0,
+      "prob_no": 0.9991958737373352,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 12,
+      "score": 0.0004305570910219103,
+      "prob_yes": 0.0004305570910219103,
+      "prob_partial": 0.0,
+      "prob_no": 0.9995694756507874,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 13,
+      "score": 0.0009110512328334153,
+      "prob_yes": 0.0009110512328334153,
+      "prob_partial": 0.0,
+      "prob_no": 0.9990890026092529,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 14,
+      "score": 0.0004878571489825845,
+      "prob_yes": 0.0004878571489825845,
+      "prob_partial": 0.0,
+      "prob_no": 0.9995121955871582,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 15,
+      "score": 0.0006263342220336199,
+      "prob_yes": 0.0006263342220336199,
+      "prob_partial": 0.0,
+      "prob_no": 0.999373733997345,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

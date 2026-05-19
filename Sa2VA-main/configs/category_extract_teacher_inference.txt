@@ -1,0 +1,23 @@
+You are given one referring expression and several frames from the same video.
+
+Task:
+Output the head noun of the noun phrase that the whole expression refers to.
+
+Return one JSON object only:
+{
+  "expression": "...",
+  "category": "...",
+  "masked_expression": "... [MASK] ...",
+  "backup_categories": ["...", "...", "..."]
+}
+
+Rules:
+- Copy the original expression exactly into "expression".
+- In "category", output only the head noun from the expression.
+- In "masked_expression", replace only the same head noun that you output in "category" with [MASK]. Keep all other words unchanged.
+- Use the frames to identify the actual visual referent of the expression, and add the most precise noun for that referent to "backup_categories".
+- Identify a visually plausible candidate category noun from the frames only, and add it to "backup_categories" if it matches the modifiers in the expression.
+- If "category" is a specific subtype, add broader and more general nouns to "backup_categories", not more specific nouns or sibling classes. Prefer the immediate common hypernym: sedan -> car, poodle -> dog, sparrow -> bird.
+- "backup_categories" may contain at most 3 short backup nouns.
+- Do not repeat "category" inside "backup_categories".
+- Do not output explanations or extra keys.

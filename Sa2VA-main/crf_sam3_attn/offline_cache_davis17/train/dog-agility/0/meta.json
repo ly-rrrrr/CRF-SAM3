@@ -1,0 +1,49 @@
+{
+  "video_id": "dog-agility",
+  "exp_id": 0,
+  "expression": "a dog doing agility training",
+  "category": "dog",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "dog",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/davis17/train/JPEGImages/dog-agility",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.9449077473570727
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  "max_j": 0.9449077473570727,
+  "sum_j": 0.9449077473570727,
+  "mean_j": 0.9449077473570727,
+  "num_candidates": 1
+}

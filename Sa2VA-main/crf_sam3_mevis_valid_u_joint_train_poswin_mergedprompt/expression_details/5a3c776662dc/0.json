@@ -1,0 +1,69 @@
+{
+  "video_id": "5a3c776662dc",
+  "exp_id": "0",
+  "expression": "The tiger lying on the ground with another tiger on its back.",
+  "category": "tiger",
+  "primary_category": "tiger",
+  "backup_categories": [
+    "cat",
+    "animal",
+    "big cat"
+  ],
+  "category_candidates": [
+    "tiger",
+    "cat",
+    "animal",
+    "big cat"
+  ],
+  "used_category_query": "tiger",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "lying on the ground",
+    "another tiger on its back"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9324532747268677,
+      "prob_yes": 0.9324532747268677,
+      "prob_partial": 0.0,
+      "prob_no": 0.06754668802022934,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.02595735527575016,
+      "prob_yes": 0.02595735527575016,
+      "prob_partial": 0.0,
+      "prob_no": 0.9740425944328308,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.053403329104185104,
+      "prob_yes": 0.053403329104185104,
+      "prob_partial": 0.0,
+      "prob_no": 0.9465966820716858,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": []
+}

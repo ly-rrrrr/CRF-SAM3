@@ -1,0 +1,42 @@
+{
+  "video_id": "3be852ed44",
+  "exp_id": "0",
+  "expression": "a spider in a web",
+  "category": "spider",
+  "primary_category": "spider",
+  "backup_categories": [
+    "arachnid",
+    "insect",
+    "creature"
+  ],
+  "category_candidates": [
+    "spider",
+    "arachnid",
+    "insect",
+    "creature"
+  ],
+  "used_category_query": "spider",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "one spider visible",
+    "web present"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.14804719388484955,
+      "prob_yes": 0.14804719388484955,
+      "prob_partial": 0.0,
+      "prob_no": 0.8519527316093445,
+      "prediction": "No",
+      "is_selected": true
+    }
+  ]
+}

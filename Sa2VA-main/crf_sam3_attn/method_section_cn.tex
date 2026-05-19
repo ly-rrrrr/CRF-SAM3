@@ -1,0 +1,88 @@
+\section{方法}
+
+\subsection{问题定义}
+给定视频序列 $\mathcal{V}=\{I_t\}_{t=1}^{T}$ 与指代表达式 $e$，CRF-SAM3 首先进行类别级候选召回，得到候选集合
+\[
+\mathcal{C}=\{c_i\}_{i=1}^{N},
+\]
+其中每个候选 $c_i$ 对应一个时序 tube（由若干帧及其对应候选掩码构成）。
+目标是学习打分函数 $s(c_i,e)$，使真实目标候选在同组候选中获得更高排序。
+
+\subsection{两阶段训练框架}
+\paragraph{阶段 A：离线缓存构建。}
+对每个 $(\text{video},\text{expression})$ 样本执行：
+\begin{enumerate}
+\item 从表达式中抽取类别概念；
+\item 使用 SAM3 在全视频范围召回该类别全部实例候选；
+\item 将每个候选 tube 与 GT 掩码计算序列 IoU，得到 $\text{IoU}_i$；
+\item 落盘保存离线缓存（候选掩码 PNG、帧索引、IoU 字典、表达式元信息）。
+\end{enumerate}
+该阶段将高开销的候选召回过程前置，从而使微调阶段更稳定且显存开销更低。
+
+\paragraph{阶段 B：Listwise 微调。}
+训练时每个样本不是单个候选，而是同一表达式下的候选集合：
+\[
+\mathcal{X}=\{(c_i,e,\text{IoU}_i)\}_{i=1}^{N'}.
+\]
+定义正样本索引集合
+\[
+\mathcal{P}=\{i\mid \text{IoU}_i\ge \tau_{pos}\},
+\]
+负样本按策略构建（本文默认 \texttt{all}，即非正样本全部参与竞争）。
+
+\subsection{Yes/No 判别打分}
+对每个候选 $c_i$，输入为“候选掩码叠加多帧图像 + 统一 Yes/No 判别提示词”。
+模型输出末 token 的 Yes/No logits：$z_i^{yes}, z_i^{no}$，并计算
+\[
+s_i=P_i(\text{Yes})=\frac{\exp(z_i^{yes})}{\exp(z_i^{yes})+\exp(z_i^{no})}.
+\]
+该打分定义与推理阶段保持一致，避免训练-推理目标不一致。
+
+\subsection{Listwise 排序监督}
+本文采用组内排序损失，而非候选独立二分类：
+\[
+\mathcal{L}_{cls}
+=
+\log\sum_{i=1}^{N'}\exp\left(\frac{s_i}{\tau_{lw}}\right)
+-
+\log\sum_{i\in\mathcal{P}}\exp\left(\frac{s_i}{\tau_{lw}}\right).
+\]
+当某组无正样本时，可启用兜底策略：将 IoU 最大候选视为伪正样本，以提升训练稳定性。
+
+\subsection{软掩码对齐约束}
+为抑制背景捷径，本文在语言-视觉隐藏特征上引入软约束。
+设文本 token 平均特征为 $q$，图像 token 特征为 $\{h_u\}$，定义相似度
+\[
+a_u=\mathrm{sim}(h_u,q),
+\qquad
+\pi_u=\frac{\exp(a_u/\tau_a)}{\sum_v \exp(a_v/\tau_a)}.
+\]
+对每帧 $t$，掩码区域内概率质量为
+\[
+r_t=\sum_{u\in M_t}\pi_u.
+\]
+则对齐损失定义为
+\[
+\mathcal{L}_{align}=1-\frac{1}{T'}\sum_{t=1}^{T'}r_t.
+\]
+该损失不修改模型全局注意力结构，而是通过训练目标约束“证据能量”优先落在候选掩码区域。
+
+\subsection{总目标函数}
+\[
+\mathcal{L}=\mathcal{L}_{cls}+\lambda\mathcal{L}_{align},
+\]
+其中 $\lambda$ 为软对齐损失权重。
+
+\subsection{LoRA 参数高效微调}
+本文采用 LoRA 对语言侧关键投影层进行参数高效适配（如 $q,k,v,o$ 与 MLP 的 up/down/gate）。
+其参数化形式为：
+\[
+W=W_0+\Delta W,
+\qquad
+\Delta W=\frac{\alpha}{r}BA.
+\]
+训练时冻结视觉编码器，仅更新 LoRA 相关可训练参数。
+该设计在保持预训练多模态知识的同时，将学习能力聚焦于“候选排序 + 掩码约束”任务。
+
+\subsection{推理流程}
+在推理阶段，对同一表达式下全部候选计算 $s_i$ 并排序，按 Top-$K$（或 Top-1）选择候选，并输出其对应时序掩码作为最终分割结果。

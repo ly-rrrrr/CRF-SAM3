@@ -1,0 +1,81 @@
+{
+  "video_id": "loading",
+  "exp_id": "0",
+  "expression": "a fat man on the right in a black jacket",
+  "category": "man",
+  "primary_category": "man",
+  "backup_categories": [
+    "person",
+    "customer",
+    "employee"
+  ],
+  "category_candidates": [
+    "man",
+    "person",
+    "customer",
+    "employee"
+  ],
+  "used_category_query": "man",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "fat",
+    "on the right",
+    "in a black jacket"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 4,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.970687747001648,
+      "prob_yes": 0.970687747001648,
+      "prob_partial": 0.0,
+      "prob_no": 0.02931223064661026,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.006692850962281227,
+      "prob_yes": 0.006692850962281227,
+      "prob_partial": 0.0,
+      "prob_no": 0.9933071732521057,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.9399133324623108,
+      "prob_yes": 0.9399133324623108,
+      "prob_partial": 0.0,
+      "prob_no": 0.06008664891123772,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.0011695101857185364,
+      "prob_yes": 0.0011695101857185364,
+      "prob_partial": 0.0,
+      "prob_no": 0.9988304972648621,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

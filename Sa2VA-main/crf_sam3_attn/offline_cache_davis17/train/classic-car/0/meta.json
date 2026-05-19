@@ -1,0 +1,63 @@
+{
+  "video_id": "classic-car",
+  "exp_id": 0,
+  "expression": "a man in a car wearing a blue shirt",
+  "category": "person",
+  "sam3_prompt_source": "full_expression_fallback",
+  "sam3_prompt_text": "a man in a car wearing a blue shirt",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/davis17/train/JPEGImages/classic-car",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.57499463385471
+  },
+  "frame_indices": {
+    "0": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61
+    ]
+  },
+  "max_j": 0.57499463385471,
+  "sum_j": 0.57499463385471,
+  "mean_j": 0.57499463385471,
+  "num_candidates": 1
+}

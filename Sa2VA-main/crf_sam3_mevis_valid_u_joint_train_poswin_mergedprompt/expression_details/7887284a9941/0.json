@@ -1,0 +1,48 @@
+{
+  "video_id": "7887284a9941",
+  "exp_id": "0",
+  "expression": "The four parrots squeezed together and moving around.",
+  "category": "birds",
+  "primary_category": "parrots",
+  "backup_categories": [
+    "birds",
+    "parakeets",
+    "finches"
+  ],
+  "category_candidates": [
+    "parrots",
+    "birds",
+    "parakeets",
+    "finches"
+  ],
+  "used_category_query": "birds",
+  "category_fallback_used": true,
+  "num_targets": 4,
+  "sub_conditions": [
+    "four birds in cage",
+    "squeezed together",
+    "moving around"
+  ],
+  "final_rule_applied": "explicit number in expression",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.5,
+      "prob_yes": 0.5,
+      "prob_partial": 0.0,
+      "prob_no": 0.5,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": []
+}

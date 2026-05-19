@@ -1,0 +1,46 @@
+{
+  "video_id": "410dae675d9a",
+  "exp_id": "0",
+  "expression": "Girl riding bicycle in a circle",
+  "category": "girl",
+  "primary_category": "girl",
+  "backup_categories": [
+    "child",
+    "person"
+  ],
+  "category_candidates": [
+    "girl",
+    "child",
+    "person"
+  ],
+  "used_category_query": "girl",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "a girl is visible",
+    "she is riding a bicycle",
+    "she is moving in a circular path"
+  ],
+  "final_rule_applied": "singular reference to one girl riding a bicycle",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9669140577316284,
+      "prob_yes": 0.9669140577316284,
+      "prob_partial": 0.0,
+      "prob_no": 0.03308597952127457,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": []
+}

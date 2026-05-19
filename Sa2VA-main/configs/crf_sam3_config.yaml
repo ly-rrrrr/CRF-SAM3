@@ -1,0 +1,250 @@
+# CRF-SAM3 Configuration File
+# Concept Recall & Spatio-Temporal Filtering with SAM3
+
+# =============================================================================
+# Model Paths
+# =============================================================================
+model:
+  # Model type: "qwen2.5", "qwen3", or "qwen3-thinking"
+  # - qwen2.5: Qwen2.5-VL-7B-Instruct
+  # - qwen3: Qwen3-VL-8B-Instruct (newer, simplified API)
+  # - qwen3-thinking: Qwen3-VL-8B-Thinking (enhanced reasoning with thinking mechanism)
+  model_type: "qwen3"
+
+  # Legacy single-path mode:
+  # - If base_mllm_path is NOT set, the pipeline will load this path directly.
+  # - Keep this for backward compatibility with merged/full-model deployment.
+  # For qwen2.5:
+#  mllm_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen2.5-VL-7B-Instruct"
+  # For qwen3 merged/full model:
+  # mllm_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/crf_sam3_attn_outputs_refytros_train_merged"
+  # For qwen3-thinking (enhanced thinking model):
+  mllm_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen3-VL-4B-Instruct"
+#  mllm_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen3-VL-8B-Thinking"
+
+  # Shared-base dual-mode inference (recommended):
+  # - ConceptExtractor runs with adapter OFF (base behavior)
+  # - SemanticDiscriminator runs with adapter ON (trained behavior)
+  # - When base_mllm_path is set, it takes priority over mllm_path.
+  # base_mllm_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen3-VL-4B-Instruct"
+  # mllm_adapter_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/crf_sam3_attn_outputs_joint_train/checkpoint_12800"
+
+  # SAM3 checkpoint for concept recall
+  sam3_checkpoint: "/mnt/csip-200/share/kongjiawei/sam3-main/checkpoints/sam3/sam3.pt"
+
+  # CLIP model for Q-Frame (optional, only needed if using qframe sampling)
+  clip_model_path: "/mnt/csip-200/share/kongjiawei/q-frame-master/Long-CLIP/checkpoints/longclip-L.pt"
+
+# =============================================================================
+# Pipeline Parameters
+# =============================================================================
+pipeline:
+  # Number of frames to include in each Visual Tube
+  # Higher values provide more temporal context for action understanding
+  # Recommended: 8-16 frames
+  num_tube_frames: 8
+
+  # Device configuration for MLLM
+  # Options: "auto", "cuda:0", "cpu"
+  device: "auto"
+
+  # Torch dtype for MLLM
+  # Options: "bfloat16", "float16", "float32"
+  dtype: "bfloat16"
+
+# =============================================================================
+# Demo Configuration (for crf_sam3_demo.py)
+# =============================================================================
+demo:
+  # MeViS dataset root
+  mevis_root: "/mnt/csip-200/share/kongjiawei/Sa2VA/data/video_datas/mevis/valid_u"
+
+  # Video and expression to process
+#  video_id: "329909730c21"
+#  video_id: "d56a6ec78cfa"
+#  video_id: "963a498a493b"
+  # video_id: "3dde46eaaf53"
+  video_id: "ed7d7148e132"
+#  video_id: "410dae675d9a"
+#  video_id: "90cc34e3926f"
+  # video_id: "3dde46eaaf53"
+#  video_id: "377b1c5f365c"
+#  video_id: "2fbec459efc2"
+#  video_id: "3dde46eaaf53"
+#  video_id: "ee6855dcefee"
+  exp_id: 1  # Test "Hand of human holding food and pulling lizard up"
+
+  # Output directory for demo results
+  output_dir: "crf_sam3_demo_output"
+
+# =============================================================================
+# Stage 1: Concept Extraction
+# =============================================================================
+concept_extraction:
+  # Whether to use Q-Frame for selecting keyframes during concept extraction
+  # If true, uses Q-Frame to select semantically relevant frames for num_targets inference
+  # If false, uses uniform sampling (8 frames by default)
+  use_qframe: false
+  category_prompt_path: "configs/category_num_targets_inference_merged.txt"
+  teacher_pipeline_compatible: true
+  teacher_pipeline_num_frames: 3
+  teacher_pipeline_deterministic: true
+
+  # MLLM generation parameters
+  max_new_tokens: 128
+  temperature: 0.1
+
+
+# =============================================================================
+# Stage 2: Visual Tube Construction
+# =============================================================================
+visual_tube:
+  # Keyframe sampling strategy
+  # Options: "uniform", "custom", "qframe", "all"
+  # - uniform: evenly spaced across object lifespan (uses num_keyframes from pipeline config)
+  # - custom: use custom frame indices specified in custom_frame_indices
+  # - qframe: use Q-Frame keyframe selection (content-aware sampling)
+  # - all: use all frames
+  sampling_strategy: "uniform"
+
+  # Custom frame indices (only used when sampling_strategy = "custom")
+  # Example: [0, 5, 10, 15, 20, 25, 30, 35] - select these specific frame indices
+  # Note: indices are relative to the object's lifespan frames, not absolute video frames
+  custom_frame_indices: [90, 94, 95, 96, 100, 102, 108, 111]
+
+  # Q-Frame configuration (only used when sampling_strategy = "qframe")
+  qframe:
+    # Temperature for Gumbel sampling (lower = more deterministic)
+    tau: 0.8    # Gumbel 采样温度
+    # Number of keyframes will be taken from pipeline.num_tube_frames
+
+  # Visualization style for marking objects in Visual Tubes
+  # Options: "bbox", "outline", "glow", "mask"
+  # - bbox: Red bounding box (simple rectangle)
+  # - outline: Rainbow gradient outline (smooth contour)
+  # - glow: Glowing outline with soft halo effect
+  # - mask: Semi-transparent green mask overlay on original frame (alpha=0.5)
+  visualization_style: "mask"
+
+  # Whether to include context frames (before/after object appearance)
+  include_context: false
+
+# =============================================================================
+# Stage 3: Semantic Discrimination
+# =============================================================================
+discrimination:
+  # Discriminator backend
+  # Options: "mllm", "reranker", or "embedding"
+  backend: "mllm"
+
+  # Prompt type for discrimination scoring
+  # Options: "cot", "three_level", "yesno"
+  # - cot: Chain of Thought with fine-grained scoring (0-100)
+  #   Uses configs/discrimination_prompt.txt
+  #   Returns JSON with visual_summary, text_requirements, alignment_analysis, confidence_score
+  # - three_level: Yes/Partial/No with logits probability weighting
+  #   Uses configs/three_level.txt
+  #   Computes weighted score from P(Yes)*1.0 + P(Partial)*0.5 + P(No)*0.0
+  # - yesno: Simple Yes/No prompt aligned with training
+  #   Uses configs/discrimination_prompt_yesno.txt
+  prompt_type: "yesno"
+
+  # Qwen3-VL-Reranker backend config (used when backend="reranker")
+  reranker:
+    model_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen3-VL-Reranker-2B"
+    instruction: "Judge whether the masked green object in the video matches the referring expression."
+    bbox_instruction: "Judge whether the object inside the blue bbox matches the referring expression."
+    num_frames: 8
+    max_frames: 8
+    embedding_repo: "Qwen3-VL-Embedding"
+
+  # Qwen3-VL-Embedding backend config (used when backend="embedding")
+  embedding:
+    model_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen3-VL-Embedding-2B"
+    instruction: "Represent the referring expression and the masked green object for matching."
+    bbox_instruction: "Represent the referring expression and the bboxed object for matching."
+    doc_text: "This video segment shows a masked green candidate object."
+    bbox_doc_text: "This video segment shows a candidate object inside a bbox."
+    num_frames: 8
+    max_frames: 8
+    embedding_repo: "Qwen3-VL-Embedding"
+    torch_dtype: "bfloat16"
+
+
+
+# =============================================================================
+# Dataset Configuration (for run_crf_sam3_dataset.py)
+# =============================================================================
+dataset:
+  # MeViS dataset root directory
+  data_root: "/mnt/csip-200/share/kongjiawei/Sa2VA/data/video_datas/mevis"
+
+  # Dataset split
+  # Options: "valid", "valid_u", "train"
+  split: "valid_u"
+
+  # Ground truth masks root directory
+  # Structure: gt_masks_root/{video_id}/{exp_id}/00000.png
+  gt_masks_root: "/mnt/csip-200/share/kongjiawei/Sa2VA/gt_masks"
+
+  # Maximum number of videos to process (for debugging)
+  # Set to null or -1 to process all videos
+  max_videos: null
+
+  # Maximum number of expressions per video (for debugging)
+  # Set to null or -1 to process all expressions
+  max_expressions: null
+
+  # Skip videos that already have predictions
+  skip_existing: true
+
+# =============================================================================
+# Output Configuration
+# =============================================================================
+output:
+  # Output directory for predictions
+  output_dir: "crf_sam3_valid_u_outputs"
+
+  # Save intermediate results
+  save_visual_tubes: true  # Save annotated frames for debugging
+  save_scores: true          # Save discrimination scores
+
+  # Output format
+  # Options: "mevis", "davis"
+  format: "mevis"
+
+# =============================================================================
+# Performance & Optimization
+# =============================================================================
+performance:
+  # Batch size for MLLM inference (if supported)
+  batch_size: 1
+
+  # Enable mixed precision for faster inference
+  use_amp: true
+
+  # Clear CUDA cache between videos
+  clear_cache_per_video: true
+
+  # Number of workers for data loading
+  num_workers: 4
+
+# =============================================================================
+# Logging & Debugging
+# =============================================================================
+logging:
+  # Logging level
+  # Options: "DEBUG", "INFO", "WARNING", "ERROR"
+  level: "INFO"
+
+  # Save logs to file
+  log_file: "crf_sam3.log"
+
+  # Print MLLM responses
+  print_mllm_responses: true
+
+  # Print detailed timing information
+  print_timing: true
+
+  # Enable progress bars
+  use_tqdm: true

@@ -1,0 +1,43 @@
+{
+  "video_id": "3e03f623bb",
+  "exp_id": "0",
+  "expression": "a white goose carried by a lady wearing a black shirt",
+  "category": "goose",
+  "primary_category": "goose",
+  "backup_categories": [
+    "bird",
+    "plush toy",
+    "duck"
+  ],
+  "category_candidates": [
+    "goose",
+    "bird",
+    "plush toy",
+    "duck"
+  ],
+  "used_category_query": "goose",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "white goose",
+    "carried by a lady",
+    "wearing a black shirt"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9875683188438416,
+      "prob_yes": 0.9875683188438416,
+      "prob_partial": 0.0,
+      "prob_no": 0.012431650422513485,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

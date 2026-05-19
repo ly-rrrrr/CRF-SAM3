@@ -1,0 +1,47 @@
+{
+  "video_id": "4a9c4d01922f",
+  "exp_id": "0",
+  "expression": "Man kneeling and feeding pandas then standing up and moving around",
+  "category": "man",
+  "primary_category": "man",
+  "backup_categories": [
+    "person",
+    "human",
+    "zookeeper"
+  ],
+  "category_candidates": [
+    "man",
+    "person",
+    "human",
+    "zookeeper"
+  ],
+  "used_category_query": "man",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "kneeling and feeding pandas",
+    "then standing up and moving around"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.970687747001648,
+      "prob_yes": 0.970687747001648,
+      "prob_partial": 0.0,
+      "prob_no": 0.02931223064661026,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": []
+}

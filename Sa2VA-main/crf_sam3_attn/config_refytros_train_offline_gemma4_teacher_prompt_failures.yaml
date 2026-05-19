@@ -1,0 +1,33 @@
+base_config: configs/crf_sam3_refytros_train_base_gemma4_26b_teacher_prompt.yaml
+
+seed: 42
+
+data:
+  split: train
+  num_frames: 4
+  mask_style: mask
+  pos_iou: 0.5
+  neg_iou: 0.1
+  sample_neg_prob: 0.5
+  listwise: true
+  listwise_max_candidates: 10
+  max_videos: null
+  max_video_frames: 300
+  max_expressions: null
+  cache_sam3: false
+  category_source: concept
+  mask_dict_path: mask_dict.pkl
+  offline_mode: false
+  offline_cache_root: crf_sam3_attn/offline_cache_refytros_gemma4_teacher_prompt_failures
+  offline_prepare: true
+  offline_overwrite: false
+  offline_strict: true
+  offline_subset_json: crf_sam3_attn/offline_cache_refytros/iou_map_max_lt_0.5_samples.json
+
+debug:
+  enable: false
+  log_every: 50
+  save_every: 0
+  max_save: 0
+  save_dir: crf_sam3_attn_debug_refytros_gemma4_teacher_prompt_failures
+  log_prompt: false

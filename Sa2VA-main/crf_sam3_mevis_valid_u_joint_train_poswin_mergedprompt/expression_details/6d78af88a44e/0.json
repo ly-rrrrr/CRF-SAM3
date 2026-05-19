@@ -1,0 +1,59 @@
+{
+  "video_id": "6d78af88a44e",
+  "exp_id": "0",
+  "expression": "Competitive bike racers bending forward to ride motorbike",
+  "category": "racer",
+  "primary_category": "racer",
+  "backup_categories": [
+    "motorcyclist",
+    "rider",
+    "competitor"
+  ],
+  "category_candidates": [
+    "racer",
+    "motorcyclist",
+    "rider",
+    "competitor"
+  ],
+  "used_category_query": "racer",
+  "category_fallback_used": false,
+  "num_targets": 2,
+  "sub_conditions": [
+    "bending forward",
+    "riding motorbike"
+  ],
+  "final_rule_applied": "visual count",
+  "num_candidates": 2,
+  "num_selected": 2,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.977022647857666,
+      "prob_yes": 0.977022647857666,
+      "prob_partial": 0.0,
+      "prob_no": 0.022977370768785477,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9820137619972229,
+      "prob_yes": 0.9820137619972229,
+      "prob_partial": 0.0,
+      "prob_no": 0.01798621006309986,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1,
+    0
+  ],
+  "gt_obj_ids": []
+}

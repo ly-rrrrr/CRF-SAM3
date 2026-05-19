@@ -1,0 +1,42 @@
+{
+  "video_id": "0390fabe58",
+  "exp_id": "0",
+  "expression": "a white mouse in a black shoe",
+  "category": "mouse",
+  "primary_category": "mouse",
+  "backup_categories": [
+    "rat",
+    "rodent",
+    "pet"
+  ],
+  "category_candidates": [
+    "mouse",
+    "rat",
+    "rodent",
+    "pet"
+  ],
+  "used_category_query": "mouse",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "white fur",
+    "in black shoe"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9902915358543396,
+      "prob_yes": 0.9902915358543396,
+      "prob_partial": 0.0,
+      "prob_no": 0.00970847625285387,
+      "prediction": "Yes",
+      "is_selected": true
+    }
+  ]
+}

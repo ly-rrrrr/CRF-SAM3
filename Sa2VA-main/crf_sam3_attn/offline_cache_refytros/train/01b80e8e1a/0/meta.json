@@ -1,0 +1,54 @@
+{
+  "video_id": "01b80e8e1a",
+  "exp_id": 0,
+  "expression": "a zebra moving towards the right the of the view",
+  "category": "zebra",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "zebra",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/01b80e8e1a",
+  "frame_pad": 5,
+  "obj_ids": [
+    0,
+    1
+  ],
+  "iou_map": {
+    "0": 0.8861944080524508,
+    "1": 0.0
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "max_j": 0.8861944080524508,
+  "sum_j": 0.8861944080524508,
+  "mean_j": 0.4430972040262254,
+  "num_candidates": 2
+}

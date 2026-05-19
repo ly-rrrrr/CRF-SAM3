@@ -1,0 +1,48 @@
+{
+  "video_id": "35087d00d351",
+  "exp_id": "0",
+  "expression": "Girl pushing a scooter to the right",
+  "category": "girl",
+  "primary_category": "girl",
+  "backup_categories": [
+    "person",
+    "woman",
+    "child"
+  ],
+  "category_candidates": [
+    "girl",
+    "person",
+    "woman",
+    "child"
+  ],
+  "used_category_query": "girl",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "person in light jacket",
+    "pushing scooter",
+    "moving to the right"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 1,
+      "score": 0.8519527316093445,
+      "prob_yes": 0.8519527316093445,
+      "prob_partial": 0.0,
+      "prob_no": 0.14804719388484955,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": []
+}

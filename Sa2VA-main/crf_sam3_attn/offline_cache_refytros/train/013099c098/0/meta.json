@@ -1,0 +1,66 @@
+{
+  "video_id": "013099c098",
+  "exp_id": 0,
+  "expression": "an giant panda with its hand on the back of another",
+  "category": "panda",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "panda",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/013099c098",
+  "frame_pad": 5,
+  "obj_ids": [
+    0,
+    1
+  ],
+  "iou_map": {
+    "0": 0.008759927198446125,
+    "1": 0.8884292658681048
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "max_j": 0.8884292658681048,
+  "sum_j": 0.8971891930665509,
+  "mean_j": 0.44859459653327544,
+  "num_candidates": 2
+}

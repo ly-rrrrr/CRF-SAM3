@@ -1,0 +1,44 @@
+{
+  "video_id": "056c200404",
+  "exp_id": 0,
+  "expression": "a white toilet with the seat cover closed",
+  "category": "toilet",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "toilet",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/056c200404",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.9525600249106964
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "max_j": 0.9525600249106964,
+  "sum_j": 0.9525600249106964,
+  "mean_j": 0.9525600249106964,
+  "num_candidates": 1
+}

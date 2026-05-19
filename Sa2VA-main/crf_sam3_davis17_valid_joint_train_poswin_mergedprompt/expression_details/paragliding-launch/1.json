@@ -1,0 +1,58 @@
+{
+  "video_id": "paragliding-launch",
+  "exp_id": "1",
+  "expression": "a black harness",
+  "category": "paragliding gear",
+  "primary_category": "harness",
+  "backup_categories": [
+    "equipment",
+    "gear",
+    "paragliding gear"
+  ],
+  "category_candidates": [
+    "harness",
+    "equipment",
+    "gear",
+    "paragliding gear"
+  ],
+  "used_category_query": "paragliding gear",
+  "category_fallback_used": true,
+  "num_targets": 1,
+  "sub_conditions": [
+    "black color",
+    "worn by person"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 2,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9626730680465698,
+      "prob_yes": 0.9626730680465698,
+      "prob_partial": 0.0,
+      "prob_no": 0.037326883524656296,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9324532747268677,
+      "prob_yes": 0.9324532747268677,
+      "prob_partial": 0.0,
+      "prob_no": 0.06754668802022934,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

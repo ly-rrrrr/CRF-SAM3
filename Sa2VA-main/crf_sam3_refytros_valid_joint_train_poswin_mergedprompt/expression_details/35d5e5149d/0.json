@@ -1,0 +1,50 @@
+{
+  "video_id": "35d5e5149d",
+  "exp_id": "0",
+  "expression": "a rabbit jumps in to the cage",
+  "category": "rabbit",
+  "primary_category": "rabbit",
+  "backup_categories": [
+    "animal",
+    "pet",
+    "rodent"
+  ],
+  "category_candidates": [
+    "rabbit",
+    "animal",
+    "pet",
+    "rodent"
+  ],
+  "used_category_query": "rabbit",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "rabbit is visible in motion entering cage"
+  ],
+  "final_rule_applied": "singular reference with visual confirmation",
+  "num_candidates": 2,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9324532747268677,
+      "prob_yes": 0.9324532747268677,
+      "prob_partial": 0.0,
+      "prob_no": 0.06754668802022934,
+      "prediction": "Yes",
+      "is_selected": true
+    },
+    {
+      "obj_id": 1,
+      "score": 0.01798621006309986,
+      "prob_yes": 0.01798621006309986,
+      "prob_partial": 0.0,
+      "prob_no": 0.9820137619972229,
+      "prediction": "No",
+      "is_selected": false
+    }
+  ]
+}

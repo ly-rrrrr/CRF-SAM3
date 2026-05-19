@@ -1,0 +1,244 @@
+{
+  "video_id": "breakdance",
+  "exp_id": "2",
+  "expression": "a man performing a headspin",
+  "category": "man",
+  "primary_category": "man",
+  "backup_categories": [
+    "person",
+    "dancer",
+    "breakdancer"
+  ],
+  "category_candidates": [
+    "man",
+    "person",
+    "dancer",
+    "breakdancer"
+  ],
+  "used_category_query": "man",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "performing a headspin"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 19,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.00033535013790242374,
+      "prob_yes": 0.00033535013790242374,
+      "prob_partial": 0.0,
+      "prob_no": 0.9996646642684937,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9669140577316284,
+      "prob_yes": 0.9669140577316284,
+      "prob_partial": 0.0,
+      "prob_no": 0.03308597952127457,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.0010322310263291001,
+      "prob_yes": 0.0010322310263291001,
+      "prob_partial": 0.0,
+      "prob_no": 0.9989677667617798,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.00033535013790242374,
+      "prob_yes": 0.00033535013790242374,
+      "prob_partial": 0.0,
+      "prob_no": 0.9996646642684937,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.0017007224960252643,
+      "prob_yes": 0.0017007224960252643,
+      "prob_partial": 0.0,
+      "prob_no": 0.9982993006706238,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.0007096704212017357,
+      "prob_yes": 0.0007096704212017357,
+      "prob_partial": 0.0,
+      "prob_no": 0.9992903470993042,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 6,
+      "score": 0.0004305570910219103,
+      "prob_yes": 0.0004305570910219103,
+      "prob_partial": 0.0,
+      "prob_no": 0.9995694756507874,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 7,
+      "score": 0.00033535013790242374,
+      "prob_yes": 0.00033535013790242374,
+      "prob_partial": 0.0,
+      "prob_no": 0.9996646642684937,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 8,
+      "score": 0.0002611903182696551,
+      "prob_yes": 0.0002611903182696551,
+      "prob_partial": 0.0,
+      "prob_no": 0.9997387528419495,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 9,
+      "score": 0.00029595711384899914,
+      "prob_yes": 0.00029595711384899914,
+      "prob_partial": 0.0,
+      "prob_no": 0.9997040629386902,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 10,
+      "score": 0.0004305570910219103,
+      "prob_yes": 0.0004305570910219103,
+      "prob_partial": 0.0,
+      "prob_no": 0.9995694756507874,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 11,
+      "score": 0.000552778597921133,
+      "prob_yes": 0.000552778597921133,
+      "prob_partial": 0.0,
+      "prob_no": 0.9994471669197083,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 12,
+      "score": 0.0004878571489825845,
+      "prob_yes": 0.0004878571489825845,
+      "prob_partial": 0.0,
+      "prob_no": 0.9995121955871582,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 13,
+      "score": 0.00037998449988663197,
+      "prob_yes": 0.00037998449988663197,
+      "prob_partial": 0.0,
+      "prob_no": 0.9996199607849121,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 14,
+      "score": 0.00037998449988663197,
+      "prob_yes": 0.00037998449988663197,
+      "prob_partial": 0.0,
+      "prob_no": 0.9996199607849121,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 15,
+      "score": 0.0004878571489825845,
+      "prob_yes": 0.0004878571489825845,
+      "prob_partial": 0.0,
+      "prob_no": 0.9995121955871582,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 16,
+      "score": 0.0002611903182696551,
+      "prob_yes": 0.0002611903182696551,
+      "prob_partial": 0.0,
+      "prob_no": 0.9997387528419495,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 17,
+      "score": 0.0031726828310638666,
+      "prob_yes": 0.0031726828310638666,
+      "prob_partial": 0.0,
+      "prob_no": 0.9968273043632507,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 18,
+      "score": 0.0011695101857185364,
+      "prob_yes": 0.0011695101857185364,
+      "prob_partial": 0.0,
+      "prob_no": 0.9988304972648621,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

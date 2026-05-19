@@ -1,0 +1,19 @@
+Please observe the following consecutive video frames.
+The object marked by the bounding box is the **protagonist** (focus subject), while everything outside the bounding box is the background/context.
+
+Referring Expression: "{referring_expression}"
+
+Question: Does the protagonist inside the bounding box exactly match the referring expression?
+
+Please strictly follow the following reasoning principles:
+
+1. Focus on the overall intent of the referring expression.
+2. Grasp the main points of the referring expression.
+3. Logical verification centered on the object inside the bounding box.
+
+Rating Criteria:
+- "Yes" = Perfect Match. The protagonist is the **true object** described by the referring expression.
+- "Partial" = Distractor/Bystander. The protagonist matches only **part** of the description but does not fit the complete description.
+- "No" = Mismatch. Clearly a wrong object that contradicts the facts described in the referring expression.
+
+**Answer with one word only: Yes, Partial, or No:**

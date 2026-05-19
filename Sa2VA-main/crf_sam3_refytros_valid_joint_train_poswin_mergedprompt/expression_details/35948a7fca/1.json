@@ -1,0 +1,62 @@
+{
+  "video_id": "35948a7fca",
+  "exp_id": "1",
+  "expression": "a large white tiger sitting in the bottom left foreground",
+  "category": "tiger",
+  "primary_category": "tiger",
+  "backup_categories": [
+    "cat",
+    "big cat",
+    "feline"
+  ],
+  "category_candidates": [
+    "tiger",
+    "cat",
+    "big cat",
+    "feline"
+  ],
+  "used_category_query": "tiger",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "large",
+    "white",
+    "sitting",
+    "in the bottom left foreground"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    1
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.004609571769833565,
+      "prob_yes": 0.004609571769833565,
+      "prob_partial": 0.0,
+      "prob_no": 0.9953904151916504,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 1,
+      "score": 0.00970847625285387,
+      "prob_yes": 0.00970847625285387,
+      "prob_partial": 0.0,
+      "prob_no": 0.9902915358543396,
+      "prediction": "No",
+      "is_selected": true
+    },
+    {
+      "obj_id": 3,
+      "score": 0.005220125894993544,
+      "prob_yes": 0.005220125894993544,
+      "prob_partial": 0.0,
+      "prob_no": 0.9947799444198608,
+      "prediction": "No",
+      "is_selected": false
+    }
+  ]
+}

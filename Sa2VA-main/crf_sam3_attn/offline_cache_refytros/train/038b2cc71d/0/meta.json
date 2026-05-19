@@ -1,0 +1,43 @@
+{
+  "video_id": "038b2cc71d",
+  "exp_id": 0,
+  "expression": "a dark lizard moving along the grass",
+  "category": "iguana",
+  "sam3_prompt_source": "category",
+  "sam3_prompt_text": "iguana",
+  "video_path": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/038b2cc71d",
+  "frame_pad": 5,
+  "obj_ids": [
+    0
+  ],
+  "iou_map": {
+    "0": 0.7366647708487243
+  },
+  "frame_indices": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "max_j": 0.7366647708487243,
+  "sum_j": 0.7366647708487243,
+  "mean_j": 0.7366647708487243,
+  "num_candidates": 1
+}

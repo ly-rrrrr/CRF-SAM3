@@ -1,0 +1,60 @@
+{
+  "video_id": "0782a6df7e",
+  "exp_id": "2",
+  "expression": "a hand holding a butterfly",
+  "category": "butterfly",
+  "primary_category": "butterfly",
+  "backup_categories": [
+    "insect",
+    "winged insect",
+    "lepidopteran"
+  ],
+  "category_candidates": [
+    "butterfly",
+    "insect",
+    "winged insect",
+    "lepidopteran"
+  ],
+  "used_category_query": "butterfly",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "hand is open and palm-up",
+    "butterfly is resting on the hand"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    1
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.0031726828310638666,
+      "prob_yes": 0.0031726828310638666,
+      "prob_partial": 0.0,
+      "prob_no": 0.9968273043632507,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 1,
+      "score": 0.8933094143867493,
+      "prob_yes": 0.8933094143867493,
+      "prob_partial": 0.0,
+      "prob_no": 0.10669060051441193,
+      "prediction": "Yes",
+      "is_selected": true
+    },
+    {
+      "obj_id": 2,
+      "score": 0.00247262348420918,
+      "prob_yes": 0.00247262348420918,
+      "prob_partial": 0.0,
+      "prob_no": 0.9975274205207825,
+      "prediction": "No",
+      "is_selected": false
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "video_id": "loading",
+  "exp_id": "1",
+  "expression": "a big man on the right in a black jacket",
+  "category": "man",
+  "primary_category": "man",
+  "backup_categories": [
+    "person",
+    "customer",
+    "employee"
+  ],
+  "category_candidates": [
+    "man",
+    "person",
+    "customer",
+    "employee"
+  ],
+  "used_category_query": "man",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "big man",
+    "on the right",
+    "in a black jacket"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 4,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.977022647857666,
+      "prob_yes": 0.977022647857666,
+      "prob_partial": 0.0,
+      "prob_no": 0.022977370768785477,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.004070138093084097,
+      "prob_yes": 0.004070138093084097,
+      "prob_partial": 0.0,
+      "prob_no": 0.9959298968315125,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.9525741338729858,
+      "prob_yes": 0.9525741338729858,
+      "prob_partial": 0.0,
+      "prob_no": 0.04742587357759476,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.0010322310263291001,
+      "prob_yes": 0.0010322310263291001,
+      "prob_partial": 0.0,
+      "prob_no": 0.9989677667617798,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

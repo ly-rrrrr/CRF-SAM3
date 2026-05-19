@@ -1,0 +1,96 @@
+{
+  "video_id": "369919ef49",
+  "exp_id": "0",
+  "expression": "a person standing in the front comes near the door of the airplane",
+  "category": "person",
+  "primary_category": "person",
+  "backup_categories": [
+    "individual",
+    "human",
+    "skydiver"
+  ],
+  "category_candidates": [
+    "person",
+    "individual",
+    "human",
+    "skydiver"
+  ],
+  "used_category_query": "person",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "standing in the front",
+    "comes near the door"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 7,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    6
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.01798621006309986,
+      "prob_yes": 0.01798621006309986,
+      "prob_partial": 0.0,
+      "prob_no": 0.9820137619972229,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 1,
+      "score": 0.09534946084022522,
+      "prob_yes": 0.09534946084022522,
+      "prob_partial": 0.0,
+      "prob_no": 0.9046505093574524,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 2,
+      "score": 0.008577484637498856,
+      "prob_yes": 0.008577484637498856,
+      "prob_partial": 0.0,
+      "prob_no": 0.9914224743843079,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 3,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 4,
+      "score": 0.04208773002028465,
+      "prob_yes": 0.04208773002028465,
+      "prob_partial": 0.0,
+      "prob_no": 0.957912266254425,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 5,
+      "score": 0.04742587357759476,
+      "prob_yes": 0.04742587357759476,
+      "prob_partial": 0.0,
+      "prob_no": 0.9525741338729858,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 6,
+      "score": 0.24508501589298248,
+      "prob_yes": 0.24508501589298248,
+      "prob_partial": 0.0,
+      "prob_no": 0.7549149990081787,
+      "prediction": "No",
+      "is_selected": true
+    }
+  ]
+}

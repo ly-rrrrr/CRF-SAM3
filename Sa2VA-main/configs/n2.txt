@@ -1,0 +1,168 @@
+prompt = f"""You are analyzing video frames with a referring expression to identify the target object's category and count.
+
+INPUT:
+- 8 video frames showing the scene
+- Referring expression: "{referring_expression}"
+
+YOUR TASK: Output category and number of targets matching the description.
+
+═══════════════════════════════════════════════════════════
+PART 1: CATEGORY IDENTIFICATION (Language-First, Vision-Second)
+═══════════════════════════════════════════════════════════
+
+Step 1: Extract category from language
+- Identify the grammatical subject (main noun) in the referring expression
+- If the expression has no clear subject (e.g., "On the left, directing..."), look for the implied actor
+- Examples:
+  * "The dog running" → subject: "dog"
+  * "White rabbit jumping" → subject: "rabbit"
+  * "Monkeys on the left" → subject: "Monkeys" → "monkey"
+  * "The trainer on the left, directing..." → subject: "trainer"
+
+Step 2: Normalize to common visual category
+- Check the video frames to see what object type actually appears
+- Convert specific/ambiguous terms to standard visual categories:
+  * "trainer" / "person directing" / "man" / "woman" → "person"
+  * "kitten" / "cat" / "kitty" → "cat"
+  * "puppy" / "dog" → "dog"
+  * "bunny" / "rabbit" → "rabbit"
+- Keep the category at an appropriate level of specificity for visual recognition
+- Use singular form for the category name
+
+Final category: Choose the normalized visual category that matches both language and frames.
+
+═══════════════════════════════════════════════════════════
+PART 2: COUNT DETERMINATION (Vision-First, Language-Second)
+═══════════════════════════════════════════════════════════
+
+Step 1: Visual baseline count
+- Scan all 8 frames and count how many objects of this category appear
+- Note: Objects may appear/disappear across frames, use the most common count
+- Record this as VISUAL_COUNT
+
+Step 2: Decompose referring expression into sub-conditions
+- Break down the expression into individual filtering conditions
+- Each condition should be simple and atomic
+
+Example decomposition:
+- "Kitten moving around playing" →
+  Sub-conditions: ["kitten moving around", "kitten playing"]
+
+- "The trainer on the left, directing the bear's hula hoop performance" →
+  Sub-conditions: ["trainer on the left", "trainer directing"]
+
+- "White rabbit jumping forward" →
+  Sub-conditions: ["white rabbit", "rabbit jumping forward"]
+
+- "Monkeys on the left sitting down without moving" →
+  Sub-conditions: ["monkeys on the left", "monkeys sitting down", "monkeys without moving"]
+
+Step 3: Apply sub-conditions sequentially to filter
+- Start with VISUAL_COUNT (all objects of this category visible)
+- For each sub-condition, check frames and count how many objects satisfy it
+- Apply AND logic: an object must satisfy ALL sub-conditions
+- Track the count after each filter step
+
+Step 4: Handle explicit numbers and determiners
+Priority rules (check in order):
+1. **Explicit number** ("4 lizards", "two bears") → Use that exact number
+2. **Singular noun + singular determiner** ("the dog", "a rabbit") → num_targets = 1
+3. **Result from sub-condition filtering** → Use the filtered count
+4. **Plural noun without constraints** → Use VISUAL_COUNT (minimum 2)
+
+═══════════════════════════════════════════════════════════
+OUTPUT FORMAT
+═══════════════════════════════════════════════════════════
+
+Return ONLY valid JSON:
+{{
+  "category": "<normalized category in singular form>",
+  "num_targets": <final count as integer>,
+  "reasoning": {{
+    "language_subject": "<extracted subject from expression>",
+    "normalized_to": "<why this visual category>",
+    "visual_count": <total objects of this category in frames>,
+    "sub_conditions": [<list of decomposed conditions>],
+    "filtered_count": <count after applying all sub-conditions>,
+    "final_rule_applied": "<which priority rule determined the final count>"
+  }}
+}}
+
+═══════════════════════════════════════════════════════════
+EXAMPLES
+═══════════════════════════════════════════════════════════
+
+Example 1:
+Expression: "The trainer on the left, directing the bear's hula hoop performance with its mouth."
+Frames show: 2 people, 1 bear
+
+Output:
+{{
+  "category": "person",
+  "num_targets": 1,
+  "reasoning": {{
+    "language_subject": "trainer",
+    "normalized_to": "person (trainer is a type of person visible in frames)",
+    "visual_count": 2,
+    "sub_conditions": ["trainer on the left", "trainer directing"],
+    "filtered_count": 1,
+    "final_rule_applied": "Singular determiner 'the' + singular noun 'trainer' → 1"
+  }}
+}}
+
+Example 2:
+Expression: "Kitten moving around playing"
+Frames show: 3 kittens (2 playing and moving, 1 sitting still)
+
+Output:
+{{
+  "category": "cat",
+  "num_targets": 2,
+  "reasoning": {{
+    "language_subject": "kitten",
+    "normalized_to": "cat (kitten is young cat)",
+    "visual_count": 3,
+    "sub_conditions": ["kitten moving around", "kitten playing"],
+    "filtered_count": 2,
+    "final_rule_applied": "Sub-condition filtering: only 2 kittens satisfy both moving AND playing"
+  }}
+}}
+
+Example 3:
+Expression: "Monkeys on the left sitting down without moving"
+Frames show: 4 monkeys total (2 on left sitting still, 2 on right moving)
+
+Output:
+{{
+  "category": "monkey",
+  "num_targets": 2,
+  "reasoning": {{
+    "language_subject": "monkeys",
+    "normalized_to": "monkey (same category)",
+    "visual_count": 4,
+    "sub_conditions": ["monkeys on the left", "monkeys sitting down", "monkeys without moving"],
+    "filtered_count": 2,
+    "final_rule_applied": "Sub-condition filtering: 2 monkeys on left are sitting and not moving"
+  }}
+}}
+
+Example 4:
+Expression: "4 lizards moving around"
+Frames show: 5-6 lizards visible
+
+Output:
+{{
+  "category": "lizard",
+  "num_targets": 4,
+  "reasoning": {{
+    "language_subject": "lizards",
+    "normalized_to": "lizard (same category)",
+    "visual_count": 6,
+    "sub_conditions": ["4 lizards", "lizards moving around"],
+    "filtered_count": 6,
+    "final_rule_applied": "Explicit number '4' overrides visual count"
+  }}
+}}
+
+Now analyze the provided frames and referring expression following this process.
+"""

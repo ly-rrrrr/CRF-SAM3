@@ -1,0 +1,222 @@
+{
+  "video_id": "india",
+  "exp_id": "0",
+  "expression": "a woman in a yellow salwar suit",
+  "category": "woman",
+  "primary_category": "woman",
+  "backup_categories": [
+    "person",
+    "individual",
+    "adult"
+  ],
+  "category_candidates": [
+    "woman",
+    "person",
+    "individual",
+    "adult"
+  ],
+  "used_category_query": "woman",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "wearing yellow salwar suit"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 17,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    6
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.007577241398394108,
+      "prob_yes": 0.007577241398394108,
+      "prob_partial": 0.0,
+      "prob_no": 0.9924227595329285,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.0017007224960252643,
+      "prob_yes": 0.0017007224960252643,
+      "prob_partial": 0.0,
+      "prob_no": 0.9982993006706238,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.0015011822106316686,
+      "prob_yes": 0.0015011822106316686,
+      "prob_partial": 0.0,
+      "prob_no": 0.998498797416687,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.005911069456487894,
+      "prob_yes": 0.005911069456487894,
+      "prob_partial": 0.0,
+      "prob_no": 0.9940890073776245,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.002182716503739357,
+      "prob_yes": 0.002182716503739357,
+      "prob_partial": 0.0,
+      "prob_no": 0.9978172779083252,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.005911069456487894,
+      "prob_yes": 0.005911069456487894,
+      "prob_partial": 0.0,
+      "prob_no": 0.9940890073776245,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 6,
+      "score": 0.9626730680465698,
+      "prob_yes": 0.9626730680465698,
+      "prob_partial": 0.0,
+      "prob_no": 0.037326883524656296,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 7,
+      "score": 0.00247262348420918,
+      "prob_yes": 0.00247262348420918,
+      "prob_partial": 0.0,
+      "prob_no": 0.9975274205207825,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 9,
+      "score": 0.0015011822106316686,
+      "prob_yes": 0.0015011822106316686,
+      "prob_partial": 0.0,
+      "prob_no": 0.998498797416687,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 10,
+      "score": 0.005220125894993544,
+      "prob_yes": 0.005220125894993544,
+      "prob_partial": 0.0,
+      "prob_no": 0.9947799444198608,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 11,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 12,
+      "score": 0.0035936026833951473,
+      "prob_yes": 0.0035936026833951473,
+      "prob_partial": 0.0,
+      "prob_no": 0.9964063763618469,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 13,
+      "score": 0.0017007224960252643,
+      "prob_yes": 0.0017007224960252643,
+      "prob_partial": 0.0,
+      "prob_no": 0.9982993006706238,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 15,
+      "score": 0.0031726828310638666,
+      "prob_yes": 0.0031726828310638666,
+      "prob_partial": 0.0,
+      "prob_no": 0.9968273043632507,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 16,
+      "score": 0.008577484637498856,
+      "prob_yes": 0.008577484637498856,
+      "prob_partial": 0.0,
+      "prob_no": 0.9914224743843079,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 17,
+      "score": 0.004609571769833565,
+      "prob_yes": 0.004609571769833565,
+      "prob_partial": 0.0,
+      "prob_no": 0.9953904151916504,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 18,
+      "score": 0.07585818320512772,
+      "prob_yes": 0.07585818320512772,
+      "prob_partial": 0.0,
+      "prob_no": 0.9241418242454529,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

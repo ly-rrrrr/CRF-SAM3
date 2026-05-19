@@ -1,0 +1,2 @@
+Given the referring expression, judge whether the masked object in the frames matches it. Answer Yes or No.
+Expression: {referring_expression}

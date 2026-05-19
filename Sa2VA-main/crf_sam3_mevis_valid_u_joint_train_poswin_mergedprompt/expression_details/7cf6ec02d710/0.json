@@ -1,0 +1,47 @@
+{
+  "video_id": "7cf6ec02d710",
+  "exp_id": "0",
+  "expression": "Turtle biting at the ground then looking up",
+  "category": "turtle",
+  "primary_category": "turtle",
+  "backup_categories": [
+    "sea turtle",
+    "reptile",
+    "animal"
+  ],
+  "category_candidates": [
+    "turtle",
+    "sea turtle",
+    "reptile",
+    "animal"
+  ],
+  "used_category_query": "turtle",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "biting at the ground",
+    "looking up"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.8807970285415649,
+      "prob_yes": 0.8807970285415649,
+      "prob_partial": 0.0,
+      "prob_no": 0.11920291185379028,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": []
+}

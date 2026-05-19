@@ -1,0 +1,61 @@
+{
+  "video_id": "1a609fa7ee",
+  "exp_id": "0",
+  "expression": "a blue color motor bike is showcased in the show",
+  "category": "motor bike",
+  "primary_category": "motor bike",
+  "backup_categories": [
+    "bike",
+    "motorcycle",
+    "vehicle"
+  ],
+  "category_candidates": [
+    "motor bike",
+    "bike",
+    "motorcycle",
+    "vehicle"
+  ],
+  "used_category_query": "motor bike",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "blue color",
+    "motor bike",
+    "showcased in the show"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9046505093574524,
+      "prob_yes": 0.9046505093574524,
+      "prob_partial": 0.0,
+      "prob_no": 0.09534946084022522,
+      "prediction": "Yes",
+      "is_selected": true
+    },
+    {
+      "obj_id": 1,
+      "score": 0.005911069456487894,
+      "prob_yes": 0.005911069456487894,
+      "prob_partial": 0.0,
+      "prob_no": 0.9940890073776245,
+      "prediction": "No",
+      "is_selected": false
+    },
+    {
+      "obj_id": 2,
+      "score": 0.0035936026833951473,
+      "prob_yes": 0.0035936026833951473,
+      "prob_partial": 0.0,
+      "prob_no": 0.9964063763618469,
+      "prediction": "No",
+      "is_selected": false
+    }
+  ]
+}

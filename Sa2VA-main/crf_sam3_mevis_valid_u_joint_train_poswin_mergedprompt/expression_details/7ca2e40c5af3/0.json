@@ -1,0 +1,69 @@
+{
+  "video_id": "7ca2e40c5af3",
+  "exp_id": "0",
+  "expression": "Monkey moving around and jumping to the left",
+  "category": "monkey",
+  "primary_category": "monkey",
+  "backup_categories": [
+    "primate",
+    "animal",
+    "mammal"
+  ],
+  "category_candidates": [
+    "monkey",
+    "primate",
+    "animal",
+    "mammal"
+  ],
+  "used_category_query": "monkey",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "moving around",
+    "jumping to the left"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.04742587357759476,
+      "prob_yes": 0.04742587357759476,
+      "prob_partial": 0.0,
+      "prob_no": 0.9525741338729858,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.020332353189587593,
+      "prob_yes": 0.020332353189587593,
+      "prob_partial": 0.0,
+      "prob_no": 0.9796676635742188,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.14804719388484955,
+      "prob_yes": 0.14804719388484955,
+      "prob_partial": 0.0,
+      "prob_no": 0.8519527316093445,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    2
+  ],
+  "gt_obj_ids": []
+}

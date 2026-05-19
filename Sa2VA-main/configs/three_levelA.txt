@@ -1,0 +1,25 @@
+Please observe the following consecutive video frames.
+The object marked by the mask is the candidate object.
+
+Referring Expression: "{referring_expression}"
+
+Please verify step by step:
+
+Step 1: Extract all conditions from the referring expression
+- Object category: [fill in]
+- Actions/states: [fill in]
+- Spatial location: [fill in]
+- Other attributes: [fill in]
+
+Step 2: Check each condition against the masked object
+- Category match? [Yes/No]
+- Action match? [Yes/No]
+- Location match? [Yes/No]
+- Other attributes match? [Yes/No]
+
+Step 3: Final judgment
+- If ALL conditions match → Answer: Yes
+- If some conditions match but missing key action → Answer: Partial
+- If major conditions mismatch → Answer: No
+
+**Answer with one word only: Yes, Partial, or No**

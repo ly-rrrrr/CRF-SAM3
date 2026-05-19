@@ -1,0 +1,58 @@
+{
+  "video_id": "16ae95660b3a",
+  "exp_id": "0",
+  "expression": "Elephants walking around",
+  "category": "elephant",
+  "primary_category": "elephant",
+  "backup_categories": [
+    "animal",
+    "mammal",
+    "large animal"
+  ],
+  "category_candidates": [
+    "elephant",
+    "animal",
+    "mammal",
+    "large animal"
+  ],
+  "used_category_query": "elephant",
+  "category_fallback_used": false,
+  "num_targets": 2,
+  "sub_conditions": [
+    "two elephants visible in frames"
+  ],
+  "final_rule_applied": "plural without strong constraints",
+  "num_candidates": 2,
+  "num_selected": 2,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.957912266254425,
+      "prob_yes": 0.957912266254425,
+      "prob_partial": 0.0,
+      "prob_no": 0.04208773002028465,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.9241418242454529,
+      "prob_yes": 0.9241418242454529,
+      "prob_partial": 0.0,
+      "prob_no": 0.07585818320512772,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0,
+    2
+  ],
+  "gt_obj_ids": []
+}

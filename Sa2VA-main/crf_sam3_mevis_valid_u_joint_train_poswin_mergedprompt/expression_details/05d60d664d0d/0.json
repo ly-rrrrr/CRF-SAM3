@@ -1,0 +1,82 @@
+{
+  "video_id": "05d60d664d0d",
+  "exp_id": "0",
+  "expression": "Three turtles flapping their fins and swimming around",
+  "category": "turtle",
+  "primary_category": "turtle",
+  "backup_categories": [
+    "sea turtle",
+    "reptile",
+    "animal"
+  ],
+  "category_candidates": [
+    "turtle",
+    "sea turtle",
+    "reptile",
+    "animal"
+  ],
+  "used_category_query": "turtle",
+  "category_fallback_used": false,
+  "num_targets": 3,
+  "sub_conditions": [
+    "flapping fins",
+    "swimming around"
+  ],
+  "final_rule_applied": "explicit number in expression",
+  "num_candidates": 4,
+  "num_selected": 3,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.6791787147521973,
+      "prob_yes": 0.6791787147521973,
+      "prob_partial": 0.0,
+      "prob_no": 0.3208213150501251,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9465966820716858,
+      "prob_yes": 0.9465966820716858,
+      "prob_partial": 0.0,
+      "prob_no": 0.053403329104185104,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.7057850360870361,
+      "prob_yes": 0.7057850360870361,
+      "prob_partial": 0.0,
+      "prob_no": 0.29421496391296387,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1,
+    3,
+    0
+  ],
+  "gt_obj_ids": []
+}

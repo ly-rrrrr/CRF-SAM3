@@ -1,0 +1,83 @@
+\section{Method}
+
+\subsection{Problem Formulation}
+Given a video $\mathcal{V}=\{I_t\}_{t=1}^{T}$ and a referring expression $e$, CRF-SAM3 first recalls all category-consistent proposals and forms a candidate set
+\[
+\mathcal{C}=\{c_i\}_{i=1}^{N},
+\]
+where each $c_i$ is a spatio-temporal tube with masked frames. The goal is to learn a scoring function $s(c_i,e)$ that ranks the true target candidate(s) above distractors.
+
+\subsection{Two-Stage Training Pipeline}
+\paragraph{Stage A: Offline Cache Construction.}
+For each $(\text{video},\text{expression})$ pair:
+\begin{enumerate}
+\item Extract a category concept from expression and video context.
+\item Use SAM3 to recall all instances of this category across the full video.
+\item Compute tube-level IoU against GT masks for each candidate, denoted as $\text{IoU}_i$.
+\item Save offline cache: per-candidate mask PNGs, frame indices, IoU map, and expression metadata.
+\end{enumerate}
+This stage removes expensive online SAM3 recall from fine-tuning.
+
+\paragraph{Stage B: Listwise Fine-tuning.}
+At training time, one sample is an expression-level candidate group:
+\[
+\mathcal{X}=\{(c_i,e,\text{IoU}_i)\}_{i=1}^{N'}.
+\]
+Positive candidate index set:
+\[
+\mathcal{P}=\{i\mid \text{IoU}_i\ge \tau_{pos}\}.
+\]
+Negative candidates are selected by policy (typically \texttt{all}, i.e., all non-positive candidates).
+
+\subsection{Candidate Scoring with Yes/No Generation}
+For each candidate tube $c_i$, the model input is: masked multi-frame visuals + a unified Yes/No instruction prompt. The model produces final-step logits $z_i^{\text{yes}}, z_i^{\text{no}}$, and the score is
+\[
+s_i=P_i(\text{Yes})=\frac{\exp(z_i^{\text{yes}})}{\exp(z_i^{\text{yes}})+\exp(z_i^{\text{no}})}.
+\]
+This keeps training and inference scoring semantics aligned.
+
+\subsection{Listwise Ranking Supervision}
+Instead of independent binary classification, we optimize intra-group ranking:
+\[
+\mathcal{L}_{cls}
+=
+\log\sum_{i=1}^{N'}\exp\left(\frac{s_i}{\tau_{lw}}\right)
+-
+\log\sum_{i\in\mathcal{P}}\exp\left(\frac{s_i}{\tau_{lw}}\right).
+\]
+When no positive exists in a group, we optionally use the max-IoU candidate as a fallback positive to stabilize training.
+
+\subsection{Soft Mask-aware Alignment}
+To suppress background shortcut, we add a soft alignment regularizer on language-visual hidden features.
+Let $q$ be mean text-token feature and $\{h_u\}$ be image-token features.
+\[
+a_u=\mathrm{sim}(h_u,q),\qquad
+\pi_u=\frac{\exp(a_u/\tau_a)}{\sum_v\exp(a_v/\tau_a)}.
+\]
+For frame $t$, mask-region probability mass is
+\[
+r_t=\sum_{u\in M_t}\pi_u.
+\]
+Alignment loss:
+\[
+\mathcal{L}_{align}=1-\frac{1}{T'}\sum_{t=1}^{T'}r_t.
+\]
+This does not modify global attention architecture; it penalizes attention energy outside the candidate mask.
+
+\subsection{Final Objective}
+\[
+\mathcal{L}=\mathcal{L}_{cls}+\lambda\mathcal{L}_{align},
+\]
+where $\lambda$ is the alignment-loss weight.
+
+\subsection{LoRA-based Efficient Adaptation}
+We adopt LoRA to adapt key language-side projections (e.g., $q,k,v,o$ and MLP up/down/gate):
+\[
+W=W_0+\Delta W,\qquad
+\Delta W=\frac{\alpha}{r}BA.
+\]
+The visual encoder is frozen; only LoRA-related trainable parameters are updated.
+This yields efficient adaptation while preserving pretrained multimodal priors.
+
+\subsection{Inference}
+At test time, all candidates under the same expression are scored by $s_i$ and ranked. Top-$K$ candidates (or Top-1) are selected according to target-count prior or evaluation protocol, and their propagated masks are returned as final predictions.

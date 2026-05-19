@@ -1,0 +1,43 @@
+{
+  "video_id": "188cb4e03d",
+  "exp_id": "0",
+  "expression": "a white truck is in front of a white fence moving down the road to the left",
+  "category": "truck",
+  "primary_category": "truck",
+  "backup_categories": [
+    "vehicle",
+    "car",
+    "van"
+  ],
+  "category_candidates": [
+    "truck",
+    "vehicle",
+    "car",
+    "van"
+  ],
+  "used_category_query": "truck",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "white truck",
+    "in front of a white fence",
+    "moving down the road to the left"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    0
+  ],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.13296423852443695,
+      "prob_yes": 0.13296423852443695,
+      "prob_partial": 0.0,
+      "prob_no": 0.8670357465744019,
+      "prediction": "No",
+      "is_selected": true
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "video_id": "51062055025f",
+  "exp_id": "0",
+  "expression": "A school of swimming yellowfish.",
+  "category": "yellowfish",
+  "primary_category": "yellowfish",
+  "backup_categories": [
+    "fish",
+    "aquarium fish"
+  ],
+  "category_candidates": [
+    "yellowfish",
+    "fish",
+    "aquarium fish"
+  ],
+  "used_category_query": "yellowfish",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "yellowfish",
+    "swimming"
+  ],
+  "final_rule_applied": "plural without strong constraints",
+  "num_candidates": 10,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.13296423852443695,
+      "prob_yes": 0.13296423852443695,
+      "prob_partial": 0.0,
+      "prob_no": 0.8670357465744019,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.10669060051441193,
+      "prob_yes": 0.10669060051441193,
+      "prob_partial": 0.0,
+      "prob_no": 0.8933094143867493,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.16451646387577057,
+      "prob_yes": 0.16451646387577057,
+      "prob_partial": 0.0,
+      "prob_no": 0.8354835510253906,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.02931223064661026,
+      "prob_yes": 0.02931223064661026,
+      "prob_partial": 0.0,
+      "prob_no": 0.970687747001648,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.037326883524656296,
+      "prob_yes": 0.037326883524656296,
+      "prob_partial": 0.0,
+      "prob_no": 0.9626730680465698,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 7,
+      "score": 0.03308597952127457,
+      "prob_yes": 0.03308597952127457,
+      "prob_partial": 0.0,
+      "prob_no": 0.9669140577316284,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 8,
+      "score": 0.037326883524656296,
+      "prob_yes": 0.037326883524656296,
+      "prob_partial": 0.0,
+      "prob_no": 0.9626730680465698,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 9,
+      "score": 0.053403329104185104,
+      "prob_yes": 0.053403329104185104,
+      "prob_partial": 0.0,
+      "prob_no": 0.9465966820716858,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 10,
+      "score": 0.010986942797899246,
+      "prob_yes": 0.010986942797899246,
+      "prob_partial": 0.0,
+      "prob_no": 0.9890130758285522,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    3
+  ],
+  "gt_obj_ids": []
+}

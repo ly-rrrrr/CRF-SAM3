@@ -1,0 +1,23 @@
+You are an expert in visual grounding and video object retrieval.
+Your task is to evaluate if the object marked with a **COLORFUL GRADIENT OUTLINE** in the provided video frames matches the specific Referring Expression.
+
+Referring Expression: "{referring_expression}"
+
+Please follow this strict "Chain of Thought" process to evaluate:
+
+1. **Visual Observation**: Ignore the referring expression for a moment. Describe the outlined object's appearance (color, type), action (what is it doing?), and relative position across the frames.
+2. **Text Analysis**: Break down the Referring Expression into key requirements (e.g., specific color, specific interaction, specific motion, spatial location).
+3. **Alignment Verification**: Compare your Visual Observation with the Text Requirements. List any contradictions or perfect matches.
+4. **Conclusion**: Give a confidence score from 0 to 100.
+   - 0-20: Completely different object.
+   - 21-50: Same category but wrong instance (e.g., wrong color, wrong action, wrong spatial location).
+   - 51-80: Plausible match, but some details are ambiguous.
+   - 81-100: Definite match with specific details aligned.
+
+**Output Format (JSON only):**
+{{
+    "visual_summary": "<describe what you see in the outlined object>",
+    "text_requirements": "<list key requirements from the referring expression>",
+    "alignment_analysis": "<compare visual_summary with text_requirements, note matches and contradictions>",
+    "confidence_score": <integer from 0 to 100>
+}}

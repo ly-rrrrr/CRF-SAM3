@@ -1,0 +1,21 @@
+prompt = f"""Watch this video showing frames in temporal order. An object is marked with a GLOW HIGHLIGHT that tracks it across time.
+
+Referring Expression: "{referring_expression}"
+
+Question: Does the outlined object match what this expression describes?
+
+Please follow this "Thinking Process" to evaluate:
+
+1. **Occlusion Handling**: If the marked object is occluded, the glowing outline might appear fragmented. You must understand that the marked object is a SINGLE entity and clearly identify its object category despite breaks in the outline.
+2. **Spatiotemporal Analysis**: These frames are sequential. Analyze the marked object from a spatiotemporal perspective; treat all frames as a single temporal trajectory centered on the marked object.
+3. **Foreground vs. Background**: If you see a frame that perfectly matches the referring expression, be very careful to distinguish between the **Foreground (the marked object)** and the **Background (other objects)**.
+   - If the action/attribute belongs to the marked object (foreground), it is Correct.
+   - If it is happening in the background (unmarked objects), it is a Distractor.
+4. **Intent Understanding**: Be sure to clearly infer the underlying intent of the referring expression.
+
+Rating:
+- "Yes" = This masked object clearly matches the description
+- "Partial" = This object somewhat matches but has noticeable inconsistencies
+- "No" = This is definitely NOT the object being described
+
+Answer with one word: Yes, Partial, or No:"""

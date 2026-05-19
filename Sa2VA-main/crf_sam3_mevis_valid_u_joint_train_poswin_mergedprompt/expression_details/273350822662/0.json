@@ -1,0 +1,99 @@
+{
+  "video_id": "273350822662",
+  "exp_id": "0",
+  "expression": "Fish swimming around",
+  "category": "fish",
+  "primary_category": "fish",
+  "backup_categories": [
+    "aquarium",
+    "pet",
+    "animal"
+  ],
+  "category_candidates": [
+    "fish",
+    "aquarium",
+    "pet",
+    "animal"
+  ],
+  "used_category_query": "fish",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [],
+  "final_rule_applied": "plural without strong constraints",
+  "num_candidates": 6,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.09534946084022522,
+      "prob_yes": 0.09534946084022522,
+      "prob_partial": 0.0,
+      "prob_no": 0.9046505093574524,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.04742587357759476,
+      "prob_yes": 0.04742587357759476,
+      "prob_partial": 0.0,
+      "prob_no": 0.9525741338729858,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.09534946084022522,
+      "prob_yes": 0.09534946084022522,
+      "prob_partial": 0.0,
+      "prob_no": 0.9046505093574524,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.11920291185379028,
+      "prob_yes": 0.11920291185379028,
+      "prob_partial": 0.0,
+      "prob_no": 0.8807970285415649,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.07585818320512772,
+      "prob_yes": 0.07585818320512772,
+      "prob_partial": 0.0,
+      "prob_no": 0.9241418242454529,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 5,
+      "score": 0.4378235340118408,
+      "prob_yes": 0.4378235340118408,
+      "prob_partial": 0.0,
+      "prob_no": 0.562176525592804,
+      "prediction": "No",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    5
+  ],
+  "gt_obj_ids": []
+}

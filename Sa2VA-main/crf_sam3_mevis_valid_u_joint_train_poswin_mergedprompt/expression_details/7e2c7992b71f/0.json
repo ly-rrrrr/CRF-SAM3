@@ -1,0 +1,58 @@
+{
+  "video_id": "7e2c7992b71f",
+  "exp_id": "0",
+  "expression": "Trucks moving forward",
+  "category": "truck",
+  "primary_category": "truck",
+  "backup_categories": [
+    "vehicle",
+    "car",
+    "tractor"
+  ],
+  "category_candidates": [
+    "truck",
+    "vehicle",
+    "car",
+    "tractor"
+  ],
+  "used_category_query": "truck",
+  "category_fallback_used": false,
+  "num_targets": 2,
+  "sub_conditions": [
+    "two distinct vehicles visible in motion"
+  ],
+  "final_rule_applied": "plural without strong constraints",
+  "num_candidates": 2,
+  "num_selected": 2,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.977022647857666,
+      "prob_yes": 0.977022647857666,
+      "prob_partial": 0.0,
+      "prob_no": 0.022977370768785477,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9669140577316284,
+      "prob_yes": 0.9669140577316284,
+      "prob_partial": 0.0,
+      "prob_no": 0.03308597952127457,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0,
+    1
+  ],
+  "gt_obj_ids": []
+}

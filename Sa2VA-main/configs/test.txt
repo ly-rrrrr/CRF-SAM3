@@ -1,0 +1,3 @@
+prompt = f"""Is the position of the mask in the bottom right corner?
+
+Answer with one word only: Yes, Partial, or No."""

@@ -1,0 +1,57 @@
+{
+  "video_id": "598ccf70ab11",
+  "exp_id": "0",
+  "expression": "The monkey picking up things from the ground and eating them",
+  "category": "monkey",
+  "primary_category": "monkey",
+  "backup_categories": [
+    "primate",
+    "animal",
+    "ape"
+  ],
+  "category_candidates": [
+    "monkey",
+    "primate",
+    "animal",
+    "ape"
+  ],
+  "used_category_query": "monkey",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "one monkey is shown performing the action"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 2,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.6791787147521973,
+      "prob_yes": 0.6791787147521973,
+      "prob_partial": 0.0,
+      "prob_no": 0.3208213150501251,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.020332353189587593,
+      "prob_yes": 0.020332353189587593,
+      "prob_partial": 0.0,
+      "prob_no": 0.9796676635742188,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": []
+}

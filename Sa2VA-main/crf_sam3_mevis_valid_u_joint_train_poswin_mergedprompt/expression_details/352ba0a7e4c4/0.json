@@ -1,0 +1,58 @@
+{
+  "video_id": "352ba0a7e4c4",
+  "exp_id": "0",
+  "expression": "The sheep butting heads with the young calf.",
+  "category": "sheep",
+  "primary_category": "sheep",
+  "backup_categories": [
+    "animal",
+    "calf",
+    "bovine"
+  ],
+  "category_candidates": [
+    "sheep",
+    "animal",
+    "calf",
+    "bovine"
+  ],
+  "used_category_query": "sheep",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "one sheep is visible in the frame",
+    "the sheep is interacting with a calf"
+  ],
+  "final_rule_applied": "singular reference to one sheep",
+  "num_candidates": 2,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.037326883524656296,
+      "prob_yes": 0.037326883524656296,
+      "prob_partial": 0.0,
+      "prob_no": 0.9626730680465698,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9740425944328308,
+      "prob_yes": 0.9740425944328308,
+      "prob_partial": 0.0,
+      "prob_no": 0.02595735527575016,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    1
+  ],
+  "gt_obj_ids": []
+}

@@ -1,0 +1,42 @@
+{
+  "video_id": "30fe0ed0ce",
+  "exp_id": "0",
+  "expression": "a surf-boarder with a white surfboard",
+  "category": "surf-boarder",
+  "primary_category": "surf-boarder",
+  "backup_categories": [
+    "surfer",
+    "person",
+    "boarder"
+  ],
+  "category_candidates": [
+    "surf-boarder",
+    "surfer",
+    "person",
+    "boarder"
+  ],
+  "used_category_query": "surf-boarder",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "person on surfboard",
+    "surfboard is white"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    1
+  ],
+  "candidates": [
+    {
+      "obj_id": 1,
+      "score": 0.005220125894993544,
+      "prob_yes": 0.005220125894993544,
+      "prob_partial": 0.0,
+      "prob_no": 0.9947799444198608,
+      "prediction": "No",
+      "is_selected": true
+    }
+  ]
+}

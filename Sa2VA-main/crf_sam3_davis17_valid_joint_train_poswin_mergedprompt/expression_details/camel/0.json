@@ -1,0 +1,67 @@
+{
+  "video_id": "camel",
+  "exp_id": "0",
+  "expression": "a brown camel in the front",
+  "category": "camel",
+  "primary_category": "camel",
+  "backup_categories": [
+    "animal",
+    "dromedary"
+  ],
+  "category_candidates": [
+    "camel",
+    "animal",
+    "dromedary"
+  ],
+  "used_category_query": "camel",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "brown",
+    "in the front"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 3,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "selected_obj_ids": [
+    0
+  ],
+  "gt_obj_ids": [],
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9669140577316284,
+      "prob_yes": 0.9669140577316284,
+      "prob_partial": 0.0,
+      "prob_no": 0.03308597952127457,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.01590639166533947,
+      "prob_yes": 0.01590639166533947,
+      "prob_partial": 0.0,
+      "prob_no": 0.9840936064720154,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.0015011822106316686,
+      "prob_yes": 0.0015011822106316686,
+      "prob_partial": 0.0,
+      "prob_no": 0.998498797416687,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "video_id": "20a93b4c54",
+  "exp_id": "0",
+  "expression": "a knife cover on the left hand side of a knife",
+  "category": "pouch",
+  "primary_category": "knife cover",
+  "backup_categories": [
+    "sheath",
+    "case",
+    "pouch"
+  ],
+  "category_candidates": [
+    "knife cover",
+    "sheath",
+    "case",
+    "pouch"
+  ],
+  "used_category_query": "pouch",
+  "category_fallback_used": true,
+  "num_targets": 1,
+  "sub_conditions": [
+    "knife cover is on the left hand side",
+    "knife is being held by a hand"
+  ],
+  "final_rule_applied": "singular reference to one knife cover",
+  "num_candidates": 1,
+  "num_selected": 1,
+  "selected_obj_ids": [
+    1
+  ],
+  "candidates": [
+    {
+      "obj_id": 1,
+      "score": 0.5,
+      "prob_yes": 0.5,
+      "prob_partial": 0.0,
+      "prob_no": 0.5,
+      "prediction": "No",
+      "is_selected": true
+    }
+  ]
+}

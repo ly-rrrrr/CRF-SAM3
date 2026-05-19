@@ -1,0 +1,91 @@
+{
+  "video_id": "5a1d2cbd224c",
+  "exp_id": "0",
+  "expression": "Lamb moving forward then turning around",
+  "category": "lamb",
+  "primary_category": "lamb",
+  "backup_categories": [
+    "sheep",
+    "animal",
+    "goat"
+  ],
+  "category_candidates": [
+    "lamb",
+    "sheep",
+    "animal",
+    "goat"
+  ],
+  "used_category_query": "lamb",
+  "category_fallback_used": false,
+  "num_targets": 1,
+  "sub_conditions": [
+    "moving forward",
+    "turning around"
+  ],
+  "final_rule_applied": "singular reference",
+  "num_candidates": 5,
+  "num_selected": 1,
+  "num_gt_identified": 0,
+  "gt_match": false,
+  "candidates": [
+    {
+      "obj_id": 0,
+      "score": 0.9324532747268677,
+      "prob_yes": 0.9324532747268677,
+      "prob_partial": 0.0,
+      "prob_no": 0.06754668802022934,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 1,
+      "score": 0.9525741338729858,
+      "prob_yes": 0.9525741338729858,
+      "prob_partial": 0.0,
+      "prob_no": 0.04742587357759476,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 2,
+      "score": 0.9324532747268677,
+      "prob_yes": 0.9324532747268677,
+      "prob_partial": 0.0,
+      "prob_no": 0.06754668802022934,
+      "prediction": "Yes",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 3,
+      "score": 0.957912266254425,
+      "prob_yes": 0.957912266254425,
+      "prob_partial": 0.0,
+      "prob_no": 0.04208773002028465,
+      "prediction": "Yes",
+      "is_selected": true,
+      "is_gt": false,
+      "iou": 0.0
+    },
+    {
+      "obj_id": 4,
+      "score": 0.022977370768785477,
+      "prob_yes": 0.022977370768785477,
+      "prob_partial": 0.0,
+      "prob_no": 0.977022647857666,
+      "prediction": "No",
+      "is_selected": false,
+      "is_gt": false,
+      "iou": 0.0
+    }
+  ],
+  "selected_obj_ids": [
+    3
+  ],
+  "gt_obj_ids": []
+}
