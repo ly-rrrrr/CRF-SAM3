@@ -39,6 +39,9 @@ Sa2VA/data/video_datas/**/*
 *.mp4
 *.avi
 *.mov
+!论文代理/
+!论文代理/**/
+!论文代理/**/*.png
 
 # Large serialized dataset masks
 *.pkl
