@@ -1,0 +1,160 @@
+{
+  "cache_root": "crf_sam3_attn/offline_cache_davis17",
+  "summary": {
+    "expected_reference_count": 553,
+    "num_meta": 547,
+    "missing_vs_reference": 6,
+    "mean_max_j": 0.8344071786203605,
+    "median_max_j": 0.9112600339279769,
+    "min_max_j": 0.0,
+    "max_max_j": 0.9862461446603331,
+    "max_j_lt_0p5": 39,
+    "max_j_lt_0p5_rate": 0.0712979890310786,
+    "max_j_zero": 5,
+    "max_j_zero_rate": 0.009140767824497258,
+    "max_j_ge_0p7": 474,
+    "max_j_ge_0p7_rate": 0.8665447897623401,
+    "max_j_ge_0p9": 310,
+    "max_j_ge_0p9_rate": 0.56672760511883,
+    "mean_num_candidates": 6.0804387568555756,
+    "median_num_candidates": 2,
+    "max_num_candidates": 50,
+    "num_candidates_gt7": 112,
+    "num_candidates_gt7_rate": 0.20475319926873858
+  },
+  "comparison_to_current_cache": {
+    "overlap": 539,
+    "old_only": 8,
+    "current_only": 14,
+    "old_mean_on_overlap": 0.8441037471989444,
+    "current_mean_on_overlap": 0.7106702293004376,
+    "mean_delta_current_minus_old": -0.13343351789850696,
+    "current_better": 177,
+    "same": 94,
+    "current_worse": 268,
+    "effective_prompt_changed": 252,
+    "category_changed": 257
+  },
+  "top_old_prompts": [
+    [
+      "person",
+      231
+    ],
+    [
+      "car",
+      22
+    ],
+    [
+      "surfboard",
+      16
+    ],
+    [
+      "backpack",
+      16
+    ],
+    [
+      "duck",
+      15
+    ],
+    [
+      "dog",
+      14
+    ],
+    [
+      "man",
+      10
+    ],
+    [
+      "sheep",
+      10
+    ],
+    [
+      "lamb",
+      10
+    ],
+    [
+      "goose",
+      9
+    ],
+    [
+      "airplane",
+      8
+    ],
+    [
+      "hand",
+      6
+    ],
+    [
+      "skateboard",
+      6
+    ],
+    [
+      "bicycle",
+      5
+    ],
+    [
+      "motorbike",
+      5
+    ],
+    [
+      "tractor",
+      5
+    ],
+    [
+      "bear",
+      4
+    ],
+    [
+      "boat",
+      4
+    ],
+    [
+      "bus",
+      4
+    ],
+    [
+      "kitten",
+      4
+    ],
+    [
+      "cat",
+      4
+    ],
+    [
+      "truck",
+      4
+    ],
+    [
+      "drone",
+      4
+    ],
+    [
+      "phone",
+      4
+    ],
+    [
+      "elephant",
+      4
+    ],
+    [
+      "flamingo",
+      4
+    ],
+    [
+      "hockey stick",
+      4
+    ],
+    [
+      "horse",
+      4
+    ],
+    [
+      "koala",
+      4
+    ],
+    [
+      "paper",
+      4
+    ]
+  ]
+}

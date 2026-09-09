@@ -48,3 +48,45 @@ Sa2VA/data/video_datas/**/*
 
 # Offline cache mask payloads are reproducible artifacts; keep meta.json files.
 Sa2VA-main/crf_sam3_attn/offline_cache_*/**/masks/
+
+# Local packages and model vocabulary
+/transfer_rvos_*.tar.gz*
+Sa2VA-main/**/tokenizer.json
+Sa2VA-main/**/vocab.json
+Sa2VA-main/**/merges.txt
+
+# Generated training data, checkpoint exports, and temporary runs
+Sa2VA-main/category_grounding_mvp/outputs/
+Sa2VA-main/category_grounding_mvp/data/**/*.jsonl
+Sa2VA-main/category_grounding_mvp/inferera_category_api/results/
+Sa2VA-main/crf_sam3_attn/tmp_configs/
+**/expression_details/
+**/results.json
+**/results_from_png.json
+
+# Keep new evaluation artifacts focused on final runs.
+/Sa2VA-main/crf_sam3_*/
+!/Sa2VA-main/crf_sam3_attn/
+!/Sa2VA-main/crf_sam3_revos_valid_revos_query_ranker_20260806/
+!/Sa2VA-main/crf_sam3_davis17_valid_query_grounding_semantic_expand_topk5_final_20260703/
+
+# Local packing and synchronization records
+/SYNC_UPDATE_*.md
+/transfer_mirror_manifest.json
+/README_transfer_mirror.txt
+/excluded_files.json
+/summary.json
+/verification_report.json
+/optional_weights_manifest.json
+/source_git_provenance.json
+/build_rvos_paper_sync.py
+/finalize_rvos_sync.py
+
+# Ref-Youtube-VOS final overlay evaluation and its base run
+!/Sa2VA-main/crf_sam3_refytros_valid_query_grounding_mainline_20260701/
+!/Sa2VA-main/crf_sam3_refytros_valid_query_grounding_semantic_expand_topk5_failures_only_20260702/
+
+# Upstream tutorial payloads
+Sa2VA-main/SAM3-DMS/examples/
+sam3-main/sam3-main/examples/
+sam3-main/sam3-main/get-pip.py

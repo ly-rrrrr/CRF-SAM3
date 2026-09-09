@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "splits": {
+    "train": {
+      "records": 20990,
+      "by_dataset": {
+        "revos": 9371,
+        "refytvos": 11619
+      }
+    },
+    "val": {
+      "records": 2335,
+      "by_dataset": {
+        "refytvos": 1294,
+        "revos": 1041
+      }
+    }
+  }
+}

@@ -24,7 +24,7 @@ from crf_sam3_demo import CRFSAM3Pipeline, load_video_frames
 
 def setup_logging(config):
     """Setup logging based on configuration"""
-    log_config = config.get('logging', {})
+    log_config = config.get('logging') or {}
     level = getattr(logging, log_config.get('level', 'INFO'))
 
     handlers = [logging.StreamHandler()]
@@ -411,6 +411,7 @@ Examples:
     visualization_style = config.get('visual_tube', {}).get('visualization_style', 'outline')
     sampling_strategy = config.get('visual_tube', {}).get('sampling_strategy', 'uniform')
     concept_cfg = config.get('concept_extraction', {})
+    sam3_recall_config = config.get('sam3_recall', {}) or {}
     concept_use_qframe = concept_cfg.get('use_qframe', False)
 
     # Q-Frame configuration (used by VisualTubeBuilder or ConceptExtractor)
@@ -473,7 +474,8 @@ Examples:
         concept_use_qframe=concept_use_qframe,
         concept_config=concept_cfg,
         discriminator_backend=discrimination_backend,
-        reranker_cfg=reranker_cfg
+        reranker_cfg=reranker_cfg,
+        sam3_recall_cfg=sam3_recall_config,
     )
 
     # Load dataset metadata

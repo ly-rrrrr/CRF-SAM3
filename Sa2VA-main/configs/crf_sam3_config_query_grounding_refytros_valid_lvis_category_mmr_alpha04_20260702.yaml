@@ -1,0 +1,112 @@
+model:
+  model_type: qwen3
+  mllm_path: /mnt/csip-500/share/kongjiawei/Sa2VA-main/Qwen3-VL-4B-Instruct
+  sam3_checkpoint: /mnt/csip-500/share/kongjiawei/sam3-main/sam3-main/checkpoints/sam3/sam3.pt
+  clip_model_path: /mnt/csip-200/share/kongjiawei/q-frame-master/Long-CLIP/checkpoints/longclip-L.pt
+  base_mllm_path: /mnt/csip-500/share/kongjiawei/Sa2VA-main/Qwen3-VL-4B-Instruct
+  mllm_adapter_path: /mnt/csip-500/share/kongjiawei/Sa2VA-main/crf_sam3_attn_outputs_joint_train_poswin_dms_recall24_keep7_filter_failures_20260623/checkpoint_39000
+pipeline:
+  num_tube_frames: 8
+  device: auto
+  dtype: bfloat16
+sam3_recall:
+  backend: dms
+  dms_repo: /mnt/csip-500/share/kongjiawei/Sa2VA-main/SAM3-DMS
+  gpus_to_use:
+  - 0
+  candidate_recall_top_k: 24
+  candidate_keep_top_k: 7
+  async_loading_frames: false
+  video_loader_type: cv2
+  max_frame_num_to_track: null
+  text_prototype_adapter:
+    enabled: true
+    bank_path: category_grounding_mvp/data/sam3_text_prototypes/lvis_v1_category/prototype_bank.pt
+    metadata_path: category_grounding_mvp/data/sam3_text_prototypes/lvis_v1_category/prototype_meta.json
+    top_k: 8
+    alpha: 0.4
+    temperature: 0.2
+    exclude_self: true
+    selection: mmr
+    candidate_pool_size: 24
+    diversity_lambda: 0.65
+    min_similarity: 0.6
+    log_first_n: 20
+    skip_captions:
+    - visual
+demo:
+  mevis_root: /mnt/csip-200/share/kongjiawei/Sa2VA/data/video_datas/mevis/valid_u
+  video_id: ed7d7148e132
+  exp_id: 1
+  output_dir: crf_sam3_demo_output
+concept_extraction:
+  use_qframe: false
+  category_prompt_path: configs/category_num_targets_inference_merged.txt
+  teacher_pipeline_compatible: true
+  teacher_pipeline_num_frames: 3
+  teacher_pipeline_deterministic: true
+  max_new_tokens: 128
+  temperature: 0.2
+  category_override_cache_path: category_grounding_mvp/outputs/refytros_valid_query_grounding_categories_20260701.json
+visual_tube:
+  sampling_strategy: uniform
+  custom_frame_indices:
+  - 90
+  - 94
+  - 95
+  - 96
+  - 100
+  - 102
+  - 108
+  - 111
+  qframe:
+    tau: 0.8
+  visualization_style: mask
+  include_context: false
+discrimination:
+  backend: mllm
+  prompt_type: yesno
+  reranker:
+    model_path: /mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen3-VL-Reranker-2B
+    instruction: Judge whether the masked green object in the video matches the referring
+      expression.
+    bbox_instruction: Judge whether the object inside the blue bbox matches the referring
+      expression.
+    num_frames: 8
+    max_frames: 8
+    embedding_repo: Qwen3-VL-Embedding
+  embedding:
+    model_path: /mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen3-VL-Embedding-2B
+    instruction: Represent the referring expression and the masked green object for
+      matching.
+    bbox_instruction: Represent the referring expression and the bboxed object for
+      matching.
+    doc_text: This video segment shows a masked green candidate object.
+    bbox_doc_text: This video segment shows a candidate object inside a bbox.
+    num_frames: 8
+    max_frames: 8
+    embedding_repo: Qwen3-VL-Embedding
+    torch_dtype: bfloat16
+dataset:
+  data_root: /mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS
+  split: valid
+  gt_masks_root: /mnt/csip-200/share/kongjiawei/Sa2VA/gt_masks
+  max_videos: null
+  max_expressions: null
+  skip_existing: true
+output:
+  output_dir: crf_sam3_refytros_valid_query_grounding_lvis_category_mmr_alpha04_20260702
+  save_visual_tubes: false
+  save_scores: true
+  format: mevis
+performance:
+  batch_size: 1
+  use_amp: true
+  clear_cache_per_video: true
+  num_workers: 4
+logging:
+  level: INFO
+  log_file: logs/refytros_valid_query_grounding_lvis_category_mmr_alpha04_20260702_inner.log
+  print_mllm_responses: true
+  print_timing: true
+  use_tqdm: true

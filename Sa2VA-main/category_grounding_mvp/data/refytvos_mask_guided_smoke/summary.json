@@ -1,0 +1,18 @@
+{
+  "dataset": "Ref-Youtube-VOS mask-guided category grounding",
+  "base_samples": 20,
+  "train_base_samples": 18,
+  "val_base_samples": 2,
+  "train_records": 36,
+  "val_records": 4,
+  "train_videos": 3,
+  "val_videos": 1,
+  "video_overlap": 0,
+  "frames_per_sample": 2,
+  "include_mask_evidence": true,
+  "evidence_dir": "category_grounding_mvp/data/refytvos_mask_guided_smoke/evidence_images",
+  "min_area": 20,
+  "alpha": 0.55,
+  "crop_pad_ratio": 0.35,
+  "frame_sampling": "select frames from mask_dict where mask area >= min_area, then sample evenly over those non-empty mask frames"
+}

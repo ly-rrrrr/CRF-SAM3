@@ -1,0 +1,151 @@
+video_id	exp_id	old_max_j	new_max_j	delta	status	old_N	new_N	category	expression
+lindy-hop	18	0.000847	0.958678	0.957831	improved	7	7	person	a girl in a red dress
+miami-surf	2	0.000441	0.865972	0.865531	improved	3	7	surfboard	a man on a blue surfboard in black suit
+train	6	0.214896	0.954872	0.739977	improved	1	2	unit	a red unit of the toy train
+train	12	0.265281	0.942572	0.677290	improved	1	4	engine	a blue engine of a toy train
+dancing	4	0.001148	0.007299	0.006151	improved	7	7	man	a man dancing on the right in black shorts
+dancing	5	0.001148	0.007299	0.006151	improved	7	7	man	a man in black shorts dancing around
+train	14	0.244304	0.244644	0.000341	improved	1	1	unit	a blue unit of the toy train
+color-run	4	0.051195	0.051211	0.000017	improved	7	7	hand	colored hands
+color-run	5	0.051195	0.051211	0.000017	improved	7	7	hand	green hands dancing
+drone	17	0.001246	0.001262	0.000016	improved	7	7	person	a guy in a white shirt
+surf	4	0.003129	0.003130	0.000001	improved	1	1	person	a man windsurfing
+bmx-bumps	0	0.379585	0.379585	0.000000	same	1	1	bike	a silver bmx bike
+bmx-bumps	1	0.379585	0.379585	0.000000	same	1	1	bike	a black and white bike
+bmx-bumps	2	0.379751	0.379751	0.000000	same	1	1	bmx bike	a bmx bike
+bmx-bumps	3	0.380988	0.380988	0.000000	same	1	1	bicycle	a bicycle
+cat-girl	0	0.004742	0.004742	0.000000	same	1	1	kitten	a baby girl holding a kitten
+cat-girl	1	0.005219	0.005219	0.000000	same	1	1	cat	a girl holding a cat
+cat-girl	2	0.004742	0.004742	0.000000	same	1	1	kitten	a girl cuddling a kitten
+cat-girl	3	0.004742	0.004742	0.000000	same	1	1	kitten	a black and grey kitten
+classic-car	2	0.000355	0.000355	0.000000	same	7	7	man	a man sitting next to a driver
+classic-car	3	0.000355	0.000355	0.000000	same	7	7	man	a man in a blue shirt sitting in a classic car
+classic-car	6	0.001128	0.001128	0.000000	same	7	7	man	a man driving a car
+classic-car	7	0.001128	0.001128	0.000000	same	7	7	man	a man in a brown jacket and a hat
+classic-car	8	0.000920	0.000920	0.000000	same	2	2	car	a black vintage car
+classic-car	9	0.000920	0.000920	0.000000	same	2	2	car	a black car moving
+crossing	2	0.001401	0.001401	0.000000	same	1	1	woman	a woman crossing a road
+crossing	3	0.001401	0.001401	0.000000	same	1	1	woman	a woman in a black top and white pants
+crossing	8	0.000625	0.000625	0.000000	same	2	2	truck	a white truck on the road
+crossing	9	0.000625	0.000625	0.000000	same	2	2	truck	a white truck moving from the left to right
+dog-gooses	2	0.000046	0.000046	0.000000	same	1	1	dog	a black dog
+dog-gooses	3	0.000046	0.000046	0.000000	same	1	1	dog	a black and white dog chasing geese
+dog-gooses	12	0.000411	0.000411	0.000000	same	5	5	goose	a third goose from the right
+dog-gooses	13	0.000411	0.000411	0.000000	same	5	5	goose	a brown goose second to the end
+dogs-scale	2	0.000473	0.000473	0.000000	same	3	3	dog	a black puppy with a brown nose sitting behind the scale
+dogs-scale	3	0.000473	0.000473	0.000000	same	3	3	dog	a black and brown dog on the left of the weight machine
+dogs-scale	4	0.000978	0.000978	0.000000	same	2	2	puppy	a grayish black puppy in the front
+dogs-scale	5	0.001026	0.001026	0.000000	same	3	3	dog	a dog on the scale
+dogs-scale	6	0.000978	0.000978	0.000000	same	2	2	puppy	a puppy on a scale
+dogs-scale	7	0.001026	0.001026	0.000000	same	3	3	dog	a black and brown dog on the weight machine
+dogs-scale	8	0.000025	0.000025	0.000000	same	2	2	hand	a left hand holding a puppy
+dogs-scale	9	0.000025	0.000025	0.000000	same	2	2	hand	a hand holding a dog
+dogs-scale	10	0.000464	0.000464	0.000000	same	2	2	hand	a single hand
+dogs-scale	11	0.000464	0.000464	0.000000	same	2	2	hand	a human hand putting a dog on the weight machine
+dogs-scale	12	0.000621	0.000621	0.000000	same	1	1	scale	a pink scale
+dogs-scale	13	0.000621	0.000621	0.000000	same	1	1	scale	a white scale
+dogs-scale	14	0.000049	0.000049	0.000000	same	1	1	scale	a scale
+drone	2	0.000276	0.000276	0.000000	same	6	7	drone	a drone
+drone	3	0.000276	0.000276	0.000000	same	6	7	drone	a drone
+drone	4	0.215976	0.215976	0.000000	same	2	2	mobile phone	a black mobile phone held by a bald man
+drone	5	0.215575	0.215575	0.000000	same	2	2	phone	a phone in bald guy's hand
+drone	6	0.215575	0.215575	0.000000	same	2	2	phone	a phone controlling a drone
+drone	7	0.215976	0.215976	0.000000	same	2	2	mobile phone	a mobile phone in the hands of a bald man
+drone	12	0.000066	0.000066	0.000000	same	2	2	cell phone	a cell phone held by a man in a white shirt
+drone	13	0.000066	0.000066	0.000000	same	2	2	phone	a phone in a white shirt guy's hand
+drone	15	0.000000	0.000000	0.000000	same	1	1	wallet	a wallet in the hands of the man on the right
+drone	16	0.002978	0.002978	0.000000	same	7	7	man	a man on the right in a white shirt
+hockey	2	0.000000	0.000000	0.000000	same	4	4	man	a man playing hockey
+hockey	3	0.000000	0.000000	0.000000	same	4	4	man	a man in a black dress wearing skates
+hockey	4	0.002552	0.002552	0.000000	same	1	1	hockey stick	a hockey stick
+hockey	5	0.002552	0.002552	0.000000	same	1	1	hockey stick	a hockey stick
+hockey	9	0.004433	0.004433	0.000000	same	1	1	hockey ball	a hockey ball
+kite-walk	3	0.000000	0.000000	0.000000	same	1	1	rope	a surfing rope attached to a person
+kite-walk	4	0.058007	0.058007	0.000000	same	1	1	man	a man wearing a black vest and a blue helmet
+kite-walk	5	0.068462	0.068462	0.000000	same	1	1	person	a person performing a kite walk
+kite-walk	8	0.004315	0.004315	0.000000	same	1	1	surf-board	a wooden surf-board
+kite-walk	9	0.004046	0.004046	0.000000	same	1	1	kite	a kite board
+lindy-hop	9	0.000716	0.000716	0.000000	same	6	7	man	a lady in a blue tshirt dancing with a man with a black hat
+lindy-hop	13	0.000969	0.000969	0.000000	same	7	7	lady	a lady in a white top and a blue skirt dancing with another lady on the right
+lindy-hop	15	0.000882	0.000882	0.000000	same	7	7	woman	a woman wearing a white shirt and denim shorts on the right
+lindy-hop	17	0.001058	0.001058	0.000000	same	7	7	lady	a lady in a red dress dancing with another lady on the right
+lindy-hop	19	0.001038	0.001038	0.000000	same	7	7	woman	a woman on the right wearing a black dress
+lindy-hop	23	0.001806	0.001806	0.000000	same	6	7	man	a man in the center wearing khaki trousers
+lindy-hop	26	0.002439	0.002439	0.000000	same	6	7	man	a man in a black t-shirt and grey shorts
+lindy-hop	27	0.002439	0.002439	0.000000	same	6	7	man	a man on the left in a black shirt and shorts
+lindy-hop	28	0.002439	0.002439	0.000000	same	6	7	man	a man at the back wearing a hat and a pink shirt
+lindy-hop	29	0.002439	0.002439	0.000000	same	6	7	man	a guy in a pink shirt and a black hat dancing at the back
+lindy-hop	30	0.017782	0.017782	0.000000	same	6	7	man	a man in a black hat
+longboard	2	0.000000	0.000000	0.000000	same	1	1	backpack	a backpack
+longboard	3	0.000000	0.000000	0.000000	same	1	1	backpack	a black backpack on the right
+longboard	4	0.000000	0.000000	0.000000	same	1	1	bicycle	a black bicycle
+longboard	5	0.000000	0.000000	0.000000	same	1	1	bicycle	a bicycle moving on the road
+longboard	6	0.000000	0.000000	0.000000	same	1	1	bicycle	a black bicycle on the road
+longboard	7	0.000000	0.000000	0.000000	same	1	1	bicycle	a bicycle on the left
+longboard	9	0.000000	0.000000	0.000000	same	1	1	longboard	a longboard
+longboard	11	0.000000	0.000000	0.000000	same	1	1	skateboard	a skateboard
+longboard	13	0.005773	0.005773	0.000000	same	2	2	person	a person rolling over a longboard
+longboard	15	0.047979	0.047979	0.000000	same	2	2	person	a person wearing a yellow shirt and a black bag on the right
+longboard	16	0.042424	0.042424	0.000000	same	2	2	man	a man on a bicycle in a black jacket
+longboard	17	0.048946	0.048946	0.000000	same	2	2	guy	a guy riding a bicycle
+longboard	18	0.003294	0.003294	0.000000	same	2	2	man	a man on the bicycle
+longboard	19	0.003709	0.003709	0.000000	same	2	2	person	a person riding a bicycle
+lucia	1	0.464493	0.464493	0.000000	same	1	1	girl	a girl walking
+miami-surf	0	0.003289	0.003289	0.000000	same	3	3	surfboard	a man in a black suit on a blue surfboard
+miami-surf	8	0.000000	0.000000	0.000000	same	3	3	surf-board	a white surf-board in the front
+miami-surf	10	0.000000	0.000000	0.000000	same	3	3	surfboard	a surfboard in the front
+miami-surf	14	0.000000	0.000000	0.000000	same	5	5	man	a man in the front
+miami-surf	16	0.000000	0.000000	0.000000	same	5	5	man	a man on the right in a black surfsuit
+miami-surf	17	0.003289	0.003289	0.000000	same	3	3	surfboard	a surfer whose surfboard was swept away
+miami-surf	18	0.002216	0.002216	0.000000	same	5	5	man	a man surfing on the right
+miami-surf	19	0.002255	0.002255	0.000000	same	7	7	person	a person surfing on the right side of the frame
+miami-surf	22	0.000441	0.000441	0.000000	same	3	3	surfboard	a surfboard on the right
+miami-surf	23	0.000441	0.000441	0.000000	same	3	3	surfboard	a white colored surfboard of the person surfing on the right
+motorbike	2	0.008934	0.008934	0.000000	same	1	1	motorbike	a motorbike
+motorbike	3	0.008753	0.008753	0.000000	same	1	1	motor bike	a motor bike
+motorbike	4	0.013045	0.013045	0.000000	same	2	2	person	a person in a white-black jacket sitting behind a rider
+motorbike	5	0.013045	0.013045	0.000000	same	2	2	person	a guy in a black and white jacket sitting behind the rider
+schoolgirls	12	0.000183	0.000183	0.000000	same	4	4	backpack	a big black backpack carried by a tall girl
+schoolgirls	16	0.025875	0.025875	0.000000	same	4	4	girl	a tall girl looking towards left
+schoolgirls	20	0.023458	0.023458	0.000000	same	4	4	backpack	a pink and violet backpack
+schoolgirls	21	0.000183	0.000183	0.000000	same	4	4	backpack	a purple backpack worn by a short girl
+schoolgirls	24	0.041113	0.041113	0.000000	same	4	4	girl	a short girl with two ponytails
+schoolgirls	25	0.041113	0.041113	0.000000	same	4	4	girl	a short girl with a purple backpack
+stunt	0	0.133484	0.133484	0.000000	same	2	2	scooter	a black scooter with blue wheels
+stunt	1	0.005642	0.005642	0.000000	same	1	1	scooter	a skateboard with a handle
+surf	0	0.014698	0.014698	0.000000	same	1	1	surfboard	a white surfboard
+surf	1	0.014739	0.014739	0.000000	same	1	1	board	a board which a guy is standing on
+surf	5	0.003129	0.003129	0.000000	same	1	1	person	a player performing surfing
+surf	8	0.031129	0.031129	0.000000	same	1	1	sail	a colorful sail on top of a surfboard
+surf	9	0.031129	0.031129	0.000000	same	1	1	sail	a green and yellow sail
+swing	2	0.000677	0.000677	0.000000	same	1	1	woman	a woman on the swing
+swing	3	0.000506	0.000506	0.000000	same	1	1	girl	a girl riding the swing
+swing	4	0.014382	0.014382	0.000000	same	2	2	swing	a swing flying in the air
+swing	5	0.014382	0.014382	0.000000	same	2	2	swing	a swing with a girl on
+swing	9	0.282235	0.282235	0.000000	same	1	1	rope	a black rope in girl's hand
+swing	10	0.000000	0.000000	0.000000	same	1	1	rope	a black rope
+tractor-sand	0	0.404409	0.404409	0.000000	same	1	1	harvester	a blue harvester behind a tractor
+tractor-sand	2	0.498036	0.498036	0.000000	same	1	1	tractor	a trailer attached to tractor
+tractor-sand	4	0.000000	0.000000	0.000000	same	2	2	person	a tractor driver wearing a blue cap
+tractor-sand	5	0.000000	0.000000	0.000000	same	2	2	person	a person with a blue cap driving a tractor
+tractor-sand	8	0.005649	0.005649	0.000000	same	1	1	tractor	a red tractor
+tractor-sand	9	0.005649	0.005649	0.000000	same	1	1	tractor	a red tractor
+tractor-sand	10	0.498036	0.498036	0.000000	same	1	1	tractor	a red tractor
+tractor-sand	11	0.498036	0.498036	0.000000	same	1	1	tractor	a red tractor
+train	2	0.244644	0.244644	0.000000	same	1	1	train	a third unit of the toy train
+train	10	0.264852	0.264852	0.000000	same	1	1	unit	a white unit of the toy train
+train	13	0.000000	0.000000	0.000000	same	1	1	engine	a blue engine unit of the train
+train	15	0.000123	0.000123	0.000000	same	1	1	train engine	a blue colored train engine
+tuk-tuk	0	0.231234	0.231234	0.000000	same	1	1	girl	a girl on the left with black hair
+tuk-tuk	1	0.231234	0.231234	0.000000	same	1	1	girl	a girl with black hair on the left side
+tuk-tuk	2	0.000000	0.000000	0.000000	same	1	1	girl	a girl on the left
+tuk-tuk	3	0.000000	0.000000	0.000000	same	1	1	girl	a girl on the left wearing a white shirt and tied hair
+tuk-tuk	4	0.231234	0.231234	0.000000	same	1	1	girl	a girl on the right with curly hair
+tuk-tuk	5	0.231234	0.231234	0.000000	same	1	1	girl	a girl with brown hair on the right side
+tuk-tuk	6	0.000000	0.000000	0.000000	same	1	1	girl	a girl on the right
+tuk-tuk	7	0.000039	0.000039	0.000000	same	1	1	boy	a boy in the middle wearing a white graphic t-shirt
+tuk-tuk	8	0.000039	0.000039	0.000000	same	1	1	boy	a boy in a gray tshirt
+tuk-tuk	9	0.000039	0.000039	0.000000	same	1	1	boy	a boy in the middle
+tuk-tuk	11	0.000000	0.000000	0.000000	same	1	1	girl	a girl on the right with loose hair
+dancing	2	0.001849	0.000765	-0.001084	worse	7	7	woman	a woman dancing in the middle
+dancing	3	0.001849	0.000765	-0.001084	worse	7	7	woman	a woman dancing in a red dress

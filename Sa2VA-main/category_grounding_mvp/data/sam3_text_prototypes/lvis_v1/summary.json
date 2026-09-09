@@ -1,0 +1,8 @@
+{
+  "num_records": 1826,
+  "feature_dim": 256,
+  "sequence_length": 32,
+  "bank_path": "category_grounding_mvp/data/sam3_text_prototypes/lvis_v1/prototype_bank.pt",
+  "metadata_path": "category_grounding_mvp/data/sam3_text_prototypes/lvis_v1/prototype_meta.json",
+  "device": "cuda"
+}

@@ -1,0 +1,11 @@
+{
+  "videos_total_in_meta": 416,
+  "videos_processed": 416,
+  "expressions_processed": 685,
+  "expressions_skipped_existing": 5137,
+  "missing_frames_filled_as_background": 0,
+  "output_dir": "crf_sam3_revos_valid_revos_query_ranker_20260806",
+  "revos_json_path": "crf_sam3_revos_valid_revos_query_ranker_20260806/results.json",
+  "save_submit_png": false,
+  "scores_path": "crf_sam3_revos_valid_revos_query_ranker_20260806/scores.json"
+}

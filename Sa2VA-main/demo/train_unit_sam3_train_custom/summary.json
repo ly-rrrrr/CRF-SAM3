@@ -1,0 +1,826 @@
+{
+  "video": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/davis17/train/JPEGImages/train",
+  "source_kind": "frames_dir",
+  "checkpoint": "/mnt/csip-500/share/kongjiawei/sam3-main/sam3-main/checkpoints/sam3/sam3.pt",
+  "sam3_root": "/mnt/csip-500/share/kongjiawei/sam3-main/sam3-main",
+  "text": "train unit",
+  "frame_index": 0,
+  "session_id": "c08e5c08-3850-40a4-beb4-b70a62e20b67",
+  "total_video_frames": 80,
+  "propagated_frames": 80,
+  "frames_with_union_mask": 80,
+  "detected_object_ids": [
+    0,
+    1
+  ],
+  "initial_prompt_object_ids": [
+    0,
+    1
+  ],
+  "initial_prompt_num_objects": 2,
+  "saved_union_pngs": true,
+  "saved_mask_video": true,
+  "saved_overlay_video": true,
+  "per_frame": [
+    {
+      "frame_index": 0,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 29749
+    },
+    {
+      "frame_index": 1,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30111
+    },
+    {
+      "frame_index": 2,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30225
+    },
+    {
+      "frame_index": 3,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30561
+    },
+    {
+      "frame_index": 4,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30265
+    },
+    {
+      "frame_index": 5,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30263
+    },
+    {
+      "frame_index": 6,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30427
+    },
+    {
+      "frame_index": 7,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30520
+    },
+    {
+      "frame_index": 8,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30792
+    },
+    {
+      "frame_index": 9,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31117
+    },
+    {
+      "frame_index": 10,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31316
+    },
+    {
+      "frame_index": 11,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31850
+    },
+    {
+      "frame_index": 12,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31931
+    },
+    {
+      "frame_index": 13,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32136
+    },
+    {
+      "frame_index": 14,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32055
+    },
+    {
+      "frame_index": 15,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32275
+    },
+    {
+      "frame_index": 16,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32222
+    },
+    {
+      "frame_index": 17,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32347
+    },
+    {
+      "frame_index": 18,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32449
+    },
+    {
+      "frame_index": 19,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32543
+    },
+    {
+      "frame_index": 20,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32591
+    },
+    {
+      "frame_index": 21,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33037
+    },
+    {
+      "frame_index": 22,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33332
+    },
+    {
+      "frame_index": 23,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33512
+    },
+    {
+      "frame_index": 24,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33723
+    },
+    {
+      "frame_index": 25,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33684
+    },
+    {
+      "frame_index": 26,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 34109
+    },
+    {
+      "frame_index": 27,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33699
+    },
+    {
+      "frame_index": 28,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 34005
+    },
+    {
+      "frame_index": 29,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33238
+    },
+    {
+      "frame_index": 30,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33701
+    },
+    {
+      "frame_index": 31,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33528
+    },
+    {
+      "frame_index": 32,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33517
+    },
+    {
+      "frame_index": 33,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33501
+    },
+    {
+      "frame_index": 34,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33450
+    },
+    {
+      "frame_index": 35,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33499
+    },
+    {
+      "frame_index": 36,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33349
+    },
+    {
+      "frame_index": 37,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33119
+    },
+    {
+      "frame_index": 38,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33255
+    },
+    {
+      "frame_index": 39,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33516
+    },
+    {
+      "frame_index": 40,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33319
+    },
+    {
+      "frame_index": 41,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33062
+    },
+    {
+      "frame_index": 42,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33143
+    },
+    {
+      "frame_index": 43,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33253
+    },
+    {
+      "frame_index": 44,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32874
+    },
+    {
+      "frame_index": 45,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32639
+    },
+    {
+      "frame_index": 46,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32674
+    },
+    {
+      "frame_index": 47,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32845
+    },
+    {
+      "frame_index": 48,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32768
+    },
+    {
+      "frame_index": 49,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 33073
+    },
+    {
+      "frame_index": 50,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31793
+    },
+    {
+      "frame_index": 51,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 32757
+    },
+    {
+      "frame_index": 52,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31646
+    },
+    {
+      "frame_index": 53,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31679
+    },
+    {
+      "frame_index": 54,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31652
+    },
+    {
+      "frame_index": 55,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31977
+    },
+    {
+      "frame_index": 56,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31671
+    },
+    {
+      "frame_index": 57,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31940
+    },
+    {
+      "frame_index": 58,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31791
+    },
+    {
+      "frame_index": 59,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31687
+    },
+    {
+      "frame_index": 60,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31789
+    },
+    {
+      "frame_index": 61,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31580
+    },
+    {
+      "frame_index": 62,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31100
+    },
+    {
+      "frame_index": 63,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30748
+    },
+    {
+      "frame_index": 64,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30793
+    },
+    {
+      "frame_index": 65,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30542
+    },
+    {
+      "frame_index": 66,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 30897
+    },
+    {
+      "frame_index": 67,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31220
+    },
+    {
+      "frame_index": 68,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31045
+    },
+    {
+      "frame_index": 69,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31238
+    },
+    {
+      "frame_index": 70,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31424
+    },
+    {
+      "frame_index": 71,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31506
+    },
+    {
+      "frame_index": 72,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31754
+    },
+    {
+      "frame_index": 73,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 53693
+    },
+    {
+      "frame_index": 74,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 54882
+    },
+    {
+      "frame_index": 75,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 31781
+    },
+    {
+      "frame_index": 76,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 59131
+    },
+    {
+      "frame_index": 77,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 63720
+    },
+    {
+      "frame_index": 78,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 54116
+    },
+    {
+      "frame_index": 79,
+      "num_objects": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "has_union_mask": true,
+      "union_area": 49101
+    }
+  ]
+}

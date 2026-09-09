@@ -1,0 +1,258 @@
+# MAPP-SAM3 Configuration File
+
+# ============================================================================
+# Model Paths
+# ============================================================================
+models:
+  # Long-CLIP for Q-Frame temporal filtering
+  clip_model_path: "/mnt/csip-200/share/kongjiawei/q-frame-master/Long-CLIP/checkpoints/longclip-L.pt"
+
+  # Multi-modal LLM for Best View Reasoning
+  # Options: InternVL2.5-4B (推荐), Qwen2.5-VL-7B, InternVL2.5-14B
+  mllm_path: "/mnt/csip-200/share/kongjiawei/Sa2VA-main/Qwen2.5-VL-7B-Instruct"  # TODO: 更新为实际路径
+  mllm_type: "qwen2vl"  # 选项: internvl, qwen2vl
+
+  # SAM3 checkpoint for segmentation and tracking
+  sam3_checkpoint: "/mnt/csip-200/share/kongjiawei/sam3-main/checkpoints/sam3/sam3.pt"  # TODO: 更新为实际路径
+
+  # Device configuration
+  device: "cuda"
+  torch_dtype: "bfloat16"  # 选项: float32, float16, bfloat16
+
+
+# ============================================================================
+# Data Paths
+# ============================================================================
+data:
+  # MeViS dataset root
+  mevis_root: "/mnt/csip-200/share/kongjiawei/Sa2VA/data/video_datas/mevis/valid_u"
+
+  # Output directory for results
+  output_dir: "./mapp_sam3_results"
+
+  # Cache directory for intermediate results (optional)
+  cache_dir: "./mapp_sam3_cache"
+
+
+# ============================================================================
+# Module 1: Q-Frame Temporal Filtering
+# ============================================================================
+q_frame:
+  # Number of candidate frames to select
+  num_candidates: 4  # 减少到4帧避免MLLM OOM (原默认16)
+
+  # Temperature for Gumbel-Max sampling
+  # Lower tau → more deterministic (focus on top scores)
+  # Higher tau → more exploratory (more diversity)
+  tau: 0.8  # 默认0.8,范围0.5-1.5
+
+  # Number of frames to uniformly sample before CLIP matching
+  # (to reduce computation on very long videos)
+  uniform_sample_size: 64
+
+  # Whether to cache CLIP features
+  cache_features: true
+
+
+# ============================================================================
+# Module 2: Best View Reasoning
+# ============================================================================
+best_view:
+  # SAM3 Presence Head filtering
+  presence_head:
+    enabled: true
+    threshold: 0.5  # 置信度阈值,低于此值的帧被过滤
+    batch_size: 4   # 批量处理帧数
+
+  # MLLM reasoning settings
+  mllm_reasoning:
+    # Maximum number of frames to send to MLLM at once
+    max_frames_per_call: 8
+
+    # Generation parameters
+    max_new_tokens: 512
+    temperature: 0.7
+    top_p: 0.9
+
+    # Prompt template
+    prompt_template: |
+      You are analyzing a video to find the best frame(s) for initializing object segmentation.
+
+      Referring Expression: "{referring_expression}"
+
+      Task:
+      1. Identify how many objects are mentioned in the expression
+      2. For EACH object, find the frame where it is:
+         - Most visible (no occlusion)
+         - Spatially isolated (not overlapping with similar objects)
+         - Easiest to describe with simple static attributes
+
+      Output Format (JSON):
+      {{
+        "num_objects": <int>,
+        "objects": [
+          {{
+            "object_id": <int>,
+            "best_frame_index": <int>,
+            "simple_phrase": "<category + static attribute/position>",
+            "reasoning": "<why this frame is best>"
+          }}
+        ]
+      }}
+
+      Important:
+      - The simple_phrase should ONLY contain static, observable attributes (color, position, size)
+      - Avoid dynamic descriptions (actions, temporal relations)
+      - Example: "white cow on the left" NOT "cow walking to the left"
+
+      Candidate Frames: {frame_indices}
+
+  # Fallback strategy when MLLM fails
+  fallback:
+    strategy: "first_frame"  # 选项: first_frame, middle_frame, highest_presence
+
+
+# ============================================================================
+# Module 3: SAM3 Propagation
+# ============================================================================
+sam3:
+  # Propagation direction
+  # Options: "both" (bidirectional), "forward", "backward"
+  propagation_direction: "both"
+
+  # Start frame strategy
+  # Options: "min_best_frame" (earliest best frame), "first_ann_frame"
+  start_frame_strategy: "min_best_frame"
+
+  # Memory bank settings
+  memory:
+    # Whether to clear non-conditioning memory after adding corrections
+    clear_non_cond_mem_around_input: false
+
+    # Maximum number of conditioning frames to store
+    max_cond_frames: 10
+
+  # Mask post-processing
+  post_processing:
+    # Fill holes in masks smaller than this area (pixels)
+    fill_hole_area: 100
+
+    # Apply non-overlap constraint for multi-object
+    non_overlap_masks: true
+
+    # Confidence threshold for final masks
+    confidence_threshold: 0.3
+
+  # Prompt encoder settings
+  prompt_encoder:
+    # Maximum number of points in prompt encoder (to match training)
+    max_point_num: 16
+
+
+# ============================================================================
+# Evaluation Settings
+# ============================================================================
+evaluation:
+  # Metrics to compute
+  metrics:
+    - "J"      # Region similarity (IoU)
+    - "F"      # Contour accuracy
+    - "J&F"    # Mean of J and F
+
+  # Batch size for evaluation
+  batch_size: 1
+
+  # Number of workers for data loading
+  num_workers: 4
+
+  # Whether to save visualization results
+  save_visualizations: true
+
+  # Visualization settings
+  visualization:
+    # Whether to overlay masks on original frames
+    overlay_masks: true
+    overlay_alpha: 0.5
+
+    # Whether to save per-frame quality scores
+    save_quality_scores: true
+
+
+# ============================================================================
+# Logging and Debugging
+# ============================================================================
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  level: "INFO"
+
+  # Log file path (null = stdout only)
+  log_file: "./mapp_sam3.log"
+
+  # Whether to log intermediate results
+  log_intermediate: true
+
+  # Save intermediate outputs for debugging
+  debug:
+    save_qframe_selections: false
+    save_presence_scores: false
+    save_mllm_responses: true
+    save_intermediate_masks: false
+
+
+# ============================================================================
+# Optimization Settings
+# ============================================================================
+optimization:
+  # Use mixed precision training
+  use_amp: true
+
+  # Gradient checkpointing to save memory
+  gradient_checkpointing: false
+
+  # Offload to CPU when possible
+  offload_to_cpu:
+    video_frames: false
+    inference_state: false
+
+  # Batch processing settings
+  batch_processing:
+    # Process multiple videos in parallel (multi-GPU)
+    parallel_videos: 1
+
+    # Process multiple objects in parallel
+    parallel_objects: false
+
+
+# ============================================================================
+# Ablation Study Configurations
+# ============================================================================
+ablation:
+  # Disable Q-Frame (use uniform sampling instead)
+  disable_qframe: false
+
+  # Disable Presence Head filtering
+  disable_presence_head: false
+
+  # Disable MLLM reasoning (use first frame + original expression)
+  disable_mllm_reasoning: false
+
+  # Use SaSaSa2VA's frame compression for comparison
+  use_sasasa2va_compression: false
+
+
+# ============================================================================
+# Advanced Options
+# ============================================================================
+advanced:
+  # Random seed for reproducibility
+  random_seed: 42
+
+  # Compile models with torch.compile (PyTorch 2.0+)
+  torch_compile: false
+
+  # Use flash attention (requires flash-attn package)
+  use_flash_attention: true
+
+  # Precision mode for CUDNN
+  cudnn_benchmark: true
+  cudnn_deterministic: false

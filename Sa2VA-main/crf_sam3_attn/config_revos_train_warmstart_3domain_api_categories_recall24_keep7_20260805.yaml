@@ -1,0 +1,100 @@
+base_config: configs/crf_sam3_revos_train_base.yaml
+
+seed: 42
+
+model:
+  # Initialize from the completed MeViS + DAVIS17 + RefYTROS LoRA. This is a
+  # fresh-optimizer domain adaptation run, not an optimizer-state resume.
+  init_adapter_path: crf_sam3_attn_outputs_joint_train_poswin_dms_recall24_keep7_filter_failures_20260623/final
+  attn_loss_weight: 0.3
+  attn_loss_layer: -1
+  attn_loss_eps: 1e-6
+  freeze_visual_encoder: true
+  attn_implementation: sdpa
+  loss_type: feature
+  align_tau: 1.0
+  align_similarity: cosine
+  score_type: prob
+  mask_context_alpha: 0.8
+  context_mode: full
+  listwise_tau: 1.0
+  listwise_neg_policy: all
+  listwise_force_pos: true
+  hard_neg_weight: 0.25
+  hard_neg_margin: 0.1
+  hard_neg_pos_strategy: max
+  debug_logits: false
+  debug_logits_topk: 5
+  device_map: auto
+  max_memory: null
+  offload_folder: null
+  offload_state_dict: true
+  low_cpu_mem_usage: true
+  # Used only when no init/resume adapter is supplied; retained here to make
+  # architecture compatibility explicit.
+  lora:
+    r: 16
+    alpha: 32
+    dropout: 0.05
+    target_modules:
+      - q_proj
+      - k_proj
+      - v_proj
+      - o_proj
+      - gate_proj
+      - up_proj
+      - down_proj
+
+train:
+  epochs: 1
+  batch_size: 1
+  # Conservative LR for adapting an already-trained three-domain LoRA.
+  lr: 2.0e-6
+  weight_decay: 0.0
+  grad_accum: 4
+  num_workers: 2
+  max_steps: -1
+  log_every: 10
+  # This counts optimizer steps, i.e. approximately every 1000 samples.
+  save_every: 250
+  auto_resume: true
+  output_dir: crf_sam3_attn_outputs_revos_warmstart_3domain_api_categories_recall24_keep7_20260805
+  # Merge only after model selection; adapter checkpoints are much smaller.
+  save_merged: false
+  merged_output_dir: crf_sam3_attn_outputs_revos_warmstart_3domain_api_categories_recall24_keep7_20260805_merged
+
+data:
+  split: train
+  num_frames: 4
+  mask_style: mask
+  pos_iou: 0.5
+  neg_iou: 0.1
+  sample_neg_prob: 0.5
+  listwise: true
+  listwise_max_candidates: 10
+  listwise_neg_policy: all
+  hard_neg_weight: 0.3
+  hard_neg_margin: 0.1
+  hard_neg_pos_strategy: max
+  max_videos: null
+  max_video_frames: null
+  max_expressions: null
+  cache_sam3: false
+  category_source: category_cache
+  category_cache_path: category_grounding_mvp/inferera_category_api/results/revos_train_qwen37plus_categories_normalized_20260717.json
+  offline_mode: true
+  offline_prepare: false
+  offline_overwrite: false
+  offline_strict: true
+  offline_cache_root: crf_sam3_attn/offline_cache_revos_api_categories_recall24_keep7_20260717
+  offline_exclude_json: crf_sam3_attn/cache_reports/revos_train_api_categories_recall24_keep7_max_j_lt_0p5_20260718.json
+
+debug:
+  enable: true
+  log_every: 50
+  candidate_topk: 10
+  expr_max_chars: 160
+  save_every: 0
+  max_save: 0
+  save_dir: crf_sam3_attn_debug_revos_warmstart_3domain_api_categories_recall24_keep7_20260805
+  log_prompt: false

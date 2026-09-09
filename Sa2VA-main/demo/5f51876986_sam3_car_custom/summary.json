@@ -1,0 +1,328 @@
+{
+  "video": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/5f51876986",
+  "source_kind": "frames_dir",
+  "checkpoint": "/mnt/csip-500/share/kongjiawei/sam3-main/sam3-main/checkpoints/sam3/sam3.pt",
+  "sam3_root": "/mnt/csip-500/share/kongjiawei/sam3-main/sam3-main",
+  "text": "car",
+  "frame_index": 0,
+  "session_id": "f96d8574-a6a9-40b3-9c77-3903ac2233a9",
+  "total_video_frames": 20,
+  "propagated_frames": 20,
+  "frames_with_union_mask": 20,
+  "detected_object_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "initial_prompt_object_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "initial_prompt_num_objects": 10,
+  "saved_union_pngs": true,
+  "saved_mask_video": true,
+  "saved_overlay_video": true,
+  "per_frame": [
+    {
+      "frame_index": 0,
+      "num_objects": 10,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "has_union_mask": true,
+      "union_area": 25365
+    },
+    {
+      "frame_index": 1,
+      "num_objects": 10,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "has_union_mask": true,
+      "union_area": 16707
+    },
+    {
+      "frame_index": 2,
+      "num_objects": 10,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 16821
+    },
+    {
+      "frame_index": 3,
+      "num_objects": 9,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 17316
+    },
+    {
+      "frame_index": 4,
+      "num_objects": 9,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 17827
+    },
+    {
+      "frame_index": 5,
+      "num_objects": 10,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 17638
+    },
+    {
+      "frame_index": 6,
+      "num_objects": 9,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 16804
+    },
+    {
+      "frame_index": 7,
+      "num_objects": 8,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 16996
+    },
+    {
+      "frame_index": 8,
+      "num_objects": 8,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 18097
+    },
+    {
+      "frame_index": 9,
+      "num_objects": 7,
+      "obj_ids": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 15987
+    },
+    {
+      "frame_index": 10,
+      "num_objects": 5,
+      "obj_ids": [
+        2,
+        5,
+        7,
+        9,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 14256
+    },
+    {
+      "frame_index": 11,
+      "num_objects": 4,
+      "obj_ids": [
+        2,
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 12382
+    },
+    {
+      "frame_index": 12,
+      "num_objects": 4,
+      "obj_ids": [
+        2,
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 10938
+    },
+    {
+      "frame_index": 13,
+      "num_objects": 4,
+      "obj_ids": [
+        2,
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 9165
+    },
+    {
+      "frame_index": 14,
+      "num_objects": 3,
+      "obj_ids": [
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 9241
+    },
+    {
+      "frame_index": 15,
+      "num_objects": 3,
+      "obj_ids": [
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 10606
+    },
+    {
+      "frame_index": 16,
+      "num_objects": 3,
+      "obj_ids": [
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 11884
+    },
+    {
+      "frame_index": 17,
+      "num_objects": 3,
+      "obj_ids": [
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 13578
+    },
+    {
+      "frame_index": 18,
+      "num_objects": 3,
+      "obj_ids": [
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 15272
+    },
+    {
+      "frame_index": 19,
+      "num_objects": 3,
+      "obj_ids": [
+        5,
+        7,
+        10
+      ],
+      "has_union_mask": true,
+      "union_area": 17517
+    }
+  ]
+}

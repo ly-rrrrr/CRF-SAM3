@@ -1,0 +1,82 @@
+base_config: configs/crf_sam3_revos_train_base.yaml
+
+seed: 42
+
+model:
+  attn_loss_weight: 0.3
+  attn_loss_layer: -1
+  attn_loss_eps: 1e-6
+  freeze_visual_encoder: true
+  attn_implementation: sdpa
+  loss_type: feature
+  align_tau: 1.0
+  align_similarity: cosine
+  score_type: prob
+  mask_context_alpha: 0.8
+  context_mode: full
+  listwise_tau: 1.0
+  listwise_neg_policy: all
+  listwise_force_pos: true
+  debug_logits: false
+  debug_logits_topk: 5
+  device_map: auto
+  max_memory: null
+  offload_folder: null
+  offload_state_dict: true
+  low_cpu_mem_usage: true
+  lora:
+    r: 16
+    alpha: 32
+    dropout: 0.05
+    target_modules:
+      - q_proj
+      - k_proj
+      - v_proj
+      - o_proj
+      - gate_proj
+      - up_proj
+      - down_proj
+
+train:
+  epochs: 1
+  batch_size: 1
+  lr: 1e-5
+  weight_decay: 0.0
+  grad_accum: 1
+  num_workers: 2
+  max_steps: -1
+  log_every: 10
+  save_every: 200
+  output_dir: crf_sam3_attn_outputs_revos_train
+  save_merged: true
+  merged_output_dir: crf_sam3_attn_outputs_revos_train_merged
+
+data:
+  split: train
+  num_frames: 4
+  mask_style: mask
+  pos_iou: 0.5
+  neg_iou: 0.1
+  sample_neg_prob: 0.5
+  listwise: true
+  listwise_max_candidates: 10
+  max_videos: null
+  max_video_frames: null
+  max_expressions: null
+  cache_sam3: false
+  category_source: concept
+  offline_mode: false
+  # Full rebuild under the DMS recall24 -> native SAM3 score-sum keep7 pipeline.
+  offline_cache_root: crf_sam3_attn/offline_cache_revos_dms_recall24_keep7_long_video_preflight_20260622
+  offline_prepare: true
+  offline_overwrite: true
+  offline_strict: true
+  offline_subset_json: crf_sam3_attn/cache_reports/revos_train_long_video_preflight_20260622.json
+
+debug:
+  enable: false
+  log_every: 50
+  save_every: 0
+  max_save: 0
+  save_dir: crf_sam3_attn_debug_revos_train
+  log_prompt: false

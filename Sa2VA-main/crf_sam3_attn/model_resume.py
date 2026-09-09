@@ -86,7 +86,8 @@ class Qwen3VLCandidateMatcher(nn.Module):
             self.model.visual.requires_grad_(False)
 
         if lora_resume_path:
-            # True-resume path: recover an existing trainable LoRA adapter.
+            # Load an existing adapter as trainable weights. The caller decides
+            # whether this is a fresh-optimizer warm start or a true resume.
             self.model = PeftModel.from_pretrained(
                 self.model,
                 lora_resume_path,

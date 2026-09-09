@@ -1,0 +1,432 @@
+{
+  "labels_csv": "category_grounding_mvp/data/openimages_vocab/raw/oidv7-class-descriptions-boxable.csv",
+  "hierarchy_json": "category_grounding_mvp/data/openimages_vocab/raw/bbox_labels_600_hierarchy.json",
+  "num_categories": 601,
+  "num_leaf_categories": 525,
+  "num_prompt_normalized": 52,
+  "sample_prompt_normalizations": [
+    {
+      "display_name": "Baseball bat",
+      "display_prompt_text": "baseball bat",
+      "sam3_prompt_text": "bat",
+      "parents": [
+        "Sports equipment"
+      ]
+    },
+    {
+      "display_name": "Baseball glove",
+      "display_prompt_text": "baseball glove",
+      "sam3_prompt_text": "glove",
+      "parents": [
+        "Glove",
+        "Sports equipment"
+      ]
+    },
+    {
+      "display_name": "Bathroom accessory",
+      "display_prompt_text": "bathroom accessory",
+      "sam3_prompt_text": "accessory",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Bathroom cabinet",
+      "display_prompt_text": "bathroom cabinet",
+      "sam3_prompt_text": "cabinet",
+      "parents": [
+        "Furniture"
+      ]
+    },
+    {
+      "display_name": "Bicycle helmet",
+      "display_prompt_text": "bicycle helmet",
+      "sam3_prompt_text": "helmet",
+      "parents": [
+        "Helmet"
+      ]
+    },
+    {
+      "display_name": "Bicycle wheel",
+      "display_prompt_text": "bicycle wheel",
+      "sam3_prompt_text": "wheel",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Boy",
+      "display_prompt_text": "boy",
+      "sam3_prompt_text": "person",
+      "parents": [
+        "Person"
+      ]
+    },
+    {
+      "display_name": "Bronze sculpture",
+      "display_prompt_text": "bronze sculpture",
+      "sam3_prompt_text": "sculpture",
+      "parents": [
+        "Sculpture"
+      ]
+    },
+    {
+      "display_name": "Coffee table",
+      "display_prompt_text": "coffee table",
+      "sam3_prompt_text": "table",
+      "parents": [
+        "Table"
+      ]
+    },
+    {
+      "display_name": "Computer keyboard",
+      "display_prompt_text": "computer keyboard",
+      "sam3_prompt_text": "keyboard",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Computer monitor",
+      "display_prompt_text": "computer monitor",
+      "sam3_prompt_text": "monitor",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Computer mouse",
+      "display_prompt_text": "computer mouse",
+      "sam3_prompt_text": "mouse",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Cowboy hat",
+      "display_prompt_text": "cowboy hat",
+      "sam3_prompt_text": "hat",
+      "parents": [
+        "Hat"
+      ]
+    },
+    {
+      "display_name": "Cricket ball",
+      "display_prompt_text": "cricket ball",
+      "sam3_prompt_text": "ball",
+      "parents": [
+        "Ball (Object)"
+      ]
+    },
+    {
+      "display_name": "Digital clock",
+      "display_prompt_text": "digital clock",
+      "sam3_prompt_text": "clock",
+      "parents": [
+        "Clock"
+      ]
+    },
+    {
+      "display_name": "Fast food",
+      "display_prompt_text": "fast food",
+      "sam3_prompt_text": "food",
+      "parents": [
+        "Food"
+      ]
+    },
+    {
+      "display_name": "Fixed-wing aircraft",
+      "display_prompt_text": "fixed-wing aircraft",
+      "sam3_prompt_text": "aircraft",
+      "parents": [
+        "Aircraft"
+      ]
+    },
+    {
+      "display_name": "Football helmet",
+      "display_prompt_text": "football helmet",
+      "sam3_prompt_text": "helmet",
+      "parents": [
+        "Helmet"
+      ]
+    },
+    {
+      "display_name": "Girl",
+      "display_prompt_text": "girl",
+      "sam3_prompt_text": "person",
+      "parents": [
+        "Person"
+      ]
+    },
+    {
+      "display_name": "Golf ball",
+      "display_prompt_text": "golf ball",
+      "sam3_prompt_text": "ball",
+      "parents": [
+        "Sports equipment"
+      ]
+    },
+    {
+      "display_name": "Golf cart",
+      "display_prompt_text": "golf cart",
+      "sam3_prompt_text": "cart",
+      "parents": [
+        "Land vehicle"
+      ]
+    },
+    {
+      "display_name": "Hand dryer",
+      "display_prompt_text": "hand dryer",
+      "sam3_prompt_text": "dryer",
+      "parents": [
+        "Home appliance"
+      ]
+    },
+    {
+      "display_name": "Human arm",
+      "display_prompt_text": "human arm",
+      "sam3_prompt_text": "arm",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human body",
+      "display_prompt_text": "human body",
+      "sam3_prompt_text": "body",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human ear",
+      "display_prompt_text": "human ear",
+      "sam3_prompt_text": "ear",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human eye",
+      "display_prompt_text": "human eye",
+      "sam3_prompt_text": "eye",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human face",
+      "display_prompt_text": "human face",
+      "sam3_prompt_text": "face",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human foot",
+      "display_prompt_text": "human foot",
+      "sam3_prompt_text": "foot",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human hair",
+      "display_prompt_text": "human hair",
+      "sam3_prompt_text": "hair",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human hand",
+      "display_prompt_text": "human hand",
+      "sam3_prompt_text": "hand",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human head",
+      "display_prompt_text": "human head",
+      "sam3_prompt_text": "head",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human leg",
+      "display_prompt_text": "human leg",
+      "sam3_prompt_text": "leg",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human mouth",
+      "display_prompt_text": "human mouth",
+      "sam3_prompt_text": "mouth",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Human nose",
+      "display_prompt_text": "human nose",
+      "sam3_prompt_text": "nose",
+      "parents": [
+        "/m/0bl9f"
+      ]
+    },
+    {
+      "display_name": "Infant bed",
+      "display_prompt_text": "infant bed",
+      "sam3_prompt_text": "bed",
+      "parents": [
+        "Bed"
+      ]
+    },
+    {
+      "display_name": "Kitchen & dining room table",
+      "display_prompt_text": "kitchen & dining room table",
+      "sam3_prompt_text": "table",
+      "parents": [
+        "Table"
+      ]
+    },
+    {
+      "display_name": "Kitchen appliance",
+      "display_prompt_text": "kitchen appliance",
+      "sam3_prompt_text": "appliance",
+      "parents": [
+        "Kitchenware"
+      ]
+    },
+    {
+      "display_name": "Kitchen knife",
+      "display_prompt_text": "kitchen knife",
+      "sam3_prompt_text": "knife",
+      "parents": [
+        "Tableware"
+      ]
+    },
+    {
+      "display_name": "Kitchen utensil",
+      "display_prompt_text": "kitchen utensil",
+      "sam3_prompt_text": "utensil",
+      "parents": [
+        "Kitchenware",
+        "Tool"
+      ]
+    },
+    {
+      "display_name": "Land vehicle",
+      "display_prompt_text": "land vehicle",
+      "sam3_prompt_text": "vehicle",
+      "parents": [
+        "Vehicle"
+      ]
+    },
+    {
+      "display_name": "Man",
+      "display_prompt_text": "man",
+      "sam3_prompt_text": "person",
+      "parents": [
+        "Person"
+      ]
+    },
+    {
+      "display_name": "Office building",
+      "display_prompt_text": "office building",
+      "sam3_prompt_text": "building",
+      "parents": [
+        "Building"
+      ]
+    },
+    {
+      "display_name": "Palm tree",
+      "display_prompt_text": "palm tree",
+      "sam3_prompt_text": "tree",
+      "parents": [
+        "Tree"
+      ]
+    },
+    {
+      "display_name": "Rugby ball",
+      "display_prompt_text": "rugby ball",
+      "sam3_prompt_text": "ball",
+      "parents": [
+        "Ball (Object)"
+      ]
+    },
+    {
+      "display_name": "Submarine sandwich",
+      "display_prompt_text": "submarine sandwich",
+      "sam3_prompt_text": "sandwich",
+      "parents": [
+        "Sandwich"
+      ]
+    },
+    {
+      "display_name": "Sun hat",
+      "display_prompt_text": "sun hat",
+      "sam3_prompt_text": "hat",
+      "parents": [
+        "Hat"
+      ]
+    },
+    {
+      "display_name": "Table tennis racket",
+      "display_prompt_text": "table tennis racket",
+      "sam3_prompt_text": "racket",
+      "parents": [
+        "Racket"
+      ]
+    },
+    {
+      "display_name": "Tennis ball",
+      "display_prompt_text": "tennis ball",
+      "sam3_prompt_text": "ball",
+      "parents": [
+        "Ball (Object)"
+      ]
+    },
+    {
+      "display_name": "Tennis racket",
+      "display_prompt_text": "tennis racket",
+      "sam3_prompt_text": "racket",
+      "parents": [
+        "Racket"
+      ]
+    },
+    {
+      "display_name": "Wall clock",
+      "display_prompt_text": "wall clock",
+      "sam3_prompt_text": "clock",
+      "parents": [
+        "Clock",
+        "Furniture"
+      ]
+    },
+    {
+      "display_name": "Waste container",
+      "display_prompt_text": "waste container",
+      "sam3_prompt_text": "container",
+      "parents": [
+        "Container"
+      ]
+    },
+    {
+      "display_name": "Woman",
+      "display_prompt_text": "woman",
+      "sam3_prompt_text": "person",
+      "parents": [
+        "Person"
+      ]
+    }
+  ],
+  "outputs": {
+    "categories_jsonl": "category_grounding_mvp/data/openimages_vocab/processed_20260703/categories.jsonl",
+    "coarse_to_fine_json": "category_grounding_mvp/data/openimages_vocab/processed_20260703/coarse_to_fine.json"
+  }
+}

@@ -70,7 +70,7 @@ data:
   category_source: concept
   mask_dict_path: mask_dict.pkl
   offline_mode: true
-  offline_cache_root: crf_sam3_attn/offline_cache_refytros
+  offline_cache_root: crf_sam3_attn/offline_cache_refytros_dms_recall24_keep7_20260620
   offline_prepare: false
   offline_overwrite: false
   offline_strict: true

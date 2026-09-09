@@ -1,0 +1,53 @@
+{
+  "scope": "partial snapshot; complete predictions only",
+  "warning": "The running job processes a non-random dataset prefix, so this is not the final full-validation metric.",
+  "prediction_path": "crf_sam3_revos_valid_revos_query_ranker_20260806/results.json",
+  "total_expressions": 5822,
+  "evaluated_expressions": 5822,
+  "invalid_predictions": 0,
+  "coverage_percent": 100.0,
+  "coverage_by_type": {
+    "0": {
+      "completed": 3130,
+      "total": 3130,
+      "percent": 100.0
+    },
+    "1": {
+      "completed": 2475,
+      "total": 2475,
+      "percent": 100.0
+    },
+    "2": {
+      "completed": 217,
+      "total": 217,
+      "percent": 100.0
+    }
+  },
+  "metrics": {
+    "referring": {
+      "count": 3130,
+      "J": 62.5111,
+      "F": 67.337,
+      "JF": 64.924
+    },
+    "reasoning": {
+      "count": 2475,
+      "J": 51.8971,
+      "F": 57.2227,
+      "JF": 54.5599
+    },
+    "overall_type_balanced_official": {
+      "count": 5605,
+      "J": 57.2041,
+      "F": 62.2798,
+      "JF": 59.742
+    },
+    "completed_sample_weighted_audit": {
+      "count": 5605,
+      "J": 57.8243,
+      "F": 62.8708,
+      "JF": 60.3475
+    }
+  },
+  "invalid_examples": []
+}

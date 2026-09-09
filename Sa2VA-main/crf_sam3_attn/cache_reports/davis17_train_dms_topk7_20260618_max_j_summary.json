@@ -1,0 +1,133 @@
+{
+  "cache_root": "/mnt/csip-500/share/kongjiawei/Sa2VA-main/crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618",
+  "num_generated_meta": 542,
+  "num_max_j_lt_0p5": 150,
+  "rate_max_j_lt_0p5": 0.2767527675276753,
+  "num_max_j_eq_0": 24,
+  "rate_max_j_eq_0": 0.04428044280442804,
+  "min_max_j": 0.0,
+  "mean_max_j": 0.658381464334712,
+  "median_max_j": 0.8840079061736064,
+  "top_categories_lt_0p5": [
+    [
+      "man",
+      22
+    ],
+    [
+      "person",
+      13
+    ],
+    [
+      "girl",
+      13
+    ],
+    [
+      "woman",
+      7
+    ],
+    [
+      "surfboard",
+      7
+    ],
+    [
+      "hand",
+      6
+    ],
+    [
+      "dog",
+      6
+    ],
+    [
+      "bicycle",
+      5
+    ],
+    [
+      "backpack",
+      5
+    ],
+    [
+      "tractor",
+      5
+    ],
+    [
+      "kitten",
+      3
+    ],
+    [
+      "scale",
+      3
+    ],
+    [
+      "phone",
+      3
+    ],
+    [
+      "rope",
+      3
+    ],
+    [
+      "unit",
+      3
+    ],
+    [
+      "boy",
+      3
+    ],
+    [
+      "bike",
+      2
+    ],
+    [
+      "car",
+      2
+    ],
+    [
+      "truck",
+      2
+    ],
+    [
+      "goose",
+      2
+    ],
+    [
+      "puppy",
+      2
+    ],
+    [
+      "drone",
+      2
+    ],
+    [
+      "mobile phone",
+      2
+    ],
+    [
+      "hockey stick",
+      2
+    ],
+    [
+      "surf-board",
+      2
+    ],
+    [
+      "lady",
+      2
+    ],
+    [
+      "scooter",
+      2
+    ],
+    [
+      "sail",
+      2
+    ],
+    [
+      "swing",
+      2
+    ],
+    [
+      "engine",
+      2
+    ]
+  ]
+}

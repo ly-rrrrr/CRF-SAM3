@@ -1,0 +1,4 @@
+Treat the masked / highlighted object as the anchor subject of the referring expression.
+If the expression becomes true when grounded on this object in the frame sequence, answer Yes; otherwise answer No.
+Answer with a single word only: Yes or No.
+Expression: {referring_expression}

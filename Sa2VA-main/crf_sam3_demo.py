@@ -16,6 +16,7 @@ import os
 import sys
 import json
 import glob
+import uuid
 import numpy as np
 from PIL import Image, ImageDraw
 from typing import List, Dict, Tuple, Any, Optional
@@ -81,9 +82,7 @@ class SharedMLLMBackend:
         if not load_path:
             raise ValueError("Either model_path or base_model_path must be provided.")
 
-        print(f"[SharedMLLMBackend] Loading {self.model_type.upper()} from {load_path}")
-        if self.has_adapter:
-            print(f"[SharedMLLMBackend] Attaching adapter from {adapter_path}")
+        print(f"[SharedMLLMBackend] Loading {self.model_type.upper()} from {load_path}", flush=True)
 
         if self.model_type in ["qwen3", "qwen3-thinking"]:
             from transformers import Qwen3VLForConditionalGeneration
@@ -92,6 +91,7 @@ class SharedMLLMBackend:
                 load_path,
                 dtype="auto",
                 device_map="auto",
+                local_files_only=True,
             ).eval()
             self.process_vision_info = None
         elif self.model_type in ["gemma4", "gemma-4"]:
@@ -104,6 +104,7 @@ class SharedMLLMBackend:
                 load_path,
                 torch_dtype="auto",
                 device_map="auto",
+                local_files_only=True,
             ).eval()
             self._force_eager_experts(base_model)
             self.process_vision_info = None
@@ -115,7 +116,8 @@ class SharedMLLMBackend:
                 load_path,
                 torch_dtype=torch.bfloat16,
                 device_map="auto",
-                trust_remote_code=True
+                trust_remote_code=True,
+                local_files_only=True,
             ).eval()
             self.process_vision_info = process_vision_info
         else:
@@ -126,13 +128,19 @@ class SharedMLLMBackend:
         processor_path = base_model_path or model_path
         self.processor = AutoProcessor.from_pretrained(
             processor_path,
-            trust_remote_code=(self.model_type == "qwen2.5")
+            trust_remote_code=(self.model_type == "qwen2.5"),
+            local_files_only=True,
         )
 
         if self.has_adapter:
             from peft import PeftModel
 
-            self.model = PeftModel.from_pretrained(base_model, adapter_path).eval()
+            print(f"[SharedMLLMBackend] Attaching adapter from {adapter_path}", flush=True)
+            self.model = PeftModel.from_pretrained(
+                base_model,
+                adapter_path,
+                local_files_only=True,
+            ).eval()
         else:
             self.model = base_model
 
@@ -189,7 +197,8 @@ class ConceptExtractor:
                  backend: Optional[SharedMLLMBackend] = None,
                  teacher_pipeline_compatible: bool = False,
                  teacher_pipeline_num_frames: int = 3,
-                 teacher_pipeline_deterministic: bool = True):
+                 teacher_pipeline_deterministic: bool = True,
+                 category_override_cache_path: Optional[str] = None):
         """
         Args:
             mllm_path: Path to MLLM (Qwen2.5-VL, Qwen3-VL, Qwen3-VL-Thinking, or Gemma4)
@@ -210,6 +219,13 @@ class ConceptExtractor:
         # Load category inference prompt template
         self.category_prompt_template = self._load_prompt_template(category_prompt_path)
         print(f"[ConceptExtractor] Loaded category prompt from: {category_prompt_path}")
+        self.category_override_cache_path = category_override_cache_path
+        self.category_override_cache = self._load_category_override_cache(category_override_cache_path)
+        if self.category_override_cache:
+            print(
+                f"[ConceptExtractor] Loaded category override cache from: {category_override_cache_path} "
+                f"({len(self.category_override_cache)} entries)"
+            )
         self.mllm = self.backend.model
         self.processor = self.backend.processor
         self.process_vision_info = self.backend.process_vision_info
@@ -245,6 +261,40 @@ class ConceptExtractor:
         """Load prompt template from file."""
         with open(prompt_path, 'r', encoding='utf-8') as f:
             return f.read()
+
+    def _load_category_override_cache(self, cache_path: Optional[str]) -> Dict[Tuple[str, str], Dict[str, Any]]:
+        if not cache_path:
+            return {}
+        if not os.path.exists(cache_path):
+            raise FileNotFoundError(f"Category override cache not found: {cache_path}")
+        with open(cache_path, 'r', encoding='utf-8') as f:
+            payload = json.load(f)
+        records = payload.get('records', payload if isinstance(payload, list) else [])
+        cache: Dict[Tuple[str, str], Dict[str, Any]] = {}
+        for rec in records:
+            if not isinstance(rec, dict):
+                continue
+            video_id = str(rec.get('video_id', '')).strip()
+            expression = str(rec.get('expression', '')).strip()
+            category = self._normalize_query_phrase(rec.get('pred_category') or rec.get('category'))
+            if video_id and expression and category:
+                cache[(video_id, expression)] = rec
+        return cache
+
+    def _lookup_category_override(self, video_path: Optional[str], referring_expression: str) -> Optional[Dict[str, Any]]:
+        if not self.category_override_cache or not video_path:
+            return None
+        expression = str(referring_expression).strip()
+        normalized_path = os.path.normpath(video_path)
+        path_parts = normalized_path.split(os.sep)
+        # Cache records may use either a flat video id (RefYTROS/DAVIS) or a
+        # dataset-relative nested id such as OVIS/train/00e92ab4 (ReVOS).
+        for start in range(len(path_parts) - 1, -1, -1):
+            video_id = "/".join(path_parts[start:])
+            record = self.category_override_cache.get((video_id, expression))
+            if record is not None:
+                return record
+        return None
 
     @staticmethod
     def _teacher_pipeline_sample_frames(frame_files: List[str], num_frames: int) -> List[str]:
@@ -799,6 +849,24 @@ Examples:
                 category,
             )
 
+        override_record = self._lookup_category_override(video_path, referring_expression)
+        if override_record is not None:
+            override_category = self._normalize_query_phrase(
+                override_record.get("pred_category") or override_record.get("category")
+            )
+            if override_category:
+                original_category = category
+                category = override_category
+                backup_categories = self._dedup_phrases(backup_categories, exclude=category)
+                print(
+                    f"[ConceptExtractor] Category override applied: "
+                    f"'{original_category}' -> '{category}' "
+                    f"for {os.path.basename(os.path.normpath(video_path or ''))}"
+                )
+                final_rule_applied = (
+                    f"query_grounding_category_override; original_rule={final_rule_applied}"
+                )
+
         print(f"[ConceptExtractor] Extracted category: '{category}'")
         print(f"[ConceptExtractor] Estimated targets: {num_targets}")
         print(f"[ConceptExtractor] Sub-conditions: {sub_conditions}")
@@ -823,10 +891,19 @@ Examples:
 class SAM3ConceptRecall:
     """Stage 1b: Use SAM3 to recall all instances of a category"""
 
-    def __init__(self, sam3_checkpoint: str):
+    def __init__(
+        self,
+        sam3_checkpoint: str,
+        async_loading_frames: bool = False,
+        offload_video_to_cpu: bool = False,
+        max_frame_num_to_track: int = None,
+    ):
         """
         Args:
             sam3_checkpoint: Path to SAM3 checkpoint
+            async_loading_frames: Use SAM3's lazy frame loader. Required for effective CPU frame offload.
+            offload_video_to_cpu: Keep decoded/resized video frames on CPU instead of preloading all frames on GPU.
+            max_frame_num_to_track: Optional SAM3 propagation cap for long-video smoke/risk control.
         """
         import os
         import sys
@@ -843,101 +920,666 @@ class SAM3ConceptRecall:
 
         from sam3.model.sam3_video_predictor import Sam3VideoPredictor
 
+        class OffloadSam3VideoPredictor(Sam3VideoPredictor):
+            def __init__(self, *args, offload_video_to_cpu: bool = False, **kwargs):
+                self.offload_video_to_cpu = bool(offload_video_to_cpu)
+                super().__init__(*args, **kwargs)
+
+            def start_session(self, resource_path, session_id=None):
+                import time
+                import uuid
+
+                inference_state = self.model.init_state(
+                    resource_path=resource_path,
+                    offload_video_to_cpu=self.offload_video_to_cpu,
+                    async_loading_frames=self.async_loading_frames,
+                    video_loader_type=self.video_loader_type,
+                )
+                if not session_id:
+                    session_id = str(uuid.uuid4())
+                self._ALL_INFERENCE_STATES[session_id] = {
+                    "state": inference_state,
+                    "session_id": session_id,
+                    "start_time": time.time(),
+                }
+                return {"session_id": session_id}
+
         print(f"[SAM3Recall] Loading SAM3 from {sam3_checkpoint}...")
-        self.predictor = Sam3VideoPredictor(
+        self.max_frame_num_to_track = max_frame_num_to_track
+        self.predictor = OffloadSam3VideoPredictor(
             checkpoint_path=sam3_checkpoint,
             has_presence_token=True,
-            apply_temporal_disambiguation=True
+            apply_temporal_disambiguation=True,
+            async_loading_frames=bool(async_loading_frames),
+            offload_video_to_cpu=bool(offload_video_to_cpu),
         )
 
-        print(f"[SAM3Recall] SAM3 loaded successfully")
 
-    def recall_all_instances(
+        print(f"[SAM3Recall] SAM3 loaded successfully")
+        if offload_video_to_cpu:
+            print(f"[SAM3Recall] offload_video_to_cpu=True")
+        if async_loading_frames:
+            print(f"[SAM3Recall] async_loading_frames=True")
+        if self.max_frame_num_to_track is not None:
+            print(f"[SAM3Recall] max_frame_num_to_track={self.max_frame_num_to_track}")
+
+    def recall_all_instances_stream(
         self,
         video_path: str,
         category: str,
-        session_id: str = "recall_session"
-    ) -> Dict[int, Dict[int, np.ndarray]]:
+        session_id: str = "recall_session",
+        max_frame_num_to_track: int = None,
+        candidate_top_k: int = None,
+    ):
         """
-        Use SAM3 to segment all instances of the category in video.
+        Stream SAM3 masks frame-by-frame.
 
         Args:
-            video_path: Path to video directory (JPEGImages/video_id)
-            category: Simple category name (e.g., "dog", "cow")
-            session_id: Session identifier
+            candidate_top_k: Optional recall-side budget. If set, temporarily
+                constrains SAM3 max_num_objects so SAM3 keeps only top-scoring
+                detections when the category prompt returns too many instances.
 
-        Returns:
-            all_masks: Dict[frame_idx][obj_id] -> binary mask
+        Yields:
+            (frame_idx, frame_masks, frame_scores), where frame_scores contains
+            the native SAM3 object probability for each returned mask.
         """
         print(f"\n[SAM3Recall] Recalling all instances of category: '{category}'")
         print(f"[SAM3Recall] Video path: {video_path}")
 
-        # Start SAM3 session
-        response = self.predictor.handle_request(
-            request=dict(
-                type="start_session",
-                resource_path=video_path,
-                session_id=session_id
-            )
-        )
-        print(f"[SAM3Recall] Session started: {session_id}")
-
-        # Add text prompt on frame 0 (following SAM3 official usage)
-        # Note: Text prompt applies to ALL frames during propagation
-        # We don't check detection results on frame 0 - let propagate_in_video handle it
-        self.predictor.handle_request(
-            request=dict(
-                type="add_prompt",
-                session_id=session_id,
-                frame_index=0,
-                text=category
-            )
-        )
-
-        print(f"[SAM3Recall] Text prompt '{category}' added to inference state")
-        print(f"[SAM3Recall] Propagating through video (detecting on every frame)...")
-
-        # Propagate through entire video
-        # SAM3 will detect '{category}' on EVERY frame (not just tracking from frame 0)
-        all_masks = {}
-
-        for response in self.predictor.handle_stream_request(
-            request=dict(
-                type="propagate_in_video",
-                session_id=session_id
-            )
-        ):
-            frame_idx = response["frame_index"]
-            outputs = response["outputs"]
-
-            out_obj_ids_frame = outputs.get("out_obj_ids", [])
-            out_masks = outputs.get("out_binary_masks", None)
-
-            if out_masks is not None and len(out_obj_ids_frame) > 0:
-                if frame_idx not in all_masks:
-                    all_masks[frame_idx] = {}
-
-                for i, obj_id in enumerate(out_obj_ids_frame):
-                    all_masks[frame_idx][int(obj_id)] = out_masks[i]
-
-        # Close session
-        self.predictor.handle_request(
-            request=dict(type="close_session", session_id=session_id)
-        )
-
-        print(f"[SAM3Recall] Propagation complete: {len(all_masks)} frames with masks")
-
-        # Report detected object IDs
+        session_started = False
+        frames_with_masks = 0
         all_obj_ids = set()
-        for frame_masks in all_masks.values():
-            all_obj_ids.update(frame_masks.keys())
+        original_max_num_objects = None
+        budget_top_k = None
+        effective_max_frames = (
+            max_frame_num_to_track
+            if max_frame_num_to_track is not None
+            else self.max_frame_num_to_track
+        )
 
+        try:
+            response = self.predictor.handle_request(
+                request=dict(
+                    type="start_session",
+                    resource_path=video_path,
+                    session_id=session_id,
+                )
+            )
+            session_started = True
+            session_id = response.get("session_id", session_id)
+            print(f"[SAM3Recall] Session started: {session_id}")
+
+            if candidate_top_k is not None:
+                try:
+                    budget_top_k = int(candidate_top_k)
+                except (TypeError, ValueError):
+                    budget_top_k = None
+                if budget_top_k is not None and budget_top_k > 0 and hasattr(self.predictor, "model"):
+                    model_max_num_objects = getattr(self.predictor.model, "max_num_objects", None)
+                    if model_max_num_objects is not None:
+                        original_max_num_objects = model_max_num_objects
+                        self.predictor.model.max_num_objects = budget_top_k
+                        print(
+                            f"[SAM3Recall] Candidate budgeting enabled: "
+                            f"max_num_objects={budget_top_k} (score-based top-k)"
+                        )
+
+            add_prompt_response = self.predictor.handle_request(
+                request=dict(
+                    type="add_prompt",
+                    session_id=session_id,
+                    frame_index=0,
+                    text=category,
+                )
+            )
+            initial_outputs = add_prompt_response.get("outputs", {}) or {}
+
+            if budget_top_k is not None and budget_top_k > 0:
+                initial_obj_ids = initial_outputs.get("out_obj_ids", [])
+                initial_probs = initial_outputs.get("out_probs", None)
+                if torch.is_tensor(initial_obj_ids):
+                    initial_obj_ids = initial_obj_ids.detach().cpu().numpy()
+                if torch.is_tensor(initial_probs):
+                    initial_probs = initial_probs.detach().cpu().numpy()
+                initial_obj_ids = [int(obj_id) for obj_id in np.asarray(initial_obj_ids).reshape(-1).tolist()]
+                if initial_probs is not None:
+                    initial_probs = [float(prob) for prob in np.asarray(initial_probs).reshape(-1).tolist()]
+                if initial_probs is not None and len(initial_probs) == len(initial_obj_ids):
+                    ranked = sorted(
+                        zip(initial_obj_ids, initial_probs),
+                        key=lambda item: item[1],
+                        reverse=True,
+                    )
+                    print(
+                        f"[SAM3Recall] Candidate budgeting after prompt: "
+                        f"kept={initial_obj_ids}, scores={[round(prob, 4) for _, prob in ranked]}"
+                    )
+                else:
+                    print(f"[SAM3Recall] Candidate budgeting after prompt: kept={initial_obj_ids}")
+
+            print(f"[SAM3Recall] Text prompt '{category}' added to inference state")
+            print(f"[SAM3Recall] Propagating through video (detecting on every frame)...")
+            if effective_max_frames is not None:
+                print(f"[SAM3Recall] Limiting propagation to {effective_max_frames} frames")
+
+            request = dict(
+                type="propagate_in_video",
+                session_id=session_id,
+            )
+            if effective_max_frames is not None:
+                request["max_frame_num_to_track"] = int(effective_max_frames)
+
+            for response in self.predictor.handle_stream_request(request=request):
+                frame_idx = response["frame_index"]
+                outputs = response["outputs"]
+
+                out_obj_ids_frame = outputs.get("out_obj_ids", [])
+                out_masks = outputs.get("out_binary_masks", None)
+                out_probs = outputs.get("out_probs", None)
+                if out_masks is None or len(out_obj_ids_frame) <= 0:
+                    continue
+
+                if torch.is_tensor(out_obj_ids_frame):
+                    out_obj_ids_frame = out_obj_ids_frame.detach().cpu().numpy()
+                if torch.is_tensor(out_probs):
+                    out_probs = out_probs.detach().cpu().numpy()
+                obj_ids = np.asarray(out_obj_ids_frame).reshape(-1).tolist()
+                probs = None if out_probs is None else np.asarray(out_probs).reshape(-1).tolist()
+                if probs is None or len(probs) != len(obj_ids):
+                    raise RuntimeError(
+                        "SAM3 propagation output is missing aligned out_probs; "
+                        "native-score candidate filtering cannot continue."
+                    )
+
+                frame_masks = {}
+                frame_scores = {}
+                for i, obj_id in enumerate(obj_ids):
+                    obj_id = int(obj_id)
+                    frame_masks[obj_id] = out_masks[i]
+                    frame_scores[obj_id] = float(probs[i])
+                    all_obj_ids.add(obj_id)
+
+                if frame_masks:
+                    frames_with_masks += 1
+                    yield frame_idx, frame_masks, frame_scores
+        finally:
+            if original_max_num_objects is not None and hasattr(self.predictor, "model"):
+                self.predictor.model.max_num_objects = original_max_num_objects
+            if session_started:
+                self.predictor.handle_request(
+                    request=dict(type="close_session", session_id=session_id)
+                )
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+
+        print(f"[SAM3Recall] Propagation complete: {frames_with_masks} frames with masks")
         if len(all_obj_ids) > 0:
             print(f"[SAM3Recall] ✓ Detected {len(all_obj_ids)} unique objects: {sorted(all_obj_ids)}")
         else:
             print(f"[SAM3Recall] ⚠ Warning: No objects detected for '{category}' in entire video")
 
+    def recall_all_instances(
+        self,
+        video_path: str,
+        category: str,
+        session_id: str = "recall_session",
+        max_frame_num_to_track: int = None,
+        candidate_top_k: int = None,
+    ) -> Dict[int, Dict[int, np.ndarray]]:
+        """
+        Use SAM3 to segment all instances of the category in video.
+
+        This compatibility wrapper materializes the streaming output. Offline cache
+        preparation should prefer recall_all_instances_stream to keep memory bounded.
+        """
+        all_masks: Dict[int, Dict[int, np.ndarray]] = {}
+        for frame_idx, frame_masks, _frame_scores in self.recall_all_instances_stream(
+            video_path=video_path,
+            category=category,
+            session_id=session_id,
+            max_frame_num_to_track=max_frame_num_to_track,
+            candidate_top_k=candidate_top_k,
+        ):
+            all_masks[int(frame_idx)] = frame_masks
         return all_masks
+
+
+@contextmanager
+def _prepend_sys_path(path: str):
+    path = os.path.abspath(path)
+    added = path not in sys.path
+    if added:
+        sys.path.insert(0, path)
+    try:
+        yield
+    finally:
+        if added:
+            try:
+                sys.path.remove(path)
+            except ValueError:
+                pass
+
+
+def _parse_gpus_to_use(value) -> List[int]:
+    if value is None:
+        return [0]
+    if isinstance(value, int):
+        return [int(value)]
+    if isinstance(value, (list, tuple)):
+        return [int(x) for x in value]
+    text = str(value).strip()
+    if not text:
+        return [0]
+    return [int(x.strip()) for x in text.split(',') if x.strip()]
+
+
+def _resolve_candidate_budget_value(
+    raw_value: Any,
+    num_targets: Any,
+    recall_cfg: Optional[Dict] = None,
+    default: Optional[int] = None,
+) -> Optional[int]:
+    recall_cfg = recall_cfg or {}
+    if raw_value is None or raw_value is False:
+        return None
+    if isinstance(raw_value, str):
+        mode = raw_value.strip().lower()
+        if mode in {'', 'none', 'null', 'false', 'off', 'disabled'}:
+            return None
+        if mode in {'num_targets', 'target_scaled', 'legacy', 'auto'}:
+            try:
+                n = int(num_targets)
+            except (TypeError, ValueError):
+                n = 1
+            if n <= 0:
+                n = 1
+            multiplier = int(recall_cfg.get('candidate_top_k_multiplier', 3))
+            minimum = int(recall_cfg.get('candidate_top_k_min', 5))
+            return max(n * multiplier, minimum)
+    try:
+        value = int(raw_value)
+    except (TypeError, ValueError):
+        return default
+    return value if value > 0 else None
+
+
+def resolve_candidate_top_k(num_targets: Any, recall_cfg: Optional[Dict] = None) -> Optional[int]:
+    """Resolve the legacy SAM3 recall-side object budget."""
+    recall_cfg = recall_cfg or {}
+    return _resolve_candidate_budget_value(
+        recall_cfg.get('candidate_top_k', 7),
+        num_targets,
+        recall_cfg,
+        default=7,
+    )
+
+
+def resolve_candidate_recall_top_k(num_targets: Any, recall_cfg: Optional[Dict] = None) -> Optional[int]:
+    """Resolve the first-stage SAM3/DMS recall budget.
+
+    If candidate_recall_top_k is not set, this falls back to candidate_top_k for
+    backward compatibility. New configs should set candidate_recall_top_k larger
+    than candidate_keep_top_k to avoid truncating crowded first-frame detections.
+    """
+    recall_cfg = recall_cfg or {}
+    if 'candidate_recall_top_k' in recall_cfg:
+        return _resolve_candidate_budget_value(
+            recall_cfg.get('candidate_recall_top_k'),
+            num_targets,
+            recall_cfg,
+            default=None,
+        )
+    return resolve_candidate_top_k(num_targets, recall_cfg)
+
+
+def resolve_candidate_keep_top_k(num_targets: Any, recall_cfg: Optional[Dict] = None) -> Optional[int]:
+    """Resolve the final candidate budget after native SAM3 score-sum ranking."""
+    recall_cfg = recall_cfg or {}
+    if 'candidate_keep_top_k' not in recall_cfg:
+        return None
+    return _resolve_candidate_budget_value(
+        recall_cfg.get('candidate_keep_top_k'),
+        num_targets,
+        recall_cfg,
+        default=None,
+    )
+
+
+class DMSConceptRecall:
+    """SAM3-DMS recall adapter with the same interface as SAM3ConceptRecall."""
+
+    def __init__(
+        self,
+        dms_repo: str,
+        checkpoint_path: str,
+        gpus_to_use: Optional[List[int]] = None,
+        async_loading_frames: bool = False,
+        video_loader_type: str = 'cv2',
+        max_frame_num_to_track: int = None,
+        offload_video_to_cpu: bool = False,
+        offload_output_to_cpu_for_eval: bool = False,
+        trim_past_non_cond_mem_for_eval: bool = False,
+        text_prototype_adapter_cfg: Optional[Dict] = None,
+        text_memory_adapter_cfg: Optional[Dict] = None,
+        reverse_recondition: bool = False,
+        reverse_recondition_support_frames: Optional[int] = None,
+    ):
+        self.dms_repo = os.path.abspath(dms_repo)
+        self.checkpoint_path = checkpoint_path
+        self.gpus_to_use = [0] if gpus_to_use is None else gpus_to_use
+        self.async_loading_frames = bool(async_loading_frames)
+        self.video_loader_type = video_loader_type
+        self.max_frame_num_to_track = max_frame_num_to_track
+        self.offload_video_to_cpu = bool(offload_video_to_cpu)
+        self.offload_output_to_cpu_for_eval = bool(offload_output_to_cpu_for_eval)
+        self.trim_past_non_cond_mem_for_eval = bool(trim_past_non_cond_mem_for_eval)
+        self.text_prototype_adapter_cfg = dict(text_prototype_adapter_cfg or {})
+        self.text_memory_adapter_cfg = dict(text_memory_adapter_cfg or {})
+        self.reverse_recondition = bool(reverse_recondition)
+        self.reverse_recondition_support_frames = reverse_recondition_support_frames
+
+        if not os.path.isdir(self.dms_repo):
+            raise FileNotFoundError(f'SAM3-DMS repo not found: {self.dms_repo}')
+        if not os.path.exists(self.checkpoint_path):
+            raise FileNotFoundError(f'SAM3 checkpoint not found: {self.checkpoint_path}')
+
+        print(f'[SAM3DMSRecall] Loading SAM3-DMS from {self.dms_repo}')
+        with _prepend_sys_path(self.dms_repo):
+            from sam3.model_builder import build_sam3_video_predictor
+
+            self.predictor = build_sam3_video_predictor(
+                gpus_to_use=self.gpus_to_use,
+                checkpoint_path=self.checkpoint_path,
+            )
+        self.predictor.async_loading_frames = self.async_loading_frames
+        self.predictor.video_loader_type = self.video_loader_type
+        self.predictor.offload_video_to_cpu = self.offload_video_to_cpu
+        if self.text_prototype_adapter_cfg.get('enabled', False):
+            from category_grounding_mvp.sam3_text_prototype_adapter import install_sam3_text_prototype_adapter
+
+            install_sam3_text_prototype_adapter(self.predictor, self.text_prototype_adapter_cfg)
+        if self.text_memory_adapter_cfg.get('enabled', False):
+            from category_grounding_mvp.sam3_text_memory_adapter import install_sam3_text_memory_adapter
+
+            install_sam3_text_memory_adapter(self.predictor, self.text_memory_adapter_cfg)
+        tracker = getattr(self.predictor.model, 'tracker', None)
+        if tracker is not None:
+            tracker.offload_output_to_cpu_for_eval = self.offload_output_to_cpu_for_eval
+            tracker.trim_past_non_cond_mem_for_eval = self.trim_past_non_cond_mem_for_eval
+        if self.offload_video_to_cpu:
+            print('[SAM3DMSRecall] offload_video_to_cpu=True')
+        if self.offload_output_to_cpu_for_eval:
+            print('[SAM3DMSRecall] offload_output_to_cpu_for_eval=True')
+        if self.trim_past_non_cond_mem_for_eval:
+            print('[SAM3DMSRecall] trim_past_non_cond_mem_for_eval=True')
+        if self.reverse_recondition:
+            native_memory_budget = int(getattr(self.predictor.model.tracker, 'num_maskmem', 1))
+            configured_budget = self.reverse_recondition_support_frames
+            support_frames = native_memory_budget if configured_budget is None else int(configured_budget)
+            print(
+                '[SAM3DMSRecall] reverse_recondition=True '
+                f'(single-session early trajectory support={support_frames})'
+            )
+        print('[SAM3DMSRecall] SAM3-DMS loaded successfully')
+
+    @staticmethod
+    def _to_numpy_mask(mask) -> np.ndarray:
+        if torch.is_tensor(mask):
+            mask = mask.detach().cpu().numpy()
+        arr = np.asarray(mask)
+        if arr.ndim == 3 and arr.shape[0] == 1:
+            arr = arr[0]
+        return (arr > 0).astype(np.uint8)
+
+    def recall_all_instances_stream(
+        self,
+        video_path: str,
+        category: str,
+        session_id: str = None,
+        max_frame_num_to_track: int = None,
+        candidate_top_k: int = None,
+        candidate_keep_top_k: int = None,
+    ):
+        print(f"\n[SAM3DMSRecall] Recalling all instances of category: '{category}'")
+        print(f'[SAM3DMSRecall] Video path: {video_path}')
+        session_id = session_id or f'dms_recall_{uuid.uuid4().hex}'
+        started = False
+        original_max_num_objects = None
+        budget_top_k = None
+        effective_max_frames = (
+            max_frame_num_to_track
+            if max_frame_num_to_track is not None
+            else self.max_frame_num_to_track
+        )
+        try:
+            response = self.predictor.handle_request(
+                dict(
+                    type='start_session',
+                    resource_path=video_path,
+                    session_id=session_id,
+                    offload_video_to_cpu=self.offload_video_to_cpu,
+                )
+            )
+            session_id = response.get('session_id', session_id)
+            started = True
+            print(f'[SAM3DMSRecall] Session started: {session_id}')
+
+            if candidate_top_k is not None:
+                try:
+                    budget_top_k = int(candidate_top_k)
+                except (TypeError, ValueError):
+                    budget_top_k = None
+                if budget_top_k is not None and budget_top_k > 0 and hasattr(self.predictor, 'model'):
+                    model_max_num_objects = getattr(self.predictor.model, 'max_num_objects', None)
+                    if model_max_num_objects is not None:
+                        original_max_num_objects = model_max_num_objects
+                        self.predictor.model.max_num_objects = budget_top_k
+                        print(
+                            f'[SAM3DMSRecall] Candidate budgeting enabled: '
+                            f'max_num_objects={budget_top_k} (score-based top-k)'
+                        )
+
+            add_prompt_response = self.predictor.handle_request(
+                dict(type='add_prompt', session_id=session_id, frame_index=0, text=category)
+            )
+            initial_outputs = add_prompt_response.get('outputs', {}) or {}
+            initial_obj_ids = initial_outputs.get('out_obj_ids', [])
+            if torch.is_tensor(initial_obj_ids):
+                initial_obj_ids = initial_obj_ids.detach().cpu().numpy()
+            initial_obj_ids = [int(x) for x in np.asarray(initial_obj_ids).reshape(-1).tolist()]
+            if budget_top_k is not None and budget_top_k > 0:
+                print(f'[SAM3DMSRecall] Candidate budgeting after prompt: kept={initial_obj_ids}')
+
+            # In reverse-reconditioning mode we first run only the existing forward
+            # pass. The current live session stays open and retains a bounded early
+            # native trajectory for each recalled object.
+            # The support length defaults to the tracker’s own memory capacity. It is
+            # a model-interface budget, not a category-specific decision rule.
+            native_memory_budget = int(getattr(self.predictor.model.tracker, 'num_maskmem', 1))
+            configured_budget = self.reverse_recondition_support_frames
+            reverse_support_frames = (
+                native_memory_budget
+                if configured_budget is None
+                else max(1, int(configured_budget))
+            )
+            reverse_support = {} if self.reverse_recondition else None
+            forward_score_sums = {} if self.reverse_recondition else None
+            request = dict(
+                type='propagate_in_video',
+                session_id=session_id,
+                propagation_direction='forward' if self.reverse_recondition else 'both',
+            )
+            if effective_max_frames is not None:
+                request['max_frame_num_to_track'] = int(effective_max_frames)
+            for response in self.predictor.handle_stream_request(request):
+                frame_idx = int(response['frame_index'])
+                outputs = response.get('outputs', {}) or {}
+                obj_ids = outputs.get('out_obj_ids', [])
+                masks = outputs.get('out_binary_masks', None)
+                probs = outputs.get('out_probs', None)
+                tracker_probs = outputs.get('out_tracker_probs', None)
+                if masks is None or len(obj_ids) == 0:
+                    continue
+                if torch.is_tensor(obj_ids):
+                    obj_ids = obj_ids.detach().cpu().numpy()
+                if torch.is_tensor(probs):
+                    probs = probs.detach().cpu().numpy()
+                if torch.is_tensor(tracker_probs):
+                    tracker_probs = tracker_probs.detach().cpu().numpy()
+                obj_ids = np.asarray(obj_ids).reshape(-1).tolist()
+                probs = None if probs is None else np.asarray(probs).reshape(-1).tolist()
+                tracker_probs = (
+                    None
+                    if tracker_probs is None
+                    else np.asarray(tracker_probs).reshape(-1).tolist()
+                )
+                if probs is None or len(probs) != len(obj_ids):
+                    raise RuntimeError(
+                        'SAM3-DMS propagation output is missing aligned out_probs; '
+                        'native-score candidate filtering cannot continue.'
+                    )
+                frame_masks = {}
+                frame_scores = {}
+                for i, obj_id in enumerate(obj_ids):
+                    obj_id = int(obj_id)
+                    mask_np = self._to_numpy_mask(masks[i])
+                    native_score = float(probs[i])
+                    frame_masks[obj_id] = mask_np
+                    frame_scores[obj_id] = native_score
+                    if reverse_support is not None:
+                        forward_score_sums[obj_id] = (
+                            forward_score_sums.get(obj_id, 0.0) + native_score
+                        )
+                        # Retain only the earliest short native trajectory. Its right
+                        # endpoint is the reverse start; later forward masks are
+                        # already available and need not be propagated backward again.
+                        support = reverse_support.setdefault(obj_id, [])
+                        if len(support) < reverse_support_frames:
+                            support.append(
+                                {
+                                    'obj_id': obj_id,
+                                    'frame_index': frame_idx,
+                                    'mask': mask_np,
+                                }
+                            )
+                if frame_masks:
+                    yield frame_idx, frame_masks, frame_scores
+
+            if reverse_support:
+                # Select candidates after their complete forward trajectories are
+                # scored. This is the same native SAM3 score-sum keep-top-k used by
+                # the downstream pipeline, not a semantic or GT-dependent gate.
+                reverse_obj_ids = sorted(reverse_support)
+                if candidate_keep_top_k is not None and int(candidate_keep_top_k) > 0:
+                    keep_count = int(candidate_keep_top_k)
+                    reverse_obj_ids = sorted(
+                        reverse_obj_ids,
+                        key=lambda obj_id: (-float(forward_score_sums[obj_id]), int(obj_id)),
+                    )[:keep_count]
+                    print(
+                        '[SAM3DMSRecall] Reverse reconditioning candidate filter: '
+                        f'kept={reverse_obj_ids} by native SAM3 score sum '
+                        f'(keep_top_k={keep_count})'
+                    )
+                seed_masks = [
+                    record
+                    for obj_id in reverse_obj_ids
+                    # The predictor consumes them in reverse chronological order;
+                    # each object’s latest support frame becomes the reverse start.
+                    for record in reversed(reverse_support[obj_id])
+                ]
+                support_summary = []
+                for obj_id in reverse_obj_ids:
+                    frames = [record['frame_index'] for record in reverse_support[obj_id]]
+                    support_summary.append(f"obj_{obj_id}@{frames[0]}-{frames[-1]}")
+                print(
+                    '[SAM3DMSRecall] Reverse reconditioning in the same session: '
+                    + ', '.join(support_summary)
+                )
+                for response in self.predictor.handle_stream_request(
+                    dict(
+                        type='propagate_from_masks_backward',
+                        session_id=session_id,
+                        seed_masks=seed_masks,
+                    )
+                ):
+                    frame_idx = int(response['frame_index'])
+                    outputs = response.get('outputs', {}) or {}
+                    obj_ids = np.asarray(outputs.get('out_obj_ids', [])).reshape(-1).tolist()
+                    masks = outputs.get('out_binary_masks', None)
+                    if masks is None or not obj_ids:
+                        continue
+                    frame_masks = {}
+                    frame_scores = {}
+                    for i, obj_id in enumerate(obj_ids):
+                        obj_id = int(obj_id)
+                        frame_masks[obj_id] = self._to_numpy_mask(masks[i])
+                        # Reverse recovery changes spatial support only. Preserve the
+                        # forward SAM3 score-sum ranking used by keep-top-k.
+                        frame_scores[obj_id] = 0.0
+                    if frame_masks:
+                        yield frame_idx, frame_masks, frame_scores
+        finally:
+            if original_max_num_objects is not None and hasattr(self.predictor, 'model'):
+                self.predictor.model.max_num_objects = original_max_num_objects
+            if started:
+                self.predictor.handle_request(dict(type='close_session', session_id=session_id))
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+
+    def recall_all_instances(
+        self,
+        video_path: str,
+        category: str,
+        session_id: str = None,
+        max_frame_num_to_track: int = None,
+        candidate_top_k: int = None,
+        candidate_keep_top_k: int = None,
+    ) -> Dict[int, Dict[int, np.ndarray]]:
+        all_masks: Dict[int, Dict[int, np.ndarray]] = {}
+        for frame_idx, frame_masks, _frame_scores in self.recall_all_instances_stream(
+            video_path=video_path,
+            category=category,
+            session_id=session_id,
+            max_frame_num_to_track=max_frame_num_to_track,
+            candidate_top_k=candidate_top_k,
+            candidate_keep_top_k=candidate_keep_top_k,
+        ):
+            all_masks[int(frame_idx)] = frame_masks
+        return all_masks
+
+
+def build_sam3_recall_backend(sam3_checkpoint: str, recall_cfg: Optional[Dict] = None):
+    recall_cfg = dict(recall_cfg or {})
+    backend = str(recall_cfg.get('backend') or recall_cfg.get('type') or 'sam3').strip().lower()
+    if backend in {'sam3', 'default', 'original'}:
+        return SAM3ConceptRecall(
+            sam3_checkpoint,
+            async_loading_frames=bool(recall_cfg.get('async_loading_frames', False)),
+            offload_video_to_cpu=bool(recall_cfg.get('offload_video_to_cpu', False)),
+            max_frame_num_to_track=recall_cfg.get('max_frame_num_to_track'),
+        )
+    if backend in {'dms', 'sam3_dms', 'sam3-dms'}:
+        dms_repo = (
+            recall_cfg.get('dms_repo')
+            or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'SAM3-DMS')
+        )
+        return DMSConceptRecall(
+            dms_repo=dms_repo,
+            checkpoint_path=recall_cfg.get('checkpoint_path') or sam3_checkpoint,
+            gpus_to_use=_parse_gpus_to_use(recall_cfg.get('gpus_to_use')),
+            async_loading_frames=bool(recall_cfg.get('async_loading_frames', False)),
+            video_loader_type=str(recall_cfg.get('video_loader_type', 'cv2')),
+            max_frame_num_to_track=recall_cfg.get('max_frame_num_to_track'),
+            offload_video_to_cpu=bool(recall_cfg.get('offload_video_to_cpu', False)),
+            offload_output_to_cpu_for_eval=bool(recall_cfg.get('offload_output_to_cpu_for_eval', False)),
+            trim_past_non_cond_mem_for_eval=bool(recall_cfg.get('trim_past_non_cond_mem_for_eval', False)),
+            text_prototype_adapter_cfg=recall_cfg.get('text_prototype_adapter'),
+            text_memory_adapter_cfg=recall_cfg.get('text_memory_adapter'),
+            reverse_recondition=bool(recall_cfg.get('reverse_recondition', False)),
+            reverse_recondition_support_frames=recall_cfg.get('reverse_recondition_support_frames'),
+        )
+    raise ValueError(f'Unsupported sam3_recall backend: {backend!r}')
 
 
 class VisualTubeBuilder:
@@ -1594,7 +2236,9 @@ class SemanticDiscriminator:
         Args:
             mllm_path: Path to video-capable MLLM (Qwen2.5-VL, Qwen3-VL, or Qwen3-VL-Thinking)
             prompt_template_path: Path to discrimination prompt template file
-            prompt_type: Type of prompt ("cot", "three_level", or "yesno")
+            prompt_type: Type of prompt ("cot", "three_level", "yesno", or
+                "yesno_images"). The yesno_images mode matches scorer training
+                by sending each sampled frame as an individual image.
             model_type: Type of model ("qwen2.5", "qwen3", "qwen3-thinking", or "gemma4")
             backend: Optional shared MLLM backend. When provided, discrimination runs with adapter enabled.
         """
@@ -1669,7 +2313,7 @@ class SemanticDiscriminator:
         # Select scoring function based on prompt type
         if self.prompt_type == "three_level":
             score_func = lambda obj_id, paths, expr: self._score_tube_three_level(obj_id, paths, expr, current_prompt_template)
-        elif self.prompt_type == "yesno":
+        elif self.prompt_type in ("yesno", "yesno_images"):
             score_func = lambda obj_id, paths, expr: self._score_tube_yesno(obj_id, paths, expr, current_prompt_template)
         else:  # Default to CoT
             score_func = lambda obj_id, paths, expr: self._score_tube_cot(obj_id, paths, expr, current_prompt_template)
@@ -1678,10 +2322,12 @@ class SemanticDiscriminator:
             frame_paths = tube_data.get('frame_paths', [])
             num_frames = len(frame_paths)
 
-            # Qwen3-VL video processor requires at least 2 frames.
+            # Qwen3-VL video processor requires at least 2 frames. The
+            # training-aligned yesno_images path uses independent images and
+            # remains valid for a one-frame tube.
             # Skip short tubes to avoid runtime failure:
             #   ValueError: t:1 must be larger than temporal_factor:2
-            if num_frames < 2:
+            if num_frames < 2 and self.prompt_type != "yesno_images":
                 skip_reason = f"insufficient_frames({num_frames})"
                 print(
                     f"[Discriminator] Object {obj_id}: [SKIP] "
@@ -1919,13 +2565,18 @@ class SemanticDiscriminator:
 
         prompt = prompt_template.format(referring_expression=referring_expression)
 
+        if self.prompt_type == "yesno_images":
+            visual_content = [
+                {"type": "image", "image": frame_path}
+                for frame_path in tube_frame_paths
+            ]
+        else:
+            visual_content = [{"type": "video", "video": tube_frame_paths}]
+
         messages = [
             {
                 "role": "user",
-                "content": [
-                    {"type": "video", "video": tube_frame_paths},
-                    {"type": "text", "text": prompt}
-                ]
+                "content": visual_content + [{"type": "text", "text": prompt}],
             }
         ]
 
@@ -2374,6 +3025,7 @@ class CRFSAM3Pipeline:
         sam3_checkpoint: str,
         num_tube_frames: int = 8,
         visualization_style: str = "outline",
+        visual_tube_temp_dir: str = "visual_tubes_temp",
         prompt_type: str = "cot",
         prompt_template_path: str = "configs/discrimination_prompt.txt",
         sampling_strategy: str = "uniform",
@@ -2386,6 +3038,7 @@ class CRFSAM3Pipeline:
         reranker_cfg: Dict = None,
         base_mllm_path: Optional[str] = None,
         mllm_adapter_path: Optional[str] = None,
+        sam3_recall_cfg: Optional[Dict] = None,
     ):
         """
         Args:
@@ -2394,6 +3047,7 @@ class CRFSAM3Pipeline:
             num_tube_frames: Frames per Visual Tube (used for uniform sampling)
             visualization_style: Visualization style ("bbox", "outline", "glow", "mask")
             prompt_type: Type of discrimination prompt ("cot", "three_level", or "yesno")
+            visual_tube_temp_dir: Workspace-local directory for annotated scoring frames
             prompt_template_path: Path to prompt template file
             sampling_strategy: Sampling strategy ("uniform", "custom", or "qframe")
             custom_frame_indices: Custom frame indices (used when sampling_strategy="custom")
@@ -2405,6 +3059,7 @@ class CRFSAM3Pipeline:
             reranker_cfg: Config dict for Qwen3-VL-Reranker
             base_mllm_path: Optional base model path for shared-base dual-mode inference
             mllm_adapter_path: Optional LoRA adapter path for discriminator mode
+            sam3_recall_cfg: Optional SAM3 recall backend/budget configuration
         """
         # CRITICAL: Store the original configured visualization_style to fix bbox persistence bug
         # When processing multiple samples sequentially, dynamic switching to bbox should always
@@ -2426,13 +3081,38 @@ class CRFSAM3Pipeline:
             qframe_config=qframe_config,
             category_prompt_path=concept_config.get("category_prompt_path", "configs/category_num_targets_inference.txt"),
             backend=self.shared_mllm,
+            category_override_cache_path=concept_config.get("category_override_cache_path"),
             teacher_pipeline_compatible=bool(concept_config.get("teacher_pipeline_compatible", False)),
             teacher_pipeline_num_frames=int(concept_config.get("teacher_pipeline_num_frames", 3)),
             teacher_pipeline_deterministic=bool(concept_config.get("teacher_pipeline_deterministic", True)),
         )
-        self.sam3_recall = SAM3ConceptRecall(sam3_checkpoint)
+        self.sam3_recall_cfg = dict(sam3_recall_cfg or {})
+        self.sam3_recall = build_sam3_recall_backend(sam3_checkpoint, self.sam3_recall_cfg)
+        self.sam3_recall_backend = str(
+            self.sam3_recall_cfg.get('backend') or self.sam3_recall_cfg.get('type') or 'sam3'
+        ).strip().lower()
+        self.semantic_query_expander_cfg = (
+            self.sam3_recall_cfg.get('semantic_query_expander')
+            or self.sam3_recall_cfg.get('semantic_prompt_router')
+            or {}
+        )
+        if self.semantic_query_expander_cfg.get('enabled', False):
+            from category_grounding_mvp.sam3_semantic_query_expander import build_sam3_semantic_query_expander
+
+            self.semantic_query_expander = build_sam3_semantic_query_expander(
+                self.semantic_query_expander_cfg
+            )
+            print("[CRFSAM3] Semantic query expander: enabled")
+        else:
+            self.semantic_query_expander = None
+        print(
+            f"[CRFSAM3] SAM3 recall backend: {self.sam3_recall_backend}; "
+            f"candidate_recall_top_k={resolve_candidate_recall_top_k(1, self.sam3_recall_cfg)}, "
+            f"candidate_keep_top_k={resolve_candidate_keep_top_k(1, self.sam3_recall_cfg)}"
+        )
         self.tube_builder = VisualTubeBuilder(
             num_tube_frames,
+            temp_dir=visual_tube_temp_dir,
             visualization_style=visualization_style,
             sampling_strategy=sampling_strategy,
             custom_frame_indices=custom_frame_indices,
@@ -2550,30 +3230,189 @@ class CRFSAM3Pipeline:
                     return False
             return True
 
+        def _recall_stats(
+            mask_dict: Dict[int, Dict[int, np.ndarray]],
+            score_sums: Dict[int, float],
+        ) -> Dict[str, Any]:
+            obj_ids = set()
+            frame_count = 0
+            mask_count = 0
+            for _, frame_masks in mask_dict.items():
+                if not frame_masks:
+                    continue
+                frame_count += 1
+                mask_count += len(frame_masks)
+                obj_ids.update(int(obj_id) for obj_id in frame_masks)
+            total_score = float(sum(float(v) for v in score_sums.values()))
+            return {
+                "num_objects": len(obj_ids),
+                "frames_with_masks": frame_count,
+                "num_masks": mask_count,
+                "score_sum": total_score,
+                "score_mean": total_score / max(mask_count, 1),
+                "max_object_score_sum": max([float(v) for v in score_sums.values()] or [0.0]),
+            }
+
+        trigger_cfg = dict(self.semantic_query_expander_cfg.get("trigger") or {})
+        min_frames_with_masks = trigger_cfg.get("min_frames_with_masks")
+        min_score_sum = trigger_cfg.get("min_score_sum")
+        min_score_mean = trigger_cfg.get("min_score_mean")
+        min_object_score_sum = trigger_cfg.get("min_object_score_sum")
+        quality_field = str(trigger_cfg.get("quality_field", "max_object_score_sum"))
+        probe_all_expanded = bool(trigger_cfg.get("probe_all_expanded", False))
+
+        def _recall_is_poor(stats: Dict[str, Any]) -> bool:
+            if stats["num_objects"] <= 0:
+                return True
+            if min_frames_with_masks is not None and stats["frames_with_masks"] < int(min_frames_with_masks):
+                return True
+            if min_score_sum is not None and stats["score_sum"] < float(min_score_sum):
+                return True
+            if min_score_mean is not None and stats["score_mean"] < float(min_score_mean):
+                return True
+            if min_object_score_sum is not None and stats["max_object_score_sum"] < float(min_object_score_sum):
+                return True
+            return False
+
+        def _recall_quality(stats: Dict[str, Any]) -> Tuple[float, int, int]:
+            primary = stats.get(quality_field, stats["max_object_score_sum"])
+            return (
+                float(primary),
+                int(stats["frames_with_masks"]),
+                int(stats["num_objects"]),
+            )
+
         query_candidates = []
-        for q in [category] + list(backup_categories):
+        semantic_expansions = []
+        if self.semantic_query_expander is not None:
+            semantic_expansions = self.semantic_query_expander.expand(
+                category,
+                existing=[category] + list(backup_categories),
+            )
+        for q in [category] + list(semantic_expansions) + list(backup_categories):
             qn = str(q).strip().lower()
             if qn and qn not in query_candidates:
                 query_candidates.append(qn)
         if len(query_candidates) == 0:
             query_candidates = [category]
 
+        candidate_recall_top_k = resolve_candidate_recall_top_k(num_targets, self.sam3_recall_cfg)
+        candidate_keep_top_k = resolve_candidate_keep_top_k(num_targets, self.sam3_recall_cfg)
         print(f"[CRFSAM3] Recall query candidates: {query_candidates}")
+        print(
+            f"[CRFSAM3] Recall-side candidate budget: "
+            f"recall_top_k={candidate_recall_top_k if candidate_recall_top_k is not None else 'disabled'}, "
+            f"keep_top_k={candidate_keep_top_k if candidate_keep_top_k is not None else 'disabled'} "
+            f"(num_targets={num_targets}, filter=sam3_object_score_sum)"
+        )
         all_masks = {}
+        candidate_score_sums = {}
         used_category_query = query_candidates[0]
+        recall_query_stats = {}
+        best_recall = None
         for i, recall_query in enumerate(query_candidates):
             if i == 0:
                 print(f"[CRFSAM3] Trying primary recall query: '{recall_query}'")
             else:
-                print(f"[CRFSAM3] Primary recall empty, trying backup #{i}: '{recall_query}'")
-            recall_masks = self.sam3_recall.recall_all_instances(video_path, recall_query)
+                print(f"[CRFSAM3] Recall response not accepted, trying expanded query #{i}: '{recall_query}'")
+            recall_masks = {}
+            recall_score_sums = {}
+            recall_stream_kwargs = {'candidate_top_k': candidate_recall_top_k}
+            if self.sam3_recall_backend in {'dms', 'sam3_dms', 'sam3-dms'}:
+                recall_stream_kwargs['candidate_keep_top_k'] = candidate_keep_top_k
+            for frame_idx, frame_masks, frame_scores in self.sam3_recall.recall_all_instances_stream(
+                video_path,
+                recall_query,
+                **recall_stream_kwargs,
+            ):
+                if not frame_masks:
+                    continue
+                recall_masks[int(frame_idx)] = frame_masks
+                for obj_id in frame_masks:
+                    obj_id = int(obj_id)
+                    if obj_id not in frame_scores:
+                        raise RuntimeError(
+                            f"Missing native SAM3 score for frame={frame_idx}, obj_id={obj_id}."
+                        )
+                    recall_score_sums[obj_id] = recall_score_sums.get(obj_id, 0.0) + float(frame_scores[obj_id])
+
             if not _is_recall_empty(recall_masks):
-                all_masks = recall_masks
-                used_category_query = recall_query
-                if i > 0:
-                    print(f"[CRFSAM3] Backup query succeeded: '{used_category_query}'")
-                break
+                stats = _recall_stats(recall_masks, recall_score_sums)
+                recall_query_stats[recall_query] = stats
+                print(
+                    f"[CRFSAM3] Recall stats for '{recall_query}': "
+                    f"objects={stats['num_objects']} frames={stats['frames_with_masks']} "
+                    f"score_sum={stats['score_sum']:.4f} score_mean={stats['score_mean']:.4f}"
+                )
+                if (
+                    candidate_keep_top_k is not None
+                    and int(candidate_keep_top_k) > 0
+                    and len(recall_score_sums) > int(candidate_keep_top_k)
+                ):
+                    kept_obj_ids = set(
+                        sorted(
+                            recall_score_sums,
+                            key=lambda obj_id: (-float(recall_score_sums[obj_id]), int(obj_id)),
+                        )[: int(candidate_keep_top_k)]
+                    )
+                    recall_masks = {
+                        frame_idx: {
+                            int(obj_id): mask
+                            for obj_id, mask in frame_masks.items()
+                            if int(obj_id) in kept_obj_ids
+                        }
+                        for frame_idx, frame_masks in recall_masks.items()
+                    }
+                    recall_masks = {
+                        frame_idx: frame_masks
+                        for frame_idx, frame_masks in recall_masks.items()
+                        if frame_masks
+                    }
+                    recall_score_sums = {
+                        int(obj_id): score
+                        for obj_id, score in recall_score_sums.items()
+                        if int(obj_id) in kept_obj_ids
+                    }
+                    stats = _recall_stats(recall_masks, recall_score_sums)
+                    recall_query_stats[recall_query] = stats
+                    print(
+                        f"[CRFSAM3] Candidate keep applied: "
+                        f"kept={sorted(kept_obj_ids)} by native SAM3 score sum"
+                    )
+
+                quality = _recall_quality(stats)
+                if best_recall is None or quality > best_recall["quality"]:
+                    best_recall = {
+                        "query": recall_query,
+                        "masks": recall_masks,
+                        "score_sums": recall_score_sums,
+                        "stats": stats,
+                        "quality": quality,
+                    }
+
+                if self.semantic_query_expander is None or (not probe_all_expanded and not _recall_is_poor(stats)):
+                    all_masks = recall_masks
+                    candidate_score_sums = recall_score_sums
+                    used_category_query = recall_query
+                    if i > 0:
+                        print(f"[CRFSAM3] Expanded query accepted: '{used_category_query}'")
+                    break
+
+                print(
+                    f"[CRFSAM3] Recall query '{recall_query}' is weak or under semantic probing; "
+                    "continuing semantic expansion."
+                )
+                continue
             print(f"[CRFSAM3] Recall query '{recall_query}' returned empty masks.")
+
+        if _is_recall_empty(all_masks) and best_recall is not None:
+            all_masks = best_recall["masks"]
+            candidate_score_sums = best_recall["score_sums"]
+            used_category_query = best_recall["query"]
+            print(
+                f"[CRFSAM3] No query passed the accept threshold; using best native response: "
+                f"'{used_category_query}' stats={best_recall['stats']}"
+            )
 
         if _is_recall_empty(all_masks):
             print("[CRFSAM3] ⚠ No objects recalled, returning empty result")
@@ -2582,10 +3421,18 @@ class CRFSAM3Pipeline:
                     'category': used_category_query,
                     'primary_category': category,
                     'backup_categories': backup_categories,
+                    'semantic_query_expansions': semantic_expansions,
                     'category_candidates': query_candidates,
                     'used_category_query': used_category_query,
                     'category_fallback_used': used_category_query != category,
+                    'recall_query_stats': recall_query_stats,
                     'num_targets': num_targets,
+                    'recall_backend': self.sam3_recall_backend,
+                    'candidate_top_k': candidate_recall_top_k,
+                    'candidate_recall_top_k': candidate_recall_top_k,
+                    'candidate_keep_top_k': candidate_keep_top_k,
+                    'candidate_filter': 'sam3_object_score_sum' if candidate_keep_top_k is not None else 'none',
+                    'candidate_score_sums': {},
                     'sub_conditions': category_reasoning.get("sub_conditions", []),
                     'final_rule_applied': category_reasoning.get("final_rule_applied", "N/A"),
                     'all_candidates': [],
@@ -2641,10 +3488,21 @@ class CRFSAM3Pipeline:
                 'category': used_category_query,
                 'primary_category': category,
                 'backup_categories': backup_categories,
+                'semantic_query_expansions': semantic_expansions,
                 'category_candidates': query_candidates,
                 'used_category_query': used_category_query,
                 'category_fallback_used': used_category_query != category,
+                'recall_query_stats': recall_query_stats,
                 'num_targets': num_targets,
+                'recall_backend': self.sam3_recall_backend,
+                'candidate_top_k': candidate_recall_top_k,
+                'candidate_recall_top_k': candidate_recall_top_k,
+                'candidate_keep_top_k': candidate_keep_top_k,
+                'candidate_filter': 'sam3_object_score_sum' if candidate_keep_top_k is not None else 'none',
+                'candidate_score_sums': {
+                    int(k): float(v)
+                    for k, v in sorted(candidate_score_sums.items())
+                },
                 'sub_conditions': category_reasoning.get("sub_conditions", []),
                 'final_rule_applied': category_reasoning.get("final_rule_applied", "N/A"),
                 'all_candidates': all_candidate_ids,
@@ -2948,6 +3806,9 @@ Examples:
             if 'num_frames' not in qframe_config:
                 qframe_config['num_frames'] = num_tube_frames  # Use same as tube frames
 
+        # Extract SAM3 recall config
+        sam3_recall_config = config.get('sam3_recall', {}) or {}
+
         # Extract discrimination config
         discrimination_config = config.get('discrimination', {})
         discrimination_backend = discrimination_config.get('backend', 'mllm')
@@ -3028,6 +3889,7 @@ Examples:
     elif sampling_strategy == "qframe":
         print(f"Q-Frame Config: {qframe_config}")
     print(f"Concept Extraction Q-Frame: {concept_use_qframe}")
+    print(f"SAM3 Recall: {sam3_recall_config}")
     print(f"Discriminator Backend: {discrimination_backend}")
     print(f"Prompt Type: {prompt_type}")
     print(f"Prompt Template: {prompt_template_path}")
@@ -3062,7 +3924,8 @@ Examples:
         model_type=model_type,
         concept_use_qframe=concept_use_qframe,
         discriminator_backend=discrimination_backend,
-        reranker_cfg=reranker_cfg
+        reranker_cfg=reranker_cfg,
+        sam3_recall_cfg=sam3_recall_config,
     )
 
     # Run prediction with detailed scores

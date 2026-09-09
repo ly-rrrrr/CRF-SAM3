@@ -24,6 +24,7 @@ from crf_sam3_attn.train_data import (
     build_training_dataset,
     load_base_config,
     prepare_training_offline_cache,
+    resolve_config_path,
 )
 
 
@@ -293,6 +294,35 @@ def _resolve_resume_dir(args, train_cfg: Dict, output_dir: str) -> Optional[str]
     return None
 
 
+def _resolve_init_adapter_dir(
+    args,
+    model_cfg: Dict,
+    config_dir: str,
+) -> Optional[str]:
+    init_from = args.init_adapter_from or model_cfg.get("init_adapter_path")
+    if not init_from:
+        return None
+
+    init_dir = resolve_config_path(
+        str(init_from),
+        config_dir=config_dir,
+        repo_root=_REPO_ROOT,
+    )
+    if not os.path.isdir(init_dir):
+        raise FileNotFoundError(f"init adapter directory not found: {init_dir}")
+    config_path = os.path.join(init_dir, "adapter_config.json")
+    weight_paths = (
+        os.path.join(init_dir, "adapter_model.safetensors"),
+        os.path.join(init_dir, "adapter_model.bin"),
+    )
+    if not os.path.isfile(config_path) or not any(os.path.isfile(path) for path in weight_paths):
+        raise FileNotFoundError(
+            f"init adapter directory is incomplete: {init_dir}; expected adapter_config.json "
+            "and adapter_model.safetensors or adapter_model.bin"
+        )
+    return init_dir
+
+
 def main():
     parser = argparse.ArgumentParser(description="CRF-SAM3 attention training (true resume)")
     parser.add_argument("--config", type=str, default="crf_sam3_attn/config.yaml")
@@ -306,6 +336,12 @@ def main():
         "--auto_resume",
         action="store_true",
         help="Auto-resume from latest checkpoint_* under output_dir if available.",
+    )
+    parser.add_argument(
+        "--init_adapter_from",
+        type=str,
+        default=None,
+        help="Warm-start trainable LoRA weights from this adapter using a fresh optimizer.",
     )
     args = parser.parse_args()
 
@@ -371,11 +407,22 @@ def main():
     save_merged = bool(train_section.get("save_merged", False))
     merged_dir = train_section.get("merged_output_dir", "crf_sam3_attn_outputs_merged")
 
+    model_cfg = train_cfg.get("model", {})
     resume_dir = _resolve_resume_dir(args, train_cfg, output_dir)
+    init_adapter_dir = _resolve_init_adapter_dir(args, model_cfg, config_dir)
     if resume_dir is not None:
         print(f"[resume] Resuming from: {resume_dir}")
+        adapter_load_dir = resume_dir
+        if init_adapter_dir is not None:
+            print(
+                f"[resume] Ignoring configured warm-start adapter because a true-resume "
+                f"checkpoint was found: {init_adapter_dir}"
+            )
+    else:
+        adapter_load_dir = init_adapter_dir
+        if init_adapter_dir is not None:
+            print(f"[warm-start] Loading trainable LoRA adapter with fresh optimizer: {init_adapter_dir}")
 
-    model_cfg = train_cfg.get("model", {})
     model = Qwen3VLCandidateMatcher(
         model_path=base_cfg["model"]["mllm_path"],
         attn_loss_weight=float(model_cfg.get("attn_loss_weight", 0.3)),
@@ -383,7 +430,7 @@ def main():
         attn_loss_eps=float(model_cfg.get("attn_loss_eps", 1e-6)),
         freeze_visual_encoder=bool(model_cfg.get("freeze_visual_encoder", True)),
         lora_cfg=model_cfg.get("lora"),
-        lora_resume_path=resume_dir,
+        lora_resume_path=adapter_load_dir,
         attn_implementation=model_cfg.get("attn_implementation", "sdpa"),
         loss_type=model_cfg.get("loss_type", "attn"),
         align_tau=float(model_cfg.get("align_tau", 1.0)),

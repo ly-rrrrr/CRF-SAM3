@@ -1,0 +1,11 @@
+{
+  "annotation": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/datasets/lvis/annotations/lvis_v1_train.json",
+  "num_categories": 1203,
+  "num_variants": 1826,
+  "frequency_counts": {
+    "c": 461,
+    "f": 405,
+    "r": 337
+  },
+  "output_jsonl": "category_grounding_mvp/data/visual_vocab/lvis_v1/categories.jsonl"
+}

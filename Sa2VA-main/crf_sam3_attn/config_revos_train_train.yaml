@@ -66,7 +66,7 @@ data:
   cache_sam3: false
   category_source: concept
   offline_mode: true
-  offline_cache_root: crf_sam3_attn/offline_cache_revos
+  offline_cache_root: crf_sam3_attn/offline_cache_revos_dms_recall24_keep7_20260622
   offline_prepare: false
   offline_overwrite: false
   offline_strict: true

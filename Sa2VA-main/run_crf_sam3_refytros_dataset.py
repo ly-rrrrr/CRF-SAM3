@@ -191,6 +191,7 @@ Examples:
     sampling_strategy = visual_tube_cfg.get("sampling_strategy", "uniform")
 
     concept_cfg = config.get("concept_extraction", {})
+    sam3_recall_config = config.get("sam3_recall", {}) or {}
     concept_use_qframe = bool(concept_cfg.get("use_qframe", False))
 
     qframe_config = None
@@ -273,6 +274,7 @@ Examples:
         concept_config=concept_cfg,
         discriminator_backend=backend,
         reranker_cfg=reranker_cfg,
+        sam3_recall_cfg=sam3_recall_config,
     )
 
     os.makedirs(output_dir, exist_ok=True)
@@ -381,9 +383,11 @@ Examples:
                         "category": discrimination_details.get("category"),
                         "primary_category": discrimination_details.get("primary_category"),
                         "backup_categories": discrimination_details.get("backup_categories", []),
+                        "semantic_query_expansions": discrimination_details.get("semantic_query_expansions", []),
                         "category_candidates": discrimination_details.get("category_candidates", []),
                         "used_category_query": discrimination_details.get("used_category_query"),
                         "category_fallback_used": bool(discrimination_details.get("category_fallback_used", False)),
+                        "recall_query_stats": discrimination_details.get("recall_query_stats", {}),
                         "num_targets": discrimination_details.get("num_targets"),
                         "sub_conditions": discrimination_details.get("sub_conditions", []),
                         "final_rule_applied": discrimination_details.get("final_rule_applied", "N/A"),

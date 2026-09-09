@@ -85,7 +85,7 @@ data:
       hard_neg_pos_strategy: mean
     - name: davis17
       base_config: configs/crf_sam3_davis_train_base.yaml
-      offline_cache_root: crf_sam3_attn/offline_cache_davis17
+      offline_cache_root: crf_sam3_attn/offline_cache_davis17_dms_recall24_keep7_20260620
       repeats: 4
       pos_iou: 0.5
       neg_iou: 0.1
@@ -96,7 +96,7 @@ data:
     - name: refytros
       base_config: configs/crf_sam3_refytros_train_base.yaml
       mask_dict_path: mask_dict.pkl
-      offline_cache_root: crf_sam3_attn/offline_cache_refytros
+      offline_cache_root: crf_sam3_attn/offline_cache_refytros_dms_recall24_keep7_20260620
       repeats: 2
       pos_iou: 0.5
       neg_iou: 0.1

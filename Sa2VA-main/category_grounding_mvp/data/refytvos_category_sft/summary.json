@@ -1,0 +1,137 @@
+{
+  "meta_expressions": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/meta_expressions.json",
+  "meta_objects": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/meta.json",
+  "image_root": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages",
+  "frames_per_sample": 3,
+  "seed": 42,
+  "val_ratio": 0.1,
+  "base_samples": 12913,
+  "train_records": 23238,
+  "val_records": 1294,
+  "train_videos": 3124,
+  "val_videos": 347,
+  "random_view_copies": 1,
+  "num_categories": 65,
+  "top_categories": [
+    [
+      "person",
+      2924
+    ],
+    [
+      "ape",
+      442
+    ],
+    [
+      "sedan",
+      406
+    ],
+    [
+      "giant_panda",
+      387
+    ],
+    [
+      "parrot",
+      372
+    ],
+    [
+      "hand",
+      340
+    ],
+    [
+      "duck",
+      328
+    ],
+    [
+      "lizard",
+      320
+    ],
+    [
+      "skateboard",
+      288
+    ],
+    [
+      "monkey",
+      282
+    ],
+    [
+      "dog",
+      276
+    ],
+    [
+      "sheep",
+      270
+    ],
+    [
+      "fish",
+      244
+    ],
+    [
+      "rabbit",
+      232
+    ],
+    [
+      "cow",
+      219
+    ],
+    [
+      "zebra",
+      192
+    ],
+    [
+      "giraffe",
+      190
+    ],
+    [
+      "hat",
+      190
+    ],
+    [
+      "snake",
+      190
+    ],
+    [
+      "cat",
+      188
+    ],
+    [
+      "fox",
+      172
+    ],
+    [
+      "motorbike",
+      166
+    ],
+    [
+      "leopard",
+      162
+    ],
+    [
+      "bear",
+      160
+    ],
+    [
+      "truck",
+      156
+    ],
+    [
+      "elephant",
+      154
+    ],
+    [
+      "turtle",
+      152
+    ],
+    [
+      "deer",
+      150
+    ],
+    [
+      "dolphin",
+      150
+    ],
+    [
+      "horse",
+      146
+    ]
+  ]
+}

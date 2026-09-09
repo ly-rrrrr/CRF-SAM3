@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "dataset": "ReVOS",
+    "purpose": "USXHZ/0 new DMS recall24 -> keep7 visual inspection",
+    "num_samples": 1
+  },
+  "samples": [
+    {
+      "video_id": "TAO/test/Charades/USXHZ",
+      "exp_id": 0,
+      "expression": "the person sitting on the sofa(s).",
+      "category": "person",
+      "old_category": "person",
+      "current_category": "person",
+      "sam3_prompt_text": "person",
+      "sam3_prompt_source": "category",
+      "old_max_j": 0.08818654979010339,
+      "new_max_j": 0.08819092433298388,
+      "new_max_j_filled": 0.08819092433298388,
+      "delta": 4.374542880491994e-06,
+      "old_num_candidates": 5,
+      "new_num_candidates": 5,
+      "num_candidates_before_filter": 5,
+      "candidate_filter": "track_quality",
+      "status": "same"
+    }
+  ]
+}

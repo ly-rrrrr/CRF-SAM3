@@ -1,0 +1,1800 @@
+{
+  "-1": {
+    "before": [
+      {
+        "video_id": "e8d09effc9e0",
+        "exp_id": "6",
+        "expression": "Two yaks in the midst of a fight.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.45549993388038607,
+            "label": "pos",
+            "mean_in_sim": -0.11669921875,
+            "mean_out_sim": -0.099365234375,
+            "mean_margin_sim": -0.017333984375,
+            "mean_in_prob": 0.00205230712890625,
+            "mean_out_prob": 0.0020904541015625,
+            "mean_margin_prob": -3.814697265625e-05,
+            "mean_auc_sim": 0.45755399763584137,
+            "prob_score": 0.622459352016449,
+            "logit_score": 0.5
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.49562702191418295,
+            "label": "pos",
+            "mean_in_sim": -0.11328125,
+            "mean_out_sim": -0.07177734375,
+            "mean_margin_sim": -0.04150390625,
+            "mean_in_prob": 0.002002716064453125,
+            "mean_out_prob": 0.00209808349609375,
+            "mean_margin_prob": -9.5367431640625e-05,
+            "mean_auc_sim": 0.4069252014160156,
+            "prob_score": 0.9820137619972229,
+            "logit_score": 4.0
+          }
+        ]
+      },
+      {
+        "video_id": "521a90b654ca",
+        "exp_id": "6",
+        "expression": "The frolicking pair of dogs.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.5332819102255701,
+            "label": "pos",
+            "mean_in_sim": -0.126220703125,
+            "mean_out_sim": -0.07373046875,
+            "mean_margin_sim": -0.052490234375,
+            "mean_in_prob": 0.000621795654296875,
+            "mean_out_prob": 0.0006561279296875,
+            "mean_margin_prob": -3.4332275390625e-05,
+            "mean_auc_sim": 0.37939876317977905,
+            "prob_score": 0.2689414322376251,
+            "logit_score": -1.0
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.425050065092794,
+            "label": "pos",
+            "mean_in_sim": -0.15087890625,
+            "mean_out_sim": -0.089111328125,
+            "mean_margin_sim": -0.061767578125,
+            "mean_in_prob": 0.0006160736083984375,
+            "mean_out_prob": 0.0006561279296875,
+            "mean_margin_prob": -4.00543212890625e-05,
+            "mean_auc_sim": 0.3509976714849472,
+            "prob_score": 0.3775406777858734,
+            "logit_score": -0.5
+          }
+        ]
+      },
+      {
+        "video_id": "377b1c5f365c",
+        "exp_id": "14",
+        "expression": "The initial lizard to consume the food.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 2.777415170797146e-06,
+            "label": "neg",
+            "mean_in_sim": -0.052490234375,
+            "mean_out_sim": 0.018310546875,
+            "mean_margin_sim": -0.07080078125,
+            "mean_in_prob": 0.00311279296875,
+            "mean_out_prob": 0.00335693359375,
+            "mean_margin_prob": -0.000244140625,
+            "mean_auc_sim": 0.3382929861545563,
+            "prob_score": 0.022977370768785477,
+            "logit_score": -3.75
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.0016608929118531008,
+            "label": "neg",
+            "mean_in_sim": -0.0164794921875,
+            "mean_out_sim": -0.00994873046875,
+            "mean_margin_sim": -0.00653076171875,
+            "mean_in_prob": 0.00330352783203125,
+            "mean_out_prob": 0.00333404541015625,
+            "mean_margin_prob": -3.0517578125e-05,
+            "mean_auc_sim": 0.5036488771438599,
+            "prob_score": 0.18242551386356354,
+            "logit_score": -1.5
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0020319319776346697,
+            "label": "neg",
+            "mean_in_sim": -0.038818359375,
+            "mean_out_sim": 0.00079345703125,
+            "mean_margin_sim": -0.03961181640625,
+            "mean_in_prob": 0.00321197509765625,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.00012969970703125,
+            "mean_auc_sim": 0.4059067517518997,
+            "prob_score": 0.037326883524656296,
+            "logit_score": -3.25
+          },
+          {
+            "obj_id": 3,
+            "obj_iou": 0.8718669542804667,
+            "label": "pos",
+            "mean_in_sim": -0.038330078125,
+            "mean_out_sim": -0.010009765625,
+            "mean_margin_sim": -0.0283203125,
+            "mean_in_prob": 0.00324249267578125,
+            "mean_out_prob": 0.00333404541015625,
+            "mean_margin_prob": -9.1552734375e-05,
+            "mean_auc_sim": 0.442083939909935,
+            "prob_score": 0.037326883524656296,
+            "logit_score": -3.25
+          },
+          {
+            "obj_id": 5,
+            "obj_iou": 0.004650443859124934,
+            "label": "neg",
+            "mean_in_sim": -0.0794677734375,
+            "mean_out_sim": -0.03192138671875,
+            "mean_margin_sim": -0.04754638671875,
+            "mean_in_prob": 0.003173828125,
+            "mean_out_prob": 0.00333404541015625,
+            "mean_margin_prob": -0.00016021728515625,
+            "mean_auc_sim": 0.3782783970236778,
+            "prob_score": 0.14804719388484955,
+            "logit_score": -1.75
+          }
+        ]
+      },
+      {
+        "video_id": "d32e4f23eb40",
+        "exp_id": "20",
+        "expression": "The ultimate cow that moved ahead.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.0026164862000282603,
+            "label": "neg",
+            "mean_in_sim": -0.06787109375,
+            "mean_out_sim": -0.036651611328125,
+            "mean_margin_sim": -0.031219482421875,
+            "mean_in_prob": 0.0044403076171875,
+            "mean_out_prob": 0.0045928955078125,
+            "mean_margin_prob": -0.000152587890625,
+            "mean_auc_sim": 0.44507764279842377,
+            "prob_score": 0.22270014882087708,
+            "logit_score": -1.25
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 8.328076264035429e-05,
+            "label": "neg",
+            "mean_in_sim": -0.03466796875,
+            "mean_out_sim": -0.060791015625,
+            "mean_margin_sim": 0.026123046875,
+            "mean_in_prob": 0.004669189453125,
+            "mean_out_prob": 0.004547119140625,
+            "mean_margin_prob": 0.0001220703125,
+            "mean_auc_sim": 0.5544077157974243,
+            "prob_score": 0.07585817575454712,
+            "logit_score": -2.5
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.9066920819187421,
+            "label": "pos",
+            "mean_in_sim": -0.164794921875,
+            "mean_out_sim": -0.03759765625,
+            "mean_margin_sim": -0.127197265625,
+            "mean_in_prob": 0.0040130615234375,
+            "mean_out_prob": 0.004547119140625,
+            "mean_margin_prob": -0.0005340576171875,
+            "mean_auc_sim": 0.24530923925340176,
+            "prob_score": 0.18242551386356354,
+            "logit_score": -1.5
+          }
+        ]
+      },
+      {
+        "video_id": "2fbec459efc2",
+        "exp_id": "1",
+        "expression": "Stationary truck",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.8614903845352281,
+            "label": "pos",
+            "mean_in_sim": -0.032470703125,
+            "mean_out_sim": 0.035888671875,
+            "mean_margin_sim": -0.068359375,
+            "mean_in_prob": 0.00182342529296875,
+            "mean_out_prob": 0.0019683837890625,
+            "mean_margin_prob": -0.00014495849609375,
+            "mean_auc_sim": 0.2917485423386097,
+            "prob_score": 0.0004305570910219103,
+            "logit_score": -7.75
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": 0.03509521484375,
+            "mean_out_sim": 0.016021728515625,
+            "mean_margin_sim": 0.019073486328125,
+            "mean_in_prob": 0.00199127197265625,
+            "mean_out_prob": 0.00196075439453125,
+            "mean_margin_prob": 3.0517578125e-05,
+            "mean_auc_sim": 0.5618639588356018,
+            "prob_score": 0.004070138093084097,
+            "logit_score": -5.5
+          }
+        ]
+      },
+      {
+        "video_id": "6eac00b5f389",
+        "exp_id": "12",
+        "expression": "The young boy approaching to carry the tiny dog.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.9483830168800488,
+            "label": "pos",
+            "mean_in_sim": -0.053466796875,
+            "mean_out_sim": -0.0394287109375,
+            "mean_margin_sim": -0.0140380859375,
+            "mean_in_prob": 0.00193023681640625,
+            "mean_out_prob": 0.00196075439453125,
+            "mean_margin_prob": -3.0517578125e-05,
+            "mean_auc_sim": 0.4566998928785324,
+            "prob_score": 0.9820137619972229,
+            "logit_score": 4.0
+          }
+        ]
+      },
+      {
+        "video_id": "945c47a50243",
+        "exp_id": "17",
+        "expression": "The bear twirling a small hula hoop with its mouth.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.112060546875,
+            "mean_out_sim": -0.120849609375,
+            "mean_margin_sim": 0.0087890625,
+            "mean_in_prob": 0.000408172607421875,
+            "mean_out_prob": 0.0004024505615234375,
+            "mean_margin_prob": 5.7220458984375e-06,
+            "mean_auc_sim": 0.522481769323349,
+            "prob_score": 0.8807970285415649,
+            "logit_score": 2.0
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9243231237416941,
+            "label": "pos",
+            "mean_in_sim": -0.23046875,
+            "mean_out_sim": -0.124755859375,
+            "mean_margin_sim": -0.105712890625,
+            "mean_in_prob": 0.000362396240234375,
+            "mean_out_prob": 0.0004024505615234375,
+            "mean_margin_prob": -4.00543212890625e-05,
+            "mean_auc_sim": 0.2647695541381836,
+            "prob_score": 0.9324532747268677,
+            "logit_score": 2.625
+          }
+        ]
+      },
+      {
+        "video_id": "963a498a493b",
+        "exp_id": "2",
+        "expression": "The person holding onto the reptile.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.5000350347096941,
+            "label": "pos",
+            "mean_in_sim": -0.154296875,
+            "mean_out_sim": -0.15234375,
+            "mean_margin_sim": -0.001953125,
+            "mean_in_prob": 0.0004901885986328125,
+            "mean_out_prob": 0.0004901885986328125,
+            "mean_margin_prob": 0.0,
+            "mean_auc_sim": 0.4954492747783661,
+            "prob_score": 0.9399133324623108,
+            "logit_score": 2.75
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.5076890115499354,
+            "label": "pos",
+            "mean_in_sim": -0.1533203125,
+            "mean_out_sim": -0.142578125,
+            "mean_margin_sim": -0.0107421875,
+            "mean_in_prob": 0.000484466552734375,
+            "mean_out_prob": 0.000492095947265625,
+            "mean_margin_prob": -7.62939453125e-06,
+            "mean_auc_sim": 0.4880201518535614,
+            "prob_score": 0.9399133324623108,
+            "logit_score": 2.75
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0005350735028688009,
+            "label": "neg",
+            "mean_in_sim": -0.126220703125,
+            "mean_out_sim": -0.136962890625,
+            "mean_margin_sim": 0.0107421875,
+            "mean_in_prob": 0.0004911422729492188,
+            "mean_out_prob": 0.0004901885986328125,
+            "mean_margin_prob": 9.5367431640625e-07,
+            "mean_auc_sim": 0.545995682477951,
+            "prob_score": 0.9046505093574524,
+            "logit_score": 2.25
+          }
+        ]
+      },
+      {
+        "video_id": "84bf89fe11fe",
+        "exp_id": "20",
+        "expression": "The unmoving bicycle",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.005531916668292104,
+            "label": "neg",
+            "mean_in_sim": -0.0662841796875,
+            "mean_out_sim": -0.0433349609375,
+            "mean_margin_sim": -0.02294921875,
+            "mean_in_prob": 0.001918792724609375,
+            "mean_out_prob": 0.00196075439453125,
+            "mean_margin_prob": -4.1961669921875e-05,
+            "mean_auc_sim": 0.4449375569820404,
+            "prob_score": 0.851952850818634,
+            "logit_score": 1.75
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.7291833268369052,
+            "label": "pos",
+            "mean_in_sim": -0.075927734375,
+            "mean_out_sim": -0.048095703125,
+            "mean_margin_sim": -0.02783203125,
+            "mean_in_prob": 0.0019073486328125,
+            "mean_out_prob": 0.0019683837890625,
+            "mean_margin_prob": -6.103515625e-05,
+            "mean_auc_sim": 0.4544622302055359,
+            "prob_score": 0.7310585379600525,
+            "logit_score": 1.0
+          }
+        ]
+      },
+      {
+        "video_id": "750176309b94",
+        "exp_id": "10",
+        "expression": "The three young bears in pursuit of the adult bear.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.3708784567677738,
+            "label": "pos",
+            "mean_in_sim": -0.13427734375,
+            "mean_out_sim": -0.073974609375,
+            "mean_margin_sim": -0.060302734375,
+            "mean_in_prob": 0.000766754150390625,
+            "mean_out_prob": 0.00081634521484375,
+            "mean_margin_prob": -4.9591064453125e-05,
+            "mean_auc_sim": 0.34121520817279816,
+            "prob_score": 0.02931223064661026,
+            "logit_score": -3.5
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.27151457654770855,
+            "label": "pos",
+            "mean_in_sim": -0.1845703125,
+            "mean_out_sim": -0.0640869140625,
+            "mean_margin_sim": -0.1204833984375,
+            "mean_in_prob": 0.000720977783203125,
+            "mean_out_prob": 0.00081634521484375,
+            "mean_margin_prob": -9.5367431640625e-05,
+            "mean_auc_sim": 0.1874304823577404,
+            "prob_score": 0.037326883524656296,
+            "logit_score": -3.25
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0020702964345941637,
+            "label": "neg",
+            "mean_in_sim": -0.0863037109375,
+            "mean_out_sim": -0.05535888671875,
+            "mean_margin_sim": -0.03094482421875,
+            "mean_in_prob": 0.000789642333984375,
+            "mean_out_prob": 0.00081634521484375,
+            "mean_margin_prob": -2.6702880859375e-05,
+            "mean_auc_sim": 0.42405806481838226,
+            "prob_score": 0.11920291930437088,
+            "logit_score": -2.0
+          },
+          {
+            "obj_id": 4,
+            "obj_iou": 0.3378747433893038,
+            "label": "pos",
+            "mean_in_sim": -0.107666015625,
+            "mean_out_sim": -0.0712890625,
+            "mean_margin_sim": -0.036376953125,
+            "mean_in_prob": 0.00078582763671875,
+            "mean_out_prob": 0.00081634521484375,
+            "mean_margin_prob": -3.0517578125e-05,
+            "mean_auc_sim": 0.4001549482345581,
+            "prob_score": 0.06008664518594742,
+            "logit_score": -2.75
+          }
+        ]
+      },
+      {
+        "video_id": "945c47a50243",
+        "exp_id": "7",
+        "expression": "A standing bear effortlessly spinning a hula hoop using its neck.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.9300059706695704,
+            "label": "pos",
+            "mean_in_sim": -0.1085205078125,
+            "mean_out_sim": -0.11962890625,
+            "mean_margin_sim": 0.0111083984375,
+            "mean_in_prob": 0.00040912628173828125,
+            "mean_out_prob": 0.0004024505615234375,
+            "mean_margin_prob": 6.67572021484375e-06,
+            "mean_auc_sim": 0.5274940431118011,
+            "prob_score": 0.9525741338729858,
+            "logit_score": 3.0
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.228515625,
+            "mean_out_sim": -0.1240234375,
+            "mean_margin_sim": -0.1044921875,
+            "mean_in_prob": 0.00036334991455078125,
+            "mean_out_prob": 0.0004024505615234375,
+            "mean_margin_prob": -3.910064697265625e-05,
+            "mean_auc_sim": 0.26687026023864746,
+            "prob_score": 0.957912266254425,
+            "logit_score": 3.125
+          }
+        ]
+      },
+      {
+        "video_id": "16ae95660b3a",
+        "exp_id": "14",
+        "expression": "The elephant being pressed on its back by the other elephant's trunk.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.7449970074390582,
+            "label": "pos",
+            "mean_in_sim": -0.11083984375,
+            "mean_out_sim": -0.090087890625,
+            "mean_margin_sim": -0.020751953125,
+            "mean_in_prob": 0.0011138916015625,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -2.288818359375e-05,
+            "mean_auc_sim": 0.4644646793603897,
+            "prob_score": 0.3208213150501251,
+            "logit_score": -0.75
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.012311514943739032,
+            "label": "neg",
+            "mean_in_sim": -0.16748046875,
+            "mean_out_sim": -0.08740234375,
+            "mean_margin_sim": -0.080078125,
+            "mean_in_prob": 0.001049041748046875,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -8.7738037109375e-05,
+            "mean_auc_sim": 0.3030509501695633,
+            "prob_score": 0.2689414322376251,
+            "logit_score": -1.0
+          }
+        ]
+      },
+      {
+        "video_id": "b4d6cf8c922c",
+        "exp_id": "8",
+        "expression": "The two tigers that have remained stationary while drinking water.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.00509320700068549,
+            "label": "neg",
+            "mean_in_sim": -0.16943359375,
+            "mean_out_sim": -0.0809326171875,
+            "mean_margin_sim": -0.0885009765625,
+            "mean_in_prob": 0.0030517578125,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.0002899169921875,
+            "mean_auc_sim": 0.2950599193572998,
+            "prob_score": 0.9399133324623108,
+            "logit_score": 2.75
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.3113588171095378,
+            "label": "pos",
+            "mean_in_sim": -0.1337890625,
+            "mean_out_sim": -0.0689697265625,
+            "mean_margin_sim": -0.0648193359375,
+            "mean_in_prob": 0.00312042236328125,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.00022125244140625,
+            "mean_auc_sim": 0.3248327672481537,
+            "prob_score": 0.2689414322376251,
+            "logit_score": -1.0
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.621382083034027,
+            "label": "pos",
+            "mean_in_sim": -0.120849609375,
+            "mean_out_sim": -0.0704345703125,
+            "mean_margin_sim": -0.0504150390625,
+            "mean_in_prob": 0.00316619873046875,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.00017547607421875,
+            "mean_auc_sim": 0.37555016577243805,
+            "prob_score": 0.04742587357759476,
+            "logit_score": -3.0
+          },
+          {
+            "obj_id": 3,
+            "obj_iou": 0.001946859625421998,
+            "label": "neg",
+            "mean_in_sim": 0.02001953125,
+            "mean_out_sim": -0.07177734375,
+            "mean_margin_sim": 0.091796875,
+            "mean_in_prob": 0.00368499755859375,
+            "mean_out_prob": 0.00333404541015625,
+            "mean_margin_prob": 0.0003509521484375,
+            "mean_auc_sim": 0.6210799664258957,
+            "prob_score": 0.5,
+            "logit_score": 0.0
+          }
+        ]
+      },
+      {
+        "video_id": "c0ba63651c5c",
+        "exp_id": "3",
+        "expression": "horse run in circles",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.8766957983122938,
+            "label": "pos",
+            "mean_in_sim": -0.01953125,
+            "mean_out_sim": -0.0289764404296875,
+            "mean_margin_sim": 0.0094451904296875,
+            "mean_in_prob": 0.007843017578125,
+            "mean_out_prob": 0.0078125,
+            "mean_margin_prob": 3.0517578125e-05,
+            "mean_auc_sim": 0.5520000010728836,
+            "prob_score": 0.0015011822106316686,
+            "logit_score": -6.5
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.038330078125,
+            "mean_out_sim": 0.035888671875,
+            "mean_margin_sim": -0.07421875,
+            "mean_in_prob": 0.007171630859375,
+            "mean_out_prob": 0.0078125,
+            "mean_margin_prob": -0.000640869140625,
+            "mean_auc_sim": 0.34645670652389526,
+            "prob_score": 0.8175744414329529,
+            "logit_score": 1.5
+          }
+        ]
+      },
+      {
+        "video_id": "410dae675d9a",
+        "exp_id": "22",
+        "expression": "The motionless black car parked.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.149658203125,
+            "mean_out_sim": -0.113525390625,
+            "mean_margin_sim": -0.0361328125,
+            "mean_in_prob": 0.0004711151123046875,
+            "mean_out_prob": 0.000492095947265625,
+            "mean_margin_prob": -2.09808349609375e-05,
+            "mean_auc_sim": 0.3912605345249176,
+            "prob_score": 0.9626730680465698,
+            "logit_score": 3.25
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9515312823519307,
+            "label": "pos",
+            "mean_in_sim": -0.119140625,
+            "mean_out_sim": -0.127197265625,
+            "mean_margin_sim": 0.008056640625,
+            "mean_in_prob": 0.0004949569702148438,
+            "mean_out_prob": 0.0004901885986328125,
+            "mean_margin_prob": 4.76837158203125e-06,
+            "mean_auc_sim": 0.5236155539751053,
+            "prob_score": 5.829126530443318e-05,
+            "logit_score": -9.75
+          }
+        ]
+      },
+      {
+        "video_id": "d6c1a055ae91",
+        "exp_id": "24",
+        "expression": "The hand that was waving the cat teaser wand.",
+        "candidates": [
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9238732633005761,
+            "label": "pos",
+            "mean_in_sim": -0.0771484375,
+            "mean_out_sim": -0.07666015625,
+            "mean_margin_sim": -0.00048828125,
+            "mean_in_prob": 0.00048828125,
+            "mean_out_prob": 0.000492095947265625,
+            "mean_margin_prob": -3.814697265625e-06,
+            "mean_auc_sim": 0.5010088086128235,
+            "prob_score": 0.04742587357759476,
+            "logit_score": -3.0
+          }
+        ]
+      },
+      {
+        "video_id": "963a498a493b",
+        "exp_id": "1",
+        "expression": "The individual gripping the lizard.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.5000350347096941,
+            "label": "pos",
+            "mean_in_sim": -0.14990234375,
+            "mean_out_sim": -0.1484375,
+            "mean_margin_sim": -0.00146484375,
+            "mean_in_prob": 0.0004901885986328125,
+            "mean_out_prob": 0.0004901885986328125,
+            "mean_margin_prob": 0.0,
+            "mean_auc_sim": 0.4975450187921524,
+            "prob_score": 0.8175744414329529,
+            "logit_score": 1.5
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.5076890115499354,
+            "label": "pos",
+            "mean_in_sim": -0.14794921875,
+            "mean_out_sim": -0.1376953125,
+            "mean_margin_sim": -0.01025390625,
+            "mean_in_prob": 0.000484466552734375,
+            "mean_out_prob": 0.000492095947265625,
+            "mean_margin_prob": -7.62939453125e-06,
+            "mean_auc_sim": 0.4895741939544678,
+            "prob_score": 0.7310585379600525,
+            "logit_score": 1.0
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0005350735028688009,
+            "label": "neg",
+            "mean_in_sim": -0.115966796875,
+            "mean_out_sim": -0.130126953125,
+            "mean_margin_sim": 0.01416015625,
+            "mean_in_prob": 0.0004911422729492188,
+            "mean_out_prob": 0.000492095947265625,
+            "mean_margin_prob": -9.5367431640625e-07,
+            "mean_auc_sim": 0.5543974936008453,
+            "prob_score": 0.9241418242454529,
+            "logit_score": 2.5
+          }
+        ]
+      },
+      {
+        "video_id": "3dde46eaaf53",
+        "exp_id": "18",
+        "expression": "The monkey sitting down in the middle",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.008248686239672334,
+            "label": "neg",
+            "mean_in_sim": -0.2021484375,
+            "mean_out_sim": -0.15234375,
+            "mean_margin_sim": -0.0498046875,
+            "mean_in_prob": 0.00107574462890625,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -6.103515625e-05,
+            "mean_auc_sim": 0.338733434677124,
+            "prob_score": 0.09534946084022522,
+            "logit_score": -2.25
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.17578125,
+            "mean_out_sim": -0.132080078125,
+            "mean_margin_sim": -0.043701171875,
+            "mean_in_prob": 0.0010833740234375,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -5.340576171875e-05,
+            "mean_auc_sim": 0.3606722056865692,
+            "prob_score": 0.022977370768785477,
+            "logit_score": -3.75
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.17529296875,
+            "mean_out_sim": -0.13671875,
+            "mean_margin_sim": -0.03857421875,
+            "mean_in_prob": 0.001087188720703125,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -4.9591064453125e-05,
+            "mean_auc_sim": 0.39491578936576843,
+            "prob_score": 0.3775406777858734,
+            "logit_score": -0.5
+          },
+          {
+            "obj_id": 3,
+            "obj_iou": 0.8653576100358458,
+            "label": "pos",
+            "mean_in_sim": -0.16015625,
+            "mean_out_sim": -0.1279296875,
+            "mean_margin_sim": -0.0322265625,
+            "mean_in_prob": 0.001094818115234375,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -4.1961669921875e-05,
+            "mean_auc_sim": 0.4108770042657852,
+            "prob_score": 0.0024726232513785362,
+            "logit_score": -6.0
+          },
+          {
+            "obj_id": 4,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.150390625,
+            "mean_out_sim": -0.13427734375,
+            "mean_margin_sim": -0.01611328125,
+            "mean_in_prob": 0.0011138916015625,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -2.288818359375e-05,
+            "mean_auc_sim": 0.46782462298870087,
+            "prob_score": 0.43782350420951843,
+            "logit_score": -0.25
+          }
+        ]
+      },
+      {
+        "video_id": "521a90b654ca",
+        "exp_id": "12",
+        "expression": "The small dog is stretched out on the ground, revealing its belly.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.011054189567336772,
+            "label": "neg",
+            "mean_in_sim": -0.124267578125,
+            "mean_out_sim": -0.072265625,
+            "mean_margin_sim": -0.052001953125,
+            "mean_in_prob": 0.000621795654296875,
+            "mean_out_prob": 0.0006561279296875,
+            "mean_margin_prob": -3.4332275390625e-05,
+            "mean_auc_sim": 0.3806031495332718,
+            "prob_score": 0.9990890026092529,
+            "logit_score": 7.0
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9082304564729055,
+            "label": "pos",
+            "mean_in_sim": -0.146484375,
+            "mean_out_sim": -0.08642578125,
+            "mean_margin_sim": -0.06005859375,
+            "mean_in_prob": 0.00061798095703125,
+            "mean_out_prob": 0.0006561279296875,
+            "mean_margin_prob": -3.814697265625e-05,
+            "mean_auc_sim": 0.35691817104816437,
+            "prob_score": 0.9890130758285522,
+            "logit_score": 4.5
+          }
+        ]
+      },
+      {
+        "video_id": "329909730c21",
+        "exp_id": "0",
+        "expression": "Airplane moving forward",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.002495621045474024,
+            "label": "neg",
+            "mean_in_sim": -0.1318359375,
+            "mean_out_sim": -0.127197265625,
+            "mean_margin_sim": -0.004638671875,
+            "mean_in_prob": 0.0006046295166015625,
+            "mean_out_prob": 0.000606536865234375,
+            "mean_margin_prob": -1.9073486328125e-06,
+            "mean_auc_sim": 0.4684371203184128,
+            "prob_score": 0.622459352016449,
+            "logit_score": 0.5
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9076926204537036,
+            "label": "pos",
+            "mean_in_sim": -0.13623046875,
+            "mean_out_sim": -0.125732421875,
+            "mean_margin_sim": -0.010498046875,
+            "mean_in_prob": 0.000598907470703125,
+            "mean_out_prob": 0.000606536865234375,
+            "mean_margin_prob": -7.62939453125e-06,
+            "mean_auc_sim": 0.48515111207962036,
+            "prob_score": 0.7310585379600525,
+            "logit_score": 1.0
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 7.56141936390759e-05,
+            "label": "neg",
+            "mean_in_sim": -0.263671875,
+            "mean_out_sim": -0.11767578125,
+            "mean_margin_sim": -0.14599609375,
+            "mean_in_prob": 0.000518798828125,
+            "mean_out_prob": 0.000606536865234375,
+            "mean_margin_prob": -8.7738037109375e-05,
+            "mean_auc_sim": 0.09520921856164932,
+            "prob_score": 0.9046505093574524,
+            "logit_score": 2.25
+          },
+          {
+            "obj_id": 4,
+            "obj_iou": 0.0001910997821242769,
+            "label": "neg",
+            "mean_in_sim": -0.1201171875,
+            "mean_out_sim": -0.137939453125,
+            "mean_margin_sim": 0.017822265625,
+            "mean_in_prob": 0.0006256103515625,
+            "mean_out_prob": 0.0006122589111328125,
+            "mean_margin_prob": 1.33514404296875e-05,
+            "mean_auc_sim": 0.5229180008172989,
+            "prob_score": 0.622459352016449,
+            "logit_score": 0.5
+          },
+          {
+            "obj_id": 5,
+            "obj_iou": 0.0007977670322673845,
+            "label": "neg",
+            "mean_in_sim": -0.2421875,
+            "mean_out_sim": -0.140625,
+            "mean_margin_sim": -0.1015625,
+            "mean_in_prob": 0.000545501708984375,
+            "mean_out_prob": 0.000606536865234375,
+            "mean_margin_prob": -6.103515625e-05,
+            "mean_auc_sim": 0.2314581423997879,
+            "prob_score": 0.02931223064661026,
+            "logit_score": -3.5
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "video_id": "e8d09effc9e0",
+        "exp_id": "6",
+        "expression": "Two yaks in the midst of a fight.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.45549993388038607,
+            "label": "pos",
+            "mean_in_sim": 0.00653076171875,
+            "mean_out_sim": 0.0478515625,
+            "mean_margin_sim": -0.04132080078125,
+            "mean_in_prob": 0.00200653076171875,
+            "mean_out_prob": 0.00209808349609375,
+            "mean_margin_prob": -9.1552734375e-05,
+            "mean_auc_sim": 0.4435218870639801,
+            "prob_score": 0.9669140577316284,
+            "logit_score": 3.375
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.49562702191418295,
+            "label": "pos",
+            "mean_in_sim": 0.0118408203125,
+            "mean_out_sim": 0.076171875,
+            "mean_margin_sim": -0.0643310546875,
+            "mean_in_prob": 0.001953125,
+            "mean_out_prob": 0.00209808349609375,
+            "mean_margin_prob": -0.00014495849609375,
+            "mean_auc_sim": 0.4224330931901932,
+            "prob_score": 0.9796676635742188,
+            "logit_score": 3.875
+          }
+        ]
+      },
+      {
+        "video_id": "521a90b654ca",
+        "exp_id": "6",
+        "expression": "The frolicking pair of dogs.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.5332819102255701,
+            "label": "pos",
+            "mean_in_sim": 0.0560150146484375,
+            "mean_out_sim": 0.11865234375,
+            "mean_margin_sim": -0.0626373291015625,
+            "mean_in_prob": 0.0006160736083984375,
+            "mean_out_prob": 0.0006580352783203125,
+            "mean_margin_prob": -4.1961669921875e-05,
+            "mean_auc_sim": 0.3872631937265396,
+            "prob_score": 0.9859364032745361,
+            "logit_score": 4.25
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.425050065092794,
+            "label": "pos",
+            "mean_in_sim": 0.04052734375,
+            "mean_out_sim": 0.121826171875,
+            "mean_margin_sim": -0.081298828125,
+            "mean_in_prob": 0.0006046295166015625,
+            "mean_out_prob": 0.0006580352783203125,
+            "mean_margin_prob": -5.340576171875e-05,
+            "mean_auc_sim": 0.3753221929073334,
+            "prob_score": 0.9875683188438416,
+            "logit_score": 4.375
+          }
+        ]
+      },
+      {
+        "video_id": "377b1c5f365c",
+        "exp_id": "14",
+        "expression": "The initial lizard to consume the food.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 2.777415170797146e-06,
+            "label": "neg",
+            "mean_in_sim": -0.0712890625,
+            "mean_out_sim": 0.04931640625,
+            "mean_margin_sim": -0.12060546875,
+            "mean_in_prob": 0.002960205078125,
+            "mean_out_prob": 0.00335693359375,
+            "mean_margin_prob": -0.000396728515625,
+            "mean_auc_sim": 0.27501633763313293,
+            "prob_score": 0.10669060051441193,
+            "logit_score": -2.125
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.0016608929118531008,
+            "label": "neg",
+            "mean_in_sim": 0.06005859375,
+            "mean_out_sim": 0.0966796875,
+            "mean_margin_sim": -0.03662109375,
+            "mean_in_prob": 0.00319671630859375,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.00014495849609375,
+            "mean_auc_sim": 0.45307788252830505,
+            "prob_score": 0.02931223064661026,
+            "logit_score": -3.5
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0020319319776346697,
+            "label": "neg",
+            "mean_in_sim": 0.083953857421875,
+            "mean_out_sim": 0.108154296875,
+            "mean_margin_sim": -0.024200439453125,
+            "mean_in_prob": 0.00325775146484375,
+            "mean_out_prob": 0.00333404541015625,
+            "mean_margin_prob": -7.62939453125e-05,
+            "mean_auc_sim": 0.47733423113822937,
+            "prob_score": 0.0534033328294754,
+            "logit_score": -2.875
+          },
+          {
+            "obj_id": 3,
+            "obj_iou": 0.8718669542804667,
+            "label": "pos",
+            "mean_in_sim": 0.062744140625,
+            "mean_out_sim": 0.10107421875,
+            "mean_margin_sim": -0.038330078125,
+            "mean_in_prob": 0.003204345703125,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.0001373291015625,
+            "mean_auc_sim": 0.4462771564722061,
+            "prob_score": 0.8807970285415649,
+            "logit_score": 2.0
+          },
+          {
+            "obj_id": 5,
+            "obj_iou": 0.004650443859124934,
+            "label": "neg",
+            "mean_in_sim": -0.009765625,
+            "mean_out_sim": 0.06854248046875,
+            "mean_margin_sim": -0.07830810546875,
+            "mean_in_prob": 0.0030975341796875,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.000244140625,
+            "mean_auc_sim": 0.37455934286117554,
+            "prob_score": 0.01798621006309986,
+            "logit_score": -4.0
+          }
+        ]
+      },
+      {
+        "video_id": "d32e4f23eb40",
+        "exp_id": "20",
+        "expression": "The ultimate cow that moved ahead.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.0026164862000282603,
+            "label": "neg",
+            "mean_in_sim": 0.00244140625,
+            "mean_out_sim": 0.0672607421875,
+            "mean_margin_sim": -0.0648193359375,
+            "mean_in_prob": 0.00433349609375,
+            "mean_out_prob": 0.0046539306640625,
+            "mean_margin_prob": -0.0003204345703125,
+            "mean_auc_sim": 0.4024265259504318,
+            "prob_score": 0.07585817575454712,
+            "logit_score": -2.5
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 8.328076264035429e-05,
+            "label": "neg",
+            "mean_in_sim": 0.11669921875,
+            "mean_out_sim": 0.0810546875,
+            "mean_margin_sim": 0.03564453125,
+            "mean_in_prob": 0.004730224609375,
+            "mean_out_prob": 0.0045166015625,
+            "mean_margin_prob": 0.000213623046875,
+            "mean_auc_sim": 0.5680670142173767,
+            "prob_score": 0.8807970285415649,
+            "logit_score": 2.0
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.9066920819187421,
+            "label": "pos",
+            "mean_in_sim": -0.086181640625,
+            "mean_out_sim": 0.068115234375,
+            "mean_margin_sim": -0.154296875,
+            "mean_in_prob": 0.00391387939453125,
+            "mean_out_prob": 0.004547119140625,
+            "mean_margin_prob": -0.00063323974609375,
+            "mean_auc_sim": 0.23245518957264721,
+            "prob_score": 0.037326883524656296,
+            "logit_score": -3.25
+          }
+        ]
+      },
+      {
+        "video_id": "2fbec459efc2",
+        "exp_id": "1",
+        "expression": "Stationary truck",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.8614903845352281,
+            "label": "pos",
+            "mean_in_sim": -0.06451416015625,
+            "mean_out_sim": 0.072265625,
+            "mean_margin_sim": -0.13677978515625,
+            "mean_in_prob": 0.001697540283203125,
+            "mean_out_prob": 0.0019683837890625,
+            "mean_margin_prob": -0.000270843505859375,
+            "mean_auc_sim": 0.11984283104538918,
+            "prob_score": 0.957912266254425,
+            "logit_score": 3.125
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": 0.021484375,
+            "mean_out_sim": 0.0863037109375,
+            "mean_margin_sim": -0.0648193359375,
+            "mean_in_prob": 0.001834869384765625,
+            "mean_out_prob": 0.00196075439453125,
+            "mean_margin_prob": -0.000125885009765625,
+            "mean_auc_sim": 0.3663216754794121,
+            "prob_score": 0.531209409236908,
+            "logit_score": 0.125
+          }
+        ]
+      },
+      {
+        "video_id": "6eac00b5f389",
+        "exp_id": "12",
+        "expression": "The young boy approaching to carry the tiny dog.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.9483830168800488,
+            "label": "pos",
+            "mean_in_sim": 0.03472900390625,
+            "mean_out_sim": 0.123046875,
+            "mean_margin_sim": -0.08831787109375,
+            "mean_in_prob": 0.001789093017578125,
+            "mean_out_prob": 0.0019683837890625,
+            "mean_margin_prob": -0.000179290771484375,
+            "mean_auc_sim": 0.3082607537508011,
+            "prob_score": 0.9902915358543396,
+            "logit_score": 4.625
+          }
+        ]
+      },
+      {
+        "video_id": "945c47a50243",
+        "exp_id": "17",
+        "expression": "The bear twirling a small hula hoop with its mouth.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": 0.0955810546875,
+            "mean_out_sim": 0.0865478515625,
+            "mean_margin_sim": 0.009033203125,
+            "mean_in_prob": 0.00040531158447265625,
+            "mean_out_prob": 0.0004024505615234375,
+            "mean_margin_prob": 2.86102294921875e-06,
+            "mean_auc_sim": 0.5353851318359375,
+            "prob_score": 0.9914224743843079,
+            "logit_score": 4.75
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9243231237416941,
+            "label": "pos",
+            "mean_in_sim": -0.031005859375,
+            "mean_out_sim": 0.08642578125,
+            "mean_margin_sim": -0.117431640625,
+            "mean_in_prob": 0.00035762786865234375,
+            "mean_out_prob": 0.0004024505615234375,
+            "mean_margin_prob": -4.482269287109375e-05,
+            "mean_auc_sim": 0.2654770761728287,
+            "prob_score": 0.0035936026833951473,
+            "logit_score": -5.625
+          }
+        ]
+      },
+      {
+        "video_id": "963a498a493b",
+        "exp_id": "2",
+        "expression": "The person holding onto the reptile.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.5000350347096941,
+            "label": "pos",
+            "mean_in_sim": 0.0509033203125,
+            "mean_out_sim": 0.0238037109375,
+            "mean_margin_sim": 0.027099609375,
+            "mean_in_prob": 0.000499725341796875,
+            "mean_out_prob": 0.00048828125,
+            "mean_margin_prob": 1.1444091796875e-05,
+            "mean_auc_sim": 0.5495099723339081,
+            "prob_score": 0.970687747001648,
+            "logit_score": 3.5
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.5076890115499354,
+            "label": "pos",
+            "mean_in_sim": 0.0533447265625,
+            "mean_out_sim": 0.0184326171875,
+            "mean_margin_sim": 0.034912109375,
+            "mean_in_prob": 0.0005025863647460938,
+            "mean_out_prob": 0.00048828125,
+            "mean_margin_prob": 1.430511474609375e-05,
+            "mean_auc_sim": 0.5654733926057816,
+            "prob_score": 0.04742587357759476,
+            "logit_score": -3.0
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0005350735028688009,
+            "label": "neg",
+            "mean_in_sim": 0.1591796875,
+            "mean_out_sim": 0.04473876953125,
+            "mean_margin_sim": 0.11444091796875,
+            "mean_in_prob": 0.00054931640625,
+            "mean_out_prob": 0.0004901885986328125,
+            "mean_margin_prob": 5.91278076171875e-05,
+            "mean_auc_sim": 0.716788113117218,
+            "prob_score": 0.006692850962281227,
+            "logit_score": -5.0
+          }
+        ]
+      },
+      {
+        "video_id": "84bf89fe11fe",
+        "exp_id": "20",
+        "expression": "The unmoving bicycle",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.005531916668292104,
+            "label": "neg",
+            "mean_in_sim": 0.00146484375,
+            "mean_out_sim": 0.0806884765625,
+            "mean_margin_sim": -0.0792236328125,
+            "mean_in_prob": 0.001819610595703125,
+            "mean_out_prob": 0.00196075439453125,
+            "mean_margin_prob": -0.000141143798828125,
+            "mean_auc_sim": 0.3844510391354561,
+            "prob_score": 0.001700722612440586,
+            "logit_score": -6.375
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.7291833268369052,
+            "label": "pos",
+            "mean_in_sim": -0.020751953125,
+            "mean_out_sim": 0.083251953125,
+            "mean_margin_sim": -0.10400390625,
+            "mean_in_prob": 0.00177001953125,
+            "mean_out_prob": 0.0019683837890625,
+            "mean_margin_prob": -0.0001983642578125,
+            "mean_auc_sim": 0.316992811858654,
+            "prob_score": 0.9902915358543396,
+            "logit_score": 4.625
+          }
+        ]
+      },
+      {
+        "video_id": "750176309b94",
+        "exp_id": "10",
+        "expression": "The three young bears in pursuit of the adult bear.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.3708784567677738,
+            "label": "pos",
+            "mean_in_sim": 0.0689697265625,
+            "mean_out_sim": 0.12646484375,
+            "mean_margin_sim": -0.0574951171875,
+            "mean_in_prob": 0.0007686614990234375,
+            "mean_out_prob": 0.00081634521484375,
+            "mean_margin_prob": -4.76837158203125e-05,
+            "mean_auc_sim": 0.37503431737422943,
+            "prob_score": 0.9875683188438416,
+            "logit_score": 4.375
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.27151457654770855,
+            "label": "pos",
+            "mean_in_sim": 0.02392578125,
+            "mean_out_sim": 0.12109375,
+            "mean_margin_sim": -0.09716796875,
+            "mean_in_prob": 0.000736236572265625,
+            "mean_out_prob": 0.00081634521484375,
+            "mean_margin_prob": -8.0108642578125e-05,
+            "mean_auc_sim": 0.31733088940382004,
+            "prob_score": 0.9914224743843079,
+            "logit_score": 4.75
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0020702964345941637,
+            "label": "neg",
+            "mean_in_sim": 0.03582763671875,
+            "mean_out_sim": 0.13671875,
+            "mean_margin_sim": -0.10089111328125,
+            "mean_in_prob": 0.0007343292236328125,
+            "mean_out_prob": 0.0008182525634765625,
+            "mean_margin_prob": -8.392333984375e-05,
+            "mean_auc_sim": 0.3099730312824249,
+            "prob_score": 0.0035936026833951473,
+            "logit_score": -5.625
+          },
+          {
+            "obj_id": 4,
+            "obj_iou": 0.3378747433893038,
+            "label": "pos",
+            "mean_in_sim": 0.0830078125,
+            "mean_out_sim": 0.14794921875,
+            "mean_margin_sim": -0.06494140625,
+            "mean_in_prob": 0.000759124755859375,
+            "mean_out_prob": 0.00081634521484375,
+            "mean_margin_prob": -5.7220458984375e-05,
+            "mean_auc_sim": 0.3594914823770523,
+            "prob_score": 0.18242551386356354,
+            "logit_score": -1.5
+          }
+        ]
+      },
+      {
+        "video_id": "945c47a50243",
+        "exp_id": "7",
+        "expression": "A standing bear effortlessly spinning a hula hoop using its neck.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.9300059706695704,
+            "label": "pos",
+            "mean_in_sim": 0.096435546875,
+            "mean_out_sim": 0.085693359375,
+            "mean_margin_sim": 0.0107421875,
+            "mean_in_prob": 0.0004062652587890625,
+            "mean_out_prob": 0.0004024505615234375,
+            "mean_margin_prob": 3.814697265625e-06,
+            "mean_auc_sim": 0.5383234620094299,
+            "prob_score": 0.9902915358543396,
+            "logit_score": 4.625
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.0316162109375,
+            "mean_out_sim": 0.084716796875,
+            "mean_margin_sim": -0.1163330078125,
+            "mean_in_prob": 0.00035858154296875,
+            "mean_out_prob": 0.0004024505615234375,
+            "mean_margin_prob": -4.38690185546875e-05,
+            "mean_auc_sim": 0.26717253029346466,
+            "prob_score": 0.004609572701156139,
+            "logit_score": -5.375
+          }
+        ]
+      },
+      {
+        "video_id": "16ae95660b3a",
+        "exp_id": "14",
+        "expression": "The elephant being pressed on its back by the other elephant's trunk.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.7449970074390582,
+            "label": "pos",
+            "mean_in_sim": -0.00157928466796875,
+            "mean_out_sim": 0.0750732421875,
+            "mean_margin_sim": -0.07665252685546875,
+            "mean_in_prob": 0.001049041748046875,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -8.7738037109375e-05,
+            "mean_auc_sim": 0.377084344625473,
+            "prob_score": 0.06754669547080994,
+            "logit_score": -2.625
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.012311514943739032,
+            "label": "neg",
+            "mean_in_sim": -0.03009033203125,
+            "mean_out_sim": 0.0528564453125,
+            "mean_margin_sim": -0.08294677734375,
+            "mean_in_prob": 0.001041412353515625,
+            "mean_out_prob": 0.001140594482421875,
+            "mean_margin_prob": -9.918212890625e-05,
+            "mean_auc_sim": 0.3472476005554199,
+            "prob_score": 0.970687747001648,
+            "logit_score": 3.5
+          }
+        ]
+      },
+      {
+        "video_id": "b4d6cf8c922c",
+        "exp_id": "8",
+        "expression": "The two tigers that have remained stationary while drinking water.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.00509320700068549,
+            "label": "neg",
+            "mean_in_sim": 0.00390625,
+            "mean_out_sim": 0.051513671875,
+            "mean_margin_sim": -0.047607421875,
+            "mean_in_prob": 0.0031585693359375,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.00018310546875,
+            "mean_auc_sim": 0.4255625456571579,
+            "prob_score": 0.004070138093084097,
+            "logit_score": -5.5
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.3113588171095378,
+            "label": "pos",
+            "mean_in_sim": -0.0374755859375,
+            "mean_out_sim": 0.044921875,
+            "mean_margin_sim": -0.0823974609375,
+            "mean_in_prob": 0.0030670166015625,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.000274658203125,
+            "mean_auc_sim": 0.34695932269096375,
+            "prob_score": 0.022977370768785477,
+            "logit_score": -3.75
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.621382083034027,
+            "label": "pos",
+            "mean_in_sim": 0.0262451171875,
+            "mean_out_sim": 0.076416015625,
+            "mean_margin_sim": -0.0501708984375,
+            "mean_in_prob": 0.0031585693359375,
+            "mean_out_prob": 0.0033416748046875,
+            "mean_margin_prob": -0.00018310546875,
+            "mean_auc_sim": 0.43452905118465424,
+            "prob_score": 0.9740425944328308,
+            "logit_score": 3.625
+          },
+          {
+            "obj_id": 3,
+            "obj_iou": 0.001946859625421998,
+            "label": "neg",
+            "mean_in_sim": 0.061767578125,
+            "mean_out_sim": 0.07373046875,
+            "mean_margin_sim": -0.011962890625,
+            "mean_in_prob": 0.0032958984375,
+            "mean_out_prob": 0.00333404541015625,
+            "mean_margin_prob": -3.814697265625e-05,
+            "mean_auc_sim": 0.4949009343981743,
+            "prob_score": 0.001700722612440586,
+            "logit_score": -6.375
+          }
+        ]
+      },
+      {
+        "video_id": "c0ba63651c5c",
+        "exp_id": "3",
+        "expression": "horse run in circles",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.8766957983122938,
+            "label": "pos",
+            "mean_in_sim": -0.00048828125,
+            "mean_out_sim": 0.0084075927734375,
+            "mean_margin_sim": -0.0088958740234375,
+            "mean_in_prob": 0.007659912109375,
+            "mean_out_prob": 0.0078125,
+            "mean_margin_prob": -0.000152587890625,
+            "mean_auc_sim": 0.5153333246707916,
+            "prob_score": 0.9324532747268677,
+            "logit_score": 2.625
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.173828125,
+            "mean_out_sim": 0.04736328125,
+            "mean_margin_sim": -0.22119140625,
+            "mean_in_prob": 0.006134033203125,
+            "mean_out_prob": 0.0078125,
+            "mean_margin_prob": -0.001678466796875,
+            "mean_auc_sim": 0.07874015718698502,
+            "prob_score": 0.0011695101857185364,
+            "logit_score": -6.75
+          }
+        ]
+      },
+      {
+        "video_id": "410dae675d9a",
+        "exp_id": "22",
+        "expression": "The motionless black car parked.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.0306396484375,
+            "mean_out_sim": 0.035888671875,
+            "mean_margin_sim": -0.0665283203125,
+            "mean_in_prob": 0.0004558563232421875,
+            "mean_out_prob": 0.000492095947265625,
+            "mean_margin_prob": -3.62396240234375e-05,
+            "mean_auc_sim": 0.35965944081544876,
+            "prob_score": 0.009708477184176445,
+            "logit_score": -4.625
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9515312823519307,
+            "label": "pos",
+            "mean_in_sim": -0.013641357421875,
+            "mean_out_sim": 0.012939453125,
+            "mean_margin_sim": -0.026580810546875,
+            "mean_in_prob": 0.0004787445068359375,
+            "mean_out_prob": 0.000492095947265625,
+            "mean_margin_prob": -1.33514404296875e-05,
+            "mean_auc_sim": 0.43400487303733826,
+            "prob_score": 0.9859364032745361,
+            "logit_score": 4.25
+          }
+        ]
+      },
+      {
+        "video_id": "d6c1a055ae91",
+        "exp_id": "24",
+        "expression": "The hand that was waving the cat teaser wand.",
+        "candidates": [
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9238732633005761,
+            "label": "pos",
+            "mean_in_sim": 0.1357421875,
+            "mean_out_sim": 0.130859375,
+            "mean_margin_sim": 0.0048828125,
+            "mean_in_prob": 0.00048828125,
+            "mean_out_prob": 0.000492095947265625,
+            "mean_margin_prob": -3.814697265625e-06,
+            "mean_auc_sim": 0.5133498907089233,
+            "prob_score": 0.014063626527786255,
+            "logit_score": -4.25
+          }
+        ]
+      },
+      {
+        "video_id": "963a498a493b",
+        "exp_id": "1",
+        "expression": "The individual gripping the lizard.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.5000350347096941,
+            "label": "pos",
+            "mean_in_sim": 0.05078125,
+            "mean_out_sim": 0.02337646484375,
+            "mean_margin_sim": 0.02740478515625,
+            "mean_in_prob": 0.000499725341796875,
+            "mean_out_prob": 0.00048828125,
+            "mean_margin_prob": 1.1444091796875e-05,
+            "mean_auc_sim": 0.5504362285137177,
+            "prob_score": 0.9669140577316284,
+            "logit_score": 3.375
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.5076890115499354,
+            "label": "pos",
+            "mean_in_sim": 0.052978515625,
+            "mean_out_sim": 0.017822265625,
+            "mean_margin_sim": 0.03515625,
+            "mean_in_prob": 0.0005025863647460938,
+            "mean_out_prob": 0.00048828125,
+            "mean_margin_prob": 1.430511474609375e-05,
+            "mean_auc_sim": 0.5668538808822632,
+            "prob_score": 0.04742587357759476,
+            "logit_score": -3.0
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0005350735028688009,
+            "label": "neg",
+            "mean_in_sim": 0.16064453125,
+            "mean_out_sim": 0.044830322265625,
+            "mean_margin_sim": 0.115814208984375,
+            "mean_in_prob": 0.00054931640625,
+            "mean_out_prob": 0.0004901885986328125,
+            "mean_margin_prob": 5.91278076171875e-05,
+            "mean_auc_sim": 0.7197931706905365,
+            "prob_score": 0.007577240467071533,
+            "logit_score": -4.875
+          }
+        ]
+      },
+      {
+        "video_id": "3dde46eaaf53",
+        "exp_id": "18",
+        "expression": "The monkey sitting down in the middle",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.008248686239672334,
+            "label": "neg",
+            "mean_in_sim": -0.08251953125,
+            "mean_out_sim": -0.000965118408203125,
+            "mean_margin_sim": -0.08155441284179688,
+            "mean_in_prob": 0.00104522705078125,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -9.1552734375e-05,
+            "mean_auc_sim": 0.2992963492870331,
+            "prob_score": 0.007577240467071533,
+            "logit_score": -4.875
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.0733642578125,
+            "mean_out_sim": -0.023834228515625,
+            "mean_margin_sim": -0.049530029296875,
+            "mean_in_prob": 0.0010833740234375,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -5.340576171875e-05,
+            "mean_auc_sim": 0.42028649151325226,
+            "prob_score": 0.004609572701156139,
+            "logit_score": -5.375
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": -0.119140625,
+            "mean_out_sim": -0.0095672607421875,
+            "mean_margin_sim": -0.1095733642578125,
+            "mean_in_prob": 0.00101470947265625,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -0.0001220703125,
+            "mean_auc_sim": 0.30222827196121216,
+            "prob_score": 0.009708477184176445,
+            "logit_score": -4.625
+          },
+          {
+            "obj_id": 3,
+            "obj_iou": 0.8653576100358458,
+            "label": "pos",
+            "mean_in_sim": -0.104248046875,
+            "mean_out_sim": -0.0067596435546875,
+            "mean_margin_sim": -0.0974884033203125,
+            "mean_in_prob": 0.0010204315185546875,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": -0.0001163482666015625,
+            "mean_auc_sim": 0.2737756446003914,
+            "prob_score": 0.8670357465744019,
+            "logit_score": 1.875
+          },
+          {
+            "obj_id": 4,
+            "obj_iou": 0.0,
+            "label": "neg",
+            "mean_in_sim": 0.01580810546875,
+            "mean_out_sim": -0.00787353515625,
+            "mean_margin_sim": 0.023681640625,
+            "mean_in_prob": 0.001148223876953125,
+            "mean_out_prob": 0.00113677978515625,
+            "mean_margin_prob": 1.1444091796875e-05,
+            "mean_auc_sim": 0.5938211977481842,
+            "prob_score": 0.006692850962281227,
+            "logit_score": -5.0
+          }
+        ]
+      },
+      {
+        "video_id": "521a90b654ca",
+        "exp_id": "12",
+        "expression": "The small dog is stretched out on the ground, revealing its belly.",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.011054189567336772,
+            "label": "neg",
+            "mean_in_sim": 0.0570831298828125,
+            "mean_out_sim": 0.1181640625,
+            "mean_margin_sim": -0.0610809326171875,
+            "mean_in_prob": 0.0006160736083984375,
+            "mean_out_prob": 0.0006580352783203125,
+            "mean_margin_prob": -4.1961669921875e-05,
+            "mean_auc_sim": 0.38952794671058655,
+            "prob_score": 0.01798621006309986,
+            "logit_score": -4.0
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9082304564729055,
+            "label": "pos",
+            "mean_in_sim": 0.0419921875,
+            "mean_out_sim": 0.121826171875,
+            "mean_margin_sim": -0.079833984375,
+            "mean_in_prob": 0.000606536865234375,
+            "mean_out_prob": 0.0006580352783203125,
+            "mean_margin_prob": -5.14984130859375e-05,
+            "mean_auc_sim": 0.37826329469680786,
+            "prob_score": 0.9875683188438416,
+            "logit_score": 4.375
+          }
+        ]
+      },
+      {
+        "video_id": "329909730c21",
+        "exp_id": "0",
+        "expression": "Airplane moving forward",
+        "candidates": [
+          {
+            "obj_id": 0,
+            "obj_iou": 0.002495621045474024,
+            "label": "neg",
+            "mean_in_sim": -0.00152587890625,
+            "mean_out_sim": -0.002685546875,
+            "mean_margin_sim": 0.00115966796875,
+            "mean_in_prob": 0.0006084442138671875,
+            "mean_out_prob": 0.000606536865234375,
+            "mean_margin_prob": 1.9073486328125e-06,
+            "mean_auc_sim": 0.5003349781036377,
+            "prob_score": 0.01798621006309986,
+            "logit_score": -4.0
+          },
+          {
+            "obj_id": 1,
+            "obj_iou": 0.9076926204537036,
+            "label": "pos",
+            "mean_in_sim": -0.0343017578125,
+            "mean_out_sim": -0.0069580078125,
+            "mean_margin_sim": -0.02734375,
+            "mean_in_prob": 0.0005893707275390625,
+            "mean_out_prob": 0.0006084442138671875,
+            "mean_margin_prob": -1.9073486328125e-05,
+            "mean_auc_sim": 0.45662379264831543,
+            "prob_score": 0.8807970285415649,
+            "logit_score": 2.0
+          },
+          {
+            "obj_id": 2,
+            "obj_iou": 7.56141936390759e-05,
+            "label": "neg",
+            "mean_in_sim": -0.302734375,
+            "mean_out_sim": -0.048095703125,
+            "mean_margin_sim": -0.254638671875,
+            "mean_in_prob": 0.0004634857177734375,
+            "mean_out_prob": 0.000606536865234375,
+            "mean_margin_prob": -0.0001430511474609375,
+            "mean_auc_sim": 0.03729533031582832,
+            "prob_score": 0.005911068990826607,
+            "logit_score": -5.125
+          },
+          {
+            "obj_id": 4,
+            "obj_iou": 0.0001910997821242769,
+            "label": "neg",
+            "mean_in_sim": -0.0369873046875,
+            "mean_out_sim": -0.07122802734375,
+            "mean_margin_sim": 0.03424072265625,
+            "mean_in_prob": 0.000629425048828125,
+            "mean_out_prob": 0.000606536865234375,
+            "mean_margin_prob": 2.288818359375e-05,
+            "mean_auc_sim": 0.5583445578813553,
+            "prob_score": 0.622459352016449,
+            "logit_score": 0.5
+          },
+          {
+            "obj_id": 5,
+            "obj_iou": 0.0007977670322673845,
+            "label": "neg",
+            "mean_in_sim": -0.240234375,
+            "mean_out_sim": -0.0869140625,
+            "mean_margin_sim": -0.1533203125,
+            "mean_in_prob": 0.000518798828125,
+            "mean_out_prob": 0.000606536865234375,
+            "mean_margin_prob": -8.7738037109375e-05,
+            "mean_auc_sim": 0.23211024701595306,
+            "prob_score": 0.008577484637498856,
+            "logit_score": -4.75
+          }
+        ]
+      }
+    ]
+  }
+}

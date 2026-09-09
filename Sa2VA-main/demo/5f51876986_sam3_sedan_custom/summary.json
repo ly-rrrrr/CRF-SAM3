@@ -1,0 +1,232 @@
+{
+  "video": "/mnt/csip-500/share/kongjiawei/Sa2VA/data/video_datas/Ref-Youtube-VOS/train/JPEGImages/5f51876986",
+  "source_kind": "frames_dir",
+  "checkpoint": "/mnt/csip-500/share/kongjiawei/sam3-main/sam3-main/checkpoints/sam3/sam3.pt",
+  "sam3_root": "/mnt/csip-500/share/kongjiawei/sam3-main/sam3-main",
+  "text": "sedan",
+  "frame_index": 0,
+  "session_id": "a6a96e1c-08cd-4445-8239-a0407b48e37c",
+  "total_video_frames": 20,
+  "propagated_frames": 20,
+  "frames_with_union_mask": 20,
+  "detected_object_ids": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "initial_prompt_object_ids": [
+    0,
+    1,
+    2
+  ],
+  "initial_prompt_num_objects": 3,
+  "saved_union_pngs": true,
+  "saved_mask_video": true,
+  "saved_overlay_video": true,
+  "per_frame": [
+    {
+      "frame_index": 0,
+      "num_objects": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "has_union_mask": true,
+      "union_area": 3658
+    },
+    {
+      "frame_index": 1,
+      "num_objects": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "has_union_mask": true,
+      "union_area": 3282
+    },
+    {
+      "frame_index": 2,
+      "num_objects": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "has_union_mask": true,
+      "union_area": 1932
+    },
+    {
+      "frame_index": 3,
+      "num_objects": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 6595
+    },
+    {
+      "frame_index": 4,
+      "num_objects": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 8175
+    },
+    {
+      "frame_index": 5,
+      "num_objects": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 8385
+    },
+    {
+      "frame_index": 6,
+      "num_objects": 3,
+      "obj_ids": [
+        0,
+        2,
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 7459
+    },
+    {
+      "frame_index": 7,
+      "num_objects": 3,
+      "obj_ids": [
+        0,
+        2,
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 7789
+    },
+    {
+      "frame_index": 8,
+      "num_objects": 3,
+      "obj_ids": [
+        0,
+        2,
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 7913
+    },
+    {
+      "frame_index": 9,
+      "num_objects": 3,
+      "obj_ids": [
+        0,
+        2,
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 6779
+    },
+    {
+      "frame_index": 10,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 5021
+    },
+    {
+      "frame_index": 11,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 4654
+    },
+    {
+      "frame_index": 12,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 5426
+    },
+    {
+      "frame_index": 13,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 5693
+    },
+    {
+      "frame_index": 14,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 6194
+    },
+    {
+      "frame_index": 15,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 7449
+    },
+    {
+      "frame_index": 16,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 8996
+    },
+    {
+      "frame_index": 17,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 10606
+    },
+    {
+      "frame_index": 18,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 12654
+    },
+    {
+      "frame_index": 19,
+      "num_objects": 1,
+      "obj_ids": [
+        3
+      ],
+      "has_union_mask": true,
+      "union_area": 14616
+    }
+  ]
+}

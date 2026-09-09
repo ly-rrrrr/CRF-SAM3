@@ -1,0 +1,151 @@
+video_id	exp_id	max_j	num_candidates	category	prompt_source	prompt_text	expression
+drone	15	0.000000	1	wallet	category	wallet	a wallet in the hands of the man on the right
+hockey	2	0.000000	4	man	category	man	a man playing hockey
+hockey	3	0.000000	4	man	category	man	a man in a black dress wearing skates
+kite-walk	3	0.000000	1	rope	category	rope	a surfing rope attached to a person
+longboard	2	0.000000	1	backpack	category	backpack	a backpack
+longboard	3	0.000000	1	backpack	category	backpack	a black backpack on the right
+longboard	4	0.000000	1	bicycle	category	bicycle	a black bicycle
+longboard	5	0.000000	1	bicycle	category	bicycle	a bicycle moving on the road
+longboard	6	0.000000	1	bicycle	category	bicycle	a black bicycle on the road
+longboard	7	0.000000	1	bicycle	category	bicycle	a bicycle on the left
+longboard	9	0.000000	1	longboard	category	longboard	a longboard
+longboard	11	0.000000	1	skateboard	category	skateboard	a skateboard
+miami-surf	8	0.000000	3	surf-board	category	surf-board	a white surf-board in the front
+miami-surf	10	0.000000	3	surfboard	category	surfboard	a surfboard in the front
+miami-surf	14	0.000000	5	man	category	man	a man in the front
+miami-surf	16	0.000000	5	man	category	man	a man on the right in a black surfsuit
+swing	10	0.000000	1	rope	category	rope	a black rope
+tractor-sand	4	0.000000	2	person	category	person	a tractor driver wearing a blue cap
+tractor-sand	5	0.000000	2	person	category	person	a person with a blue cap driving a tractor
+train	13	0.000000	1	engine	backup_category	train engine	a blue engine unit of the train
+tuk-tuk	2	0.000000	1	girl	category	girl	a girl on the left
+tuk-tuk	3	0.000000	1	girl	category	girl	a girl on the left wearing a white shirt and tied hair
+tuk-tuk	6	0.000000	1	girl	category	girl	a girl on the right
+tuk-tuk	11	0.000000	1	girl	category	girl	a girl on the right with loose hair
+dogs-scale	8	0.000025	2	hand	category	hand	a left hand holding a puppy
+dogs-scale	9	0.000025	2	hand	category	hand	a hand holding a dog
+tuk-tuk	7	0.000039	1	boy	category	boy	a boy in the middle wearing a white graphic t-shirt
+tuk-tuk	8	0.000039	1	boy	category	boy	a boy in a gray tshirt
+tuk-tuk	9	0.000039	1	boy	category	boy	a boy in the middle
+dog-gooses	2	0.000046	1	dog	category	dog	a black dog
+dog-gooses	3	0.000046	1	dog	category	dog	a black and white dog chasing geese
+dogs-scale	14	0.000049	1	scale	category	scale	a scale
+drone	12	0.000066	2	cell phone	category	cell phone	a cell phone held by a man in a white shirt
+drone	13	0.000066	2	phone	category	phone	a phone in a white shirt guy's hand
+train	15	0.000123	1	train engine	category	train engine	a blue colored train engine
+schoolgirls	12	0.000183	4	backpack	category	backpack	a big black backpack carried by a tall girl
+schoolgirls	21	0.000183	4	backpack	category	backpack	a purple backpack worn by a short girl
+drone	2	0.000276	6	drone	category	drone	a drone
+drone	3	0.000276	6	drone	category	drone	a drone
+classic-car	2	0.000355	7	man	category	man	a man sitting next to a driver
+classic-car	3	0.000355	7	man	category	man	a man in a blue shirt sitting in a classic car
+dog-gooses	12	0.000411	5	goose	category	goose	a third goose from the right
+dog-gooses	13	0.000411	5	goose	category	goose	a brown goose second to the end
+miami-surf	2	0.000441	3	surfboard	category	surfboard	a man on a blue surfboard in black suit
+miami-surf	22	0.000441	3	surfboard	category	surfboard	a surfboard on the right
+miami-surf	23	0.000441	3	surfboard	category	surfboard	a white colored surfboard of the person surfing on the right
+dogs-scale	10	0.000464	2	hand	category	hand	a single hand
+dogs-scale	11	0.000464	2	hand	category	hand	a human hand putting a dog on the weight machine
+dogs-scale	2	0.000473	3	dog	category	dog	a black puppy with a brown nose sitting behind the scale
+dogs-scale	3	0.000473	3	dog	category	dog	a black and brown dog on the left of the weight machine
+swing	3	0.000506	1	girl	category	girl	a girl riding the swing
+dogs-scale	12	0.000621	1	scale	category	scale	a pink scale
+dogs-scale	13	0.000621	1	scale	category	scale	a white scale
+crossing	8	0.000625	2	truck	category	truck	a white truck on the road
+crossing	9	0.000625	2	truck	category	truck	a white truck moving from the left to right
+swing	2	0.000677	1	woman	category	woman	a woman on the swing
+lindy-hop	9	0.000716	6	man	category	man	a lady in a blue tshirt dancing with a man with a black hat
+lindy-hop	18	0.000847	7	person	category	person	a girl in a red dress
+lindy-hop	15	0.000882	7	woman	category	woman	a woman wearing a white shirt and denim shorts on the right
+classic-car	8	0.000920	2	car	category	car	a black vintage car
+classic-car	9	0.000920	2	car	category	car	a black car moving
+lindy-hop	13	0.000969	7	lady	category	lady	a lady in a white top and a blue skirt dancing with another lady on the right
+dogs-scale	4	0.000978	2	puppy	category	puppy	a grayish black puppy in the front
+dogs-scale	6	0.000978	2	puppy	category	puppy	a puppy on a scale
+dogs-scale	5	0.001026	3	dog	category	dog	a dog on the scale
+dogs-scale	7	0.001026	3	dog	category	dog	a black and brown dog on the weight machine
+lindy-hop	19	0.001038	7	woman	category	woman	a woman on the right wearing a black dress
+lindy-hop	17	0.001058	7	lady	category	lady	a lady in a red dress dancing with another lady on the right
+classic-car	6	0.001128	7	man	category	man	a man driving a car
+classic-car	7	0.001128	7	man	category	man	a man in a brown jacket and a hat
+dancing	4	0.001148	7	man	category	man	a man dancing on the right in black shorts
+dancing	5	0.001148	7	man	category	man	a man in black shorts dancing around
+drone	17	0.001246	7	person	category	person	a guy in a white shirt
+crossing	2	0.001401	1	woman	category	woman	a woman crossing a road
+crossing	3	0.001401	1	woman	category	woman	a woman in a black top and white pants
+lindy-hop	23	0.001806	6	man	category	man	a man in the center wearing khaki trousers
+dancing	2	0.001849	7	woman	category	woman	a woman dancing in the middle
+dancing	3	0.001849	7	woman	category	woman	a woman dancing in a red dress
+miami-surf	18	0.002216	5	man	category	man	a man surfing on the right
+miami-surf	19	0.002255	7	person	category	person	a person surfing on the right side of the frame
+lindy-hop	26	0.002439	6	man	category	man	a man in a black t-shirt and grey shorts
+lindy-hop	27	0.002439	6	man	category	man	a man on the left in a black shirt and shorts
+lindy-hop	28	0.002439	6	man	category	man	a man at the back wearing a hat and a pink shirt
+lindy-hop	29	0.002439	6	man	category	man	a guy in a pink shirt and a black hat dancing at the back
+hockey	4	0.002552	1	hockey stick	category	hockey stick	a hockey stick
+hockey	5	0.002552	1	hockey stick	category	hockey stick	a hockey stick
+drone	16	0.002978	7	man	category	man	a man on the right in a white shirt
+surf	4	0.003129	1	person	category	person	a man windsurfing
+surf	5	0.003129	1	person	category	person	a player performing surfing
+miami-surf	0	0.003289	3	surfboard	category	surfboard	a man in a black suit on a blue surfboard
+miami-surf	17	0.003289	3	surfboard	category	surfboard	a surfer whose surfboard was swept away
+longboard	18	0.003294	2	man	category	man	a man on the bicycle
+longboard	19	0.003709	2	person	category	person	a person riding a bicycle
+kite-walk	9	0.004046	1	kite	backup_category	board	a kite board
+kite-walk	8	0.004315	1	surf-board	category	surf-board	a wooden surf-board
+hockey	9	0.004433	1	hockey ball	category	hockey ball	a hockey ball
+cat-girl	0	0.004742	1	kitten	category	kitten	a baby girl holding a kitten
+cat-girl	2	0.004742	1	kitten	category	kitten	a girl cuddling a kitten
+cat-girl	3	0.004742	1	kitten	category	kitten	a black and grey kitten
+cat-girl	1	0.005219	1	cat	category	cat	a girl holding a cat
+stunt	1	0.005642	1	scooter	backup_category	handle	a skateboard with a handle
+tractor-sand	8	0.005649	1	tractor	category	tractor	a red tractor
+tractor-sand	9	0.005649	1	tractor	category	tractor	a red tractor
+longboard	13	0.005773	2	person	category	person	a person rolling over a longboard
+motorbike	3	0.008753	1	motor bike	category	motor bike	a motor bike
+motorbike	2	0.008934	1	motorbike	category	motorbike	a motorbike
+motorbike	4	0.013045	2	person	category	person	a person in a white-black jacket sitting behind a rider
+motorbike	5	0.013045	2	person	category	person	a guy in a black and white jacket sitting behind the rider
+swing	4	0.014382	2	swing	category	swing	a swing flying in the air
+swing	5	0.014382	2	swing	category	swing	a swing with a girl on
+surf	0	0.014698	1	surfboard	category	surfboard	a white surfboard
+surf	1	0.014739	1	board	category	board	a board which a guy is standing on
+lindy-hop	30	0.017782	6	man	category	man	a man in a black hat
+schoolgirls	20	0.023458	4	backpack	category	backpack	a pink and violet backpack
+schoolgirls	16	0.025875	4	girl	category	girl	a tall girl looking towards left
+surf	8	0.031129	1	sail	category	sail	a colorful sail on top of a surfboard
+surf	9	0.031129	1	sail	category	sail	a green and yellow sail
+schoolgirls	24	0.041113	4	girl	category	girl	a short girl with two ponytails
+schoolgirls	25	0.041113	4	girl	category	girl	a short girl with a purple backpack
+longboard	16	0.042424	2	man	category	man	a man on a bicycle in a black jacket
+longboard	15	0.047979	2	person	category	person	a person wearing a yellow shirt and a black bag on the right
+longboard	17	0.048946	2	guy	category	guy	a guy riding a bicycle
+color-run	4	0.051195	7	hand	category	hand	colored hands
+color-run	5	0.051195	7	hand	category	hand	green hands dancing
+kite-walk	4	0.058007	1	man	category	man	a man wearing a black vest and a blue helmet
+kite-walk	5	0.068462	1	person	category	person	a person performing a kite walk
+stunt	0	0.133484	2	scooter	backup_category	blue wheels	a black scooter with blue wheels
+train	6	0.214896	1	unit	backup_category	toy train unit	a red unit of the toy train
+drone	5	0.215575	2	phone	category	phone	a phone in bald guy's hand
+drone	6	0.215575	2	phone	category	phone	a phone controlling a drone
+drone	4	0.215976	2	mobile phone	category	mobile phone	a black mobile phone held by a bald man
+drone	7	0.215976	2	mobile phone	category	mobile phone	a mobile phone in the hands of a bald man
+tuk-tuk	0	0.231234	1	girl	category	girl	a girl on the left with black hair
+tuk-tuk	1	0.231234	1	girl	category	girl	a girl with black hair on the left side
+tuk-tuk	4	0.231234	1	girl	category	girl	a girl on the right with curly hair
+tuk-tuk	5	0.231234	1	girl	category	girl	a girl with brown hair on the right side
+train	14	0.244304	1	unit	backup_category	toy train unit	a blue unit of the toy train
+train	2	0.244644	1	train	category	train	a third unit of the toy train
+train	10	0.264852	1	unit	backup_category	toy train unit	a white unit of the toy train
+train	12	0.265281	1	engine	backup_category	train	a blue engine of a toy train
+swing	9	0.282235	1	rope	category	rope	a black rope in girl's hand
+bmx-bumps	0	0.379585	1	bike	category	bike	a silver bmx bike
+bmx-bumps	1	0.379585	1	bike	category	bike	a black and white bike
+bmx-bumps	2	0.379751	1	bmx bike	category	bmx bike	a bmx bike
+bmx-bumps	3	0.380988	1	bicycle	category	bicycle	a bicycle
+tractor-sand	0	0.404409	1	harvester	category	harvester	a blue harvester behind a tractor
+lucia	1	0.464493	1	girl	category	girl	a girl walking
+tractor-sand	2	0.498036	1	tractor	category	tractor	a trailer attached to tractor
+tractor-sand	10	0.498036	1	tractor	category	tractor	a red tractor
+tractor-sand	11	0.498036	1	tractor	category	tractor	a red tractor

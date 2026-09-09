@@ -1,0 +1,18 @@
+{
+  "mode": "mask_supervised_query_grounding",
+  "base_samples": 8,
+  "train_records": 8,
+  "val_records": 0,
+  "train_videos": 1,
+  "val_videos": 0,
+  "video_overlap": 0,
+  "frames_per_sample": 2,
+  "min_area": 1,
+  "skip_stats": {
+    "missing_mask": 0,
+    "missing_fields": 0,
+    "no_visible_mask": 0,
+    "missing_image": 0
+  },
+  "output_dir": "category_grounding_mvp/data/refytvos_query_grounding_smoke"
+}

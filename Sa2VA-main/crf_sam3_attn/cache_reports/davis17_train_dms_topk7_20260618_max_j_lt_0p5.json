@@ -1,0 +1,2485 @@
+{
+  "summary": {
+    "cache_root": "/mnt/csip-500/share/kongjiawei/Sa2VA-main/crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618",
+    "num_generated_meta": 542,
+    "num_max_j_lt_0p5": 150,
+    "rate_max_j_lt_0p5": 0.2767527675276753,
+    "num_max_j_eq_0": 24,
+    "rate_max_j_eq_0": 0.04428044280442804,
+    "min_max_j": 0.0,
+    "mean_max_j": 0.658381464334712,
+    "median_max_j": 0.8840079061736064,
+    "top_categories_lt_0p5": [
+      [
+        "man",
+        22
+      ],
+      [
+        "person",
+        13
+      ],
+      [
+        "girl",
+        13
+      ],
+      [
+        "woman",
+        7
+      ],
+      [
+        "surfboard",
+        7
+      ],
+      [
+        "hand",
+        6
+      ],
+      [
+        "dog",
+        6
+      ],
+      [
+        "bicycle",
+        5
+      ],
+      [
+        "backpack",
+        5
+      ],
+      [
+        "tractor",
+        5
+      ],
+      [
+        "kitten",
+        3
+      ],
+      [
+        "scale",
+        3
+      ],
+      [
+        "phone",
+        3
+      ],
+      [
+        "rope",
+        3
+      ],
+      [
+        "unit",
+        3
+      ],
+      [
+        "boy",
+        3
+      ],
+      [
+        "bike",
+        2
+      ],
+      [
+        "car",
+        2
+      ],
+      [
+        "truck",
+        2
+      ],
+      [
+        "goose",
+        2
+      ],
+      [
+        "puppy",
+        2
+      ],
+      [
+        "drone",
+        2
+      ],
+      [
+        "mobile phone",
+        2
+      ],
+      [
+        "hockey stick",
+        2
+      ],
+      [
+        "surf-board",
+        2
+      ],
+      [
+        "lady",
+        2
+      ],
+      [
+        "scooter",
+        2
+      ],
+      [
+        "sail",
+        2
+      ],
+      [
+        "swing",
+        2
+      ],
+      [
+        "engine",
+        2
+      ]
+    ]
+  },
+  "samples": [
+    {
+      "video_id": "drone",
+      "exp_id": 15,
+      "expression": "a wallet in the hands of the man on the right",
+      "category": "wallet",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "wallet",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/15/meta.json"
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 2,
+      "expression": "a man playing hockey",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0,
+      "num_candidates": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/hockey/2/meta.json"
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 3,
+      "expression": "a man in a black dress wearing skates",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0,
+      "num_candidates": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/hockey/3/meta.json"
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 3,
+      "expression": "a surfing rope attached to a person",
+      "category": "rope",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "rope",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/kite-walk/3/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 2,
+      "expression": "a backpack",
+      "category": "backpack",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "backpack",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/2/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 3,
+      "expression": "a black backpack on the right",
+      "category": "backpack",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "backpack",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/3/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 4,
+      "expression": "a black bicycle",
+      "category": "bicycle",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "bicycle",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/4/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 5,
+      "expression": "a bicycle moving on the road",
+      "category": "bicycle",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "bicycle",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/5/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 6,
+      "expression": "a black bicycle on the road",
+      "category": "bicycle",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "bicycle",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/6/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 7,
+      "expression": "a bicycle on the left",
+      "category": "bicycle",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "bicycle",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/7/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 9,
+      "expression": "a longboard",
+      "category": "longboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "longboard",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/9/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 11,
+      "expression": "a skateboard",
+      "category": "skateboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "skateboard",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/11/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 8,
+      "expression": "a white surf-board in the front",
+      "category": "surf-board",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surf-board",
+      "max_j": 0.0,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/8/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 10,
+      "expression": "a surfboard in the front",
+      "category": "surfboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surfboard",
+      "max_j": 0.0,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/10/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 14,
+      "expression": "a man in the front",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0,
+      "num_candidates": 5,
+      "obj_ids": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/14/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 16,
+      "expression": "a man on the right in a black surfsuit",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0,
+      "num_candidates": 5,
+      "obj_ids": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/16/meta.json"
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 10,
+      "expression": "a black rope",
+      "category": "rope",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "rope",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/swing/10/meta.json"
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 4,
+      "expression": "a tractor driver wearing a blue cap",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.0,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tractor-sand/4/meta.json"
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 5,
+      "expression": "a person with a blue cap driving a tractor",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.0,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tractor-sand/5/meta.json"
+    },
+    {
+      "video_id": "train",
+      "exp_id": 13,
+      "expression": "a blue engine unit of the train",
+      "category": "engine",
+      "sam3_prompt_source": "backup_category",
+      "sam3_prompt_text": "train engine",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/train/13/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 2,
+      "expression": "a girl on the left",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/2/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 3,
+      "expression": "a girl on the left wearing a white shirt and tied hair",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/3/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 6,
+      "expression": "a girl on the right",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/6/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 11,
+      "expression": "a girl on the right with loose hair",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.0,
+      "num_candidates": 1,
+      "obj_ids": [
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/11/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 8,
+      "expression": "a left hand holding a puppy",
+      "category": "hand",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hand",
+      "max_j": 2.5221689309846213e-05,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/8/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 9,
+      "expression": "a hand holding a dog",
+      "category": "hand",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hand",
+      "max_j": 2.5221689309846213e-05,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/9/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 7,
+      "expression": "a boy in the middle wearing a white graphic t-shirt",
+      "category": "boy",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "boy",
+      "max_j": 3.932723647099019e-05,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/7/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 8,
+      "expression": "a boy in a gray tshirt",
+      "category": "boy",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "boy",
+      "max_j": 3.932723647099019e-05,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/8/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 9,
+      "expression": "a boy in the middle",
+      "category": "boy",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "boy",
+      "max_j": 3.932723647099019e-05,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/9/meta.json"
+    },
+    {
+      "video_id": "dog-gooses",
+      "exp_id": 2,
+      "expression": "a black dog",
+      "category": "dog",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "dog",
+      "max_j": 4.625482309665771e-05,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dog-gooses/2/meta.json"
+    },
+    {
+      "video_id": "dog-gooses",
+      "exp_id": 3,
+      "expression": "a black and white dog chasing geese",
+      "category": "dog",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "dog",
+      "max_j": 4.625482309665771e-05,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dog-gooses/3/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 14,
+      "expression": "a scale",
+      "category": "scale",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "scale",
+      "max_j": 4.903247636111894e-05,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/14/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 12,
+      "expression": "a cell phone held by a man in a white shirt",
+      "category": "cell phone",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "cell phone",
+      "max_j": 6.572732309091554e-05,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/12/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 13,
+      "expression": "a phone in a white shirt guy's hand",
+      "category": "phone",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "phone",
+      "max_j": 6.587692354826251e-05,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/13/meta.json"
+    },
+    {
+      "video_id": "train",
+      "exp_id": 15,
+      "expression": "a blue colored train engine",
+      "category": "train engine",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "train engine",
+      "max_j": 0.0001229948770482757,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/train/15/meta.json"
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 12,
+      "expression": "a big black backpack carried by a tall girl",
+      "category": "backpack",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "backpack",
+      "max_j": 0.00018337221474553966,
+      "num_candidates": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/schoolgirls/12/meta.json"
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 21,
+      "expression": "a purple backpack worn by a short girl",
+      "category": "backpack",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "backpack",
+      "max_j": 0.00018337221474553966,
+      "num_candidates": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/schoolgirls/21/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 2,
+      "expression": "a drone",
+      "category": "drone",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "drone",
+      "max_j": 0.00027567740225678685,
+      "num_candidates": 6,
+      "obj_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/2/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 3,
+      "expression": "a drone",
+      "category": "drone",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "drone",
+      "max_j": 0.00027567740225678685,
+      "num_candidates": 6,
+      "obj_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/3/meta.json"
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 2,
+      "expression": "a man sitting next to a driver",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.00035518910685228375,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/classic-car/2/meta.json"
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 3,
+      "expression": "a man in a blue shirt sitting in a classic car",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.00035518910685228375,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/classic-car/3/meta.json"
+    },
+    {
+      "video_id": "dog-gooses",
+      "exp_id": 12,
+      "expression": "a third goose from the right",
+      "category": "goose",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "goose",
+      "max_j": 0.00041102889679942814,
+      "num_candidates": 5,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dog-gooses/12/meta.json"
+    },
+    {
+      "video_id": "dog-gooses",
+      "exp_id": 13,
+      "expression": "a brown goose second to the end",
+      "category": "goose",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "goose",
+      "max_j": 0.00041102889679942814,
+      "num_candidates": 5,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dog-gooses/13/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 2,
+      "expression": "a man on a blue surfboard in black suit",
+      "category": "surfboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surfboard",
+      "max_j": 0.0004412940323043857,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/2/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 22,
+      "expression": "a surfboard on the right",
+      "category": "surfboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surfboard",
+      "max_j": 0.0004412940323043857,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/22/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 23,
+      "expression": "a white colored surfboard of the person surfing on the right",
+      "category": "surfboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surfboard",
+      "max_j": 0.0004412940323043857,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/23/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 10,
+      "expression": "a single hand",
+      "category": "hand",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hand",
+      "max_j": 0.0004638244542641137,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/10/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 11,
+      "expression": "a human hand putting a dog on the weight machine",
+      "category": "hand",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hand",
+      "max_j": 0.0004638244542641137,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/11/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 2,
+      "expression": "a black puppy with a brown nose sitting behind the scale",
+      "category": "dog",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "dog",
+      "max_j": 0.000473193349340922,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/2/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 3,
+      "expression": "a black and brown dog on the left of the weight machine",
+      "category": "dog",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "dog",
+      "max_j": 0.000473193349340922,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/3/meta.json"
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 3,
+      "expression": "a girl riding the swing",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.0005056080241089429,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/swing/3/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 12,
+      "expression": "a pink scale",
+      "category": "scale",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "scale",
+      "max_j": 0.0006207926191969783,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/12/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 13,
+      "expression": "a white scale",
+      "category": "scale",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "scale",
+      "max_j": 0.0006207926191969783,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/13/meta.json"
+    },
+    {
+      "video_id": "crossing",
+      "exp_id": 8,
+      "expression": "a white truck on the road",
+      "category": "truck",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "truck",
+      "max_j": 0.0006246623727875374,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/crossing/8/meta.json"
+    },
+    {
+      "video_id": "crossing",
+      "exp_id": 9,
+      "expression": "a white truck moving from the left to right",
+      "category": "truck",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "truck",
+      "max_j": 0.0006246623727875374,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/crossing/9/meta.json"
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 2,
+      "expression": "a woman on the swing",
+      "category": "woman",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "woman",
+      "max_j": 0.0006771917082834995,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/swing/2/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 9,
+      "expression": "a lady in a blue tshirt dancing with a man with a black hat",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0007161198012550184,
+      "num_candidates": 6,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/9/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 18,
+      "expression": "a girl in a red dress",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.0008470047668201355,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/18/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 15,
+      "expression": "a woman wearing a white shirt and denim shorts on the right",
+      "category": "woman",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "woman",
+      "max_j": 0.0008821301438104733,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/15/meta.json"
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 8,
+      "expression": "a black vintage car",
+      "category": "car",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "car",
+      "max_j": 0.0009195857650681283,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/classic-car/8/meta.json"
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 9,
+      "expression": "a black car moving",
+      "category": "car",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "car",
+      "max_j": 0.0009195857650681283,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/classic-car/9/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 13,
+      "expression": "a lady in a white top and a blue skirt dancing with another lady on the right",
+      "category": "lady",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "lady",
+      "max_j": 0.0009691724547922366,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/13/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 4,
+      "expression": "a grayish black puppy in the front",
+      "category": "puppy",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "puppy",
+      "max_j": 0.00097828601331092,
+      "num_candidates": 2,
+      "obj_ids": [
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/4/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 6,
+      "expression": "a puppy on a scale",
+      "category": "puppy",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "puppy",
+      "max_j": 0.00097828601331092,
+      "num_candidates": 2,
+      "obj_ids": [
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/6/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 5,
+      "expression": "a dog on the scale",
+      "category": "dog",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "dog",
+      "max_j": 0.0010258746773680692,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/5/meta.json"
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 7,
+      "expression": "a black and brown dog on the weight machine",
+      "category": "dog",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "dog",
+      "max_j": 0.0010258746773680692,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dogs-scale/7/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 19,
+      "expression": "a woman on the right wearing a black dress",
+      "category": "woman",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "woman",
+      "max_j": 0.0010384467654768524,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/19/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 17,
+      "expression": "a lady in a red dress dancing with another lady on the right",
+      "category": "lady",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "lady",
+      "max_j": 0.0010583653841771455,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/17/meta.json"
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 6,
+      "expression": "a man driving a car",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0011283870959269994,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/classic-car/6/meta.json"
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 7,
+      "expression": "a man in a brown jacket and a hat",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0011283870959269994,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/classic-car/7/meta.json"
+    },
+    {
+      "video_id": "dancing",
+      "exp_id": 4,
+      "expression": "a man dancing on the right in black shorts",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.001148123037865015,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dancing/4/meta.json"
+    },
+    {
+      "video_id": "dancing",
+      "exp_id": 5,
+      "expression": "a man in black shorts dancing around",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.001148123037865015,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dancing/5/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 17,
+      "expression": "a guy in a white shirt",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.0012459438616513139,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/17/meta.json"
+    },
+    {
+      "video_id": "crossing",
+      "exp_id": 2,
+      "expression": "a woman crossing a road",
+      "category": "woman",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "woman",
+      "max_j": 0.0014006823147907686,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/crossing/2/meta.json"
+    },
+    {
+      "video_id": "crossing",
+      "exp_id": 3,
+      "expression": "a woman in a black top and white pants",
+      "category": "woman",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "woman",
+      "max_j": 0.0014006823147907686,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/crossing/3/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 23,
+      "expression": "a man in the center wearing khaki trousers",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0018055602053197123,
+      "num_candidates": 6,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/23/meta.json"
+    },
+    {
+      "video_id": "dancing",
+      "exp_id": 2,
+      "expression": "a woman dancing in the middle",
+      "category": "woman",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "woman",
+      "max_j": 0.0018492812358456652,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dancing/2/meta.json"
+    },
+    {
+      "video_id": "dancing",
+      "exp_id": 3,
+      "expression": "a woman dancing in a red dress",
+      "category": "woman",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "woman",
+      "max_j": 0.0018492812358456652,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/dancing/3/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 18,
+      "expression": "a man surfing on the right",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.002215668205243712,
+      "num_candidates": 5,
+      "obj_ids": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/18/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 19,
+      "expression": "a person surfing on the right side of the frame",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.002254914710428415,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/19/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 26,
+      "expression": "a man in a black t-shirt and grey shorts",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0024394063604795896,
+      "num_candidates": 6,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/26/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 27,
+      "expression": "a man on the left in a black shirt and shorts",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0024394063604795896,
+      "num_candidates": 6,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/27/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 28,
+      "expression": "a man at the back wearing a hat and a pink shirt",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0024394063604795896,
+      "num_candidates": 6,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/28/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 29,
+      "expression": "a guy in a pink shirt and a black hat dancing at the back",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0024394063604795896,
+      "num_candidates": 6,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/29/meta.json"
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 4,
+      "expression": "a hockey stick",
+      "category": "hockey stick",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hockey stick",
+      "max_j": 0.0025519236065227775,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/hockey/4/meta.json"
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 5,
+      "expression": "a hockey stick",
+      "category": "hockey stick",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hockey stick",
+      "max_j": 0.0025519236065227775,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/hockey/5/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 16,
+      "expression": "a man on the right in a white shirt",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.0029782682320443703,
+      "num_candidates": 7,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/16/meta.json"
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 4,
+      "expression": "a man windsurfing",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.0031290486748186993,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/surf/4/meta.json"
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 5,
+      "expression": "a player performing surfing",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.0031290486748186993,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/surf/5/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 0,
+      "expression": "a man in a black suit on a blue surfboard",
+      "category": "surfboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surfboard",
+      "max_j": 0.003288882357984825,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/0/meta.json"
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 17,
+      "expression": "a surfer whose surfboard was swept away",
+      "category": "surfboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surfboard",
+      "max_j": 0.003288882357984825,
+      "num_candidates": 3,
+      "obj_ids": [
+        0,
+        1,
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/miami-surf/17/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 18,
+      "expression": "a man on the bicycle",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.003293852297164905,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/18/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 19,
+      "expression": "a person riding a bicycle",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.0037094294203446525,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/19/meta.json"
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 9,
+      "expression": "a kite board",
+      "category": "kite",
+      "sam3_prompt_source": "backup_category",
+      "sam3_prompt_text": "board",
+      "max_j": 0.00404554908128215,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/kite-walk/9/meta.json"
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 8,
+      "expression": "a wooden surf-board",
+      "category": "surf-board",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surf-board",
+      "max_j": 0.0043150112858528905,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/kite-walk/8/meta.json"
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 9,
+      "expression": "a hockey ball",
+      "category": "hockey ball",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hockey ball",
+      "max_j": 0.004432791743349298,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/hockey/9/meta.json"
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 0,
+      "expression": "a baby girl holding a kitten",
+      "category": "kitten",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "kitten",
+      "max_j": 0.004741957830781475,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/cat-girl/0/meta.json"
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 2,
+      "expression": "a girl cuddling a kitten",
+      "category": "kitten",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "kitten",
+      "max_j": 0.004741957830781475,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/cat-girl/2/meta.json"
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 3,
+      "expression": "a black and grey kitten",
+      "category": "kitten",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "kitten",
+      "max_j": 0.004741957830781475,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/cat-girl/3/meta.json"
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 1,
+      "expression": "a girl holding a cat",
+      "category": "cat",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "cat",
+      "max_j": 0.005219133599621641,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/cat-girl/1/meta.json"
+    },
+    {
+      "video_id": "stunt",
+      "exp_id": 1,
+      "expression": "a skateboard with a handle",
+      "category": "scooter",
+      "sam3_prompt_source": "backup_category",
+      "sam3_prompt_text": "handle",
+      "max_j": 0.005642050794519002,
+      "num_candidates": 1,
+      "obj_ids": [
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/stunt/1/meta.json"
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 8,
+      "expression": "a red tractor",
+      "category": "tractor",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "tractor",
+      "max_j": 0.005649282719418469,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tractor-sand/8/meta.json"
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 9,
+      "expression": "a red tractor",
+      "category": "tractor",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "tractor",
+      "max_j": 0.005649282719418469,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tractor-sand/9/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 13,
+      "expression": "a person rolling over a longboard",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.005772968572345511,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/13/meta.json"
+    },
+    {
+      "video_id": "motorbike",
+      "exp_id": 3,
+      "expression": "a motor bike",
+      "category": "motor bike",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "motor bike",
+      "max_j": 0.008752931931211,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/motorbike/3/meta.json"
+    },
+    {
+      "video_id": "motorbike",
+      "exp_id": 2,
+      "expression": "a motorbike",
+      "category": "motorbike",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "motorbike",
+      "max_j": 0.008934445801353197,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/motorbike/2/meta.json"
+    },
+    {
+      "video_id": "motorbike",
+      "exp_id": 4,
+      "expression": "a person in a white-black jacket sitting behind a rider",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.013045446294674714,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/motorbike/4/meta.json"
+    },
+    {
+      "video_id": "motorbike",
+      "exp_id": 5,
+      "expression": "a guy in a black and white jacket sitting behind the rider",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.013045446294674714,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/motorbike/5/meta.json"
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 4,
+      "expression": "a swing flying in the air",
+      "category": "swing",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "swing",
+      "max_j": 0.014382192006297949,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/swing/4/meta.json"
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 5,
+      "expression": "a swing with a girl on",
+      "category": "swing",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "swing",
+      "max_j": 0.014382192006297949,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/swing/5/meta.json"
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 0,
+      "expression": "a white surfboard",
+      "category": "surfboard",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "surfboard",
+      "max_j": 0.014698262557754374,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/surf/0/meta.json"
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 1,
+      "expression": "a board which a guy is standing on",
+      "category": "board",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "board",
+      "max_j": 0.014738756451921277,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/surf/1/meta.json"
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 30,
+      "expression": "a man in a black hat",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.017782435390436446,
+      "num_candidates": 6,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lindy-hop/30/meta.json"
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 20,
+      "expression": "a pink and violet backpack",
+      "category": "backpack",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "backpack",
+      "max_j": 0.023457733568003136,
+      "num_candidates": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/schoolgirls/20/meta.json"
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 16,
+      "expression": "a tall girl looking towards left",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.025874561624557167,
+      "num_candidates": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/schoolgirls/16/meta.json"
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 8,
+      "expression": "a colorful sail on top of a surfboard",
+      "category": "sail",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "sail",
+      "max_j": 0.031128721128157646,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/surf/8/meta.json"
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 9,
+      "expression": "a green and yellow sail",
+      "category": "sail",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "sail",
+      "max_j": 0.031128721128157646,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/surf/9/meta.json"
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 24,
+      "expression": "a short girl with two ponytails",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.041113330773439524,
+      "num_candidates": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/schoolgirls/24/meta.json"
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 25,
+      "expression": "a short girl with a purple backpack",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.041113330773439524,
+      "num_candidates": 4,
+      "obj_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/schoolgirls/25/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 16,
+      "expression": "a man on a bicycle in a black jacket",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.04242440744768661,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/16/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 15,
+      "expression": "a person wearing a yellow shirt and a black bag on the right",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.04797938972905718,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/15/meta.json"
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 17,
+      "expression": "a guy riding a bicycle",
+      "category": "guy",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "guy",
+      "max_j": 0.04894648798122747,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/longboard/17/meta.json"
+    },
+    {
+      "video_id": "color-run",
+      "exp_id": 4,
+      "expression": "colored hands",
+      "category": "hand",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hand",
+      "max_j": 0.051194686261972495,
+      "num_candidates": 7,
+      "obj_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/color-run/4/meta.json"
+    },
+    {
+      "video_id": "color-run",
+      "exp_id": 5,
+      "expression": "green hands dancing",
+      "category": "hand",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "hand",
+      "max_j": 0.051194686261972495,
+      "num_candidates": 7,
+      "obj_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/color-run/5/meta.json"
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 4,
+      "expression": "a man wearing a black vest and a blue helmet",
+      "category": "man",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "man",
+      "max_j": 0.058006607894972674,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/kite-walk/4/meta.json"
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 5,
+      "expression": "a person performing a kite walk",
+      "category": "person",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "person",
+      "max_j": 0.06846170454090314,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/kite-walk/5/meta.json"
+    },
+    {
+      "video_id": "stunt",
+      "exp_id": 0,
+      "expression": "a black scooter with blue wheels",
+      "category": "scooter",
+      "sam3_prompt_source": "backup_category",
+      "sam3_prompt_text": "blue wheels",
+      "max_j": 0.13348440599576217,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/stunt/0/meta.json"
+    },
+    {
+      "video_id": "train",
+      "exp_id": 6,
+      "expression": "a red unit of the toy train",
+      "category": "unit",
+      "sam3_prompt_source": "backup_category",
+      "sam3_prompt_text": "toy train unit",
+      "max_j": 0.21489575407497646,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/train/6/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 5,
+      "expression": "a phone in bald guy's hand",
+      "category": "phone",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "phone",
+      "max_j": 0.21557546411789164,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/5/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 6,
+      "expression": "a phone controlling a drone",
+      "category": "phone",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "phone",
+      "max_j": 0.21557546411789164,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/6/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 4,
+      "expression": "a black mobile phone held by a bald man",
+      "category": "mobile phone",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "mobile phone",
+      "max_j": 0.21597614477423907,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/4/meta.json"
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 7,
+      "expression": "a mobile phone in the hands of a bald man",
+      "category": "mobile phone",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "mobile phone",
+      "max_j": 0.21597614477423907,
+      "num_candidates": 2,
+      "obj_ids": [
+        0,
+        1
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/drone/7/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 0,
+      "expression": "a girl on the left with black hair",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.23123404841465897,
+      "num_candidates": 1,
+      "obj_ids": [
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/0/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 1,
+      "expression": "a girl with black hair on the left side",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.23123404841465897,
+      "num_candidates": 1,
+      "obj_ids": [
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/1/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 4,
+      "expression": "a girl on the right with curly hair",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.23123404841465897,
+      "num_candidates": 1,
+      "obj_ids": [
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/4/meta.json"
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 5,
+      "expression": "a girl with brown hair on the right side",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.23123404841465897,
+      "num_candidates": 1,
+      "obj_ids": [
+        5
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tuk-tuk/5/meta.json"
+    },
+    {
+      "video_id": "train",
+      "exp_id": 14,
+      "expression": "a blue unit of the toy train",
+      "category": "unit",
+      "sam3_prompt_source": "backup_category",
+      "sam3_prompt_text": "toy train unit",
+      "max_j": 0.24430356458771585,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/train/14/meta.json"
+    },
+    {
+      "video_id": "train",
+      "exp_id": 2,
+      "expression": "a third unit of the toy train",
+      "category": "train",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "train",
+      "max_j": 0.24464418380197367,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/train/2/meta.json"
+    },
+    {
+      "video_id": "train",
+      "exp_id": 10,
+      "expression": "a white unit of the toy train",
+      "category": "unit",
+      "sam3_prompt_source": "backup_category",
+      "sam3_prompt_text": "toy train unit",
+      "max_j": 0.2648518903212211,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/train/10/meta.json"
+    },
+    {
+      "video_id": "train",
+      "exp_id": 12,
+      "expression": "a blue engine of a toy train",
+      "category": "engine",
+      "sam3_prompt_source": "backup_category",
+      "sam3_prompt_text": "train",
+      "max_j": 0.26528121724385023,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/train/12/meta.json"
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 9,
+      "expression": "a black rope in girl's hand",
+      "category": "rope",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "rope",
+      "max_j": 0.28223484892552886,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/swing/9/meta.json"
+    },
+    {
+      "video_id": "bmx-bumps",
+      "exp_id": 0,
+      "expression": "a silver bmx bike",
+      "category": "bike",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "bike",
+      "max_j": 0.3795853291864993,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/bmx-bumps/0/meta.json"
+    },
+    {
+      "video_id": "bmx-bumps",
+      "exp_id": 1,
+      "expression": "a black and white bike",
+      "category": "bike",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "bike",
+      "max_j": 0.3795853291864993,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/bmx-bumps/1/meta.json"
+    },
+    {
+      "video_id": "bmx-bumps",
+      "exp_id": 2,
+      "expression": "a bmx bike",
+      "category": "bmx bike",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "bmx bike",
+      "max_j": 0.37975059326873223,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/bmx-bumps/2/meta.json"
+    },
+    {
+      "video_id": "bmx-bumps",
+      "exp_id": 3,
+      "expression": "a bicycle",
+      "category": "bicycle",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "bicycle",
+      "max_j": 0.38098831077901857,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/bmx-bumps/3/meta.json"
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 0,
+      "expression": "a blue harvester behind a tractor",
+      "category": "harvester",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "harvester",
+      "max_j": 0.40440929462779823,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tractor-sand/0/meta.json"
+    },
+    {
+      "video_id": "lucia",
+      "exp_id": 1,
+      "expression": "a girl walking",
+      "category": "girl",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "girl",
+      "max_j": 0.4644933366449891,
+      "num_candidates": 1,
+      "obj_ids": [
+        2
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/lucia/1/meta.json"
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 2,
+      "expression": "a trailer attached to tractor",
+      "category": "tractor",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "tractor",
+      "max_j": 0.4980362097224365,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tractor-sand/2/meta.json"
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 10,
+      "expression": "a red tractor",
+      "category": "tractor",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "tractor",
+      "max_j": 0.4980362097224365,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tractor-sand/10/meta.json"
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 11,
+      "expression": "a red tractor",
+      "category": "tractor",
+      "sam3_prompt_source": "category",
+      "sam3_prompt_text": "tractor",
+      "max_j": 0.4980362097224365,
+      "num_candidates": 1,
+      "obj_ids": [
+        0
+      ],
+      "meta_path": "crf_sam3_attn/offline_cache_davis17_dms_topk7_20260618/train/tractor-sand/11/meta.json"
+    }
+  ]
+}

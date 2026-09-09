@@ -1,0 +1,9 @@
+{
+  "category_cache": "/mnt/csip-500/share/kongjiawei/Sa2VA-main/category_grounding_mvp/inferera_category_api/results/revos_train_qwen37plus_categories_normalized_20260717.json",
+  "records": 10412,
+  "train_records": 9371,
+  "val_records": 1041,
+  "train_videos": 157,
+  "val_videos": 18,
+  "skipped": {}
+}

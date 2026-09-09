@@ -3,6 +3,7 @@ import glob
 import os
 import random
 import pickle
+import shutil
 from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
@@ -13,8 +14,12 @@ import cv2
 
 from crf_sam3_demo import (
     ConceptExtractor,
-    SAM3ConceptRecall,
+    build_sam3_recall_backend,
+    resolve_candidate_keep_top_k,
+    resolve_candidate_recall_top_k,
+    resolve_candidate_top_k,
     load_gt_masks,
+    compute_j_score,
     compute_j_score_sequence,
 )
 try:
@@ -149,8 +154,26 @@ class CRFSAM3AttnDataset(Dataset):
         self.hard_neg_margin = train_cfg.get("hard_neg_margin")
         self.hard_neg_pos_strategy = train_cfg.get("hard_neg_pos_strategy")
         self.cache_sam3 = bool(train_cfg.get("cache_sam3", False))
-        self.category_source = train_cfg.get("category_source", "concept")
+        self.category_source = str(train_cfg.get("category_source", "concept")).strip().lower()
+        self.category_cache_path = train_cfg.get("category_cache_path")
+        if self.category_source not in {"concept", "category_cache"}:
+            raise ValueError(
+                f"Unsupported category_source={self.category_source!r}. "
+                "Expected 'concept' or 'category_cache'."
+            )
         self.max_video_frames = train_cfg.get("max_video_frames")
+        self.sam3_recall_cfg = dict(base_cfg.get("sam3_recall", {}) or {})
+        if "sam3_max_frame_num_to_track" in train_cfg:
+            self.sam3_recall_cfg["max_frame_num_to_track"] = train_cfg.get("sam3_max_frame_num_to_track")
+        self.sam3_oom_policy = str(
+            train_cfg.get("sam3_oom_policy")
+            or self.sam3_recall_cfg.get("oom_policy")
+            or "skip"
+        ).strip().lower()
+        if self.sam3_oom_policy not in {"skip", "raise"}:
+            raise ValueError(
+                f"Unsupported sam3_oom_policy={self.sam3_oom_policy!r}. Expected 'skip' or 'raise'."
+            )
         self.mask_dict_path = train_cfg.get("mask_dict_path") or dataset_cfg.get("mask_dict_path")
         self.gt_source = str(
             train_cfg.get("gt_source") or dataset_cfg.get("gt_source") or "auto"
@@ -174,6 +197,7 @@ class CRFSAM3AttnDataset(Dataset):
         self.offline_mode = bool(train_cfg.get("offline_mode", False))
         self.offline_strict = bool(train_cfg.get("offline_strict", True))
         self.offline_subset_json = train_cfg.get("offline_subset_json")
+        self.offline_exclude_json = train_cfg.get("offline_exclude_json")
         self.offline_cache_root = train_cfg.get("offline_cache_root", "crf_sam3_attn/offline_cache")
         if not os.path.isabs(self.offline_cache_root):
             self.offline_cache_root = os.path.join(self._repo_root, self.offline_cache_root)
@@ -181,7 +205,9 @@ class CRFSAM3AttnDataset(Dataset):
         self.offline_split_root = os.path.join(self.offline_cache_root, str(split))
 
         self._meta = _load_meta_expressions(self.mevis_root)
+        self._external_category_info = self._load_external_category_info()
         self._offline_subset_pairs = self._load_offline_subset_pairs(self.offline_subset_json)
+        self._offline_exclude_pairs = self._load_offline_subset_pairs(self.offline_exclude_json)
         self._samples = self._build_samples(
             max_videos=train_cfg.get("max_videos"),
             max_expressions=train_cfg.get("max_expressions"),
@@ -229,7 +255,46 @@ class CRFSAM3AttnDataset(Dataset):
                     teacher_pipeline_deterministic=bool(concept_cfg.get("teacher_pipeline_deterministic", True)),
                 )
 
-            self._sam3 = SAM3ConceptRecall(self.sam3_checkpoint)
+            self._sam3 = build_sam3_recall_backend(self.sam3_checkpoint, self.sam3_recall_cfg)
+
+    def _load_external_category_info(self) -> Dict[Tuple[str, int], Dict[str, Any]]:
+        if self.category_source != "category_cache":
+            return {}
+        if not self.category_cache_path:
+            raise ValueError("category_cache_path is required when category_source='category_cache'.")
+        path = self.category_cache_path
+        if not os.path.isabs(path):
+            path = os.path.join(self._repo_root, path)
+        path = os.path.abspath(path)
+        with open(path, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+        records = payload.get("records", payload) if isinstance(payload, dict) else payload
+        if not isinstance(records, list):
+            raise TypeError(f"Unsupported category cache format: {path}")
+        result: Dict[Tuple[str, int], Dict[str, Any]] = {}
+        for record in records:
+            if not isinstance(record, dict):
+                continue
+            video_id = record.get("video_id")
+            exp_id = record.get("exp_id")
+            category = str(record.get("category", "")).strip()
+            if video_id is None or exp_id is None or not category:
+                continue
+            key = (str(video_id), int(exp_id))
+            result[key] = {
+                "category": category,
+                "num_targets": 1,
+                "backup_categories": [],
+                "reasoning": {
+                    "source": "category_cache",
+                    "raw_category": str(record.get("raw_category", category)).strip(),
+                    "normalization": record.get("normalization", "identity"),
+                },
+            }
+        if not result:
+            raise RuntimeError(f"No usable category records found in: {path}")
+        print(f"[category_cache] Loaded {len(result)} entries from {path}")
+        return result
 
     def _load_offline_subset_pairs(self, subset_json: Optional[str]) -> Optional[set[tuple[str, int]]]:
         if not subset_json:
@@ -265,7 +330,14 @@ class CRFSAM3AttnDataset(Dataset):
                 expressions = expressions[: int(max_expressions)]
             for exp_id, exp_data in expressions:
                 exp_id_int = int(exp_id)
+                if (
+                    self.category_source == "category_cache"
+                    and (str(video_id), exp_id_int) not in self._external_category_info
+                ):
+                    continue
                 if self._offline_subset_pairs is not None and (video_id, exp_id_int) not in self._offline_subset_pairs:
+                    continue
+                if self._offline_exclude_pairs is not None and (video_id, exp_id_int) in self._offline_exclude_pairs:
                     continue
                 if self.offline_mode:
                     meta_path = self._offline_meta_path(video_id, exp_id_int)
@@ -483,14 +555,10 @@ class CRFSAM3AttnDataset(Dataset):
         cache_key = (video_id, exp_id)
         if cache_key in self._category_info_cache:
             return self._category_info_cache[cache_key]
-        if self._concept_extractor is None:
-            category = expression.split()[0] if expression else "object"
-            info = {
-                "category": category,
-                "num_targets": 1,
-                "backup_categories": [],
-                "reasoning": {},
-            }
+        if self.category_source == "category_cache":
+            info = self._external_category_info.get(cache_key)
+            if info is None:
+                raise KeyError("Missing category cache entry for %s:%s" % (video_id, exp_id))
         else:
             category, num_targets, reasoning = self._concept_extractor.extract_category(expression, video_path)
             backup_categories = []
@@ -525,6 +593,24 @@ class CRFSAM3AttnDataset(Dataset):
         self._category_cache[cache_key] = category
         return category
 
+    def _candidate_top_k_from_num_targets(self, num_targets: Any) -> Optional[int]:
+        return resolve_candidate_top_k(num_targets, self.sam3_recall_cfg)
+
+    def _candidate_recall_top_k_from_num_targets(self, num_targets: Any) -> Optional[int]:
+        return resolve_candidate_recall_top_k(num_targets, self.sam3_recall_cfg)
+
+    def _candidate_keep_top_k_from_num_targets(self, num_targets: Any) -> Optional[int]:
+        return resolve_candidate_keep_top_k(num_targets, self.sam3_recall_cfg)
+
+    @staticmethod
+    def _select_candidates_by_score_sum(
+        score_sums: Dict[int, float], keep_top_k: int
+    ) -> List[int]:
+        return sorted(
+            score_sums,
+            key=lambda obj_id: (-float(score_sums[obj_id]), int(obj_id)),
+        )[: max(0, int(keep_top_k))]
+
     def _get_all_masks(
         self,
         video_id: str,
@@ -533,19 +619,77 @@ class CRFSAM3AttnDataset(Dataset):
         category: str,
         backup_categories: Optional[List[str]] = None,
         expression: str = None,
+        num_targets: Any = None,
     ) -> Dict:
         cache_key = (video_id, exp_id)
         if self.cache_sam3 and cache_key in self._sam3_cache:
             return self._sam3_cache[cache_key]
 
-        def _is_recall_empty(mask_dict: Dict[int, Dict[int, np.ndarray]]) -> bool:
-            if not mask_dict:
-                return True
-            for frame_masks in mask_dict.values():
-                if frame_masks and len(frame_masks) > 0:
-                    return False
-            return True
+        all_masks: Dict[int, Dict[int, np.ndarray]] = {}
+        candidate_score_sums: Dict[int, float] = {}
+        for frame_idx, frame_masks, frame_scores in self._iter_all_masks_stream(
+            video_id,
+            exp_id,
+            video_path,
+            category,
+            backup_categories=backup_categories,
+            expression=expression,
+            num_targets=num_targets,
+        ):
+            all_masks[int(frame_idx)] = frame_masks
+            for obj_id in frame_masks:
+                obj_id = int(obj_id)
+                if obj_id not in frame_scores:
+                    raise RuntimeError(
+                        f"Missing native SAM3 score for {video_id}/{exp_id}, "
+                        f"frame={frame_idx}, obj_id={obj_id}."
+                    )
+                candidate_score_sums[obj_id] = (
+                    candidate_score_sums.get(obj_id, 0.0)
+                    + float(frame_scores[obj_id])
+                )
 
+        candidate_keep_top_k = self._candidate_keep_top_k_from_num_targets(num_targets)
+        if (
+            candidate_keep_top_k is not None
+            and int(candidate_keep_top_k) > 0
+            and len(candidate_score_sums) > int(candidate_keep_top_k)
+        ):
+            kept_obj_ids = set(
+                self._select_candidates_by_score_sum(
+                    candidate_score_sums, int(candidate_keep_top_k)
+                )
+            )
+            all_masks = {
+                frame_idx: {
+                    int(obj_id): mask
+                    for obj_id, mask in frame_masks.items()
+                    if int(obj_id) in kept_obj_ids
+                }
+                for frame_idx, frame_masks in all_masks.items()
+            }
+            all_masks = {
+                frame_idx: frame_masks
+                for frame_idx, frame_masks in all_masks.items()
+                if frame_masks
+            }
+
+        if self.cache_sam3:
+            self._sam3_cache[cache_key] = all_masks
+        return all_masks
+
+    def _iter_all_masks_stream(
+        self,
+        video_id: str,
+        exp_id: int,
+        video_path: str,
+        category: str,
+        backup_categories: Optional[List[str]] = None,
+        expression: str = None,
+        num_targets: Any = None,
+    ):
+        """Yield SAM3 candidate masks frame-by-frame without materializing a full video."""
+        cache_key = (video_id, exp_id)
         query_candidates: List[str] = []
         for q in [category] + list(backup_categories or []):
             qn = str(q).strip()
@@ -556,17 +700,27 @@ class CRFSAM3AttnDataset(Dataset):
             query_candidates.append(qn)
         if not query_candidates:
             query_candidates = [category]
+        candidate_top_k = self._candidate_recall_top_k_from_num_targets(num_targets)
 
-        prompt_source = "category"
-        prompt_text = query_candidates[0]
-        all_masks = {}
         for i, recall_query in enumerate(query_candidates):
+            any_masks = False
+            prompt_source = "category" if i == 0 else "backup_category"
+            prompt_text = recall_query
             try:
-                recall_masks = self._sam3.recall_all_instances(video_path, recall_query)
+                for frame_idx, frame_masks, frame_scores in self._sam3.recall_all_instances_stream(
+                    video_path,
+                    recall_query,
+                    candidate_top_k=candidate_top_k,
+                ):
+                    if frame_masks:
+                        any_masks = True
+                    yield int(frame_idx), frame_masks, frame_scores
             except RuntimeError as err:
-                # Fallback path for extreme crowded-category OOM:
-                # retry the same sample with full expression prompt.
-                if (not _is_oom_runtime_error(err)) or (not expression):
+                if self.sam3_oom_policy == "raise" and _is_oom_runtime_error(err):
+                    raise
+                # Legacy rescue path: if OOM happens before any partial output, retry with
+                # the full expression. Disabled when sam3_oom_policy='raise'.
+                if any_masks or (not _is_oom_runtime_error(err)) or (not expression):
                     raise
                 if torch.cuda.is_available():
                     torch.cuda.empty_cache()
@@ -574,26 +728,29 @@ class CRFSAM3AttnDataset(Dataset):
                     f"[SAM3Recall][OOM] {video_id}/{exp_id} with query='{recall_query}'. "
                     "Retry with full expression prompt."
                 )
-                recall_masks = self._sam3.recall_all_instances(video_path, expression)
                 prompt_source = "full_expression_fallback"
                 prompt_text = expression
-                all_masks = recall_masks
-                break
+                for frame_idx, frame_masks, frame_scores in self._sam3.recall_all_instances_stream(
+                    video_path,
+                    expression,
+                    candidate_top_k=candidate_top_k,
+                ):
+                    if frame_masks:
+                        any_masks = True
+                    yield int(frame_idx), frame_masks, frame_scores
 
-            if not _is_recall_empty(recall_masks):
-                all_masks = recall_masks
-                prompt_source = "category" if i == 0 else "backup_category"
-                prompt_text = recall_query
-                break
+            if any_masks:
+                self._sam3_prompt_meta[cache_key] = {
+                    "source": prompt_source,
+                    "text": prompt_text,
+                }
+                return
             print(f"[SAM3Recall][empty] {video_id}/{exp_id} query='{recall_query}' returned no masks.")
 
         self._sam3_prompt_meta[cache_key] = {
-            "source": prompt_source,
-            "text": prompt_text,
+            "source": "category",
+            "text": query_candidates[0],
         }
-        if self.cache_sam3:
-            self._sam3_cache[cache_key] = all_masks
-        return all_masks
 
     def _compute_iou_map(self, all_masks: Dict[int, Dict[int, np.ndarray]], gt_masks: Dict[int, np.ndarray]) -> Dict[int, float]:
         obj_ids = set()
@@ -681,6 +838,7 @@ class CRFSAM3AttnDataset(Dataset):
                 category,
                 backup_categories=category_info.get("backup_categories", []),
                 expression=expression,
+                num_targets=category_info.get("num_targets", 1),
             )
             if not all_masks:
                 idx = random.randint(0, len(self._samples) - 1)
@@ -975,6 +1133,7 @@ class CRFSAM3AttnDataset(Dataset):
                 category,
                 backup_categories=category_info.get("backup_categories", []),
                 expression=expression,
+                num_targets=category_info.get("num_targets", 1),
             )
             if not all_masks:
                 idx = random.randint(0, len(self._samples) - 1)
@@ -1105,66 +1264,143 @@ class CRFSAM3AttnDataset(Dataset):
                     _mark_skip("exceeds_max_video_frames", video_id, exp_id)
                     continue
 
-            category_info = self._get_category_info(video_id, exp_id, expression, video_path)
-            category = category_info["category"]
-            backup_categories = category_info.get("backup_categories", [])
-            try:
-                all_masks = self._get_all_masks(
-                    video_id,
-                    exp_id,
-                    video_path,
-                    category,
-                    backup_categories=backup_categories,
-                    expression=expression,
-                )
-            except RuntimeError as err:
-                if _is_oom_runtime_error(err):
-                    if torch.cuda.is_available():
-                        torch.cuda.empty_cache()
-                    print(
-                        f"[OfflinePrepare][oom-skip] Skip {video_id}/{exp_id} "
-                        "after fallback retry."
-                    )
-                    _mark_skip("sam3_oom_after_retry", video_id, exp_id)
-                    continue
-                raise
-            if not all_masks:
-                _mark_skip("empty_sam3_masks", video_id, exp_id)
-                continue
+            # Drop incomplete cache artifacts from previous interrupted/OOM runs.
+            if os.path.isdir(exp_dir):
+                shutil.rmtree(exp_dir)
 
             gt_masks = self._load_expression_gt_masks(video_id, exp_id)
             if not gt_masks:
                 _mark_skip("empty_gt_masks", video_id, exp_id)
                 continue
 
-            iou_map = self._compute_iou_map(all_masks, gt_masks)
-            if not iou_map:
-                _mark_skip("empty_iou_map", video_id, exp_id)
-                continue
+            category_info = self._get_category_info(video_id, exp_id, expression, video_path)
+            category = category_info["category"]
+            backup_categories = category_info.get("backup_categories", [])
 
             frame_pad = _get_frame_pad(video_path)
             mask_root = os.path.join(exp_dir, "masks")
             os.makedirs(mask_root, exist_ok=True)
 
             frame_indices_map: Dict[int, List[int]] = {}
-            for obj_id in sorted(iou_map.keys()):
-                frames_with_obj = [f for f in sorted(all_masks.keys()) if obj_id in all_masks[f]]
-                if not frames_with_obj:
-                    continue
-                frame_indices_map[obj_id] = frames_with_obj
-                obj_dir = os.path.join(mask_root, f"obj_{obj_id}")
-                os.makedirs(obj_dir, exist_ok=True)
-                for frame_idx in frames_with_obj:
-                    mask = all_masks[frame_idx][obj_id]
-                    mask_img = (mask > 0).astype(np.uint8) * 255
-                    if frame_pad > 0:
-                        mask_name = f"{frame_idx:0{frame_pad}d}.png"
-                    else:
-                        mask_name = f"{frame_idx}.png"
-                    Image.fromarray(mask_img).save(os.path.join(obj_dir, mask_name))
+            candidate_score_sums: Dict[int, float] = {}
+            j_sums: Dict[int, float] = {}
+            streamed_frames = 0
+            gt_denominator = float(len(gt_masks))
+            candidate_recall_top_k = self._candidate_recall_top_k_from_num_targets(
+                category_info.get("num_targets", 1)
+            )
+            candidate_keep_top_k = self._candidate_keep_top_k_from_num_targets(
+                category_info.get("num_targets", 1)
+            )
+
+            def _mask_to_numpy(mask: Any) -> np.ndarray:
+                if torch.is_tensor(mask):
+                    mask_np = mask.detach().cpu().numpy()
+                else:
+                    mask_np = np.asarray(mask)
+                if mask_np.ndim == 3 and mask_np.shape[0] == 1:
+                    mask_np = mask_np[0]
+                return mask_np
+
+            try:
+                for frame_idx, frame_masks, frame_scores in self._iter_all_masks_stream(
+                    video_id,
+                    exp_id,
+                    video_path,
+                    category,
+                    backup_categories=backup_categories,
+                    expression=expression,
+                    num_targets=category_info.get("num_targets", 1),
+                ):
+                    if not frame_masks:
+                        continue
+                    streamed_frames += 1
+                    for obj_id_raw, mask in frame_masks.items():
+                        obj_id = int(obj_id_raw)
+                        mask_np = _mask_to_numpy(mask)
+                        mask_bin = mask_np > 0
+                        frame_indices_map.setdefault(obj_id, []).append(int(frame_idx))
+                        if obj_id not in frame_scores:
+                            raise RuntimeError(
+                                f"Missing native SAM3 score for {video_id}/{exp_id}, "
+                                f"frame={frame_idx}, obj_id={obj_id}."
+                            )
+                        candidate_score_sums[obj_id] = (
+                            candidate_score_sums.get(obj_id, 0.0)
+                            + float(frame_scores[obj_id])
+                        )
+
+                        obj_dir = os.path.join(mask_root, f"obj_{obj_id}")
+                        os.makedirs(obj_dir, exist_ok=True)
+                        mask_img = mask_bin.astype(np.uint8) * 255
+                        if frame_pad > 0:
+                            mask_name = f"{int(frame_idx):0{frame_pad}d}.png"
+                        else:
+                            mask_name = f"{int(frame_idx)}.png"
+                        Image.fromarray(mask_img).save(os.path.join(obj_dir, mask_name))
+
+                        gt_mask = gt_masks.get(int(frame_idx))
+                        if gt_mask is None:
+                            continue
+                        pred_mask = mask_bin.astype(np.uint8)
+                        if pred_mask.shape != gt_mask.shape:
+                            gt_mask = cv2.resize(
+                                (gt_mask > 0).astype(np.uint8),
+                                (pred_mask.shape[1], pred_mask.shape[0]),
+                                interpolation=cv2.INTER_NEAREST,
+                            )
+                        j_sums[obj_id] = j_sums.get(obj_id, 0.0) + float(
+                            compute_j_score(pred_mask, gt_mask)
+                        )
+            except RuntimeError as err:
+                if os.path.isdir(exp_dir):
+                    shutil.rmtree(exp_dir)
+                if _is_oom_runtime_error(err):
+                    if torch.cuda.is_available():
+                        torch.cuda.empty_cache()
+                    print(
+                        f"[OfflinePrepare][oom-{self.sam3_oom_policy}] {video_id}/{exp_id} "
+                        "after streaming cleanup."
+                    )
+                    if self.sam3_oom_policy == "skip":
+                        _mark_skip("sam3_oom_after_retry", video_id, exp_id)
+                        continue
+                raise
 
             if not frame_indices_map:
+                if os.path.isdir(exp_dir):
+                    shutil.rmtree(exp_dir)
                 _mark_skip("empty_frame_indices_map", video_id, exp_id)
+                continue
+
+            raw_obj_ids = sorted([int(x) for x in frame_indices_map.keys()])
+            num_candidates_before_filter = len(raw_obj_ids)
+            kept_obj_ids = list(raw_obj_ids)
+            if (
+                candidate_keep_top_k is not None
+                and int(candidate_keep_top_k) > 0
+                and len(frame_indices_map) > int(candidate_keep_top_k)
+            ):
+                kept_obj_ids = self._select_candidates_by_score_sum(
+                    candidate_score_sums, int(candidate_keep_top_k)
+                )
+                kept_set = set(int(x) for x in kept_obj_ids)
+                for obj_id in list(frame_indices_map.keys()):
+                    if int(obj_id) in kept_set:
+                        continue
+                    shutil.rmtree(os.path.join(mask_root, f"obj_{int(obj_id)}"), ignore_errors=True)
+                    frame_indices_map.pop(obj_id, None)
+                    j_sums.pop(obj_id, None)
+                    candidate_score_sums.pop(obj_id, None)
+
+            iou_map = {
+                int(obj_id): float(j_sums.get(int(obj_id), 0.0) / gt_denominator)
+                for obj_id in frame_indices_map.keys()
+            }
+            if not iou_map:
+                if os.path.isdir(exp_dir):
+                    shutil.rmtree(exp_dir)
+                _mark_skip("empty_iou_map", video_id, exp_id)
                 continue
 
             iou_summary = summarize_iou_map(iou_map)
@@ -1178,6 +1414,20 @@ class CRFSAM3AttnDataset(Dataset):
                 "sam3_prompt_text": self._sam3_prompt_meta.get((video_id, exp_id), {}).get("text", category),
                 "video_path": video_path,
                 "frame_pad": frame_pad,
+                "offline_write_mode": "streaming",
+                "streamed_frames_with_masks": int(streamed_frames),
+                "sam3_recall_config": self.sam3_recall_cfg,
+                "sam3_oom_policy": self.sam3_oom_policy,
+                "candidate_recall_top_k": candidate_recall_top_k,
+                "candidate_keep_top_k": candidate_keep_top_k,
+                "candidate_filter": "sam3_object_score_sum" if candidate_keep_top_k is not None else "none",
+                "num_candidates_before_filter": int(num_candidates_before_filter),
+                "raw_obj_ids_before_filter": raw_obj_ids,
+                "candidate_score_sums": {
+                    str(k): float(v)
+                    for k, v in sorted(candidate_score_sums.items())
+                    if int(k) in frame_indices_map
+                },
                 "obj_ids": sorted([int(x) for x in frame_indices_map.keys()]),
                 "iou_map": {str(k): float(v) for k, v in iou_map.items()},
                 "max_j": iou_summary["max_j"],

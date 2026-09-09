@@ -144,6 +144,7 @@ Examples:
     sampling_strategy = visual_tube_cfg.get("sampling_strategy", "uniform")
 
     concept_cfg = config.get("concept_extraction", {})
+    sam3_recall_config = config.get("sam3_recall", {}) or {}
     concept_use_qframe = bool(concept_cfg.get("use_qframe", False))
 
     qframe_config = None
@@ -232,6 +233,7 @@ Examples:
         concept_config=concept_cfg,
         discriminator_backend=backend,
         reranker_cfg=reranker_cfg,
+        sam3_recall_cfg=sam3_recall_config,
     )
 
     os.makedirs(output_dir, exist_ok=True)

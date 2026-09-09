@@ -61,7 +61,7 @@ data:
   listwise: true
   listwise_max_candidates: 10
   max_videos: null
-  max_video_frames: 300
+  max_video_frames: null
   max_expressions: null
   cache_sam3: false
   category_source: concept

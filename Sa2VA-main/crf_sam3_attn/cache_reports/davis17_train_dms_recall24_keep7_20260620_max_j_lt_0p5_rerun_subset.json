@@ -1,0 +1,671 @@
+{
+  "source_report": "crf_sam3_attn/cache_reports/davis17_train_dms_recall24_keep7_20260620_max_j_lt_0p5.json",
+  "criterion": "max_j < 0.5 before normalized-prompt rerun",
+  "num_samples": 166,
+  "samples": [
+    {
+      "video_id": "drone",
+      "exp_id": 15
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 2
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 3
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 3
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 2
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 3
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 4
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 5
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 6
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 7
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 9
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 11
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 12
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 14
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 8
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 9
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 10
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 14
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 16
+    },
+    {
+      "video_id": "sheep",
+      "exp_id": 13
+    },
+    {
+      "video_id": "skate-park",
+      "exp_id": 1
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 10
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 11
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 4
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 5
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 2
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 3
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 6
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 11
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 8
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 7
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 8
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 9
+    },
+    {
+      "video_id": "dog-gooses",
+      "exp_id": 2
+    },
+    {
+      "video_id": "dog-gooses",
+      "exp_id": 3
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 14
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 15
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 12
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 13
+    },
+    {
+      "video_id": "train",
+      "exp_id": 15
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 12
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 21
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 2
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 3
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 2
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 3
+    },
+    {
+      "video_id": "color-run",
+      "exp_id": 8
+    },
+    {
+      "video_id": "color-run",
+      "exp_id": 9
+    },
+    {
+      "video_id": "dog-gooses",
+      "exp_id": 12
+    },
+    {
+      "video_id": "dog-gooses",
+      "exp_id": 13
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 22
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 23
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 2
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 10
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 11
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 3
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 2
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 3
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 12
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 13
+    },
+    {
+      "video_id": "crossing",
+      "exp_id": 8
+    },
+    {
+      "video_id": "crossing",
+      "exp_id": 9
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 2
+    },
+    {
+      "video_id": "dancing",
+      "exp_id": 2
+    },
+    {
+      "video_id": "dancing",
+      "exp_id": 3
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 17
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 14
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 15
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 16
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 0
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 1
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 8
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 9
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 13
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 4
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 6
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 5
+    },
+    {
+      "video_id": "dogs-scale",
+      "exp_id": 7
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 18
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 19
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 17
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 6
+    },
+    {
+      "video_id": "classic-car",
+      "exp_id": 7
+    },
+    {
+      "video_id": "crossing",
+      "exp_id": 2
+    },
+    {
+      "video_id": "crossing",
+      "exp_id": 3
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 23
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 18
+    },
+    {
+      "video_id": "miami-surf",
+      "exp_id": 19
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 26
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 27
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 28
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 29
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 4
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 5
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 16
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 5
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 4
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 18
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 19
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 8
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 9
+    },
+    {
+      "video_id": "hockey",
+      "exp_id": 9
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 0
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 2
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 3
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 7
+    },
+    {
+      "video_id": "cat-girl",
+      "exp_id": 1
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 8
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 9
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 13
+    },
+    {
+      "video_id": "sheep",
+      "exp_id": 14
+    },
+    {
+      "video_id": "dancing",
+      "exp_id": 4
+    },
+    {
+      "video_id": "dancing",
+      "exp_id": 5
+    },
+    {
+      "video_id": "motorbike",
+      "exp_id": 3
+    },
+    {
+      "video_id": "motorbike",
+      "exp_id": 2
+    },
+    {
+      "video_id": "motorbike",
+      "exp_id": 4
+    },
+    {
+      "video_id": "motorbike",
+      "exp_id": 5
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 4
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 5
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 0
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 1
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 30
+    },
+    {
+      "video_id": "lindy-hop",
+      "exp_id": 31
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 20
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 16
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 8
+    },
+    {
+      "video_id": "surf",
+      "exp_id": 9
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 24
+    },
+    {
+      "video_id": "schoolgirls",
+      "exp_id": 25
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 16
+    },
+    {
+      "video_id": "color-run",
+      "exp_id": 11
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 15
+    },
+    {
+      "video_id": "longboard",
+      "exp_id": 17
+    },
+    {
+      "video_id": "color-run",
+      "exp_id": 4
+    },
+    {
+      "video_id": "color-run",
+      "exp_id": 5
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 4
+    },
+    {
+      "video_id": "kite-walk",
+      "exp_id": 5
+    },
+    {
+      "video_id": "train",
+      "exp_id": 4
+    },
+    {
+      "video_id": "train",
+      "exp_id": 5
+    },
+    {
+      "video_id": "train",
+      "exp_id": 6
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 5
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 6
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 4
+    },
+    {
+      "video_id": "drone",
+      "exp_id": 7
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 0
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 1
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 4
+    },
+    {
+      "video_id": "tuk-tuk",
+      "exp_id": 5
+    },
+    {
+      "video_id": "train",
+      "exp_id": 2
+    },
+    {
+      "video_id": "train",
+      "exp_id": 14
+    },
+    {
+      "video_id": "train",
+      "exp_id": 8
+    },
+    {
+      "video_id": "train",
+      "exp_id": 9
+    },
+    {
+      "video_id": "train",
+      "exp_id": 10
+    },
+    {
+      "video_id": "train",
+      "exp_id": 12
+    },
+    {
+      "video_id": "train",
+      "exp_id": 13
+    },
+    {
+      "video_id": "swing",
+      "exp_id": 9
+    },
+    {
+      "video_id": "scooter-board",
+      "exp_id": 5
+    },
+    {
+      "video_id": "bmx-bumps",
+      "exp_id": 0
+    },
+    {
+      "video_id": "bmx-bumps",
+      "exp_id": 1
+    },
+    {
+      "video_id": "bmx-bumps",
+      "exp_id": 2
+    },
+    {
+      "video_id": "bmx-bumps",
+      "exp_id": 3
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 0
+    },
+    {
+      "video_id": "lucia",
+      "exp_id": 1
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 2
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 10
+    },
+    {
+      "video_id": "tractor-sand",
+      "exp_id": 11
+    }
+  ]
+}

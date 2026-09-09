@@ -1,0 +1,8572 @@
+{
+  "/m/0mkg": {
+    "display_name": "Accordion",
+    "sam3_prompt_text": "accordion",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/03m3vtv": {
+    "display_name": "Adhesive tape",
+    "sam3_prompt_text": "adhesive tape",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/0k5j": {
+    "display_name": "Aircraft",
+    "sam3_prompt_text": "aircraft",
+    "children": [
+      "/m/0cmf2",
+      "/m/09ct_",
+      "/m/09rvcxw"
+    ],
+    "child_names": [
+      "Fixed-wing aircraft",
+      "Helicopter",
+      "Rocket"
+    ],
+    "parents": [
+      "/m/07yv9"
+    ],
+    "parent_names": [
+      "Vehicle"
+    ]
+  },
+  "/m/046dlr": {
+    "display_name": "Alarm clock",
+    "sam3_prompt_text": "alarm clock",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01x3z"
+    ],
+    "parent_names": [
+      "Clock"
+    ]
+  },
+  "/m/0pcr": {
+    "display_name": "Alpaca",
+    "sam3_prompt_text": "alpaca",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/012n7d": {
+    "display_name": "Ambulance",
+    "sam3_prompt_text": "ambulance",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/0jbk": {
+    "display_name": "Animal",
+    "sam3_prompt_text": "animal",
+    "children": [
+      "/m/015p6",
+      "/m/0ch_cf",
+      "/m/03xxp",
+      "/m/04rky",
+      "/m/06bt6",
+      "/m/0fbdv"
+    ],
+    "child_names": [
+      "Bird",
+      "Fish",
+      "Invertebrate",
+      "Mammal",
+      "Reptile",
+      "Shellfish"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0_k2": {
+    "display_name": "Ant",
+    "sam3_prompt_text": "ant",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03vt0"
+    ],
+    "parent_names": [
+      "Insect"
+    ]
+  },
+  "/m/0czz2": {
+    "display_name": "Antelope",
+    "sam3_prompt_text": "antelope",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/014j1m": {
+    "display_name": "Apple",
+    "sam3_prompt_text": "apple",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0xfy": {
+    "display_name": "Armadillo",
+    "sam3_prompt_text": "armadillo",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/047v4b": {
+    "display_name": "Artichoke",
+    "sam3_prompt_text": "artichoke",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/08dz3q": {
+    "display_name": "Auto part",
+    "sam3_prompt_text": "auto part",
+    "children": [
+      "/m/0dkzw",
+      "/m/0h9mv",
+      "/m/01jfm_",
+      "/m/083wq"
+    ],
+    "child_names": [
+      "Seat belt",
+      "Tire",
+      "Vehicle registration plate",
+      "Wheel"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0c2jj": {
+    "display_name": "Axe",
+    "sam3_prompt_text": "axe",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x",
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Tool",
+      "Weapon"
+    ]
+  },
+  "/m/01940j": {
+    "display_name": "Backpack",
+    "sam3_prompt_text": "backpack",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0hf58v5"
+    ],
+    "parent_names": [
+      "Luggage and bags"
+    ]
+  },
+  "/m/01fb_0": {
+    "display_name": "Bagel",
+    "sam3_prompt_text": "bagel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/052lwg6"
+    ],
+    "parent_names": [
+      "Baked goods"
+    ]
+  },
+  "/m/052lwg6": {
+    "display_name": "Baked goods",
+    "sam3_prompt_text": "baked goods",
+    "children": [
+      "/m/01fb_0",
+      "/m/09728",
+      "/m/021mn",
+      "/m/01tcjp",
+      "/m/0hnyx",
+      "/m/01f91_"
+    ],
+    "child_names": [
+      "Bagel",
+      "Bread",
+      "Cookie",
+      "Muffin",
+      "Pastry",
+      "Pretzel"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0l3ms": {
+    "display_name": "Balance beam",
+    "sam3_prompt_text": "balance beam",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/018xm": {
+    "display_name": "Ball (Object)",
+    "sam3_prompt_text": "ball",
+    "children": [
+      "/m/02ctlc",
+      "/m/01226z",
+      "/m/0wdt60w",
+      "/m/05ctyq",
+      "/m/02rgn06"
+    ],
+    "child_names": [
+      "Cricket ball",
+      "Football",
+      "Rugby ball",
+      "Tennis ball",
+      "Volleyball (Ball)"
+    ],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/01j51": {
+    "display_name": "Balloon",
+    "sam3_prompt_text": "balloon",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0138tl"
+    ],
+    "parent_names": [
+      "Toy"
+    ]
+  },
+  "/m/09qck": {
+    "display_name": "Banana",
+    "sam3_prompt_text": "banana",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0j496": {
+    "display_name": "Band-aid",
+    "sam3_prompt_text": "band-aid",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01xgg_"
+    ],
+    "parent_names": [
+      "Medical equipment"
+    ]
+  },
+  "/m/018j2": {
+    "display_name": "Banjo",
+    "sam3_prompt_text": "banjo",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/01btn": {
+    "display_name": "Barge",
+    "sam3_prompt_text": "barge",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019jd"
+    ],
+    "parent_names": [
+      "Boat"
+    ]
+  },
+  "/m/02zn6n": {
+    "display_name": "Barrel",
+    "sam3_prompt_text": "barrel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/011q46kg"
+    ],
+    "parent_names": [
+      "Container"
+    ]
+  },
+  "/m/03g8mr": {
+    "display_name": "Baseball bat",
+    "sam3_prompt_text": "bat",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/03grzl": {
+    "display_name": "Baseball glove",
+    "sam3_prompt_text": "glove",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0174n1",
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Glove",
+      "Sports equipment"
+    ]
+  },
+  "/m/01h44": {
+    "display_name": "Bat (Animal)",
+    "sam3_prompt_text": "bat",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/0h8nr_l": {
+    "display_name": "Bathroom accessory",
+    "sam3_prompt_text": "accessory",
+    "children": [
+      "/m/0h8nsvg",
+      "/m/0c3mkw",
+      "/m/09gtd",
+      "/m/0162_1"
+    ],
+    "child_names": [
+      "Facial tissue holder",
+      "Soap dispenser",
+      "Toilet paper",
+      "Towel"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/04y4h8h": {
+    "display_name": "Bathroom cabinet",
+    "sam3_prompt_text": "cabinet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/03dnzn": {
+    "display_name": "Bathtub",
+    "sam3_prompt_text": "bathtub",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02pkr5"
+    ],
+    "parent_names": [
+      "Plumbing fixture"
+    ]
+  },
+  "/m/0d20w4": {
+    "display_name": "Beaker",
+    "sam3_prompt_text": "beaker",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/011q46kg"
+    ],
+    "parent_names": [
+      "Container"
+    ]
+  },
+  "/m/01dws": {
+    "display_name": "Bear",
+    "sam3_prompt_text": "bear",
+    "children": [
+      "/m/01dxs",
+      "/m/03bj1",
+      "/m/0633h",
+      "/m/0kmg4"
+    ],
+    "child_names": [
+      "Brown bear",
+      "Panda",
+      "Polar bear",
+      "Teddy bear"
+    ],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/015h_t": {
+    "display_name": "Beard",
+    "sam3_prompt_text": "beard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03ssj5": {
+    "display_name": "Bed",
+    "sam3_prompt_text": "bed",
+    "children": [
+      "/m/061hd_",
+      "/m/026qbn5"
+    ],
+    "child_names": [
+      "Infant bed",
+      "Studio couch"
+    ],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/01h3n": {
+    "display_name": "Bee",
+    "sam3_prompt_text": "bee",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03vt0"
+    ],
+    "parent_names": [
+      "Insect"
+    ]
+  },
+  "/m/01gllr": {
+    "display_name": "Beehive",
+    "sam3_prompt_text": "beehive",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01599": {
+    "display_name": "Beer",
+    "sam3_prompt_text": "beer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0271t"
+    ],
+    "parent_names": [
+      "Drink"
+    ]
+  },
+  "/m/020jm": {
+    "display_name": "Beetle",
+    "sam3_prompt_text": "beetle",
+    "children": [
+      "/m/0gj37"
+    ],
+    "child_names": [
+      "Ladybug"
+    ],
+    "parents": [
+      "/m/03vt0"
+    ],
+    "parent_names": [
+      "Insect"
+    ]
+  },
+  "/m/0jg57": {
+    "display_name": "Bell pepper",
+    "sam3_prompt_text": "bell pepper",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/0176mf": {
+    "display_name": "Belt",
+    "sam3_prompt_text": "belt",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/0cvnqh": {
+    "display_name": "Bench",
+    "sam3_prompt_text": "bench",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/0199g": {
+    "display_name": "Bicycle",
+    "sam3_prompt_text": "bicycle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls",
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Land vehicle",
+      "Sports equipment"
+    ]
+  },
+  "/m/03p3bw": {
+    "display_name": "Bicycle helmet",
+    "sam3_prompt_text": "helmet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0zvk5"
+    ],
+    "parent_names": [
+      "Helmet"
+    ]
+  },
+  "/m/01bqk0": {
+    "display_name": "Bicycle wheel",
+    "sam3_prompt_text": "wheel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01vbnl": {
+    "display_name": "Bidet",
+    "sam3_prompt_text": "bidet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02pkr5"
+    ],
+    "parent_names": [
+      "Plumbing fixture"
+    ]
+  },
+  "/m/01knjb": {
+    "display_name": "Billboard",
+    "sam3_prompt_text": "billboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/04p0qw": {
+    "display_name": "Billiard table",
+    "sam3_prompt_text": "billiard table",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/0lt4_": {
+    "display_name": "Binoculars",
+    "sam3_prompt_text": "binoculars",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/015p6": {
+    "display_name": "Bird",
+    "sam3_prompt_text": "bird",
+    "children": [
+      "/m/01f8m5",
+      "/m/0ccs93",
+      "/m/09b5t",
+      "/m/09ddx",
+      "/m/09csl",
+      "/m/0f6wt",
+      "/m/0dbvp",
+      "/m/012074",
+      "/m/05n4y",
+      "/m/09d5_",
+      "/m/0gv1x",
+      "/m/05z6w",
+      "/m/06j2d",
+      "/m/0h23m",
+      "/m/0dftk",
+      "/m/0jly1",
+      "/m/01dy8n"
+    ],
+    "child_names": [
+      "Blue jay",
+      "Canary",
+      "Chicken",
+      "Duck",
+      "Eagle",
+      "Falcon",
+      "Goose",
+      "Magpie",
+      "Ostrich",
+      "Owl",
+      "Parrot",
+      "Penguin",
+      "Raven",
+      "Sparrow",
+      "Swan",
+      "Turkey",
+      "Woodpecker"
+    ],
+    "parents": [
+      "/m/0jbk"
+    ],
+    "parent_names": [
+      "Animal"
+    ]
+  },
+  "/m/02pjr4": {
+    "display_name": "Blender",
+    "sam3_prompt_text": "blender",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1",
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Home appliance",
+      "Kitchen appliance"
+    ]
+  },
+  "/m/01f8m5": {
+    "display_name": "Blue jay",
+    "sam3_prompt_text": "blue jay",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/019jd": {
+    "display_name": "Boat",
+    "sam3_prompt_text": "boat",
+    "children": [
+      "/m/01btn",
+      "/m/0ph39",
+      "/m/02068x"
+    ],
+    "child_names": [
+      "Barge",
+      "Canoe",
+      "Gondola"
+    ],
+    "parents": [
+      "/m/01rzcn"
+    ],
+    "parent_names": [
+      "Watercraft"
+    ]
+  },
+  "/m/0ct4f": {
+    "display_name": "Bomb",
+    "sam3_prompt_text": "bomb",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Weapon"
+    ]
+  },
+  "/m/0bt_c3": {
+    "display_name": "Book",
+    "sam3_prompt_text": "book",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03__z0": {
+    "display_name": "Bookcase",
+    "sam3_prompt_text": "bookcase",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/01b638": {
+    "display_name": "Boot",
+    "sam3_prompt_text": "boot",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j5n"
+    ],
+    "parent_names": [
+      "Footwear"
+    ]
+  },
+  "/m/04dr76w": {
+    "display_name": "Bottle",
+    "sam3_prompt_text": "bottle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/011q46kg",
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Container",
+      "Tableware"
+    ]
+  },
+  "/m/04f5ws": {
+    "display_name": "Bottle opener",
+    "sam3_prompt_text": "bottle opener",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/01g3x7": {
+    "display_name": "Bow and arrow",
+    "sam3_prompt_text": "bow and arrow",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj",
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Sports equipment",
+      "Weapon"
+    ]
+  },
+  "/m/04kkgm": {
+    "display_name": "Bowl",
+    "sam3_prompt_text": "bowl",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/07pj7bq": {
+    "display_name": "Bowling equipment",
+    "sam3_prompt_text": "bowling equipment",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/025dyy": {
+    "display_name": "Box",
+    "sam3_prompt_text": "box",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/01bl7v": {
+    "display_name": "Boy",
+    "sam3_prompt_text": "person",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01g317"
+    ],
+    "parent_names": [
+      "Person"
+    ]
+  },
+  "/m/01gmv2": {
+    "display_name": "Brassiere",
+    "sam3_prompt_text": "brassiere",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/09728": {
+    "display_name": "Bread",
+    "sam3_prompt_text": "bread",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/052lwg6"
+    ],
+    "parent_names": [
+      "Baked goods"
+    ]
+  },
+  "/m/0584n8": {
+    "display_name": "Briefcase",
+    "sam3_prompt_text": "briefcase",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0hf58v5"
+    ],
+    "parent_names": [
+      "Luggage and bags"
+    ]
+  },
+  "/m/0hkxq": {
+    "display_name": "Broccoli",
+    "sam3_prompt_text": "broccoli",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/01yx86": {
+    "display_name": "Bronze sculpture",
+    "sam3_prompt_text": "sculpture",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/06msq"
+    ],
+    "parent_names": [
+      "Sculpture"
+    ]
+  },
+  "/m/01dxs": {
+    "display_name": "Brown bear",
+    "sam3_prompt_text": "brown bear",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01dws"
+    ],
+    "parent_names": [
+      "Bear"
+    ]
+  },
+  "/m/0cgh4": {
+    "display_name": "Building",
+    "sam3_prompt_text": "building",
+    "children": [
+      "/m/0d5gx",
+      "/m/0crjs",
+      "/m/03jm5",
+      "/m/04h7h",
+      "/m/021sj1",
+      "/m/079cl",
+      "/m/01fdzj",
+      "/m/02wg_p"
+    ],
+    "child_names": [
+      "Castle",
+      "Convenience store",
+      "House",
+      "Lighthouse",
+      "Office building",
+      "Skyscraper",
+      "Tower",
+      "Tree house"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0cnyhnx": {
+    "display_name": "Bull",
+    "sam3_prompt_text": "bull",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/01j3zr": {
+    "display_name": "Burrito",
+    "sam3_prompt_text": "burrito",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/01bjv": {
+    "display_name": "Bus",
+    "sam3_prompt_text": "bus",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/04yqq2": {
+    "display_name": "Bust",
+    "sam3_prompt_text": "bust",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/06msq"
+    ],
+    "parent_names": [
+      "Sculpture"
+    ]
+  },
+  "/m/0cyf8": {
+    "display_name": "Butterfly",
+    "sam3_prompt_text": "butterfly",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0d_2m"
+    ],
+    "parent_names": [
+      "Moths and butterflies"
+    ]
+  },
+  "/m/0fbw6": {
+    "display_name": "Cabbage",
+    "sam3_prompt_text": "cabbage",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/01s105": {
+    "display_name": "Cabinetry",
+    "sam3_prompt_text": "cabinetry",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/0fszt": {
+    "display_name": "Cake",
+    "sam3_prompt_text": "cake",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0270h"
+    ],
+    "parent_names": [
+      "Dessert"
+    ]
+  },
+  "/m/0h8n6ft": {
+    "display_name": "Cake stand",
+    "sam3_prompt_text": "cake stand",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/024d2": {
+    "display_name": "Calculator",
+    "sam3_prompt_text": "calculator",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/01x_v": {
+    "display_name": "Camel",
+    "sam3_prompt_text": "camel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/0dv5r": {
+    "display_name": "Camera",
+    "sam3_prompt_text": "camera",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/02mqfb": {
+    "display_name": "Can opener",
+    "sam3_prompt_text": "can opener",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/0ccs93": {
+    "display_name": "Canary",
+    "sam3_prompt_text": "canary",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/0c06p": {
+    "display_name": "Candle",
+    "sam3_prompt_text": "candle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0gm28": {
+    "display_name": "Candy",
+    "sam3_prompt_text": "candy",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0270h"
+    ],
+    "parent_names": [
+      "Dessert"
+    ]
+  },
+  "/m/020kz": {
+    "display_name": "Cannon",
+    "sam3_prompt_text": "cannon",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Weapon"
+    ]
+  },
+  "/m/0ph39": {
+    "display_name": "Canoe",
+    "sam3_prompt_text": "canoe",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019jd"
+    ],
+    "parent_names": [
+      "Boat"
+    ]
+  },
+  "/m/0kpt_": {
+    "display_name": "Cantaloupe",
+    "sam3_prompt_text": "cantaloupe",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0k4j": {
+    "display_name": "Car",
+    "sam3_prompt_text": "car",
+    "children": [
+      "/m/01lcw4",
+      "/m/0h2r6"
+    ],
+    "child_names": [
+      "Limousine",
+      "Van"
+    ],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/01lrl": {
+    "display_name": "Carnivore",
+    "sam3_prompt_text": "carnivore",
+    "children": [
+      "/m/01dws",
+      "/m/01yrx",
+      "/m/0cd4d",
+      "/m/0bt9lr",
+      "/m/0306r",
+      "/m/0449p",
+      "/m/0c29q",
+      "/m/096mb",
+      "/m/04g2r",
+      "/m/0cn6p",
+      "/m/0dq75",
+      "/m/06l9r",
+      "/m/07dm6"
+    ],
+    "child_names": [
+      "Bear",
+      "Cat",
+      "Cheetah",
+      "Dog",
+      "Fox",
+      "Jaguar (Animal)",
+      "Leopard",
+      "Lion",
+      "Lynx",
+      "Otter",
+      "Raccoon",
+      "Red panda",
+      "Tiger"
+    ],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/0fj52s": {
+    "display_name": "Carrot",
+    "sam3_prompt_text": "carrot",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/018p4k": {
+    "display_name": "Cart",
+    "sam3_prompt_text": "cart",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/01432t": {
+    "display_name": "Cassette deck",
+    "sam3_prompt_text": "cassette deck",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0d5gx": {
+    "display_name": "Castle",
+    "sam3_prompt_text": "castle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0cgh4"
+    ],
+    "parent_names": [
+      "Building"
+    ]
+  },
+  "/m/01yrx": {
+    "display_name": "Cat",
+    "sam3_prompt_text": "cat",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/0h8nm9j": {
+    "display_name": "Cat furniture",
+    "sam3_prompt_text": "cat furniture",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0cydv": {
+    "display_name": "Caterpillar",
+    "sam3_prompt_text": "caterpillar",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0d_2m"
+    ],
+    "parent_names": [
+      "Moths and butterflies"
+    ]
+  },
+  "/m/01xq0k1": {
+    "display_name": "Cattle",
+    "sam3_prompt_text": "cattle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/03ldnb": {
+    "display_name": "Ceiling fan",
+    "sam3_prompt_text": "ceiling fan",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/01xqw": {
+    "display_name": "Cello",
+    "sam3_prompt_text": "cello",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/019h78": {
+    "display_name": "Centipede",
+    "sam3_prompt_text": "centipede",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03xxp"
+    ],
+    "parent_names": [
+      "Invertebrate"
+    ]
+  },
+  "/m/01j4z9": {
+    "display_name": "Chainsaw",
+    "sam3_prompt_text": "chainsaw",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/01mzpv": {
+    "display_name": "Chair",
+    "sam3_prompt_text": "chair",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/01nkt": {
+    "display_name": "Cheese",
+    "sam3_prompt_text": "cheese",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0284d"
+    ],
+    "parent_names": [
+      "Dairy Product"
+    ]
+  },
+  "/m/0cd4d": {
+    "display_name": "Cheetah",
+    "sam3_prompt_text": "cheetah",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/05kyg_": {
+    "display_name": "Chest of drawers",
+    "sam3_prompt_text": "chest of drawers",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/09b5t": {
+    "display_name": "Chicken",
+    "sam3_prompt_text": "chicken",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/0f8s22": {
+    "display_name": "Chime",
+    "sam3_prompt_text": "chime",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/0_dqb": {
+    "display_name": "Chisel",
+    "sam3_prompt_text": "chisel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/01_5g": {
+    "display_name": "Chopsticks",
+    "sam3_prompt_text": "chopsticks",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c",
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Kitchen utensil",
+      "Tableware"
+    ]
+  },
+  "/m/025nd": {
+    "display_name": "Christmas tree",
+    "sam3_prompt_text": "christmas tree",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07j7r"
+    ],
+    "parent_names": [
+      "Tree"
+    ]
+  },
+  "/m/01x3z": {
+    "display_name": "Clock",
+    "sam3_prompt_text": "clock",
+    "children": [
+      "/m/046dlr",
+      "/m/06_72j",
+      "/m/0h8mzrc"
+    ],
+    "child_names": [
+      "Alarm clock",
+      "Digital clock",
+      "Wall clock"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0d4w1": {
+    "display_name": "Closet",
+    "sam3_prompt_text": "closet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/09j2d": {
+    "display_name": "Clothing",
+    "sam3_prompt_text": "clothing",
+    "children": [
+      "/m/01gmv2",
+      "/m/01xygc",
+      "/m/01d40f",
+      "/m/0463sg",
+      "/m/09j5n",
+      "/m/02dl1y",
+      "/m/0zvk5",
+      "/m/032b3c",
+      "/m/0hf58v5",
+      "/m/02h19r",
+      "/m/01n4qj",
+      "/m/01bfm9",
+      "/m/02wv6h6",
+      "/m/0h8mhzd",
+      "/m/01xyhv",
+      "/m/04tn4x",
+      "/m/01gkx_",
+      "/m/01krhy",
+      "/m/07mhn"
+    ],
+    "child_names": [
+      "Brassiere",
+      "Coat",
+      "Dress",
+      "Fashion accessory",
+      "Footwear",
+      "Hat",
+      "Helmet",
+      "Jacket",
+      "Luggage and bags",
+      "Scarf",
+      "Shirt",
+      "Shorts",
+      "Skirt",
+      "Sports uniform",
+      "Suit",
+      "Swim cap",
+      "Swimwear",
+      "Tiara",
+      "Trousers"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01xygc": {
+    "display_name": "Coat",
+    "sam3_prompt_text": "coat",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/024g6": {
+    "display_name": "Cocktail",
+    "sam3_prompt_text": "cocktail",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0271t"
+    ],
+    "parent_names": [
+      "Drink"
+    ]
+  },
+  "/m/0440zs": {
+    "display_name": "Cocktail shaker",
+    "sam3_prompt_text": "cocktail shaker",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/0djtd": {
+    "display_name": "Coconut",
+    "sam3_prompt_text": "coconut",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/02vqfm": {
+    "display_name": "Coffee (drink)",
+    "sam3_prompt_text": "coffee",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0271t"
+    ],
+    "parent_names": [
+      "Drink"
+    ]
+  },
+  "/m/02p5f1q": {
+    "display_name": "Coffee cup",
+    "sam3_prompt_text": "coffee cup",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/078n6m": {
+    "display_name": "Coffee table",
+    "sam3_prompt_text": "table",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04bcr3"
+    ],
+    "parent_names": [
+      "Table"
+    ]
+  },
+  "/m/07xyvk": {
+    "display_name": "Coffeemaker",
+    "sam3_prompt_text": "coffeemaker",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1",
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Home appliance",
+      "Kitchen appliance"
+    ]
+  },
+  "/m/0242l": {
+    "display_name": "Coin",
+    "sam3_prompt_text": "coin",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/043nyj": {
+    "display_name": "Common fig",
+    "sam3_prompt_text": "common fig",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0ftb8": {
+    "display_name": "Common sunflower",
+    "sam3_prompt_text": "common sunflower",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c9ph5"
+    ],
+    "parent_names": [
+      "Flower"
+    ]
+  },
+  "/m/01m2v": {
+    "display_name": "Computer keyboard",
+    "sam3_prompt_text": "keyboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/02522": {
+    "display_name": "Computer monitor",
+    "sam3_prompt_text": "monitor",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/020lf": {
+    "display_name": "Computer mouse",
+    "sam3_prompt_text": "mouse",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/011q46kg": {
+    "display_name": "Container",
+    "sam3_prompt_text": "container",
+    "children": [
+      "/m/02zn6n",
+      "/m/0d20w4",
+      "/m/04dr76w",
+      "/m/0fm3zh",
+      "/m/08hvt4",
+      "/m/07kng9",
+      "/m/02jnhm",
+      "/m/0bjyj5"
+    ],
+    "child_names": [
+      "Barrel",
+      "Beaker",
+      "Bottle",
+      "Flowerpot",
+      "Jug",
+      "Picnic basket",
+      "Tin can",
+      "Waste container"
+    ],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/0crjs": {
+    "display_name": "Convenience store",
+    "sam3_prompt_text": "convenience store",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0cgh4"
+    ],
+    "parent_names": [
+      "Building"
+    ]
+  },
+  "/m/021mn": {
+    "display_name": "Cookie",
+    "sam3_prompt_text": "cookie",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/052lwg6",
+      "/m/0270h",
+      "/m/01ww8y"
+    ],
+    "parent_names": [
+      "Baked goods",
+      "Dessert",
+      "Snack"
+    ]
+  },
+  "/m/07mcwg": {
+    "display_name": "Cooking spray",
+    "sam3_prompt_text": "cooking spray",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0h8lkj8": {
+    "display_name": "Corded phone",
+    "sam3_prompt_text": "corded phone",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07cx4"
+    ],
+    "parent_names": [
+      "Telephone"
+    ]
+  },
+  "/m/014trl": {
+    "display_name": "Cosmetics",
+    "sam3_prompt_text": "cosmetics",
+    "children": [
+      "/m/02xb7qb",
+      "/m/05w9t9",
+      "/m/06c7f7",
+      "/m/0p833"
+    ],
+    "child_names": [
+      "Face powder",
+      "Hair spray",
+      "Lipstick",
+      "Perfume"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/02crq1": {
+    "display_name": "Couch",
+    "sam3_prompt_text": "couch",
+    "children": [
+      "/m/0703r8",
+      "/m/03m3pdh"
+    ],
+    "child_names": [
+      "Loveseat",
+      "Sofa bed"
+    ],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/0b3fp9": {
+    "display_name": "Countertop",
+    "sam3_prompt_text": "countertop",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/025rp__": {
+    "display_name": "Cowboy hat",
+    "sam3_prompt_text": "hat",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02dl1y"
+    ],
+    "parent_names": [
+      "Hat"
+    ]
+  },
+  "/m/0n28_": {
+    "display_name": "Crab",
+    "sam3_prompt_text": "crab",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hl4l9",
+      "/m/0fbdv"
+    ],
+    "parent_names": [
+      "Marine invertebrates",
+      "Shellfish"
+    ]
+  },
+  "/m/08p92x": {
+    "display_name": "Cream",
+    "sam3_prompt_text": "cream",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02w3_ws"
+    ],
+    "parent_names": [
+      "Personal care"
+    ]
+  },
+  "/m/02ctlc": {
+    "display_name": "Cricket ball",
+    "sam3_prompt_text": "ball",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/018xm"
+    ],
+    "parent_names": [
+      "Ball (Object)"
+    ]
+  },
+  "/m/09f_2": {
+    "display_name": "Crocodile",
+    "sam3_prompt_text": "crocodile",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/06bt6"
+    ],
+    "parent_names": [
+      "Reptile"
+    ]
+  },
+  "/m/015wgc": {
+    "display_name": "Croissant",
+    "sam3_prompt_text": "croissant",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0hnyx"
+    ],
+    "parent_names": [
+      "Pastry"
+    ]
+  },
+  "/m/0nl46": {
+    "display_name": "Crown",
+    "sam3_prompt_text": "crown",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/05441v": {
+    "display_name": "Crutch",
+    "sam3_prompt_text": "crutch",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02w3_ws"
+    ],
+    "parent_names": [
+      "Personal care"
+    ]
+  },
+  "/m/015x4r": {
+    "display_name": "Cucumber",
+    "sam3_prompt_text": "cucumber",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/0642b4": {
+    "display_name": "Cupboard",
+    "sam3_prompt_text": "cupboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/03rszm": {
+    "display_name": "Curtain",
+    "sam3_prompt_text": "curtain",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/02pdsw": {
+    "display_name": "Cutting board",
+    "sam3_prompt_text": "cutting board",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/02gzp": {
+    "display_name": "Dagger",
+    "sam3_prompt_text": "dagger",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Weapon"
+    ]
+  },
+  "/m/0284d": {
+    "display_name": "Dairy Product",
+    "sam3_prompt_text": "dairy product",
+    "children": [
+      "/m/01nkt",
+      "/m/04zpv"
+    ],
+    "child_names": [
+      "Cheese",
+      "Milk"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/09kx5": {
+    "display_name": "Deer",
+    "sam3_prompt_text": "deer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/01y9k5": {
+    "display_name": "Desk",
+    "sam3_prompt_text": "desk",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/0270h": {
+    "display_name": "Dessert",
+    "sam3_prompt_text": "dessert",
+    "children": [
+      "/m/0fszt",
+      "/m/0gm28",
+      "/m/021mn",
+      "/m/0cxn2",
+      "/m/01tcjp"
+    ],
+    "child_names": [
+      "Cake",
+      "Candy",
+      "Cookie",
+      "Ice cream",
+      "Muffin"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0f571": {
+    "display_name": "Diaper",
+    "sam3_prompt_text": "diaper",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02w3_ws"
+    ],
+    "parent_names": [
+      "Personal care"
+    ]
+  },
+  "/m/029b3": {
+    "display_name": "Dice",
+    "sam3_prompt_text": "dice",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0138tl"
+    ],
+    "parent_names": [
+      "Toy"
+    ]
+  },
+  "/m/06_72j": {
+    "display_name": "Digital clock",
+    "sam3_prompt_text": "clock",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01x3z"
+    ],
+    "parent_names": [
+      "Clock"
+    ]
+  },
+  "/m/029tx": {
+    "display_name": "Dinosaur",
+    "sam3_prompt_text": "dinosaur",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/06bt6"
+    ],
+    "parent_names": [
+      "Reptile"
+    ]
+  },
+  "/m/0ky7b": {
+    "display_name": "Dishwasher",
+    "sam3_prompt_text": "dishwasher",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1",
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Home appliance",
+      "Kitchen appliance"
+    ]
+  },
+  "/m/0bt9lr": {
+    "display_name": "Dog",
+    "sam3_prompt_text": "dog",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/0h8n6f9": {
+    "display_name": "Dog bed",
+    "sam3_prompt_text": "dog bed",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0167gd": {
+    "display_name": "Doll",
+    "sam3_prompt_text": "doll",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0138tl"
+    ],
+    "parent_names": [
+      "Toy"
+    ]
+  },
+  "/m/02hj4": {
+    "display_name": "Dolphin",
+    "sam3_prompt_text": "dolphin",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0gd2v"
+    ],
+    "parent_names": [
+      "Marine mammal"
+    ]
+  },
+  "/m/02dgv": {
+    "display_name": "Door",
+    "sam3_prompt_text": "door",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03c7gz": {
+    "display_name": "Door handle",
+    "sam3_prompt_text": "door handle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0jy4k": {
+    "display_name": "Doughnut",
+    "sam3_prompt_text": "doughnut",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0hnyx"
+    ],
+    "parent_names": [
+      "Pastry"
+    ]
+  },
+  "/m/0ft9s": {
+    "display_name": "Dragonfly",
+    "sam3_prompt_text": "dragonfly",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03vt0"
+    ],
+    "parent_names": [
+      "Insect"
+    ]
+  },
+  "/m/0fqfqc": {
+    "display_name": "Drawer",
+    "sam3_prompt_text": "drawer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/01d40f": {
+    "display_name": "Dress",
+    "sam3_prompt_text": "dress",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/01d380": {
+    "display_name": "Drill (Tool)",
+    "sam3_prompt_text": "drill",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/0271t": {
+    "display_name": "Drink",
+    "sam3_prompt_text": "drink",
+    "children": [
+      "/m/01599",
+      "/m/024g6",
+      "/m/02vqfm",
+      "/m/01z1kdw",
+      "/m/07clx",
+      "/m/081qc"
+    ],
+    "child_names": [
+      "Beer",
+      "Cocktail",
+      "Coffee (drink)",
+      "Juice",
+      "Tea",
+      "Wine"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03v5tg": {
+    "display_name": "Drinking straw",
+    "sam3_prompt_text": "drinking straw",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/026t6": {
+    "display_name": "Drum",
+    "sam3_prompt_text": "drum",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/09ddx": {
+    "display_name": "Duck",
+    "sam3_prompt_text": "duck",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/04h8sr": {
+    "display_name": "Dumbbell",
+    "sam3_prompt_text": "dumbbell",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/09csl": {
+    "display_name": "Eagle",
+    "sam3_prompt_text": "eagle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/01r546": {
+    "display_name": "Earring",
+    "sam3_prompt_text": "earring",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/033cnk": {
+    "display_name": "Egg",
+    "sam3_prompt_text": "egg",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0bwd_0j": {
+    "display_name": "Elephant",
+    "sam3_prompt_text": "elephant",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/0frqm": {
+    "display_name": "Envelope",
+    "sam3_prompt_text": "envelope",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/02fh7f": {
+    "display_name": "Eraser",
+    "sam3_prompt_text": "eraser",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/02xb7qb": {
+    "display_name": "Face powder",
+    "sam3_prompt_text": "face powder",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/014trl"
+    ],
+    "parent_names": [
+      "Cosmetics"
+    ]
+  },
+  "/m/0h8nsvg": {
+    "display_name": "Facial tissue holder",
+    "sam3_prompt_text": "facial tissue holder",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0h8nr_l"
+    ],
+    "parent_names": [
+      "Bathroom accessory"
+    ]
+  },
+  "/m/0f6wt": {
+    "display_name": "Falcon",
+    "sam3_prompt_text": "falcon",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/0463sg": {
+    "display_name": "Fashion accessory",
+    "sam3_prompt_text": "fashion accessory",
+    "children": [
+      "/m/0176mf",
+      "/m/0nl46",
+      "/m/01r546",
+      "/m/0jyfg",
+      "/m/0174n1",
+      "/m/02_n6y",
+      "/m/080hkjn",
+      "/m/02dl1y",
+      "/m/01llwg",
+      "/m/02h19r",
+      "/m/01nq26",
+      "/m/017ftj",
+      "/m/01krhy",
+      "/m/01rkbr",
+      "/m/0hnnb",
+      "/m/0gjkl"
+    ],
+    "child_names": [
+      "Belt",
+      "Crown",
+      "Earring",
+      "Glasses",
+      "Glove",
+      "Goggles",
+      "Handbag",
+      "Hat",
+      "Necklace",
+      "Scarf",
+      "Sock",
+      "Sunglasses",
+      "Tiara",
+      "Tie",
+      "Umbrella",
+      "Watch"
+    ],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/01_bhs": {
+    "display_name": "Fast food",
+    "sam3_prompt_text": "food",
+    "children": [
+      "/m/02y6n",
+      "/m/01b9xk"
+    ],
+    "child_names": [
+      "French fries",
+      "Hot dog"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/02xqq": {
+    "display_name": "Fax",
+    "sam3_prompt_text": "fax",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/02fq_6": {
+    "display_name": "Fedora",
+    "sam3_prompt_text": "fedora",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02dl1y"
+    ],
+    "parent_names": [
+      "Hat"
+    ]
+  },
+  "/m/047j0r": {
+    "display_name": "Filing cabinet",
+    "sam3_prompt_text": "filing cabinet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/01pns0": {
+    "display_name": "Fire hydrant",
+    "sam3_prompt_text": "fire hydrant",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03tw93": {
+    "display_name": "Fireplace",
+    "sam3_prompt_text": "fireplace",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0ch_cf": {
+    "display_name": "Fish",
+    "sam3_prompt_text": "fish",
+    "children": [
+      "/m/03fj2",
+      "/m/0m53l",
+      "/m/0nybt",
+      "/m/0by6g"
+    ],
+    "child_names": [
+      "Goldfish",
+      "Rays and skates",
+      "Seahorse",
+      "Shark"
+    ],
+    "parents": [
+      "/m/0jbk"
+    ],
+    "parent_names": [
+      "Animal"
+    ]
+  },
+  "/m/0cmf2": {
+    "display_name": "Fixed-wing aircraft",
+    "sam3_prompt_text": "aircraft",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0k5j"
+    ],
+    "parent_names": [
+      "Aircraft"
+    ]
+  },
+  "/m/03120": {
+    "display_name": "Flag",
+    "sam3_prompt_text": "flag",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01kb5b": {
+    "display_name": "Flashlight",
+    "sam3_prompt_text": "flashlight",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/0c9ph5": {
+    "display_name": "Flower",
+    "sam3_prompt_text": "flower",
+    "children": [
+      "/m/0ftb8",
+      "/m/04gth",
+      "/m/0jqgx",
+      "/m/06m11"
+    ],
+    "child_names": [
+      "Common sunflower",
+      "Lavender (Plant)",
+      "Lily",
+      "Rose"
+    ],
+    "parents": [
+      "/m/05s2s"
+    ],
+    "parent_names": [
+      "Plant"
+    ]
+  },
+  "/m/0fm3zh": {
+    "display_name": "Flowerpot",
+    "sam3_prompt_text": "flowerpot",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/011q46kg"
+    ],
+    "parent_names": [
+      "Container"
+    ]
+  },
+  "/m/0l14j_": {
+    "display_name": "Flute",
+    "sam3_prompt_text": "flute",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/02wmf": {
+    "display_name": "Flying disc",
+    "sam3_prompt_text": "flying disc",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj",
+      "/m/0138tl"
+    ],
+    "parent_names": [
+      "Sports equipment",
+      "Toy"
+    ]
+  },
+  "/m/02wbm": {
+    "display_name": "Food",
+    "sam3_prompt_text": "food",
+    "children": [
+      "/m/052lwg6",
+      "/m/01j3zr",
+      "/m/07mcwg",
+      "/m/0284d",
+      "/m/0270h",
+      "/m/033cnk",
+      "/m/01_bhs",
+      "/m/02xwb",
+      "/m/02g30s",
+      "/m/0fz0h",
+      "/m/052sf",
+      "/m/01dwwc",
+      "/m/05z55",
+      "/m/0663v",
+      "/m/0l515",
+      "/m/06nwz",
+      "/m/01ww8y",
+      "/m/07030",
+      "/m/07crc",
+      "/m/0f4s2w",
+      "/m/01dwsz"
+    ],
+    "child_names": [
+      "Baked goods",
+      "Burrito",
+      "Cooking spray",
+      "Dairy Product",
+      "Dessert",
+      "Egg",
+      "Fast food",
+      "Fruit",
+      "Guacamole",
+      "Honeycomb",
+      "Mushroom",
+      "Pancake",
+      "Pasta",
+      "Pizza",
+      "Sandwich",
+      "Seafood",
+      "Snack",
+      "Sushi",
+      "Taco",
+      "Vegetable",
+      "Waffle"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03y6mg": {
+    "display_name": "Food processor",
+    "sam3_prompt_text": "food processor",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Kitchen appliance"
+    ]
+  },
+  "/m/01226z": {
+    "display_name": "Football",
+    "sam3_prompt_text": "football",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/018xm"
+    ],
+    "parent_names": [
+      "Ball (Object)"
+    ]
+  },
+  "/m/07qxg_": {
+    "display_name": "Football helmet",
+    "sam3_prompt_text": "helmet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0zvk5"
+    ],
+    "parent_names": [
+      "Helmet"
+    ]
+  },
+  "/m/09j5n": {
+    "display_name": "Footwear",
+    "sam3_prompt_text": "footwear",
+    "children": [
+      "/m/01b638",
+      "/m/06k2mb",
+      "/m/02p3w7d",
+      "/m/03nfch"
+    ],
+    "child_names": [
+      "Boot",
+      "High heels",
+      "Roller skates",
+      "Sandal"
+    ],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/0dt3t": {
+    "display_name": "Fork",
+    "sam3_prompt_text": "fork",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c",
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Kitchen utensil",
+      "Tableware"
+    ]
+  },
+  "/m/0220r2": {
+    "display_name": "Fountain",
+    "sam3_prompt_text": "fountain",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0306r": {
+    "display_name": "Fox",
+    "sam3_prompt_text": "fox",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/02y6n": {
+    "display_name": "French fries",
+    "sam3_prompt_text": "french fries",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01_bhs"
+    ],
+    "parent_names": [
+      "Fast food"
+    ]
+  },
+  "/m/0319l": {
+    "display_name": "French horn",
+    "sam3_prompt_text": "french horn",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/09ld4": {
+    "display_name": "Frog",
+    "sam3_prompt_text": "frog",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/06bt6"
+    ],
+    "parent_names": [
+      "Reptile"
+    ]
+  },
+  "/m/02xwb": {
+    "display_name": "Fruit",
+    "sam3_prompt_text": "fruit",
+    "children": [
+      "/m/014j1m",
+      "/m/09qck",
+      "/m/0kpt_",
+      "/m/043nyj",
+      "/m/0388q",
+      "/m/0hqkz",
+      "/m/09k_b",
+      "/m/0fldg",
+      "/m/0cyhj_",
+      "/m/0dj6p",
+      "/m/061_f",
+      "/m/0fp6w",
+      "/m/0jwn_",
+      "/m/07fbm7",
+      "/m/07j87",
+      "/m/0kpqd"
+    ],
+    "child_names": [
+      "Apple",
+      "Banana",
+      "Cantaloupe",
+      "Common fig",
+      "Grape",
+      "Grapefruit",
+      "Lemon (plant)",
+      "Mango",
+      "Orange (fruit)",
+      "Peach",
+      "Pear",
+      "Pineapple",
+      "Pomegranate",
+      "Strawberry",
+      "Tomato",
+      "Watermelon"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/04v6l4": {
+    "display_name": "Frying pan",
+    "sam3_prompt_text": "frying pan",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03_wxk"
+    ],
+    "parent_names": [
+      "Kitchenware"
+    ]
+  },
+  "/m/0c_jw": {
+    "display_name": "Furniture",
+    "sam3_prompt_text": "furniture",
+    "children": [
+      "/m/04y4h8h",
+      "/m/03ssj5",
+      "/m/0cvnqh",
+      "/m/03__z0",
+      "/m/01s105",
+      "/m/01mzpv",
+      "/m/05kyg_",
+      "/m/0d4w1",
+      "/m/02crq1",
+      "/m/0642b4",
+      "/m/01y9k5",
+      "/m/0fqfqc",
+      "/m/047j0r",
+      "/m/02z51p",
+      "/m/0gjbg72",
+      "/m/0fqt361",
+      "/m/04bcr3",
+      "/m/0h8mzrc",
+      "/m/02vkqh8",
+      "/m/0271qf7"
+    ],
+    "child_names": [
+      "Bathroom cabinet",
+      "Bed",
+      "Bench",
+      "Bookcase",
+      "Cabinetry",
+      "Chair",
+      "Chest of drawers",
+      "Closet",
+      "Couch",
+      "Cupboard",
+      "Desk",
+      "Drawer",
+      "Filing cabinet",
+      "Nightstand",
+      "Shelf",
+      "Stool",
+      "Table",
+      "Wall clock",
+      "Wardrobe",
+      "Wine rack"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0cjs7": {
+    "display_name": "Garden Asparagus",
+    "sam3_prompt_text": "garden asparagus",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/02wv84t": {
+    "display_name": "Gas stove",
+    "sam3_prompt_text": "gas stove",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/03bk1": {
+    "display_name": "Giraffe",
+    "sam3_prompt_text": "giraffe",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/05r655": {
+    "display_name": "Girl",
+    "sam3_prompt_text": "person",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01g317"
+    ],
+    "parent_names": [
+      "Person"
+    ]
+  },
+  "/m/0jyfg": {
+    "display_name": "Glasses",
+    "sam3_prompt_text": "glasses",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg",
+      "/m/02w3_ws"
+    ],
+    "parent_names": [
+      "Fashion accessory",
+      "Personal care"
+    ]
+  },
+  "/m/0174n1": {
+    "display_name": "Glove",
+    "sam3_prompt_text": "glove",
+    "children": [
+      "/m/03grzl"
+    ],
+    "child_names": [
+      "Baseball glove"
+    ],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/03fwl": {
+    "display_name": "Goat",
+    "sam3_prompt_text": "goat",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/02_n6y": {
+    "display_name": "Goggles",
+    "sam3_prompt_text": "goggles",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg",
+      "/m/02w3_ws"
+    ],
+    "parent_names": [
+      "Fashion accessory",
+      "Personal care"
+    ]
+  },
+  "/m/03fj2": {
+    "display_name": "Goldfish",
+    "sam3_prompt_text": "goldfish",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0ch_cf"
+    ],
+    "parent_names": [
+      "Fish"
+    ]
+  },
+  "/m/044r5d": {
+    "display_name": "Golf ball",
+    "sam3_prompt_text": "ball",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/0323sq": {
+    "display_name": "Golf cart",
+    "sam3_prompt_text": "cart",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/02068x": {
+    "display_name": "Gondola",
+    "sam3_prompt_text": "gondola",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019jd"
+    ],
+    "parent_names": [
+      "Boat"
+    ]
+  },
+  "/m/0dbvp": {
+    "display_name": "Goose",
+    "sam3_prompt_text": "goose",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/0388q": {
+    "display_name": "Grape",
+    "sam3_prompt_text": "grape",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0hqkz": {
+    "display_name": "Grapefruit",
+    "sam3_prompt_text": "grapefruit",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0h8jyh6": {
+    "display_name": "Grinder",
+    "sam3_prompt_text": "grinder",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/02g30s": {
+    "display_name": "Guacamole",
+    "sam3_prompt_text": "guacamole",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0342h": {
+    "display_name": "Guitar",
+    "sam3_prompt_text": "guitar",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/03wvsk": {
+    "display_name": "Hair dryer",
+    "sam3_prompt_text": "hair dryer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/05w9t9": {
+    "display_name": "Hair spray",
+    "sam3_prompt_text": "hair spray",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/014trl"
+    ],
+    "parent_names": [
+      "Cosmetics"
+    ]
+  },
+  "/m/0cdn1": {
+    "display_name": "Hamburger",
+    "sam3_prompt_text": "hamburger",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0l515"
+    ],
+    "parent_names": [
+      "Sandwich"
+    ]
+  },
+  "/m/03l9g": {
+    "display_name": "Hammer",
+    "sam3_prompt_text": "hammer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/03qrc": {
+    "display_name": "Hamster",
+    "sam3_prompt_text": "hamster",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/0c3m8g": {
+    "display_name": "Hand dryer",
+    "sam3_prompt_text": "dryer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/080hkjn": {
+    "display_name": "Handbag",
+    "sam3_prompt_text": "handbag",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg",
+      "/m/0hf58v5"
+    ],
+    "parent_names": [
+      "Fashion accessory",
+      "Luggage and bags"
+    ]
+  },
+  "/m/0gxl3": {
+    "display_name": "Handgun",
+    "sam3_prompt_text": "handgun",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Weapon"
+    ]
+  },
+  "/m/02l8p9": {
+    "display_name": "Harbor seal",
+    "sam3_prompt_text": "harbor seal",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0gd2v"
+    ],
+    "parent_names": [
+      "Marine mammal"
+    ]
+  },
+  "/m/03qjg": {
+    "display_name": "Harmonica",
+    "sam3_prompt_text": "harmonica",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/03m5k": {
+    "display_name": "Harp",
+    "sam3_prompt_text": "harp",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/03q5t": {
+    "display_name": "Harpsichord",
+    "sam3_prompt_text": "harpsichord",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/02dl1y": {
+    "display_name": "Hat",
+    "sam3_prompt_text": "hat",
+    "children": [
+      "/m/025rp__",
+      "/m/02fq_6",
+      "/m/02jfl0",
+      "/m/02wbtzl"
+    ],
+    "child_names": [
+      "Cowboy hat",
+      "Fedora",
+      "Sombrero",
+      "Sun hat"
+    ],
+    "parents": [
+      "/m/09j2d",
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Clothing",
+      "Fashion accessory"
+    ]
+  },
+  "/m/01b7fy": {
+    "display_name": "Headphones",
+    "sam3_prompt_text": "headphones",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03qhv5": {
+    "display_name": "Heater",
+    "sam3_prompt_text": "heater",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/0cl4p": {
+    "display_name": "Hedgehog",
+    "sam3_prompt_text": "hedgehog",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/09ct_": {
+    "display_name": "Helicopter",
+    "sam3_prompt_text": "helicopter",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0k5j"
+    ],
+    "parent_names": [
+      "Aircraft"
+    ]
+  },
+  "/m/0zvk5": {
+    "display_name": "Helmet",
+    "sam3_prompt_text": "helmet",
+    "children": [
+      "/m/03p3bw",
+      "/m/07qxg_"
+    ],
+    "child_names": [
+      "Bicycle helmet",
+      "Football helmet"
+    ],
+    "parents": [
+      "/m/09j2d",
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Clothing",
+      "Sports equipment"
+    ]
+  },
+  "/m/06k2mb": {
+    "display_name": "High heels",
+    "sam3_prompt_text": "high heels",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j5n"
+    ],
+    "parent_names": [
+      "Footwear"
+    ]
+  },
+  "/m/0268lbt": {
+    "display_name": "Hiking equipment",
+    "sam3_prompt_text": "hiking equipment",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/09f20": {
+    "display_name": "Hippopotamus",
+    "sam3_prompt_text": "hippopotamus",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/019dx1": {
+    "display_name": "Home appliance",
+    "sam3_prompt_text": "home appliance",
+    "children": [
+      "/m/02pjr4",
+      "/m/03ldnb",
+      "/m/07xyvk",
+      "/m/0ky7b",
+      "/m/02wv84t",
+      "/m/03wvsk",
+      "/m/0c3m8g",
+      "/m/03qhv5",
+      "/m/04lvq_",
+      "/m/03s_tn",
+      "/m/02x984l",
+      "/m/0fx9l",
+      "/m/063rgb",
+      "/m/029bxz",
+      "/m/040b_t",
+      "/m/0llzx",
+      "/m/01k6s3",
+      "/m/0174k2",
+      "/m/04169hn"
+    ],
+    "child_names": [
+      "Blender",
+      "Ceiling fan",
+      "Coffeemaker",
+      "Dishwasher",
+      "Gas stove",
+      "Hair dryer",
+      "Hand dryer",
+      "Heater",
+      "Humidifier",
+      "Kettle",
+      "Mechanical fan",
+      "Microwave oven",
+      "Mixer",
+      "Oven",
+      "Refrigerator",
+      "Sewing machine",
+      "Toaster",
+      "Washing machine",
+      "Wood-burning stove"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0fz0h": {
+    "display_name": "Honeycomb",
+    "sam3_prompt_text": "honeycomb",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0cqn2": {
+    "display_name": "Horizontal bar",
+    "sam3_prompt_text": "horizontal bar",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/03k3r": {
+    "display_name": "Horse",
+    "sam3_prompt_text": "horse",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/01b9xk": {
+    "display_name": "Hot dog",
+    "sam3_prompt_text": "hot dog",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01_bhs"
+    ],
+    "parent_names": [
+      "Fast food"
+    ]
+  },
+  "/m/03jm5": {
+    "display_name": "House",
+    "sam3_prompt_text": "house",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0cgh4"
+    ],
+    "parent_names": [
+      "Building"
+    ]
+  },
+  "/m/03fp41": {
+    "display_name": "Houseplant",
+    "sam3_prompt_text": "houseplant",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05s2s"
+    ],
+    "parent_names": [
+      "Plant"
+    ]
+  },
+  "/m/0dzf4": {
+    "display_name": "Human arm",
+    "sam3_prompt_text": "arm",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/02p0tk3": {
+    "display_name": "Human body",
+    "sam3_prompt_text": "body",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/039xj_": {
+    "display_name": "Human ear",
+    "sam3_prompt_text": "ear",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/014sv8": {
+    "display_name": "Human eye",
+    "sam3_prompt_text": "eye",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0dzct": {
+    "display_name": "Human face",
+    "sam3_prompt_text": "face",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/031n1": {
+    "display_name": "Human foot",
+    "sam3_prompt_text": "foot",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03q69": {
+    "display_name": "Human hair",
+    "sam3_prompt_text": "hair",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0k65p": {
+    "display_name": "Human hand",
+    "sam3_prompt_text": "hand",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/04hgtk": {
+    "display_name": "Human head",
+    "sam3_prompt_text": "head",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/035r7c": {
+    "display_name": "Human leg",
+    "sam3_prompt_text": "leg",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0283dt1": {
+    "display_name": "Human mouth",
+    "sam3_prompt_text": "mouth",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0k0pj": {
+    "display_name": "Human nose",
+    "sam3_prompt_text": "nose",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/04lvq_": {
+    "display_name": "Humidifier",
+    "sam3_prompt_text": "humidifier",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/0cxn2": {
+    "display_name": "Ice cream",
+    "sam3_prompt_text": "ice cream",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0270h"
+    ],
+    "parent_names": [
+      "Dessert"
+    ]
+  },
+  "/m/03wym": {
+    "display_name": "Indoor rower",
+    "sam3_prompt_text": "indoor rower",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/061hd_": {
+    "display_name": "Infant bed",
+    "sam3_prompt_text": "bed",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03ssj5"
+    ],
+    "parent_names": [
+      "Bed"
+    ]
+  },
+  "/m/03vt0": {
+    "display_name": "Insect",
+    "sam3_prompt_text": "insect",
+    "children": [
+      "/m/0_k2",
+      "/m/01h3n",
+      "/m/020jm",
+      "/m/0ft9s",
+      "/m/0d_2m"
+    ],
+    "child_names": [
+      "Ant",
+      "Bee",
+      "Beetle",
+      "Dragonfly",
+      "Moths and butterflies"
+    ],
+    "parents": [
+      "/m/03xxp"
+    ],
+    "parent_names": [
+      "Invertebrate"
+    ]
+  },
+  "/m/03xxp": {
+    "display_name": "Invertebrate",
+    "sam3_prompt_text": "invertebrate",
+    "children": [
+      "/m/019h78",
+      "/m/03vt0",
+      "/m/03hl4l9",
+      "/m/0_cp5",
+      "/m/0755b",
+      "/m/0f9_l",
+      "/m/09kmb",
+      "/m/0175cv",
+      "/m/084hf"
+    ],
+    "child_names": [
+      "Centipede",
+      "Insect",
+      "Marine invertebrates",
+      "Oyster",
+      "Scorpion",
+      "Snail",
+      "Spider",
+      "Tick",
+      "Worm"
+    ],
+    "parents": [
+      "/m/0jbk"
+    ],
+    "parent_names": [
+      "Animal"
+    ]
+  },
+  "/m/0mcx2": {
+    "display_name": "Ipod",
+    "sam3_prompt_text": "ipod",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/035vxb": {
+    "display_name": "Isopod",
+    "sam3_prompt_text": "isopod",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hl4l9"
+    ],
+    "parent_names": [
+      "Marine invertebrates"
+    ]
+  },
+  "/m/032b3c": {
+    "display_name": "Jacket",
+    "sam3_prompt_text": "jacket",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/065h6l": {
+    "display_name": "Jacuzzi",
+    "sam3_prompt_text": "jacuzzi",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0449p": {
+    "display_name": "Jaguar (Animal)",
+    "sam3_prompt_text": "jaguar",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/0fly7": {
+    "display_name": "Jeans",
+    "sam3_prompt_text": "jeans",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07mhn"
+    ],
+    "parent_names": [
+      "Trousers"
+    ]
+  },
+  "/m/0d8zb": {
+    "display_name": "Jellyfish",
+    "sam3_prompt_text": "jellyfish",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hl4l9"
+    ],
+    "parent_names": [
+      "Marine invertebrates"
+    ]
+  },
+  "/m/01xs3r": {
+    "display_name": "Jet ski",
+    "sam3_prompt_text": "jet ski",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01rzcn"
+    ],
+    "parent_names": [
+      "Watercraft"
+    ]
+  },
+  "/m/08hvt4": {
+    "display_name": "Jug",
+    "sam3_prompt_text": "jug",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/011q46kg",
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Container",
+      "Tableware"
+    ]
+  },
+  "/m/01z1kdw": {
+    "display_name": "Juice",
+    "sam3_prompt_text": "juice",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0271t"
+    ],
+    "parent_names": [
+      "Drink"
+    ]
+  },
+  "/m/04c0y": {
+    "display_name": "Kangaroo",
+    "sam3_prompt_text": "kangaroo",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/03s_tn": {
+    "display_name": "Kettle",
+    "sam3_prompt_text": "kettle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/0h8n5zk": {
+    "display_name": "Kitchen & dining room table",
+    "sam3_prompt_text": "table",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04bcr3"
+    ],
+    "parent_names": [
+      "Table"
+    ]
+  },
+  "/m/0h99cwc": {
+    "display_name": "Kitchen appliance",
+    "sam3_prompt_text": "appliance",
+    "children": [
+      "/m/02pjr4",
+      "/m/07xyvk",
+      "/m/0ky7b",
+      "/m/03y6mg",
+      "/m/0fx9l",
+      "/m/063rgb",
+      "/m/029bxz",
+      "/m/0h8ntjv",
+      "/m/040b_t",
+      "/m/02tsc9",
+      "/m/04z4wx"
+    ],
+    "child_names": [
+      "Blender",
+      "Coffeemaker",
+      "Dishwasher",
+      "Food processor",
+      "Microwave oven",
+      "Mixer",
+      "Oven",
+      "Pressure cooker",
+      "Refrigerator",
+      "Slow cooker",
+      "Waffle iron"
+    ],
+    "parents": [
+      "/m/03_wxk"
+    ],
+    "parent_names": [
+      "Kitchenware"
+    ]
+  },
+  "/m/058qzx": {
+    "display_name": "Kitchen knife",
+    "sam3_prompt_text": "knife",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/03hlz0c": {
+    "display_name": "Kitchen utensil",
+    "sam3_prompt_text": "utensil",
+    "children": [
+      "/m/04f5ws",
+      "/m/02mqfb",
+      "/m/01_5g",
+      "/m/02pdsw",
+      "/m/03v5tg",
+      "/m/0dt3t",
+      "/m/04ctx",
+      "/m/027rl48",
+      "/m/07v9_z",
+      "/m/08ks85",
+      "/m/02d1br",
+      "/m/0cmx8",
+      "/m/02vwcm"
+    ],
+    "child_names": [
+      "Bottle opener",
+      "Can opener",
+      "Chopsticks",
+      "Cutting board",
+      "Drinking straw",
+      "Fork",
+      "Knife",
+      "Ladle",
+      "Measuring cup",
+      "Pizza cutter",
+      "Spatula",
+      "Spoon",
+      "Whisk"
+    ],
+    "parents": [
+      "/m/03_wxk",
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Kitchenware",
+      "Tool"
+    ]
+  },
+  "/m/03_wxk": {
+    "display_name": "Kitchenware",
+    "sam3_prompt_text": "kitchenware",
+    "children": [
+      "/m/04v6l4",
+      "/m/0h99cwc",
+      "/m/03hlz0c",
+      "/m/0h8kx63",
+      "/m/04brg2",
+      "/m/084rd"
+    ],
+    "child_names": [
+      "Frying pan",
+      "Kitchen appliance",
+      "Kitchen utensil",
+      "Spice rack",
+      "Tableware",
+      "Wok"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/02zt3": {
+    "display_name": "Kite",
+    "sam3_prompt_text": "kite",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0138tl"
+    ],
+    "parent_names": [
+      "Toy"
+    ]
+  },
+  "/m/04ctx": {
+    "display_name": "Knife",
+    "sam3_prompt_text": "knife",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c",
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Kitchen utensil",
+      "Weapon"
+    ]
+  },
+  "/m/04cp_": {
+    "display_name": "Koala",
+    "sam3_prompt_text": "koala",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/012w5l": {
+    "display_name": "Ladder",
+    "sam3_prompt_text": "ladder",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/027rl48": {
+    "display_name": "Ladle",
+    "sam3_prompt_text": "ladle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/0gj37": {
+    "display_name": "Ladybug",
+    "sam3_prompt_text": "ladybug",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/020jm"
+    ],
+    "parent_names": [
+      "Beetle"
+    ]
+  },
+  "/m/0dtln": {
+    "display_name": "Lamp",
+    "sam3_prompt_text": "lamp",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01prls": {
+    "display_name": "Land vehicle",
+    "sam3_prompt_text": "vehicle",
+    "children": [
+      "/m/012n7d",
+      "/m/0199g",
+      "/m/01bjv",
+      "/m/0k4j",
+      "/m/018p4k",
+      "/m/0323sq",
+      "/m/04_sv",
+      "/m/076bq",
+      "/m/01x3jk",
+      "/m/07cmd",
+      "/m/0pg52",
+      "/m/07jdr",
+      "/m/07r04",
+      "/m/0f6nr",
+      "/m/0qmmr"
+    ],
+    "child_names": [
+      "Ambulance",
+      "Bicycle",
+      "Bus",
+      "Car",
+      "Cart",
+      "Golf cart",
+      "Motorcycle",
+      "Segway",
+      "Snowmobile",
+      "Tank",
+      "Taxi",
+      "Train",
+      "Truck",
+      "Unicycle",
+      "Wheelchair"
+    ],
+    "parents": [
+      "/m/07yv9"
+    ],
+    "parent_names": [
+      "Vehicle"
+    ]
+  },
+  "/m/01jfsr": {
+    "display_name": "Lantern",
+    "sam3_prompt_text": "lantern",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01c648": {
+    "display_name": "Laptop",
+    "sam3_prompt_text": "laptop",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/04gth": {
+    "display_name": "Lavender (Plant)",
+    "sam3_prompt_text": "lavender",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c9ph5"
+    ],
+    "parent_names": [
+      "Flower"
+    ]
+  },
+  "/m/09k_b": {
+    "display_name": "Lemon (plant)",
+    "sam3_prompt_text": "lemon",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0c29q": {
+    "display_name": "Leopard",
+    "sam3_prompt_text": "leopard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/0h8l4fh": {
+    "display_name": "Light bulb",
+    "sam3_prompt_text": "light bulb",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/03jbxj": {
+    "display_name": "Light switch",
+    "sam3_prompt_text": "light switch",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/04h7h": {
+    "display_name": "Lighthouse",
+    "sam3_prompt_text": "lighthouse",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0cgh4"
+    ],
+    "parent_names": [
+      "Building"
+    ]
+  },
+  "/m/0jqgx": {
+    "display_name": "Lily",
+    "sam3_prompt_text": "lily",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c9ph5"
+    ],
+    "parent_names": [
+      "Flower"
+    ]
+  },
+  "/m/01lcw4": {
+    "display_name": "Limousine",
+    "sam3_prompt_text": "limousine",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0k4j"
+    ],
+    "parent_names": [
+      "Car"
+    ]
+  },
+  "/m/096mb": {
+    "display_name": "Lion",
+    "sam3_prompt_text": "lion",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/06c7f7": {
+    "display_name": "Lipstick",
+    "sam3_prompt_text": "lipstick",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/014trl"
+    ],
+    "parent_names": [
+      "Cosmetics"
+    ]
+  },
+  "/m/04m9y": {
+    "display_name": "Lizard",
+    "sam3_prompt_text": "lizard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/06bt6"
+    ],
+    "parent_names": [
+      "Reptile"
+    ]
+  },
+  "/m/0cjq5": {
+    "display_name": "Lobster",
+    "sam3_prompt_text": "lobster",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hl4l9",
+      "/m/0fbdv"
+    ],
+    "parent_names": [
+      "Marine invertebrates",
+      "Shellfish"
+    ]
+  },
+  "/m/0703r8": {
+    "display_name": "Loveseat",
+    "sam3_prompt_text": "loveseat",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02crq1"
+    ],
+    "parent_names": [
+      "Couch"
+    ]
+  },
+  "/m/0hf58v5": {
+    "display_name": "Luggage and bags",
+    "sam3_prompt_text": "luggage and bags",
+    "children": [
+      "/m/01940j",
+      "/m/0584n8",
+      "/m/080hkjn",
+      "/m/01s55n"
+    ],
+    "child_names": [
+      "Backpack",
+      "Briefcase",
+      "Handbag",
+      "Suitcase"
+    ],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/04g2r": {
+    "display_name": "Lynx",
+    "sam3_prompt_text": "lynx",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/012074": {
+    "display_name": "Magpie",
+    "sam3_prompt_text": "magpie",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/04rky": {
+    "display_name": "Mammal",
+    "sam3_prompt_text": "mammal",
+    "children": [
+      "/m/0pcr",
+      "/m/0czz2",
+      "/m/0xfy",
+      "/m/01h44",
+      "/m/0cnyhnx",
+      "/m/01x_v",
+      "/m/01lrl",
+      "/m/01xq0k1",
+      "/m/09kx5",
+      "/m/0bwd_0j",
+      "/m/03bk1",
+      "/m/03fwl",
+      "/m/03qrc",
+      "/m/0cl4p",
+      "/m/09f20",
+      "/m/03k3r",
+      "/m/04c0y",
+      "/m/04cp_",
+      "/m/0gd2v",
+      "/m/08pbxl",
+      "/m/04rmv",
+      "/m/0dbzx",
+      "/m/068zj",
+      "/m/0c568",
+      "/m/06mf6",
+      "/m/03d443",
+      "/m/07bgp",
+      "/m/0km7z",
+      "/m/071qp",
+      "/m/0898b"
+    ],
+    "child_names": [
+      "Alpaca",
+      "Antelope",
+      "Armadillo",
+      "Bat (Animal)",
+      "Bull",
+      "Camel",
+      "Carnivore",
+      "Cattle",
+      "Deer",
+      "Elephant",
+      "Giraffe",
+      "Goat",
+      "Hamster",
+      "Hedgehog",
+      "Hippopotamus",
+      "Horse",
+      "Kangaroo",
+      "Koala",
+      "Marine mammal",
+      "Monkey",
+      "Mouse",
+      "Mule",
+      "Pig",
+      "Porcupine",
+      "Rabbit",
+      "Rhinoceros",
+      "Sheep",
+      "Skunk",
+      "Squirrel",
+      "Zebra"
+    ],
+    "parents": [
+      "/m/0jbk"
+    ],
+    "parent_names": [
+      "Animal"
+    ]
+  },
+  "/m/04yx4": {
+    "display_name": "Man",
+    "sam3_prompt_text": "person",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01g317"
+    ],
+    "parent_names": [
+      "Person"
+    ]
+  },
+  "/m/0fldg": {
+    "display_name": "Mango",
+    "sam3_prompt_text": "mango",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0cffdh": {
+    "display_name": "Maple",
+    "sam3_prompt_text": "maple",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07j7r"
+    ],
+    "parent_names": [
+      "Tree"
+    ]
+  },
+  "/m/0xzly": {
+    "display_name": "Maraca",
+    "sam3_prompt_text": "maraca",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/03hl4l9": {
+    "display_name": "Marine invertebrates",
+    "sam3_prompt_text": "marine invertebrates",
+    "children": [
+      "/m/0n28_",
+      "/m/035vxb",
+      "/m/0d8zb",
+      "/m/0cjq5",
+      "/m/0ll1f78",
+      "/m/09gys",
+      "/m/01h8tj"
+    ],
+    "child_names": [
+      "Crab",
+      "Isopod",
+      "Jellyfish",
+      "Lobster",
+      "Shrimp",
+      "Squid",
+      "Starfish"
+    ],
+    "parents": [
+      "/m/03xxp"
+    ],
+    "parent_names": [
+      "Invertebrate"
+    ]
+  },
+  "/m/0gd2v": {
+    "display_name": "Marine mammal",
+    "sam3_prompt_text": "marine mammal",
+    "children": [
+      "/m/02hj4",
+      "/m/02l8p9",
+      "/m/0gd36",
+      "/m/084zz"
+    ],
+    "child_names": [
+      "Dolphin",
+      "Harbor seal",
+      "Sea lion",
+      "Whale"
+    ],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/07v9_z": {
+    "display_name": "Measuring cup",
+    "sam3_prompt_text": "measuring cup",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/02x984l": {
+    "display_name": "Mechanical fan",
+    "sam3_prompt_text": "mechanical fan",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/01xgg_": {
+    "display_name": "Medical equipment",
+    "sam3_prompt_text": "medical equipment",
+    "children": [
+      "/m/0j496",
+      "/m/073g6",
+      "/m/02lbcq",
+      "/m/012ysf"
+    ],
+    "child_names": [
+      "Band-aid",
+      "Stethoscope",
+      "Stretcher",
+      "Syringe"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0hg7b": {
+    "display_name": "Microphone",
+    "sam3_prompt_text": "microphone",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0fx9l": {
+    "display_name": "Microwave oven",
+    "sam3_prompt_text": "microwave oven",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1",
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Home appliance",
+      "Kitchen appliance"
+    ]
+  },
+  "/m/04zpv": {
+    "display_name": "Milk",
+    "sam3_prompt_text": "milk",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0284d"
+    ],
+    "parent_names": [
+      "Dairy Product"
+    ]
+  },
+  "/m/01cmb2": {
+    "display_name": "Miniskirt",
+    "sam3_prompt_text": "miniskirt",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wv6h6"
+    ],
+    "parent_names": [
+      "Skirt"
+    ]
+  },
+  "/m/054_l": {
+    "display_name": "Mirror",
+    "sam3_prompt_text": "mirror",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/04ylt": {
+    "display_name": "Missile",
+    "sam3_prompt_text": "missile",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Weapon"
+    ]
+  },
+  "/m/063rgb": {
+    "display_name": "Mixer",
+    "sam3_prompt_text": "mixer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1",
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Home appliance",
+      "Kitchen appliance"
+    ]
+  },
+  "/m/03hj559": {
+    "display_name": "Mixing bowl",
+    "sam3_prompt_text": "mixing bowl",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/050k8": {
+    "display_name": "Mobile phone",
+    "sam3_prompt_text": "mobile phone",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07cx4"
+    ],
+    "parent_names": [
+      "Telephone"
+    ]
+  },
+  "/m/08pbxl": {
+    "display_name": "Monkey",
+    "sam3_prompt_text": "monkey",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/0d_2m": {
+    "display_name": "Moths and butterflies",
+    "sam3_prompt_text": "moths and butterflies",
+    "children": [
+      "/m/0cyf8",
+      "/m/0cydv"
+    ],
+    "child_names": [
+      "Butterfly",
+      "Caterpillar"
+    ],
+    "parents": [
+      "/m/03vt0"
+    ],
+    "parent_names": [
+      "Insect"
+    ]
+  },
+  "/m/04_sv": {
+    "display_name": "Motorcycle",
+    "sam3_prompt_text": "motorcycle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/04rmv": {
+    "display_name": "Mouse",
+    "sam3_prompt_text": "mouse",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/01tcjp": {
+    "display_name": "Muffin",
+    "sam3_prompt_text": "muffin",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/052lwg6",
+      "/m/0270h"
+    ],
+    "parent_names": [
+      "Baked goods",
+      "Dessert"
+    ]
+  },
+  "/m/02jvh9": {
+    "display_name": "Mug",
+    "sam3_prompt_text": "mug",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/0dbzx": {
+    "display_name": "Mule",
+    "sam3_prompt_text": "mule",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/052sf": {
+    "display_name": "Mushroom",
+    "sam3_prompt_text": "mushroom",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/04szw": {
+    "display_name": "Musical instrument",
+    "sam3_prompt_text": "musical instrument",
+    "children": [
+      "/m/0mkg",
+      "/m/018j2",
+      "/m/01xqw",
+      "/m/0f8s22",
+      "/m/026t6",
+      "/m/0l14j_",
+      "/m/0319l",
+      "/m/0342h",
+      "/m/03qjg",
+      "/m/03m5k",
+      "/m/03q5t",
+      "/m/0xzly",
+      "/m/057cc",
+      "/m/05kms",
+      "/m/013y1f",
+      "/m/05r5c",
+      "/m/06ncr",
+      "/m/07c6l",
+      "/m/07gql",
+      "/m/07y_7"
+    ],
+    "child_names": [
+      "Accordion",
+      "Banjo",
+      "Cello",
+      "Chime",
+      "Drum",
+      "Flute",
+      "French horn",
+      "Guitar",
+      "Harmonica",
+      "Harp",
+      "Harpsichord",
+      "Maraca",
+      "Musical keyboard",
+      "Oboe",
+      "Organ (Musical Instrument)",
+      "Piano",
+      "Saxophone",
+      "Trombone",
+      "Trumpet",
+      "Violin"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/057cc": {
+    "display_name": "Musical keyboard",
+    "sam3_prompt_text": "musical keyboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/05bm6": {
+    "display_name": "Nail (Construction)",
+    "sam3_prompt_text": "nail",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/01llwg": {
+    "display_name": "Necklace",
+    "sam3_prompt_text": "necklace",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/02z51p": {
+    "display_name": "Nightstand",
+    "sam3_prompt_text": "nightstand",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/05kms": {
+    "display_name": "Oboe",
+    "sam3_prompt_text": "oboe",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/021sj1": {
+    "display_name": "Office building",
+    "sam3_prompt_text": "building",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0cgh4"
+    ],
+    "parent_names": [
+      "Building"
+    ]
+  },
+  "/m/02rdsp": {
+    "display_name": "Office supplies",
+    "sam3_prompt_text": "office supplies",
+    "children": [
+      "/m/03m3vtv",
+      "/m/025dyy",
+      "/m/024d2",
+      "/m/0frqm",
+      "/m/02fh7f",
+      "/m/02xqq",
+      "/m/080n7g",
+      "/m/0k1tl",
+      "/m/05676x",
+      "/m/02ddwp",
+      "/m/05gqfk",
+      "/m/01n5jq",
+      "/m/04zwwv",
+      "/m/01lsmm",
+      "/m/025fsf",
+      "/m/09gtd",
+      "/m/02d9qx"
+    ],
+    "child_names": [
+      "Adhesive tape",
+      "Box",
+      "Calculator",
+      "Envelope",
+      "Eraser",
+      "Fax",
+      "Paper cutter",
+      "Pen",
+      "Pencil case",
+      "Pencil sharpener",
+      "Plastic bag",
+      "Poster",
+      "Ring binder",
+      "Scissors",
+      "Stapler",
+      "Toilet paper",
+      "Whiteboard"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0cyhj_": {
+    "display_name": "Orange (fruit)",
+    "sam3_prompt_text": "orange",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/013y1f": {
+    "display_name": "Organ (Musical Instrument)",
+    "sam3_prompt_text": "organ",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/05n4y": {
+    "display_name": "Ostrich",
+    "sam3_prompt_text": "ostrich",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/0cn6p": {
+    "display_name": "Otter",
+    "sam3_prompt_text": "otter",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/029bxz": {
+    "display_name": "Oven",
+    "sam3_prompt_text": "oven",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1",
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Home appliance",
+      "Kitchen appliance"
+    ]
+  },
+  "/m/09d5_": {
+    "display_name": "Owl",
+    "sam3_prompt_text": "owl",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/0_cp5": {
+    "display_name": "Oyster",
+    "sam3_prompt_text": "oyster",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03xxp",
+      "/m/0fbdv"
+    ],
+    "parent_names": [
+      "Invertebrate",
+      "Shellfish"
+    ]
+  },
+  "/m/014y4n": {
+    "display_name": "Paddle",
+    "sam3_prompt_text": "paddle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/0cdl1": {
+    "display_name": "Palm tree",
+    "sam3_prompt_text": "tree",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07j7r"
+    ],
+    "parent_names": [
+      "Tree"
+    ]
+  },
+  "/m/01dwwc": {
+    "display_name": "Pancake",
+    "sam3_prompt_text": "pancake",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/03bj1": {
+    "display_name": "Panda",
+    "sam3_prompt_text": "panda",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01dws"
+    ],
+    "parent_names": [
+      "Bear"
+    ]
+  },
+  "/m/080n7g": {
+    "display_name": "Paper cutter",
+    "sam3_prompt_text": "paper cutter",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/02w3r3": {
+    "display_name": "Paper towel",
+    "sam3_prompt_text": "paper towel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0cyfs": {
+    "display_name": "Parachute",
+    "sam3_prompt_text": "parachute",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/015qbp": {
+    "display_name": "Parking meter",
+    "sam3_prompt_text": "parking meter",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0gv1x": {
+    "display_name": "Parrot",
+    "sam3_prompt_text": "parrot",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/05z55": {
+    "display_name": "Pasta",
+    "sam3_prompt_text": "pasta",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0hnyx": {
+    "display_name": "Pastry",
+    "sam3_prompt_text": "pastry",
+    "children": [
+      "/m/015wgc",
+      "/m/0jy4k",
+      "/m/02zvsm"
+    ],
+    "child_names": [
+      "Croissant",
+      "Doughnut",
+      "Tart"
+    ],
+    "parents": [
+      "/m/052lwg6"
+    ],
+    "parent_names": [
+      "Baked goods"
+    ]
+  },
+  "/m/0dj6p": {
+    "display_name": "Peach",
+    "sam3_prompt_text": "peach",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/061_f": {
+    "display_name": "Pear",
+    "sam3_prompt_text": "pear",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/0k1tl": {
+    "display_name": "Pen",
+    "sam3_prompt_text": "pen",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/05676x": {
+    "display_name": "Pencil case",
+    "sam3_prompt_text": "pencil case",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/02ddwp": {
+    "display_name": "Pencil sharpener",
+    "sam3_prompt_text": "pencil sharpener",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/05z6w": {
+    "display_name": "Penguin",
+    "sam3_prompt_text": "penguin",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/0p833": {
+    "display_name": "Perfume",
+    "sam3_prompt_text": "perfume",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/014trl"
+    ],
+    "parent_names": [
+      "Cosmetics"
+    ]
+  },
+  "/m/01g317": {
+    "display_name": "Person",
+    "sam3_prompt_text": "person",
+    "children": [
+      "/m/01bl7v",
+      "/m/05r655",
+      "/m/04yx4",
+      "/m/03bt1vf"
+    ],
+    "child_names": [
+      "Boy",
+      "Girl",
+      "Man",
+      "Woman"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/02w3_ws": {
+    "display_name": "Personal care",
+    "sam3_prompt_text": "personal care",
+    "children": [
+      "/m/08p92x",
+      "/m/05441v",
+      "/m/0f571",
+      "/m/0jyfg",
+      "/m/02_n6y",
+      "/m/017ftj",
+      "/m/012xff",
+      "/m/0qmmr"
+    ],
+    "child_names": [
+      "Cream",
+      "Crutch",
+      "Diaper",
+      "Glasses",
+      "Goggles",
+      "Sunglasses",
+      "Toothbrush",
+      "Wheelchair"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/054xkw": {
+    "display_name": "Personal flotation device",
+    "sam3_prompt_text": "personal flotation device",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/05r5c": {
+    "display_name": "Piano",
+    "sam3_prompt_text": "piano",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/07kng9": {
+    "display_name": "Picnic basket",
+    "sam3_prompt_text": "picnic basket",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/011q46kg"
+    ],
+    "parent_names": [
+      "Container"
+    ]
+  },
+  "/m/06z37_": {
+    "display_name": "Picture frame",
+    "sam3_prompt_text": "picture frame",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/068zj": {
+    "display_name": "Pig",
+    "sam3_prompt_text": "pig",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/034c16": {
+    "display_name": "Pillow",
+    "sam3_prompt_text": "pillow",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0fp6w": {
+    "display_name": "Pineapple",
+    "sam3_prompt_text": "pineapple",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/054fyh": {
+    "display_name": "Pitcher (Container)",
+    "sam3_prompt_text": "pitcher",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/0663v": {
+    "display_name": "Pizza",
+    "sam3_prompt_text": "pizza",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/08ks85": {
+    "display_name": "Pizza cutter",
+    "sam3_prompt_text": "pizza cutter",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/05s2s": {
+    "display_name": "Plant",
+    "sam3_prompt_text": "plant",
+    "children": [
+      "/m/0c9ph5",
+      "/m/03fp41",
+      "/m/07j7r"
+    ],
+    "child_names": [
+      "Flower",
+      "Houseplant",
+      "Tree"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/05gqfk": {
+    "display_name": "Plastic bag",
+    "sam3_prompt_text": "plastic bag",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/050gv4": {
+    "display_name": "Plate",
+    "sam3_prompt_text": "plate",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/099ssp": {
+    "display_name": "Platter",
+    "sam3_prompt_text": "platter",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/02pkr5": {
+    "display_name": "Plumbing fixture",
+    "sam3_prompt_text": "plumbing fixture",
+    "children": [
+      "/m/03dnzn",
+      "/m/01vbnl",
+      "/m/02f9f_",
+      "/m/0130jx",
+      "/m/02jz0l",
+      "/m/09g1w"
+    ],
+    "child_names": [
+      "Bathtub",
+      "Bidet",
+      "Shower",
+      "Sink",
+      "Tap",
+      "Toilet"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0633h": {
+    "display_name": "Polar bear",
+    "sam3_prompt_text": "polar bear",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01dws"
+    ],
+    "parent_names": [
+      "Bear"
+    ]
+  },
+  "/m/0jwn_": {
+    "display_name": "Pomegranate",
+    "sam3_prompt_text": "pomegranate",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/01hrv5": {
+    "display_name": "Popcorn",
+    "sam3_prompt_text": "popcorn",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01ww8y"
+    ],
+    "parent_names": [
+      "Snack"
+    ]
+  },
+  "/m/04m6gz": {
+    "display_name": "Porch",
+    "sam3_prompt_text": "porch",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0c568": {
+    "display_name": "Porcupine",
+    "sam3_prompt_text": "porcupine",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/01n5jq": {
+    "display_name": "Poster",
+    "sam3_prompt_text": "poster",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/05vtc": {
+    "display_name": "Potato",
+    "sam3_prompt_text": "potato",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/03bbps": {
+    "display_name": "Power plugs and sockets",
+    "sam3_prompt_text": "power plugs and sockets",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0h8ntjv": {
+    "display_name": "Pressure cooker",
+    "sam3_prompt_text": "pressure cooker",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Kitchen appliance"
+    ]
+  },
+  "/m/01f91_": {
+    "display_name": "Pretzel",
+    "sam3_prompt_text": "pretzel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/052lwg6",
+      "/m/01ww8y"
+    ],
+    "parent_names": [
+      "Baked goods",
+      "Snack"
+    ]
+  },
+  "/m/01m4t": {
+    "display_name": "Printer",
+    "sam3_prompt_text": "printer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/05zsy": {
+    "display_name": "Pumpkin",
+    "sam3_prompt_text": "pumpkin",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0dv77"
+    ],
+    "parent_names": [
+      "Squash (Plant)"
+    ]
+  },
+  "/m/0420v5": {
+    "display_name": "Punching bag",
+    "sam3_prompt_text": "punching bag",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/06mf6": {
+    "display_name": "Rabbit",
+    "sam3_prompt_text": "rabbit",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/0dq75": {
+    "display_name": "Raccoon",
+    "sam3_prompt_text": "raccoon",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/0dv9c": {
+    "display_name": "Racket",
+    "sam3_prompt_text": "racket",
+    "children": [
+      "/m/05_5p_0",
+      "/m/0h8my_4"
+    ],
+    "child_names": [
+      "Table tennis racket",
+      "Tennis racket"
+    ],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/015x5n": {
+    "display_name": "Radish",
+    "sam3_prompt_text": "radish",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/02bm9n": {
+    "display_name": "Ratchet (Device)",
+    "sam3_prompt_text": "ratchet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/06j2d": {
+    "display_name": "Raven",
+    "sam3_prompt_text": "raven",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/0m53l": {
+    "display_name": "Rays and skates",
+    "sam3_prompt_text": "rays and skates",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0ch_cf"
+    ],
+    "parent_names": [
+      "Fish"
+    ]
+  },
+  "/m/06l9r": {
+    "display_name": "Red panda",
+    "sam3_prompt_text": "red panda",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/040b_t": {
+    "display_name": "Refrigerator",
+    "sam3_prompt_text": "refrigerator",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1",
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Home appliance",
+      "Kitchen appliance"
+    ]
+  },
+  "/m/0qjjc": {
+    "display_name": "Remote control",
+    "sam3_prompt_text": "remote control",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/06bt6": {
+    "display_name": "Reptile",
+    "sam3_prompt_text": "reptile",
+    "children": [
+      "/m/09f_2",
+      "/m/029tx",
+      "/m/09ld4",
+      "/m/04m9y",
+      "/m/078jl",
+      "/m/09dzg"
+    ],
+    "child_names": [
+      "Crocodile",
+      "Dinosaur",
+      "Frog",
+      "Lizard",
+      "Snake",
+      "Turtle"
+    ],
+    "parents": [
+      "/m/0jbk"
+    ],
+    "parent_names": [
+      "Animal"
+    ]
+  },
+  "/m/03d443": {
+    "display_name": "Rhinoceros",
+    "sam3_prompt_text": "rhinoceros",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/06c54": {
+    "display_name": "Rifle",
+    "sam3_prompt_text": "rifle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Weapon"
+    ]
+  },
+  "/m/04zwwv": {
+    "display_name": "Ring binder",
+    "sam3_prompt_text": "ring binder",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/09rvcxw": {
+    "display_name": "Rocket",
+    "sam3_prompt_text": "rocket",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0k5j"
+    ],
+    "parent_names": [
+      "Aircraft"
+    ]
+  },
+  "/m/02p3w7d": {
+    "display_name": "Roller skates",
+    "sam3_prompt_text": "roller skates",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j5n",
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Footwear",
+      "Sports equipment"
+    ]
+  },
+  "/m/06m11": {
+    "display_name": "Rose",
+    "sam3_prompt_text": "rose",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c9ph5"
+    ],
+    "parent_names": [
+      "Flower"
+    ]
+  },
+  "/m/0wdt60w": {
+    "display_name": "Rugby ball",
+    "sam3_prompt_text": "ball",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/018xm"
+    ],
+    "parent_names": [
+      "Ball (Object)"
+    ]
+  },
+  "/m/0hdln": {
+    "display_name": "Ruler",
+    "sam3_prompt_text": "ruler",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/0grw1": {
+    "display_name": "Salad",
+    "sam3_prompt_text": "salad",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/02x8cch": {
+    "display_name": "Salt and pepper shakers",
+    "sam3_prompt_text": "salt and pepper shakers",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/03nfch": {
+    "display_name": "Sandal",
+    "sam3_prompt_text": "sandal",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j5n"
+    ],
+    "parent_names": [
+      "Footwear"
+    ]
+  },
+  "/m/0l515": {
+    "display_name": "Sandwich",
+    "sam3_prompt_text": "sandwich",
+    "children": [
+      "/m/0cdn1",
+      "/m/06pcq"
+    ],
+    "child_names": [
+      "Hamburger",
+      "Submarine sandwich"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/03q5c7": {
+    "display_name": "Saucer",
+    "sam3_prompt_text": "saucer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/06ncr": {
+    "display_name": "Saxophone",
+    "sam3_prompt_text": "saxophone",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/03txqz": {
+    "display_name": "Scale",
+    "sam3_prompt_text": "scale",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/02h19r": {
+    "display_name": "Scarf",
+    "sam3_prompt_text": "scarf",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d",
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Clothing",
+      "Fashion accessory"
+    ]
+  },
+  "/m/01lsmm": {
+    "display_name": "Scissors",
+    "sam3_prompt_text": "scissors",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp",
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Office supplies",
+      "Tool"
+    ]
+  },
+  "/m/057p5t": {
+    "display_name": "Scoreboard",
+    "sam3_prompt_text": "scoreboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/0755b": {
+    "display_name": "Scorpion",
+    "sam3_prompt_text": "scorpion",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03xxp"
+    ],
+    "parent_names": [
+      "Invertebrate"
+    ]
+  },
+  "/m/01bms0": {
+    "display_name": "Screwdriver",
+    "sam3_prompt_text": "screwdriver",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/06msq": {
+    "display_name": "Sculpture",
+    "sam3_prompt_text": "sculpture",
+    "children": [
+      "/m/01yx86",
+      "/m/04yqq2",
+      "/m/0152hh"
+    ],
+    "child_names": [
+      "Bronze sculpture",
+      "Bust",
+      "Snowman"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0gd36": {
+    "display_name": "Sea lion",
+    "sam3_prompt_text": "sea lion",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0gd2v"
+    ],
+    "parent_names": [
+      "Marine mammal"
+    ]
+  },
+  "/m/0120dh": {
+    "display_name": "Sea turtle",
+    "sam3_prompt_text": "sea turtle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09dzg"
+    ],
+    "parent_names": [
+      "Turtle"
+    ]
+  },
+  "/m/06nwz": {
+    "display_name": "Seafood",
+    "sam3_prompt_text": "seafood",
+    "children": [
+      "/m/0fbdv",
+      "/m/09gys"
+    ],
+    "child_names": [
+      "Shellfish",
+      "Squid"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0nybt": {
+    "display_name": "Seahorse",
+    "sam3_prompt_text": "seahorse",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0ch_cf"
+    ],
+    "parent_names": [
+      "Fish"
+    ]
+  },
+  "/m/0dkzw": {
+    "display_name": "Seat belt",
+    "sam3_prompt_text": "seat belt",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/08dz3q"
+    ],
+    "parent_names": [
+      "Auto part"
+    ]
+  },
+  "/m/076bq": {
+    "display_name": "Segway",
+    "sam3_prompt_text": "segway",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/0h8n27j": {
+    "display_name": "Serving tray",
+    "sam3_prompt_text": "serving tray",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/0llzx": {
+    "display_name": "Sewing machine",
+    "sam3_prompt_text": "sewing machine",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/0by6g": {
+    "display_name": "Shark",
+    "sam3_prompt_text": "shark",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0ch_cf"
+    ],
+    "parent_names": [
+      "Fish"
+    ]
+  },
+  "/m/07bgp": {
+    "display_name": "Sheep",
+    "sam3_prompt_text": "sheep",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/0gjbg72": {
+    "display_name": "Shelf",
+    "sam3_prompt_text": "shelf",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/0fbdv": {
+    "display_name": "Shellfish",
+    "sam3_prompt_text": "shellfish",
+    "children": [
+      "/m/0n28_",
+      "/m/0cjq5",
+      "/m/0_cp5",
+      "/m/0ll1f78"
+    ],
+    "child_names": [
+      "Crab",
+      "Lobster",
+      "Oyster",
+      "Shrimp"
+    ],
+    "parents": [
+      "/m/0jbk",
+      "/m/06nwz"
+    ],
+    "parent_names": [
+      "Animal",
+      "Seafood"
+    ]
+  },
+  "/m/01n4qj": {
+    "display_name": "Shirt",
+    "sam3_prompt_text": "shirt",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/01bfm9": {
+    "display_name": "Shorts",
+    "sam3_prompt_text": "shorts",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/06nrc": {
+    "display_name": "Shotgun",
+    "sam3_prompt_text": "shotgun",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Weapon"
+    ]
+  },
+  "/m/02f9f_": {
+    "display_name": "Shower",
+    "sam3_prompt_text": "shower",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02pkr5"
+    ],
+    "parent_names": [
+      "Plumbing fixture"
+    ]
+  },
+  "/m/0ll1f78": {
+    "display_name": "Shrimp",
+    "sam3_prompt_text": "shrimp",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hl4l9",
+      "/m/0fbdv"
+    ],
+    "parent_names": [
+      "Marine invertebrates",
+      "Shellfish"
+    ]
+  },
+  "/m/0130jx": {
+    "display_name": "Sink",
+    "sam3_prompt_text": "sink",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02pkr5"
+    ],
+    "parent_names": [
+      "Plumbing fixture"
+    ]
+  },
+  "/m/06_fw": {
+    "display_name": "Skateboard",
+    "sam3_prompt_text": "skateboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/071p9": {
+    "display_name": "Ski",
+    "sam3_prompt_text": "ski",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/02wv6h6": {
+    "display_name": "Skirt",
+    "sam3_prompt_text": "skirt",
+    "children": [
+      "/m/01cmb2"
+    ],
+    "child_names": [
+      "Miniskirt"
+    ],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/016m2d": {
+    "display_name": "Skull",
+    "sam3_prompt_text": "skull",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0km7z": {
+    "display_name": "Skunk",
+    "sam3_prompt_text": "skunk",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/079cl": {
+    "display_name": "Skyscraper",
+    "sam3_prompt_text": "skyscraper",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0cgh4"
+    ],
+    "parent_names": [
+      "Building"
+    ]
+  },
+  "/m/02tsc9": {
+    "display_name": "Slow cooker",
+    "sam3_prompt_text": "slow cooker",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Kitchen appliance"
+    ]
+  },
+  "/m/01ww8y": {
+    "display_name": "Snack",
+    "sam3_prompt_text": "snack",
+    "children": [
+      "/m/021mn",
+      "/m/01hrv5",
+      "/m/01f91_"
+    ],
+    "child_names": [
+      "Cookie",
+      "Popcorn",
+      "Pretzel"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0f9_l": {
+    "display_name": "Snail",
+    "sam3_prompt_text": "snail",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03xxp"
+    ],
+    "parent_names": [
+      "Invertebrate"
+    ]
+  },
+  "/m/078jl": {
+    "display_name": "Snake",
+    "sam3_prompt_text": "snake",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/06bt6"
+    ],
+    "parent_names": [
+      "Reptile"
+    ]
+  },
+  "/m/06__v": {
+    "display_name": "Snowboard",
+    "sam3_prompt_text": "snowboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/0152hh": {
+    "display_name": "Snowman",
+    "sam3_prompt_text": "snowman",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/06msq"
+    ],
+    "parent_names": [
+      "Sculpture"
+    ]
+  },
+  "/m/01x3jk": {
+    "display_name": "Snowmobile",
+    "sam3_prompt_text": "snowmobile",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/04vv5k": {
+    "display_name": "Snowplow",
+    "sam3_prompt_text": "snowplow",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/0c3mkw": {
+    "display_name": "Soap dispenser",
+    "sam3_prompt_text": "soap dispenser",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0h8nr_l"
+    ],
+    "parent_names": [
+      "Bathroom accessory"
+    ]
+  },
+  "/m/01nq26": {
+    "display_name": "Sock",
+    "sam3_prompt_text": "sock",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/03m3pdh": {
+    "display_name": "Sofa bed",
+    "sam3_prompt_text": "sofa bed",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02crq1"
+    ],
+    "parent_names": [
+      "Couch"
+    ]
+  },
+  "/m/02jfl0": {
+    "display_name": "Sombrero",
+    "sam3_prompt_text": "sombrero",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02dl1y"
+    ],
+    "parent_names": [
+      "Hat"
+    ]
+  },
+  "/m/0h23m": {
+    "display_name": "Sparrow",
+    "sam3_prompt_text": "sparrow",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/02d1br": {
+    "display_name": "Spatula",
+    "sam3_prompt_text": "spatula",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/0h8kx63": {
+    "display_name": "Spice rack",
+    "sam3_prompt_text": "spice rack",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03_wxk"
+    ],
+    "parent_names": [
+      "Kitchenware"
+    ]
+  },
+  "/m/09kmb": {
+    "display_name": "Spider",
+    "sam3_prompt_text": "spider",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03xxp"
+    ],
+    "parent_names": [
+      "Invertebrate"
+    ]
+  },
+  "/m/0cmx8": {
+    "display_name": "Spoon",
+    "sam3_prompt_text": "spoon",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c",
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Kitchen utensil",
+      "Tableware"
+    ]
+  },
+  "/m/05y5lj": {
+    "display_name": "Sports equipment",
+    "sam3_prompt_text": "sports equipment",
+    "children": [
+      "/m/0l3ms",
+      "/m/018xm",
+      "/m/03g8mr",
+      "/m/03grzl",
+      "/m/0199g",
+      "/m/04p0qw",
+      "/m/01g3x7",
+      "/m/07pj7bq",
+      "/m/04h8sr",
+      "/m/02wmf",
+      "/m/044r5d",
+      "/m/0zvk5",
+      "/m/0268lbt",
+      "/m/0cqn2",
+      "/m/03wym",
+      "/m/014y4n",
+      "/m/0cyfs",
+      "/m/054xkw",
+      "/m/0420v5",
+      "/m/0dv9c",
+      "/m/02p3w7d",
+      "/m/057p5t",
+      "/m/06_fw",
+      "/m/071p9",
+      "/m/06__v",
+      "/m/03kt2w",
+      "/m/019w40",
+      "/m/076lb9",
+      "/m/030610"
+    ],
+    "child_names": [
+      "Balance beam",
+      "Ball (Object)",
+      "Baseball bat",
+      "Baseball glove",
+      "Bicycle",
+      "Billiard table",
+      "Bow and arrow",
+      "Bowling equipment",
+      "Dumbbell",
+      "Flying disc",
+      "Golf ball",
+      "Helmet",
+      "Hiking equipment",
+      "Horizontal bar",
+      "Indoor rower",
+      "Paddle",
+      "Parachute",
+      "Personal flotation device",
+      "Punching bag",
+      "Racket",
+      "Roller skates",
+      "Scoreboard",
+      "Skateboard",
+      "Ski",
+      "Snowboard",
+      "Stationary bicycle",
+      "Surfboard",
+      "Training bench",
+      "Treadmill"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0h8mhzd": {
+    "display_name": "Sports uniform",
+    "sam3_prompt_text": "sports uniform",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/0dv77": {
+    "display_name": "Squash (Plant)",
+    "sam3_prompt_text": "squash",
+    "children": [
+      "/m/05zsy",
+      "/m/027pcv"
+    ],
+    "child_names": [
+      "Pumpkin",
+      "Zucchini"
+    ],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/09gys": {
+    "display_name": "Squid",
+    "sam3_prompt_text": "squid",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hl4l9",
+      "/m/06nwz"
+    ],
+    "parent_names": [
+      "Marine invertebrates",
+      "Seafood"
+    ]
+  },
+  "/m/071qp": {
+    "display_name": "Squirrel",
+    "sam3_prompt_text": "squirrel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/01lynh": {
+    "display_name": "Stairs",
+    "sam3_prompt_text": "stairs",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/025fsf": {
+    "display_name": "Stapler",
+    "sam3_prompt_text": "stapler",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/01h8tj": {
+    "display_name": "Starfish",
+    "sam3_prompt_text": "starfish",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hl4l9"
+    ],
+    "parent_names": [
+      "Marine invertebrates"
+    ]
+  },
+  "/m/03kt2w": {
+    "display_name": "Stationary bicycle",
+    "sam3_prompt_text": "stationary bicycle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/073g6": {
+    "display_name": "Stethoscope",
+    "sam3_prompt_text": "stethoscope",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01xgg_"
+    ],
+    "parent_names": [
+      "Medical equipment"
+    ]
+  },
+  "/m/0fqt361": {
+    "display_name": "Stool",
+    "sam3_prompt_text": "stool",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/02pv19": {
+    "display_name": "Stop sign",
+    "sam3_prompt_text": "stop sign",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01mqdt"
+    ],
+    "parent_names": [
+      "Traffic sign"
+    ]
+  },
+  "/m/07fbm7": {
+    "display_name": "Strawberry",
+    "sam3_prompt_text": "strawberry",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/033rq4": {
+    "display_name": "Street light",
+    "sam3_prompt_text": "street light",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/02lbcq": {
+    "display_name": "Stretcher",
+    "sam3_prompt_text": "stretcher",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01xgg_"
+    ],
+    "parent_names": [
+      "Medical equipment"
+    ]
+  },
+  "/m/026qbn5": {
+    "display_name": "Studio couch",
+    "sam3_prompt_text": "studio couch",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03ssj5"
+    ],
+    "parent_names": [
+      "Bed"
+    ]
+  },
+  "/m/074d1": {
+    "display_name": "Submarine",
+    "sam3_prompt_text": "submarine",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01rzcn"
+    ],
+    "parent_names": [
+      "Watercraft"
+    ]
+  },
+  "/m/06pcq": {
+    "display_name": "Submarine sandwich",
+    "sam3_prompt_text": "sandwich",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0l515"
+    ],
+    "parent_names": [
+      "Sandwich"
+    ]
+  },
+  "/m/01xyhv": {
+    "display_name": "Suit",
+    "sam3_prompt_text": "suit",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/01s55n": {
+    "display_name": "Suitcase",
+    "sam3_prompt_text": "suitcase",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0hf58v5"
+    ],
+    "parent_names": [
+      "Luggage and bags"
+    ]
+  },
+  "/m/02wbtzl": {
+    "display_name": "Sun hat",
+    "sam3_prompt_text": "hat",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02dl1y"
+    ],
+    "parent_names": [
+      "Hat"
+    ]
+  },
+  "/m/017ftj": {
+    "display_name": "Sunglasses",
+    "sam3_prompt_text": "sunglasses",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg",
+      "/m/02w3_ws"
+    ],
+    "parent_names": [
+      "Fashion accessory",
+      "Personal care"
+    ]
+  },
+  "/m/019w40": {
+    "display_name": "Surfboard",
+    "sam3_prompt_text": "surfboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/07030": {
+    "display_name": "Sushi",
+    "sam3_prompt_text": "sushi",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/0dftk": {
+    "display_name": "Swan",
+    "sam3_prompt_text": "swan",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/04tn4x": {
+    "display_name": "Swim cap",
+    "sam3_prompt_text": "swim cap",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/0b_rs": {
+    "display_name": "Swimming pool",
+    "sam3_prompt_text": "swimming pool",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01gkx_": {
+    "display_name": "Swimwear",
+    "sam3_prompt_text": "swimwear",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/06y5r": {
+    "display_name": "Sword",
+    "sam3_prompt_text": "sword",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Weapon"
+    ]
+  },
+  "/m/012ysf": {
+    "display_name": "Syringe",
+    "sam3_prompt_text": "syringe",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01xgg_"
+    ],
+    "parent_names": [
+      "Medical equipment"
+    ]
+  },
+  "/m/04bcr3": {
+    "display_name": "Table",
+    "sam3_prompt_text": "table",
+    "children": [
+      "/m/078n6m",
+      "/m/0h8n5zk"
+    ],
+    "child_names": [
+      "Coffee table",
+      "Kitchen & dining room table"
+    ],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/05_5p_0": {
+    "display_name": "Table tennis racket",
+    "sam3_prompt_text": "racket",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0dv9c"
+    ],
+    "parent_names": [
+      "Racket"
+    ]
+  },
+  "/m/0bh9flk": {
+    "display_name": "Tablet computer",
+    "sam3_prompt_text": "tablet computer",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/04brg2": {
+    "display_name": "Tableware",
+    "sam3_prompt_text": "tableware",
+    "children": [
+      "/m/04dr76w",
+      "/m/04kkgm",
+      "/m/0h8n6ft",
+      "/m/01_5g",
+      "/m/0440zs",
+      "/m/02p5f1q",
+      "/m/0dt3t",
+      "/m/08hvt4",
+      "/m/058qzx",
+      "/m/03hj559",
+      "/m/02jvh9",
+      "/m/054fyh",
+      "/m/050gv4",
+      "/m/099ssp",
+      "/m/02x8cch",
+      "/m/03q5c7",
+      "/m/0h8n27j",
+      "/m/0cmx8",
+      "/m/01fh4r",
+      "/m/09tvcd"
+    ],
+    "child_names": [
+      "Bottle",
+      "Bowl",
+      "Cake stand",
+      "Chopsticks",
+      "Cocktail shaker",
+      "Coffee cup",
+      "Fork",
+      "Jug",
+      "Kitchen knife",
+      "Mixing bowl",
+      "Mug",
+      "Pitcher (Container)",
+      "Plate",
+      "Platter",
+      "Salt and pepper shakers",
+      "Saucer",
+      "Serving tray",
+      "Spoon",
+      "Teapot",
+      "Wine glass"
+    ],
+    "parents": [
+      "/m/03_wxk"
+    ],
+    "parent_names": [
+      "Kitchenware"
+    ]
+  },
+  "/m/07crc": {
+    "display_name": "Taco",
+    "sam3_prompt_text": "taco",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/07cmd": {
+    "display_name": "Tank",
+    "sam3_prompt_text": "tank",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls",
+      "/m/083kb"
+    ],
+    "parent_names": [
+      "Land vehicle",
+      "Weapon"
+    ]
+  },
+  "/m/02jz0l": {
+    "display_name": "Tap",
+    "sam3_prompt_text": "tap",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02pkr5"
+    ],
+    "parent_names": [
+      "Plumbing fixture"
+    ]
+  },
+  "/m/02zvsm": {
+    "display_name": "Tart",
+    "sam3_prompt_text": "tart",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0hnyx"
+    ],
+    "parent_names": [
+      "Pastry"
+    ]
+  },
+  "/m/0pg52": {
+    "display_name": "Taxi",
+    "sam3_prompt_text": "taxi",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/07clx": {
+    "display_name": "Tea",
+    "sam3_prompt_text": "tea",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0271t"
+    ],
+    "parent_names": [
+      "Drink"
+    ]
+  },
+  "/m/01fh4r": {
+    "display_name": "Teapot",
+    "sam3_prompt_text": "teapot",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/0kmg4": {
+    "display_name": "Teddy bear",
+    "sam3_prompt_text": "teddy bear",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01dws",
+      "/m/0138tl"
+    ],
+    "parent_names": [
+      "Bear",
+      "Toy"
+    ]
+  },
+  "/m/07cx4": {
+    "display_name": "Telephone",
+    "sam3_prompt_text": "telephone",
+    "children": [
+      "/m/0h8lkj8",
+      "/m/050k8"
+    ],
+    "child_names": [
+      "Corded phone",
+      "Mobile phone"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/07c52": {
+    "display_name": "Television",
+    "sam3_prompt_text": "television",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/05ctyq": {
+    "display_name": "Tennis ball",
+    "sam3_prompt_text": "ball",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/018xm"
+    ],
+    "parent_names": [
+      "Ball (Object)"
+    ]
+  },
+  "/m/0h8my_4": {
+    "display_name": "Tennis racket",
+    "sam3_prompt_text": "racket",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0dv9c"
+    ],
+    "parent_names": [
+      "Racket"
+    ]
+  },
+  "/m/01j61q": {
+    "display_name": "Tent",
+    "sam3_prompt_text": "tent",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01krhy": {
+    "display_name": "Tiara",
+    "sam3_prompt_text": "tiara",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09j2d",
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Clothing",
+      "Fashion accessory"
+    ]
+  },
+  "/m/0175cv": {
+    "display_name": "Tick",
+    "sam3_prompt_text": "tick",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03xxp"
+    ],
+    "parent_names": [
+      "Invertebrate"
+    ]
+  },
+  "/m/01rkbr": {
+    "display_name": "Tie",
+    "sam3_prompt_text": "tie",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/07dm6": {
+    "display_name": "Tiger",
+    "sam3_prompt_text": "tiger",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01lrl"
+    ],
+    "parent_names": [
+      "Carnivore"
+    ]
+  },
+  "/m/02jnhm": {
+    "display_name": "Tin can",
+    "sam3_prompt_text": "tin can",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/011q46kg"
+    ],
+    "parent_names": [
+      "Container"
+    ]
+  },
+  "/m/0h9mv": {
+    "display_name": "Tire",
+    "sam3_prompt_text": "tire",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/08dz3q"
+    ],
+    "parent_names": [
+      "Auto part"
+    ]
+  },
+  "/m/01k6s3": {
+    "display_name": "Toaster",
+    "sam3_prompt_text": "toaster",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/09g1w": {
+    "display_name": "Toilet",
+    "sam3_prompt_text": "toilet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02pkr5"
+    ],
+    "parent_names": [
+      "Plumbing fixture"
+    ]
+  },
+  "/m/09gtd": {
+    "display_name": "Toilet paper",
+    "sam3_prompt_text": "toilet paper",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0h8nr_l",
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Bathroom accessory",
+      "Office supplies"
+    ]
+  },
+  "/m/07j87": {
+    "display_name": "Tomato",
+    "sam3_prompt_text": "tomato",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb",
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Fruit",
+      "Vegetable"
+    ]
+  },
+  "/m/07k1x": {
+    "display_name": "Tool",
+    "sam3_prompt_text": "tool",
+    "children": [
+      "/m/0c2jj",
+      "/m/0lt4_",
+      "/m/0dv5r",
+      "/m/01j4z9",
+      "/m/0_dqb",
+      "/m/011q46kg",
+      "/m/01d380",
+      "/m/01kb5b",
+      "/m/0h8jyh6",
+      "/m/03l9g",
+      "/m/03hlz0c",
+      "/m/012w5l",
+      "/m/05bm6",
+      "/m/02bm9n",
+      "/m/0hdln",
+      "/m/03txqz",
+      "/m/01lsmm",
+      "/m/01bms0",
+      "/m/04vv5k",
+      "/m/012xff",
+      "/m/07dd4",
+      "/m/073bxn",
+      "/m/01j5ks"
+    ],
+    "child_names": [
+      "Axe",
+      "Binoculars",
+      "Camera",
+      "Chainsaw",
+      "Chisel",
+      "Container",
+      "Drill (Tool)",
+      "Flashlight",
+      "Grinder",
+      "Hammer",
+      "Kitchen utensil",
+      "Ladder",
+      "Nail (Construction)",
+      "Ratchet (Device)",
+      "Ruler",
+      "Scale",
+      "Scissors",
+      "Screwdriver",
+      "Snowplow",
+      "Toothbrush",
+      "Torch",
+      "Tripod",
+      "Wrench"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/012xff": {
+    "display_name": "Toothbrush",
+    "sam3_prompt_text": "toothbrush",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02w3_ws",
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Personal care",
+      "Tool"
+    ]
+  },
+  "/m/07dd4": {
+    "display_name": "Torch",
+    "sam3_prompt_text": "torch",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/011k07": {
+    "display_name": "Tortoise",
+    "sam3_prompt_text": "tortoise",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/09dzg"
+    ],
+    "parent_names": [
+      "Turtle"
+    ]
+  },
+  "/m/0162_1": {
+    "display_name": "Towel",
+    "sam3_prompt_text": "towel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0h8nr_l"
+    ],
+    "parent_names": [
+      "Bathroom accessory"
+    ]
+  },
+  "/m/01fdzj": {
+    "display_name": "Tower",
+    "sam3_prompt_text": "tower",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0cgh4"
+    ],
+    "parent_names": [
+      "Building"
+    ]
+  },
+  "/m/0138tl": {
+    "display_name": "Toy",
+    "sam3_prompt_text": "toy",
+    "children": [
+      "/m/01j51",
+      "/m/029b3",
+      "/m/0167gd",
+      "/m/02wmf",
+      "/m/02zt3",
+      "/m/0kmg4"
+    ],
+    "child_names": [
+      "Balloon",
+      "Dice",
+      "Doll",
+      "Flying disc",
+      "Kite",
+      "Teddy bear"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/015qff": {
+    "display_name": "Traffic light",
+    "sam3_prompt_text": "traffic light",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01mqdt": {
+    "display_name": "Traffic sign",
+    "sam3_prompt_text": "traffic sign",
+    "children": [
+      "/m/02pv19"
+    ],
+    "child_names": [
+      "Stop sign"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/07jdr": {
+    "display_name": "Train",
+    "sam3_prompt_text": "train",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/076lb9": {
+    "display_name": "Training bench",
+    "sam3_prompt_text": "training bench",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/030610": {
+    "display_name": "Treadmill",
+    "sam3_prompt_text": "treadmill",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/05y5lj"
+    ],
+    "parent_names": [
+      "Sports equipment"
+    ]
+  },
+  "/m/07j7r": {
+    "display_name": "Tree",
+    "sam3_prompt_text": "tree",
+    "children": [
+      "/m/025nd",
+      "/m/0cffdh",
+      "/m/0cdl1",
+      "/m/0mw_6"
+    ],
+    "child_names": [
+      "Christmas tree",
+      "Maple",
+      "Palm tree",
+      "Willow"
+    ],
+    "parents": [
+      "/m/05s2s"
+    ],
+    "parent_names": [
+      "Plant"
+    ]
+  },
+  "/m/02wg_p": {
+    "display_name": "Tree house",
+    "sam3_prompt_text": "tree house",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0cgh4"
+    ],
+    "parent_names": [
+      "Building"
+    ]
+  },
+  "/m/073bxn": {
+    "display_name": "Tripod",
+    "sam3_prompt_text": "tripod",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/07c6l": {
+    "display_name": "Trombone",
+    "sam3_prompt_text": "trombone",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/07mhn": {
+    "display_name": "Trousers",
+    "sam3_prompt_text": "trousers",
+    "children": [
+      "/m/0fly7"
+    ],
+    "child_names": [
+      "Jeans"
+    ],
+    "parents": [
+      "/m/09j2d"
+    ],
+    "parent_names": [
+      "Clothing"
+    ]
+  },
+  "/m/07r04": {
+    "display_name": "Truck",
+    "sam3_prompt_text": "truck",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/07gql": {
+    "display_name": "Trumpet",
+    "sam3_prompt_text": "trumpet",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/0jly1": {
+    "display_name": "Turkey",
+    "sam3_prompt_text": "turkey",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/09dzg": {
+    "display_name": "Turtle",
+    "sam3_prompt_text": "turtle",
+    "children": [
+      "/m/0120dh",
+      "/m/011k07"
+    ],
+    "child_names": [
+      "Sea turtle",
+      "Tortoise"
+    ],
+    "parents": [
+      "/m/06bt6"
+    ],
+    "parent_names": [
+      "Reptile"
+    ]
+  },
+  "/m/0hnnb": {
+    "display_name": "Umbrella",
+    "sam3_prompt_text": "umbrella",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/0f6nr": {
+    "display_name": "Unicycle",
+    "sam3_prompt_text": "unicycle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls"
+    ],
+    "parent_names": [
+      "Land vehicle"
+    ]
+  },
+  "/m/0h2r6": {
+    "display_name": "Van",
+    "sam3_prompt_text": "van",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0k4j"
+    ],
+    "parent_names": [
+      "Car"
+    ]
+  },
+  "/m/02s195": {
+    "display_name": "Vase",
+    "sam3_prompt_text": "vase",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/0f4s2w": {
+    "display_name": "Vegetable",
+    "sam3_prompt_text": "vegetable",
+    "children": [
+      "/m/047v4b",
+      "/m/0jg57",
+      "/m/0hkxq",
+      "/m/0fbw6",
+      "/m/0fj52s",
+      "/m/015x4r",
+      "/m/0cjs7",
+      "/m/05vtc",
+      "/m/015x5n",
+      "/m/0grw1",
+      "/m/0dv77",
+      "/m/07j87",
+      "/m/02cvgx"
+    ],
+    "child_names": [
+      "Artichoke",
+      "Bell pepper",
+      "Broccoli",
+      "Cabbage",
+      "Carrot",
+      "Cucumber",
+      "Garden Asparagus",
+      "Potato",
+      "Radish",
+      "Salad",
+      "Squash (Plant)",
+      "Tomato",
+      "Winter melon"
+    ],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/07yv9": {
+    "display_name": "Vehicle",
+    "sam3_prompt_text": "vehicle",
+    "children": [
+      "/m/0k5j",
+      "/m/01prls",
+      "/m/01rzcn"
+    ],
+    "child_names": [
+      "Aircraft",
+      "Land vehicle",
+      "Watercraft"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/01jfm_": {
+    "display_name": "Vehicle registration plate",
+    "sam3_prompt_text": "vehicle registration plate",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/08dz3q"
+    ],
+    "parent_names": [
+      "Auto part"
+    ]
+  },
+  "/m/07y_7": {
+    "display_name": "Violin",
+    "sam3_prompt_text": "violin",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04szw"
+    ],
+    "parent_names": [
+      "Musical instrument"
+    ]
+  },
+  "/m/02rgn06": {
+    "display_name": "Volleyball (Ball)",
+    "sam3_prompt_text": "volleyball",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/018xm"
+    ],
+    "parent_names": [
+      "Ball (Object)"
+    ]
+  },
+  "/m/01dwsz": {
+    "display_name": "Waffle",
+    "sam3_prompt_text": "waffle",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02wbm"
+    ],
+    "parent_names": [
+      "Food"
+    ]
+  },
+  "/m/04z4wx": {
+    "display_name": "Waffle iron",
+    "sam3_prompt_text": "waffle iron",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0h99cwc"
+    ],
+    "parent_names": [
+      "Kitchen appliance"
+    ]
+  },
+  "/m/0h8mzrc": {
+    "display_name": "Wall clock",
+    "sam3_prompt_text": "clock",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01x3z",
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Clock",
+      "Furniture"
+    ]
+  },
+  "/m/02vkqh8": {
+    "display_name": "Wardrobe",
+    "sam3_prompt_text": "wardrobe",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/0174k2": {
+    "display_name": "Washing machine",
+    "sam3_prompt_text": "washing machine",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/0bjyj5": {
+    "display_name": "Waste container",
+    "sam3_prompt_text": "container",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/011q46kg"
+    ],
+    "parent_names": [
+      "Container"
+    ]
+  },
+  "/m/0gjkl": {
+    "display_name": "Watch",
+    "sam3_prompt_text": "watch",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0463sg"
+    ],
+    "parent_names": [
+      "Fashion accessory"
+    ]
+  },
+  "/m/01rzcn": {
+    "display_name": "Watercraft",
+    "sam3_prompt_text": "watercraft",
+    "children": [
+      "/m/019jd",
+      "/m/01xs3r",
+      "/m/074d1"
+    ],
+    "child_names": [
+      "Boat",
+      "Jet ski",
+      "Submarine"
+    ],
+    "parents": [
+      "/m/07yv9"
+    ],
+    "parent_names": [
+      "Vehicle"
+    ]
+  },
+  "/m/0kpqd": {
+    "display_name": "Watermelon",
+    "sam3_prompt_text": "watermelon",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02xwb"
+    ],
+    "parent_names": [
+      "Fruit"
+    ]
+  },
+  "/m/083kb": {
+    "display_name": "Weapon",
+    "sam3_prompt_text": "weapon",
+    "children": [
+      "/m/0c2jj",
+      "/m/0ct4f",
+      "/m/01g3x7",
+      "/m/020kz",
+      "/m/02gzp",
+      "/m/0gxl3",
+      "/m/04ctx",
+      "/m/04ylt",
+      "/m/06c54",
+      "/m/06nrc",
+      "/m/06y5r",
+      "/m/07cmd"
+    ],
+    "child_names": [
+      "Axe",
+      "Bomb",
+      "Bow and arrow",
+      "Cannon",
+      "Dagger",
+      "Handgun",
+      "Knife",
+      "Missile",
+      "Rifle",
+      "Shotgun",
+      "Sword",
+      "Tank"
+    ],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/084zz": {
+    "display_name": "Whale",
+    "sam3_prompt_text": "whale",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0gd2v"
+    ],
+    "parent_names": [
+      "Marine mammal"
+    ]
+  },
+  "/m/083wq": {
+    "display_name": "Wheel",
+    "sam3_prompt_text": "wheel",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/08dz3q"
+    ],
+    "parent_names": [
+      "Auto part"
+    ]
+  },
+  "/m/0qmmr": {
+    "display_name": "Wheelchair",
+    "sam3_prompt_text": "wheelchair",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01prls",
+      "/m/02w3_ws"
+    ],
+    "parent_names": [
+      "Land vehicle",
+      "Personal care"
+    ]
+  },
+  "/m/02vwcm": {
+    "display_name": "Whisk",
+    "sam3_prompt_text": "whisk",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03hlz0c"
+    ],
+    "parent_names": [
+      "Kitchen utensil"
+    ]
+  },
+  "/m/02d9qx": {
+    "display_name": "Whiteboard",
+    "sam3_prompt_text": "whiteboard",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/02rdsp"
+    ],
+    "parent_names": [
+      "Office supplies"
+    ]
+  },
+  "/m/0mw_6": {
+    "display_name": "Willow",
+    "sam3_prompt_text": "willow",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07j7r"
+    ],
+    "parent_names": [
+      "Tree"
+    ]
+  },
+  "/m/0d4v4": {
+    "display_name": "Window",
+    "sam3_prompt_text": "window",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/031b6r": {
+    "display_name": "Window blind",
+    "sam3_prompt_text": "window blind",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0bl9f"
+    ],
+    "parent_names": [
+      "/m/0bl9f"
+    ]
+  },
+  "/m/081qc": {
+    "display_name": "Wine",
+    "sam3_prompt_text": "wine",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0271t"
+    ],
+    "parent_names": [
+      "Drink"
+    ]
+  },
+  "/m/09tvcd": {
+    "display_name": "Wine glass",
+    "sam3_prompt_text": "wine glass",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04brg2"
+    ],
+    "parent_names": [
+      "Tableware"
+    ]
+  },
+  "/m/0271qf7": {
+    "display_name": "Wine rack",
+    "sam3_prompt_text": "wine rack",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0c_jw"
+    ],
+    "parent_names": [
+      "Furniture"
+    ]
+  },
+  "/m/02cvgx": {
+    "display_name": "Winter melon",
+    "sam3_prompt_text": "winter melon",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0f4s2w"
+    ],
+    "parent_names": [
+      "Vegetable"
+    ]
+  },
+  "/m/084rd": {
+    "display_name": "Wok",
+    "sam3_prompt_text": "wok",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03_wxk"
+    ],
+    "parent_names": [
+      "Kitchenware"
+    ]
+  },
+  "/m/03bt1vf": {
+    "display_name": "Woman",
+    "sam3_prompt_text": "person",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/01g317"
+    ],
+    "parent_names": [
+      "Person"
+    ]
+  },
+  "/m/04169hn": {
+    "display_name": "Wood-burning stove",
+    "sam3_prompt_text": "wood-burning stove",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/019dx1"
+    ],
+    "parent_names": [
+      "Home appliance"
+    ]
+  },
+  "/m/01dy8n": {
+    "display_name": "Woodpecker",
+    "sam3_prompt_text": "woodpecker",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/015p6"
+    ],
+    "parent_names": [
+      "Bird"
+    ]
+  },
+  "/m/084hf": {
+    "display_name": "Worm",
+    "sam3_prompt_text": "worm",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/03xxp"
+    ],
+    "parent_names": [
+      "Invertebrate"
+    ]
+  },
+  "/m/01j5ks": {
+    "display_name": "Wrench",
+    "sam3_prompt_text": "wrench",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/07k1x"
+    ],
+    "parent_names": [
+      "Tool"
+    ]
+  },
+  "/m/0898b": {
+    "display_name": "Zebra",
+    "sam3_prompt_text": "zebra",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/04rky"
+    ],
+    "parent_names": [
+      "Mammal"
+    ]
+  },
+  "/m/027pcv": {
+    "display_name": "Zucchini",
+    "sam3_prompt_text": "zucchini",
+    "children": [],
+    "child_names": [],
+    "parents": [
+      "/m/0dv77"
+    ],
+    "parent_names": [
+      "Squash (Plant)"
+    ]
+  }
+}

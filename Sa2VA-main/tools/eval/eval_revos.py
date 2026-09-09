@@ -10,18 +10,25 @@ import os.path as osp
 import time
 import argparse
 import json
+import sys
+from pathlib import Path
 import numpy as np
 import multiprocessing as mp
 import pandas as pd
 from pycocotools import mask as cocomask
 
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 from third_parts.revos.utils.metircs import db_eval_iou, db_eval_boundary, get_r2vos_accuracy, get_r2vos_robustness
 
-NUM_WOEKERS = 128
-
 def eval_queue(q, rank, out_dict):
-    while not q.empty():
-        vid_name, exp = q.get()
+    while True:
+        job = q.get()
+        if job is None:
+            break
+        vid_name, exp = job
         vid = exp_dict[vid_name]
         exp_name = f'{vid_name}_{exp}'
 
@@ -63,6 +70,7 @@ if __name__ == '__main__':
     parser.add_argument("--foreground_mask_path", type=str, default="data/video_datas/revos/mask_dict_foreground.json")
     parser.add_argument("--save_json_name", type=str, default="revos_valid.json")
     parser.add_argument("--save_csv_name", type=str, default="revos_valid.csv")
+    parser.add_argument("--workers", type=int, default=8)
     args = parser.parse_args()
     queue                = mp.Queue()
     exp_dict             = json.load(open(args.exp_path))['videos']
@@ -71,31 +79,54 @@ if __name__ == '__main__':
     #mask_dict_foreground=mask_dict
     mask_pred = json.load(open(args.pred_path))
 
-    shared_exp_dict             = mp.Manager().dict(exp_dict)
-    shared_mask_dict            = mp.Manager().dict(mask_dict)
-    shared_mask_dict_foreground = mp.Manager().dict(mask_dict_foreground)
-    output_dict                 = mp.Manager().dict()
+    manager = mp.Manager()
+    output_dict = manager.dict()
+    mask_pred_dict = mask_pred
 
-    mask_pred_dict  = mp.Manager().dict(mask_pred)
-
-
-    for idx, vid_name in enumerate(exp_dict):
+    jobs = []
+    missing = []
+    for vid_name in exp_dict:
         vid = exp_dict[vid_name]
         for exp in vid['expressions']:
-            queue.put([vid_name, exp])
+            prediction = mask_pred.get(vid_name, {}).get(exp)
+            expected_frames = len(vid['frames'])
+            actual_frames = len(prediction.get('prediction_masks', [])) if isinstance(prediction, dict) else 0
+            if actual_frames != expected_frames:
+                missing.append((vid_name, exp, expected_frames, actual_frames))
+            else:
+                jobs.append([vid_name, exp])
+
+    if missing:
+        first = missing[0]
+        raise RuntimeError(
+            f"Incomplete predictions: {len(missing)} expressions missing or incomplete; "
+            f"first={first[0]}/{first[1]} expected_frames={first[2]} actual_frames={first[3]}"
+        )
+
+    worker_count = max(1, min(args.workers, len(jobs)))
+    for job in jobs:
+        queue.put(job)
+    for _ in range(worker_count):
+        queue.put(None)
 
     start_time = time.time()
-    if NUM_WOEKERS > 1:
+    if worker_count > 1:
         processes = []
-        for rank in range(NUM_WOEKERS):
+        for rank in range(worker_count):
             p = mp.Process(target=eval_queue, args=(queue, rank, output_dict))
             p.start()
             processes.append(p)
 
         for p in processes:
             p.join()
+        failed = [(p.pid, p.exitcode) for p in processes if p.exitcode != 0]
+        if failed:
+            raise RuntimeError(f"Evaluation workers failed: {failed}")
     else:
         eval_queue(queue, 0, output_dict)
+    if len(output_dict) != len(jobs):
+        raise RuntimeError(f"Evaluation incomplete: expected={len(jobs)} completed={len(output_dict)}")
+
 
     # save average results
     output_json_path = osp.join(osp.dirname(args.pred_path), args.save_json_name)
