@@ -7,6 +7,7 @@
 | 候选排序与训练 | [crf_sam3_attn](Sa2VA-main/crf_sam3_attn/) |
 | ReVOS 最终配置 | [推理配置](Sa2VA-main/configs/crf_sam3_config_revos_valid_revos_query_ranker_20260806.yaml) |
 | ReVOS 评测与审计 | [官方结果](Sa2VA-main/crf_sam3_revos_valid_revos_query_ranker_20260806/revos_valid_official.json)、[完整性审计](Sa2VA-main/crf_sam3_revos_valid_revos_query_ranker_20260806/revos_valid_jf_audit.json) |
+| 数据集与标注 | [数据说明](Sa2VA/README.md) |
 | 各数据集结果 | [README 结果表](README.md#recorded-results) |
 | 论文图表 | [论文代理](论文代理/) |
 

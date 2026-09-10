@@ -63,6 +63,8 @@ The first three rows use expression-level metrics. The Ref-Youtube-VOS overlay c
 
 ## Data Policy
 
+See [dataset documentation](Sa2VA/README.md) for splits, annotation layouts, metadata counts, and local sample coverage.
+
 Git retains source code, configurations, dataset layout documentation, sampled cache metadata, evaluation summaries, and paper materials. Raw media, mask dictionaries, checkpoints, tokenizer payloads, training logs, generated training sets, and full prediction payloads are excluded.
 
 Datasets include MeViS, DAVIS17, Ref-Youtube-VOS, and ReVOS; `revos_prepared` is a derived ReVOS training layout. `sample_inventory.json` describes local samples, which do not replace full evaluation datasets. Full reproduction requires the original datasets and model weights.

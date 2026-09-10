@@ -1,34 +1,7 @@
-# Ref-Youtube-VOS Layout
+# Ref-Youtube-VOS
 
-Expected root:
+`train/` 包含 `JPEGImages/`、`Annotations/`、`mask_dict.pkl`、`meta.json` 和 `meta_expressions.json`；`valid/` 包含帧、PNG 标注和 `meta_expressions_challenge.json`。
 
-```text
-Sa2VA/data/video_datas/Ref-Youtube-VOS/
-```
+推理：`Sa2VA-main/run_crf_sam3_refytros_dataset.py`；评测：`Sa2VA-main/tools/eval/eval_refytros_png.py`。
 
-Expected split layout:
-
-```text
-Ref-Youtube-VOS/
-|-- train/
-|   |-- JPEGImages/
-|   |-- Annotations/
-|   |-- mask_dict.pkl
-|   `-- meta_expressions.json
-`-- valid/
-    |-- JPEGImages/
-    |-- Annotations/
-    `-- meta_expressions_challenge.json
-```
-
-Role in this project:
-
-- Used for Ref-Youtube-VOS / Ref-YTROS-style training and evaluation.
-- The main runner is `Sa2VA-main/run_crf_sam3_refytros_dataset.py`.
-- The evaluator is `Sa2VA-main/tools/eval/eval_refytros_png.py`.
-- This dataset is central to the recent category-extraction prompt study because failure-subset candidate recall improved substantially after prompt refinement.
-
-Local transfer package note:
-
-- `sample_inventory.json` reports 66 sampled train expressions and 66 sampled eval expressions for Ref-Youtube-VOS.
-- Raw frames, annotations, and serialized mask dictionaries are intentionally not tracked in Git.
+规模、采样范围与复现要求见 [数据集说明](../../../README.md)。上述代码路径相对仓库根目录；原始数据文件不进入 Git。

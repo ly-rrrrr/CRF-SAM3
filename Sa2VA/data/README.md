@@ -1,11 +1,3 @@
-# Data Directory
+# 数据目录
 
-This directory mirrors the data root expected by the project:
-
-```text
-Sa2VA/data/video_datas/
-```
-
-Only documentation and placeholders are tracked. Dataset payloads are ignored by `.gitignore`.
-
-The local transfer package used during development contained sampled raw data only. It was designed for code understanding and sanity checking, not full benchmark reproduction.
+项目数据根路径为 `video_datas/`。数据集用途、规模、标注和复现要求见 [数据集说明](../README.md)。Git 仅保留说明与目录占位。

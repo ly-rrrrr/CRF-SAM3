@@ -1,43 +1,9 @@
-# Video Dataset Layout
+# 视频数据布局
 
-This directory records the expected dataset organization for the CRF-SAM3 RVOS experiments.
+数据集规模与标注说明见 [Sa2VA 数据说明](../../README.md)。
 
-Tracked in Git:
-
-- this README;
-- dataset-specific README files;
-- optional `.gitkeep` placeholders.
-
-Not tracked in Git:
-
-- JPEG frames;
-- annotation PNG masks;
-- `mask_dict.json` / `mask_dict.pkl`;
-- full metadata files that belong to the raw dataset packages;
-- generated predictions.
-
-The sampled transfer package contained:
-
-| Dataset | Train Samples | Eval Samples |
-|---|---:|---:|
-| MeViS | 67 | 67 |
-| DAVIS17 | 67 | 67 |
-| Ref-Youtube-VOS | 66 | 66 |
-
-The exact sampled expressions are listed in `../../../sample_inventory.json`.
-
-Expected top-level layout:
-
-```text
-video_datas/
-|-- mevis/
-|   |-- train/
-|   `-- valid_u/
-|-- davis17/
-|   |-- meta_expressions/
-|   |-- train/
-|   `-- valid/
-`-- Ref-Youtube-VOS/
-    |-- train/
-    `-- valid/
-```
+- [MeViS](mevis/README.md)
+- [DAVIS17](davis17/README.md)
+- [Ref-Youtube-VOS](Ref-Youtube-VOS/README.md)
+- [ReVOS 原始布局](revos/README.md)
+- [ReVOS 派生训练布局](revos_prepared/README.md)
