@@ -1,0 +1,4 @@
+PARTIAL: zero 419/419; ok 300/300 sampled; fail 1244/1247.
+GPU2 retry repeated Triton CUDA invalid argument for OVIS/train/a3f0cb28 expressions 1,22,23.
+retry_fail.exitcode=0 does NOT mean all samples succeeded. Original pipeline.exitcode=1 correctly indicates incomplete results.
+Summary uses baseline values for missing samples; point/rescue are separate interventions, oracle_gt uses GT seeds.
