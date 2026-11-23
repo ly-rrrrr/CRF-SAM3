@@ -30,7 +30,6 @@ referring expression + video frames
 | `Sa2VA/data/video_datas/` | Dataset layout documentation |
 | `论文代理/` | Paper figures and analysis |
 | `experiments/` | 2026-11 follow-up packages: Ground v2, heatmap-seeded recall, Verify re-eval, VideoRefer zero-shot (standalone) |
-| `paper/` | v19 Overleaf source and editable framework figures |
 
 See [PAPER_EVIDENCE_MAP.md](PAPER_EVIDENCE_MAP.md) for source and result entry points, and [RESULTS.md](RESULTS.md) for the 2026-11 follow-up results.
 

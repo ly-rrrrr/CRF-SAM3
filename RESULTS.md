@@ -53,7 +53,3 @@ ReVOS 内部验证集 1,041 条（A = 旧 Ground，E = v2，E′ = v2 推理时�
 - **最终 J&F（扩展池上的 Verify）**：`experiments/p1a_spatial_recall/scripts/verify_v2.sh`，行 old / v2 / v2_point。20 条检查：19/20 与论文选择一致，概率最大差 0.093（bf16 logit 量化噪声）。全量待服务器运行。
 - **VideoRefer-7B 零样本 Verify**：`experiments/videorefer_zeroshot_verify/`，只做过 CPU 冒烟测试。
 
-## 4. 论文与作图
-
-- `paper/CRF-SAM3_v19_Overleaf/`：v19 Overleaf 源码（Method 与 4.1 按源码重写，改动见 `CHANGES_v19.md`）。
-- `paper/figures_virst_style/`：VIRST 风格框架图（可编辑 PPTX v4 + python-pptx 生成脚本 + caption），以及 Ground v1 vs v2 对比图。

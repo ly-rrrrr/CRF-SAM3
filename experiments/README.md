@@ -17,4 +17,4 @@
 
 ## 没有放进 git 的内容
 
-模型权重 / LoRA checkpoint、生成的训练数据（`ground_v2/data/`）、热力图 npz、候选池 RLE、`runs/` 下的逐样本预测与日志、各类 zip。`runs/` 里只保留了小的汇总文件（`compare.md`、`report.md`、`summary.md`、`STATUS_*.txt`、训练曲线 PNG）。这些大文件仍在服务器与本机 `Desktop/论文/` 下。
+模型权重 / LoRA checkpoint、生成的训练数据（`ground_v2/data/`）、热力图 npz、候选池 RLE、`runs/` 下的逐样本预测与日志、各类 zip。`runs/` 里只保留了小的汇总文件（`compare.md`、`report.md`、`summary.md`、`STATUS_*.txt`）。这些大文件仍在服务器与本机 `Desktop/论文/` 下。
