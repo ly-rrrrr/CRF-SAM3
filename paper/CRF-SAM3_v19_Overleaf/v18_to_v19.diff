@@ -1,0 +1,348 @@
+--- CRF-SAM3_v18_Overleaf_20261008/sections/0_abstract.tex	2026-11-18 10:51:01.343613000 +0000
++++ CRF-SAM3_v19_Overleaf_20261119/sections/0_abstract.tex	2026-11-18 16:24:07.456892000 +0000
+@@ -1,3 +1,3 @@
+ \begin{abstract}
+-Referring video object segmentation (RVOS) requires both reliable target discovery and fine-grained referent discrimination. We argue that these two requirements need not be solved at the same semantic granularity: a compact object concept is often sufficient to expose plausible trajectories, whereas the final decision may depend on attributes, actions, relations, and temporal events. We therefore propose CRF-SAM3, a \emph{Ground--Recall--Verify} framework. An expression-conditioned target-query module first learns a referent-aware open-vocabulary recall concept from frozen Qwen3-VL visual tokens. Ground-truth masks supervise query responses only during training, while inference uses the referring expression and RGB frames alone. The grounded concept then prompts SAM3 to recall multiple temporally coherent candidate tubes, deliberately preserving ambiguity. Finally, a Qwen3-VL verifier evaluates the recalled tubes under the full expression and is trained with listwise competition, hard-negative ranking, and mask-aware feature alignment. Across four benchmarks, CRF-SAM3 obtains 71.45 $\mathcal{J}\&\mathcal{F}$ on MeViS val$^u$, 76.39 on Ref-DAVIS17, 66.47 on Ref-Youtube-VOS, and 59.74 on ReVOS. Candidate-space and verifier analyses further show that recall coverage and semantic discrimination are complementary and separately measurable bottlenecks.
++Referring video object segmentation (RVOS) requires both reliable target discovery and fine-grained referent discrimination. We argue that these two requirements need not be solved at the same semantic granularity: a compact object concept is often sufficient to expose plausible trajectories, whereas the final decision may depend on attributes, actions, relations, and temporal events. We therefore propose CRF-SAM3, a \emph{Ground--Recall--Verify} framework. An expression-conditioned target-query module first learns a referent-aware open-vocabulary recall concept from frozen Qwen3-VL visual tokens. Ground-truth masks supervise query responses only during training, while inference uses the referring expression and RGB frames alone. The grounded concept then prompts SAM3 to recall multiple temporally coherent candidate tubes, deliberately preserving ambiguity. Finally, a Qwen3-VL verifier evaluates the recalled tubes under the full expression and is trained with listwise competition, hard-negative ranking, and mask-aware feature alignment. Across four benchmarks, CRF-SAM3 obtains 71.45 $\mathcal{J}\&\mathcal{F}$ on MeViS val$^u$, -- on Ref-DAVIS17, -- on Ref-Youtube-VOS, and 59.74 on ReVOS. Candidate-space and verifier analyses further show that recall coverage and semantic discrimination are complementary and separately measurable bottlenecks.
+ \end{abstract}
+--- CRF-SAM3_v18_Overleaf_20261008/sections/3_method.tex	2026-11-18 10:51:01.734951000 +0000
++++ CRF-SAM3_v19_Overleaf_20261119/sections/3_method.tex	2026-11-18 16:24:17.866257000 +0000
+@@ -1,7 +1,7 @@
+ \section{Method}
+ 
+ \subsection{Overview and Problem Formulation}
+-Given a video $\mathcal{V}=\{I_t\}_{t=1}^{T}$ and a referring expression $q$, referring video object segmentation (RVOS) predicts a mask sequence $\mathcal{Y}=\{Y_t\}_{t=1}^{T}$ for the referred instance. CRF-SAM3 factorizes this mapping into three explicit stages:
++Given a video $\mathcal{V}=\{I_t\}_{t=1}^{T}$ and a referring expression $q$, referring video object segmentation (RVOS) predicts a mask sequence $\mathcal{Y}=\{Y_t\}_{t=1}^{T}$ for the referred object(s). CRF-SAM3 factorizes this mapping into three explicit stages:
+ \begin{equation}
+ (q,\mathcal{V})
+ \xrightarrow{\text{Ground}}
+@@ -9,27 +9,28 @@
+ \xrightarrow[\mathcal{V}]{\text{Recall}}
+ \mathcal{C}(q)
+ \xrightarrow[\,q\,]{\text{Verify}}
+-\hat{\tau},
++\hat{\mathcal{S}}\subseteq\mathcal{C}(q),
+ \end{equation}
+-where $\hat c$ is a compact, referent-aware recall concept, $\mathcal{C}(q)=\{\tau_i\}_{i=1}^{N_c}$ is a set of candidate object tubes, and $\hat\tau$ is the final selected tube. The three stages solve deliberately different subproblems. Ground asks which visual concept should be used to search the video; Recall asks which temporally coherent object hypotheses satisfy that concept; Verify asks which recalled hypothesis satisfies the complete referring expression.
++where $\hat c$ is a compact, referent-aware recall concept, $\mathcal{C}(q)=\{\tau_i\}_{i=1}^{N_c}$ is a set of candidate object tubes, and $\hat{\mathcal{S}}$ is the set of selected tubes whose union forms the prediction. The three stages solve deliberately different subproblems. Ground asks which visual concept should be used to search the video; Recall asks which temporally coherent object hypotheses satisfy that concept; Verify asks which recalled hypotheses satisfy the complete referring expression.
+ 
+-This factorization is intentionally asymmetric. The first two stages are recall-oriented: it is preferable to preserve several plausible same-category tubes than to discard the true referent too early. Fine-grained attributes, actions, relations, and temporal clauses are therefore not forced into the SAM3 prompt. Instead, they are retained in the original expression and used again during candidate verification. Figure~\ref{fig:framework} summarizes this data flow.
++This factorization is intentionally asymmetric. The first two stages are recall-oriented: it is preferable to preserve several plausible same-category tubes than to discard the true referent too early. Fine-grained attributes, actions, relations, and temporal clauses are therefore not forced into the SAM3 prompt. Instead, they are retained in the original expression and used again during candidate verification. The Ground module and the verifier are trained separately (Secs.~\ref{sec:ground} and \ref{sec:verify}); SAM3 is frozen and no gradient is propagated through candidate generation. Figure~\ref{fig:framework} summarizes this data flow.
+ 
+ \subsection{Referent-Aware Concept Grounding}
++\label{sec:ground}
+ \paragraph{Visual and language representations.}
+-We sample $M$ supporting RGB frames from the video and process them with the frozen Qwen3-VL visual backbone. Let $V=\{v_n\}_{n=1}^{N_v}$ denote the ordered visual-token sequence inserted at the multimodal placeholder positions of Qwen3-VL. We do not crop the input around the target, nor do we remove visual tokens. The full referring expression is embedded with the frozen Qwen token embedding layer and passed through a lightweight bidirectional expression conditioner. The conditioner prepends a learnable summary token, projects the language embeddings to the query space, and applies a small Transformer encoder, producing conditioned text features $T$.
++We sample $M$ RGB frames from the video and encode them with the frozen Qwen3-VL vision encoder. Let $V=\{v_n\}_{n=1}^{N_v}$ denote the resulting merged visual tokens, i.e., the embeddings that Qwen3-VL inserts at its image placeholder positions. We do not crop the input around the target, nor do we remove visual tokens. In parallel, the expression $q$ is tokenized on its own and embedded with the frozen Qwen3-VL token-embedding table. A lightweight expression conditioner projects these embeddings to the query dimension, prepends a learnable summary token, and applies a small bidirectional Transformer encoder, producing conditioned text features $T$.
+ 
+-The distinction between these two streams is important: $V$ preserves the original RGB context, whereas $T$ summarizes the complete referring expression for target localization. The Qwen3-VL backbone itself remains frozen throughout this stage.
++The two streams play different roles: $V$ preserves the original RGB context, whereas $T$ summarizes the complete referring expression for target localization. The Qwen3-VL backbone itself, including its vision encoder and language decoder, remains frozen throughout this stage.
+ 
+ \paragraph{Category-agnostic target-query grounding.}
+-We introduce $K$ learnable query slots $Q^0=\{q_k^0\}_{k=1}^{K}$. They are not tied to semantic categories. Instead, each slot is free to represent a possible expression-conditioned target hypothesis. A lightweight query decoder repeatedly performs query self-attention, text cross-attention, visual cross-attention, and an FFN update:
++We introduce $K$ learnable query embeddings $Q^0=\{q_k^0\}_{k=1}^{K}$. They are not tied to semantic categories; each slot is free to represent a possible expression-conditioned target hypothesis. Let $\bar V=P_v(V)$ denote the visual tokens linearly projected to the query dimension. A query decoder of $L$ pre-norm residual layers updates the slots by query self-attention, cross-attention to the text features, cross-attention to the visual tokens, and an FFN:
+ \begin{equation}
+ Q^{\ell}=\mathcal{D}_{\ell}\!\left(Q^{\ell-1},T,\bar V\right),
+-\qquad \ell=1,\ldots,L,
++\qquad \ell=1,\ldots,L .
+ \end{equation}
+-where $\bar V=P_v(V)$ denotes the visual tokens projected to the query dimension. This design lets the target slots use the entire expression while grounding themselves directly in the original visual-token sequence.
++The slots therefore use the entire expression while grounding themselves directly in the original visual-token sequence.
+ 
+-The final query states are converted to token responses with projected cosine similarity:
++The final query states are converted to token responses with a scaled cosine similarity:
+ \begin{equation}
+ R_{k,n}
+ =
+@@ -39,10 +40,10 @@
+ \operatorname{norm}(W_v \bar v_n)
+ \right\rangle,
+ \end{equation}
+-where $\gamma$ is a response scale. The response matrix $R$ is therefore an explicit intermediate representation of where each category-agnostic slot finds evidence for the referred target.
++where $\gamma$ is a fixed response scale. The response matrix $R$ is an explicit intermediate representation of where each slot finds evidence for the referred target.
+ 
+ \paragraph{Mask supervision without mask input.}
+-Ground-truth masks are used only to supervise these token responses during training. They are never rendered into the RGB inputs and are not supplied to the model at inference. For each sampled training frame, the binary mask is mapped to the merged Qwen visual-token grid, producing token-level target labels $y$. We compute a matching cost for every query,
++Ground-truth masks supervise these token responses during training only. They are never rendered into the RGB inputs and are not supplied to the model at inference. For each training frame, the binary target mask is resized to the patch grid of the vision encoder and average-pooled over each spatial-merge window; a merged token is labelled positive if the target covers at least a fraction $\rho$ of its window, giving token labels $y\in\{0,1\}^{N_v}$. We compute a matching cost for every slot,
+ \begin{equation}
+ \ell_k^{\mathrm{mask}}
+ =
+@@ -57,23 +58,24 @@
+  \mathcal{L}_{\mathrm{ground}}
+  =\ell_{k^{*}}^{\mathrm{mask}}.
+ \end{equation}
+-The best-slot rule is used only because the query slots are exchangeable: it does not turn them into fixed semantic prototypes.
++The best-slot rule is used only because the slots are exchangeable; it does not turn them into fixed semantic prototypes.
+ 
+ \paragraph{Soft visual modulation.}
+-The token responses are not used to crop the frame or prune the Qwen visual sequence. Instead, they provide a soft residual gate. During training, the selected query produces
++The token responses are not used to crop the frame or prune the visual sequence. Instead, they provide a soft residual gate. During training, the selected slot produces
+ \begin{equation}
+  m_n^{\mathrm{train}}=\sigma(R_{k^{*},n}),
+ \end{equation}
+-and a lightweight bottleneck adapter modulates each original visual token as
++and a bottleneck adapter $A(\cdot)$ (LayerNorm, linear down-projection, SiLU, linear up-projection) modulates each original visual token as
+ \begin{equation}
+  v'_n
+  =
+  v_n+\alpha\,m_n A(v_n),
+ \label{eq:soft_modulation}
+ \end{equation}
+-where $\alpha$ is learnable. The same response gate is also applied to Qwen3-VL's corresponding deep-stack visual embeddings. Thus, grounding changes the contribution of target-relevant visual evidence while preserving token count, order, and the surrounding scene context expected by the frozen multimodal decoder.
++where $\alpha$ is a learnable scalar. The last layer of $A$ is zero-initialized, so the module starts as the identity and the frozen decoder initially receives unmodified visual tokens. The same gate and adapter are applied to Qwen3-VL's DeepStack visual embeddings, which are injected into intermediate decoder layers. Grounding thus changes the contribution of target-relevant evidence while preserving token count, order, and the surrounding scene context expected by the frozen decoder.
+ 
+-The modulated visual embeddings are scattered back to their original multimodal token positions and decoded by the frozen Qwen3-VL language model. The output is a short open-vocabulary recall concept $\hat c$. Category-generation supervision is optimized jointly with the spatial grounding objective,
++\paragraph{Concept generation.}
++The modulated visual embeddings are written back to their original placeholder positions. The frozen Qwen3-VL decoder receives an instruction prompt containing the referring expression and the $M$ frames, and generates a short JSON answer \texttt{\{"category": $\hat c$\}}. During training, the target is a category label $c^{\star}$ for the referred object, and $\mathcal{L}_{\mathrm{cat}}$ is the token-level cross-entropy of this answer. The category labels are used only as training targets; their construction is described in Sec.~\ref{sec:setup}. The grounding objective is
+ \begin{equation}
+ \mathcal{L}_{G}
+ =
+@@ -81,28 +83,30 @@
+ +
+ \lambda_c\mathcal{L}_{\mathrm{cat}}.
+ \end{equation}
+-Only the expression conditioner, query decoder, visual/query projections, response head, and modulation adapter are optimized in this stage.
++Because the gate $m^{\mathrm{train}}$ is not detached, $\mathcal{L}_{\mathrm{cat}}$ is back-propagated through the frozen decoder into the adapter and, through $m$, into the query decoder. The target queries are therefore shaped both by \emph{where} the referent is ($\mathcal{L}_{\mathrm{ground}}$) and by \emph{which concept} the decoder should emit from the modulated evidence ($\mathcal{L}_{\mathrm{cat}}$). Only the expression conditioner, query decoder, visual projection $P_v$, response head ($W_q,W_v$), and modulation adapter are optimized.
+ 
+ \paragraph{Mask-free inference.}
+-At test time, the ground-truth-based assignment $k^{*}$ is unavailable. Rather than committing to one query slot, we aggregate the responses over all slots at every visual-token position:
++At test time, the ground-truth-based assignment $k^{*}$ is unavailable. Rather than committing to one slot, we aggregate the responses over all slots at every visual-token position:
+ \begin{equation}
+  m_n^{\mathrm{test}}
+  =
+  \max_k \sigma(R_{k,n}).
+ \label{eq:test_query_aggregation}
+ \end{equation}
+-The resulting response is inserted into the same modulation rule in Eq.~\eqref{eq:soft_modulation}, after which Qwen3-VL generates the recall concept. Inference therefore requires only the original RGB frames and the referring expression. The training masks serve as privileged spatial supervision for learning \emph{where the expression refers}, not as an inference-time visual cue.
++The resulting response is inserted into Eq.~\eqref{eq:soft_modulation}, after which the decoder generates $\hat c$ by greedy decoding. Inference therefore requires only the RGB frames and the referring expression. The training masks serve as privileged spatial supervision for learning \emph{where the expression refers}, not as an inference-time visual cue.
+ 
+ \subsection{SAM3 Candidate Recall}
+-The grounded concept $\hat c$ is an interface to object discovery rather than the final semantic answer. We provide $\hat c$ together with the RGB video to SAM3 and retain the resulting temporally associated object hypotheses. Each hypothesis is represented as a candidate tube
++\label{sec:recall}
++The grounded concept $\hat c$ is an interface to object discovery rather than the final semantic answer. We provide $\hat c$ as the concept prompt, together with the RGB video, to SAM3~\cite{carion2025sam3}, using the training-free decoupled memory selection of SAM3-DMS~\cite{shen2026sam3dms} for multi-object propagation. Each retained object identity forms a candidate tube
+ \begin{equation}
+ \tau_i=\{M_t^{(i)}\}_{t=1}^{T},
+ \qquad
+ \mathcal{C}(q)=\{\tau_i\}_{i=1}^{N_c}.
+ \end{equation}
+-SAM3 is kept frozen. This stage is intentionally recall-oriented: multiple same-category instances may remain in $\mathcal{C}(q)$ even when the compact concept cannot distinguish them. Such ambiguity is acceptable as long as the true referent remains available to the verifier. In this sense, Recall defines the hypothesis space on which the final language reasoning operates.
++SAM3 first detects up to $K_r$ concept instances, ranked by its detection score, and only the top $K_{\mathrm{keep}}\le K_r$ identities are propagated and passed on, so $N_c\le K_{\mathrm{keep}}$. SAM3 is kept frozen. This stage is intentionally recall-oriented: multiple same-category instances may remain in $\mathcal{C}(q)$ even when the compact concept cannot distinguish them. Such ambiguity is acceptable as long as the true referent remains available to the verifier. If SAM3 returns no instance, $\mathcal{C}(q)=\emptyset$ and the prediction is empty.
+ 
+-For verifier training, SAM3 candidates are generated offline and cached. Candidate supervision is obtained from their overlap with the ground-truth tube rather than from the candidate-generation score itself. We use the sequence-level region similarity
++\paragraph{Offline candidates and IoU labels.}
++For verifier training, candidate tubes are generated offline with the same recall procedure and cached. Since the verifier only consumes candidate tubes, the training cache is built from training-time concepts rather than from the grounder output (Sec.~\ref{sec:setup}). Candidate supervision is obtained from overlap with the ground-truth tube rather than from the SAM3 score. We use the sequence-level region similarity
+ \begin{equation}
+ J_i
+ =
+@@ -110,37 +114,39 @@
+ \sum_{t\in\Omega_G}
+ \operatorname{IoU}\!\left(M_t^{(i)},G_t\right),
+ \end{equation}
+-where $\Omega_G$ denotes annotated ground-truth frames and a missing candidate mask is treated as empty. Positive and negative candidates are derived from the resulting IoU statistics according to the training configuration. These IoU labels are used only to supervise candidate ranking; they are never required at inference. Because SAM3 is outside both trainable modules, concept grounding and candidate verification are optimized in separate stages and no gradient is propagated through candidate generation.
++where $\Omega_G$ denotes the annotated ground-truth frames and a candidate missing on such a frame contributes an empty mask. A candidate is positive if $J_i\ge\theta_{\mathrm{pos}}$ and negative if $J_i\le\theta_{\mathrm{neg}}$. These IoU labels supervise ranking only and are never required at inference.
+ 
+ \subsection{Candidate-Aware Verification}
++\label{sec:verify}
+ \paragraph{Candidate-conditioned visual evidence.}
+-The compact recall concept is discarded once the candidate set has been constructed. Verification instead returns to the original expression $q$. For each candidate tube $\tau_i$, we sample a short sequence from its temporal support and render candidate-conditioned frames in which the current hypothesis is explicitly identified by its mask-conditioned visualization. These frames form the visual evidence for that specific hypothesis. The verifier prompt instructs Qwen3-VL to treat the marked object as the anchor subject and to judge whether the full referring expression becomes true when grounded on that object. This anchor formulation is important: without it, a multimodal model can answer whether the expression is true somewhere in the scene rather than whether it is true for the candidate under evaluation.
++The compact recall concept is discarded once the candidate set has been constructed. Verification instead returns to the original expression $q$. For each candidate tube $\tau_i$, we uniformly sample $F$ frames from the frames on which the candidate is present and mark the candidate in each frame with a semi-transparent mask overlay. These frames form the visual evidence for that specific hypothesis. The verifier prompt instructs Qwen3-VL to treat the marked object as the anchor subject of the expression and to answer \emph{Yes} if the expression becomes true when grounded on that object in the frame sequence, and \emph{No} otherwise. This anchor formulation is important: without it, a multimodal model can answer whether the expression is true somewhere in the scene rather than whether it is true for the candidate under evaluation. At inference, when the expression contains a color word, the candidate is marked by its bounding box instead of a filled overlay so that the overlay does not alter the color evidence.
+ 
+-With the training-aligned Yes/No scoring interface used by the final pipeline, the candidate score is
++Let $\ell_i^{\mathrm{yes}}$ and $\ell_i^{\mathrm{no}}$ be the next-token logits of \emph{Yes} and \emph{No} after the prompt. The candidate score is
+ \begin{equation}
+  s_i
+  =
+- P(\mathrm{Yes}\mid q,\tau_i),
++ P(\mathrm{Yes}\mid q,\tau_i)
++ =\frac{\exp\ell_i^{\mathrm{yes}}}{\exp\ell_i^{\mathrm{yes}}+\exp\ell_i^{\mathrm{no}}}.
+ \end{equation}
+-computed from the first-token Yes/No logits. The visual encoder of the verifier is frozen, while lightweight LoRA parameters adapt Qwen3-VL to candidate-level discrimination. At inference, candidates are ranked by $s_i$ and the highest-scoring hypothesis is selected.
++The vision encoder of the verifier is frozen, and LoRA adapters on the attention and MLP projections of the language model adapt Qwen3-VL to candidate-level discrimination. The same score is used for training and for ranking at inference.
+ 
+ \paragraph{Listwise candidate competition.}
+-Training the candidates independently does not reflect the decision made at inference, where candidates from the same expression compete directly. Let $\mathcal{P}\subseteq\mathcal{C}$ denote the positive set obtained from offline IoU labels. We therefore optimize a listwise objective over all candidates for the expression:
++Scoring candidates independently does not reflect the decision made at inference, where candidates from the same expression compete directly. Let $\mathcal{P}\subseteq\mathcal{C}$ be the positive set and $\mathcal{N}$ the negative set used for ranking (all non-positive candidates, or only those with $J_i\le\theta_{\mathrm{neg}}$, depending on the dataset). We optimize a listwise objective over the candidates of each expression:
+ \begin{equation}
+ \mathcal{L}_{\mathrm{list}}
+ =
+-\log\sum_{j\in\mathcal{C}}\exp(s_j/\tau)
++\log\!\!\sum_{j\in\mathcal{P}\cup\mathcal{N}}\!\!\exp(s_j/\kappa)
+ -
+-\log\sum_{j\in\mathcal{P}}\exp(s_j/\tau).
++\log\sum_{j\in\mathcal{P}}\exp(s_j/\kappa).
+ \end{equation}
+-This loss increases the score mass assigned to valid target hypotheses relative to the complete recalled set. If no candidate reaches the configured positive threshold, the highest-IoU candidate can be used as a fallback positive during training so that difficult low-recall examples still contribute ranking supervision.
++where $\kappa$ is a temperature. This loss increases the score mass assigned to valid target hypotheses relative to the competing candidates. If no candidate reaches $\theta_{\mathrm{pos}}$, the highest-IoU candidate is used as a fallback positive so that difficult low-recall examples still contribute ranking supervision.
+ 
+ \paragraph{Hard-negative ranking.}
+-Listwise competition is complemented by an explicit margin on confusing negatives. For this term, we use the Yes/No logit gap
++Listwise competition is complemented by an explicit margin on confusing negatives. Since $s_i$ is bounded in $[0,1]$, this term uses the unnormalized Yes/No logit gap
+ \begin{equation}
+- r_i=\ell_i^{\mathrm{yes}}-\ell_i^{\mathrm{no}}
++ r_i=\ell_i^{\mathrm{yes}}-\ell_i^{\mathrm{no}} .
+ \end{equation}
+-as an unnormalized ranking score. Let $r^{+}$ be the positive reference score. A negative candidate is considered violating when $r_j>r^{+}-\delta$. The hard-negative objective is
++Let $r^{+}$ be the positive reference, i.e., the maximum (or mean) of $r$ over $\mathcal{P}$. A negative is violating when $r_j>r^{+}-\delta$, and
+ \begin{equation}
+ \mathcal{L}_{\mathrm{hard}}
+ =
+@@ -148,23 +154,23 @@
+ \sum_{j\in\mathcal{H}}
+ \operatorname{softplus}(r_j-r^{+}+\delta),
+ \end{equation}
+-where $\mathcal{H}$ contains all violating negatives. The loss therefore concentrates training on candidates that remain competitive with the positive reference instead of treating all background hypotheses equally.
++where $\mathcal{H}\subseteq\mathcal{N}$ contains the violating negatives. The loss concentrates training on candidates that remain competitive with the positive reference instead of treating all background hypotheses equally.
+ 
+ \paragraph{Mask-aware feature alignment.}
+-Candidate marking defines the anchor visually, but the verifier can still over-rely on contextual objects. We therefore add a hidden-feature regularizer. At a selected language-model layer, the text-token hidden states are averaged into a text representation $t$, while visual-token states are compared to $t$ by cosine similarity. For visual token $n$,
++Candidate marking defines the anchor visually, but the verifier can still over-rely on contextual objects. We therefore regularize the hidden states of the last language-model layer. All non-visual prompt tokens, i.e., the instruction and the expression, are averaged into a text vector $t$. For the visual token $n$ of frame $f$,
+ \begin{equation}
+- a_n=\operatorname{sim}(h_n,t),
++ a_n=\cos(h_n,t),
+  \qquad
+  p_n=
+- \frac{\exp(a_n/\tau_a)}{\sum_j\exp(a_j/\tau_a)}.
++ \frac{\exp(a_n/\tau_a)}{\sum_{j\in f}\exp(a_j/\tau_a)},
+ \end{equation}
+-The candidate mask is mapped to the same visual-token grid as a binary indicator $b_n$. We maximize the normalized response mass inside the candidate region through
++where the softmax runs over the tokens of the same frame. The candidate mask, resized to that frame's token grid, gives a binary indicator $b_n$, and
+ \begin{equation}
+ \mathcal{L}_{\mathrm{align}}
+ =
+-1-\sum_n p_n b_n.
++\frac{1}{F}\sum_{f}\Bigl(1-\sum_{n\in f} p_n b_n\Bigr).
+ \end{equation}
+-This is a hidden-state alignment loss rather than direct attention-map supervision: it encourages expression-related visual evidence to remain candidate-centered while preserving temporal evidence across the candidate-conditioned sequence.
++The term is applied to every scored candidate, positive or negative: whatever the label, the verifier should gather its expression-related evidence from the marked anchor rather than from the rest of the scene, and the Yes/No decision is left to the ranking losses. It is a hidden-state regularizer rather than direct supervision of attention maps.
+ 
+ The verifier objective is
+ \begin{equation}
+@@ -176,4 +182,12 @@
+ +
+ \lambda_a\mathcal{L}_{\mathrm{align}}.
+ \end{equation}
+-Together, listwise competition answers \emph{which candidate should win}, hard-negative ranking focuses learning on the strongest distractors, and feature alignment regularizes \emph{where} the verifier obtains its evidence. These losses act only on the candidate-verification stage; the SAM3 recall stage remains frozen and discrete.
++Listwise competition answers \emph{which candidate should win}, hard-negative ranking focuses learning on the strongest distractors, and feature alignment regularizes \emph{where} the verifier obtains its evidence.
++
++\subsection{Inference and Target Selection}
++\label{sec:inference}
++An expression may refer to more than one object (e.g., ``monkeys on the left''). In addition to $\hat c$, we therefore estimate the number of referred objects $\hat N\ge 1$ with a counting prompt answered by the same frozen Qwen3-VL backbone, with the verifier adapters disabled, on the expression and $M$ uniformly sampled frames. The prompt gives priority to explicit numerals, returns one for singular references, otherwise counts the visible objects satisfying the expression, and falls back to one when uncertain. Candidates in $\mathcal{C}(q)$ are ranked by $s_i$, the top $\min(\hat N,N_c)$ tubes form $\hat{\mathcal{S}}$, and the predicted mask at frame $t$ is the union of their masks:
++\begin{equation}
++Y_t=\bigcup_{\tau_i\in\hat{\mathcal{S}}} M_t^{(i)}.
++\end{equation}
++For single-object expressions, $\hat N=1$ and this reduces to selecting the highest-scoring candidate.
+--- CRF-SAM3_v18_Overleaf_20261008/sections/4_experiments.tex	2026-11-18 10:51:01.989757000 +0000
++++ CRF-SAM3_v19_Overleaf_20261119/sections/4_experiments.tex	2026-11-18 16:24:07.483837000 +0000
+@@ -1,14 +1,34 @@
+ \section{Experiments}
+ 
+ \subsection{Experimental Setup}
++\label{sec:setup}
+ \paragraph{Datasets and metrics.}
+ We evaluate CRF-SAM3 on four complementary RVOS benchmarks. \textbf{MeViS}~\cite{ding2023mevis} emphasizes motion expressions and same-category distractors. \textbf{Ref-DAVIS17}~\cite{khoreva2018refdavis} contains short, high-quality videos with language descriptions for multiple objects, while \textbf{Ref-Youtube-VOS}~\cite{seo2020urvos} increases category and scene diversity. \textbf{ReVOS}, introduced with VISA~\cite{yan2024visa}, further includes implicit and reasoning-oriented expressions that may require temporal context and world knowledge. Following standard practice, we report region similarity $\mathcal{J}$, contour accuracy $\mathcal{F}$, and their average $\mathcal{J}\&\mathcal{F}$. For ReVOS we additionally report the official referring and reasoning partitions.
+ 
+-\paragraph{Expression-conditioned grounding.}
+-The referent-to-concept grounder uses Qwen3-VL-4B as a frozen multimodal backbone. The final grounding configuration uses $K=8$ category-agnostic target queries with dimension 1024, a two-layer bidirectional expression conditioner, a two-layer query decoder with eight attention heads, a 256-dimensional response head, and a 512-dimensional visual-token adapter. We set $\lambda_g=1.0$ and $\lambda_c=0.5$, train only the newly introduced grounding modules in BF16 with gradient checkpointing, and use a learning rate of $10^{-4}$. Ground-truth masks supervise token responses only during training; inference receives only RGB frames and the referring expression. For the reported Ref-Youtube-VOS and ReVOS grounding runs, three RGB frames are sampled uniformly per expression.
++\paragraph{Ground stage.}
++The grounder uses Qwen3-VL-4B-Instruct as a frozen backbone. We use $K=8$ target queries of dimension 1024, a two-layer expression conditioner, an $L=2$ query decoder with eight attention heads, a 256-dimensional response head with scale $\gamma=10$, and a modulation adapter with a 512-dimensional bottleneck ($\alpha$ initialized to 0.2). A merged visual token is labelled positive when the target covers at least $\rho=5\%$ of its $2\times2$ merge window. We set $\lambda_g=1.0$ and $\lambda_c=0.5$ and train only the new modules for one epoch in BF16 with gradient checkpointing, a learning rate of $10^{-4}$, 60 warm-up steps, and an effective batch size of 8. Each sample uses $M=3$ frames. During training they are drawn from frames in which the target is annotated, so that $\mathcal{L}_{\mathrm{ground}}$ always receives a non-empty token mask; at inference they are sampled uniformly from the video and resized to a longer side of 336 pixels. The category target $c^{\star}$ is the annotated object category on Ref-Youtube-VOS. ReVOS does not annotate object categories; for its training split, $c^{\star}$ is generated offline as described in the supplementary material. These labels are used only as training targets and are never available at inference. The grounder is trained on the ReVOS training split for ReVOS and on Ref-Youtube-VOS for the other three benchmarks.
+ 
+-\paragraph{Candidate recall and verification.}
+-The grounded recall concept is used as the concept prompt for SAM3. The verifier is based on Qwen3-VL-4B with a frozen visual encoder and lightweight LoRA adaptation ($r=16$, $\alpha=32$, dropout 0.05). Verifier training uses sampled candidate-conditioned frames and candidate sets constructed from cached SAM3 outputs. The three-domain verifier is trained on MeViS, Ref-DAVIS17, and Ref-Youtube-VOS with dataset-specific candidate IoU supervision. For the final ReVOS model, we recall up to 24 SAM3 hypotheses, retain up to 7 candidates, and warm-start the verifier from the three-domain checkpoint before ReVOS training. The reported ReVOS number is the \emph{complete validation run}: predictions are produced for all 5,822 validation expressions, and all metrics are taken from the official evaluator outputs.
++\paragraph{Recall and verification.}
++SAM3 recall uses SAM3-DMS propagation with $K_r=24$ and $K_{\mathrm{keep}}=7$. The verifier is Qwen3-VL-4B-Instruct with a frozen vision encoder and LoRA ($r=16$, $\alpha=32$, dropout 0.05) on the query, key, value, output, gate, up, and down projections of the language model. Each candidate is represented by $F=4$ frames with a semi-transparent mask overlay, and at most 10 candidates per expression enter a listwise step. We use $\kappa=1$, $\tau_a=1$, $\delta=0.1$, $\lambda_a=0.3$, a learning rate of $10^{-5}$, and one training epoch. The verifier training caches are produced offline by the recall stage of Sec.~\ref{sec:recall}, prompted with training-time concepts (see the supplementary material). A three-domain verifier is first trained jointly on MeViS, Ref-DAVIS17, and Ref-Youtube-VOS (sampling ratio 1:4:2) and is used for these three benchmarks. For ReVOS, it is warm-started from the three-domain checkpoint and further trained on ReVOS. Dataset-specific labelling and ranking settings are listed in Table~\ref{tab:verifier_cfg}. The reported ReVOS number is the \emph{complete validation run}: predictions are produced for all 5,822 validation expressions, and all metrics are taken from the official evaluator outputs.
++
++\begin{table}[t]
++\centering
++\setlength{\tabcolsep}{4.2pt}
++\renewcommand{\arraystretch}{1.08}
++\resizebox{\columnwidth}{!}{%
++\begin{tabular}{lccccc}
++\toprule
++Training set & $\theta_{\mathrm{pos}}$ & $\theta_{\mathrm{neg}}$ & Negatives $\mathcal{N}$ & $\lambda_h$ & $r^{+}$ \\
++\midrule
++MeViS & 0.2 & 0.05 & $J\le\theta_{\mathrm{neg}}$ & 0.15 & mean \\
++Ref-DAVIS17 & 0.5 & 0.1 & all non-positive & 0.3 & max \\
++Ref-Youtube-VOS & 0.5 & 0.1 & all non-positive & 0.3 & max \\
++ReVOS & 0.5 & 0.1 & all non-positive & 0.3 & max \\
++\bottomrule
++\end{tabular}}
++\caption{Verifier labelling and ranking settings per training set.}
++\label{tab:verifier_cfg}
++\end{table}
+ 
+ \subsection{Benchmark Performance}
+ \paragraph{Q1: How well does the framework perform across RVOS settings?}
+@@ -32,15 +52,15 @@
+ GLUS~\cite{lin2025glus} & 51.3 & -- \\
+ VRS-HQ-7B~\cite{gong2025vrshq} & 50.6 & -- \\
+ \midrule
+-\textbf{CRF-SAM3$^{\dagger}$ (Ours)} & -- & \textbf{71.45} \\
++\textbf{CRF-SAM3 (Ours)} & -- & \textbf{71.45} \\
+ \bottomrule
+ \end{tabular}}
+-\caption{Representative comparison on MeViS. Val and val$^u$ use different evaluation protocols and are therefore shown separately. $^{\dagger}$The reported MeViS result uses the prompt-based recall-concept configuration of CRF-SAM3.}
++\caption{Representative comparison on MeViS. Val and val$^u$ use different evaluation protocols and are therefore shown separately.}
+ \label{tab:mevis}
+ \end{table}
+ 
+ \paragraph{Ref-Youtube-VOS and Ref-DAVIS17.}
+-Table~\ref{tab:standard_rvos} reports the two standard RVOS benchmarks. CRF-SAM3 reaches 65.23 $\mathcal{J}$, 67.72 $\mathcal{F}$, and 66.47 $\mathcal{J}\&\mathcal{F}$ on Ref-Youtube-VOS. On Ref-DAVIS17, it obtains 74.06 $\mathcal{J}$, 78.73 $\mathcal{F}$, and 76.39 $\mathcal{J}\&\mathcal{F}$. The stronger result on Ref-DAVIS17 than on Ref-Youtube-VOS shows that the same high-level factorization does not translate uniformly across datasets. We therefore avoid attributing this difference to a single component without matched candidate-space statistics and analyze recall and verification separately below.
++Table~\ref{tab:standard_rvos} reports the two standard RVOS benchmarks. CRF-SAM3 reaches -- $\mathcal{J}$, -- $\mathcal{F}$, and -- $\mathcal{J}\&\mathcal{F}$ on Ref-Youtube-VOS. On Ref-DAVIS17, it obtains -- $\mathcal{J}$, -- $\mathcal{F}$, and -- $\mathcal{J}\&\mathcal{F}$.
+ 
+ \begin{table*}[t]
+ \centering
+@@ -70,8 +90,8 @@
+ & 68.0 & 71.9 & 70.0 & 68.3 & 73.5 & 70.9 \\
+ \midrule
+ \textbf{CRF-SAM3-4B (Ours)} & --
+-& 65.23 & 67.72 & 66.47
+-& \textbf{74.06} & \textbf{78.73} & \textbf{76.39} \\
++& -- & -- & --
++& -- & -- & -- \\
+ \bottomrule
+ \end{tabular}}
+ \caption{Comparison with representative prior work on Ref-Youtube-VOS and Ref-DAVIS17. The table is intended to position CRF-SAM3 among closely related RVOS paradigms rather than provide an exhaustive leaderboard of concurrent systems.}
+--- CRF-SAM3_v18_Overleaf_20261008/sections/5_conclusion.tex	2026-11-18 10:51:02.537014000 +0000
++++ CRF-SAM3_v19_Overleaf_20261119/sections/5_conclusion.tex	2026-11-18 16:24:07.518396000 +0000
+@@ -1,4 +1,4 @@
+ \section{Conclusion}
+ We presented CRF-SAM3, a Ground--Recall--Verify framework for referring video object segmentation. Its central premise is that object discovery and referent identification require different semantic granularity. An expression-conditioned target-query grounder uses mask supervision only during training to form a referent-aware open-vocabulary recall concept from RGB frames and language. SAM3 then exposes multiple temporally coherent candidate tubes, while a candidate-aware Qwen3-VL verifier preserves the complete expression for final discrimination through listwise competition, hard-negative ranking, and mask-aware feature alignment.
+ 
+-Across MeViS, Ref-DAVIS17, Ref-Youtube-VOS, and ReVOS, the framework shows that explicit candidate construction provides both competitive segmentation performance and a useful diagnostic interface. The MeViS and Ref-DAVIS17 results are particularly encouraging for motion-centric and high-quality video settings, while the complete ReVOS validation run reaches 59.74 $\mathcal{J}\&\mathcal{F}$ and exposes a clear remaining gap on reasoning-oriented expressions. Candidate-space analysis further shows that prompt-sensitive recall creates an upper bound for later reasoning, whereas verifier training substantially improves discrimination when a valid target tube is already present. These observations motivate future work that couples concept formation more directly to downstream candidate quality while retaining the interpretability of separate recall and verification stages.
++Across MeViS, Ref-DAVIS17, Ref-Youtube-VOS, and ReVOS, the framework shows that explicit candidate construction provides both competitive segmentation performance and a useful diagnostic interface. The MeViS result is particularly encouraging for motion-centric settings, while the complete ReVOS validation run reaches 59.74 $\mathcal{J}\&\mathcal{F}$ and exposes a clear remaining gap on reasoning-oriented expressions. Candidate-space analysis further shows that prompt-sensitive recall creates an upper bound for later reasoning, whereas verifier training substantially improves discrimination when a valid target tube is already present. These observations motivate future work that couples concept formation more directly to downstream candidate quality while retaining the interpretability of separate recall and verification stages.
+--- CRF-SAM3_v18_Overleaf_20261008/references.bib	2026-11-18 10:51:00.439685000 +0000
++++ CRF-SAM3_v19_Overleaf_20261119/references.bib	2026-11-18 16:07:07.974931000 +0000
+@@ -190,3 +190,10 @@
+   booktitle={International Conference on Machine Learning},
+   year={2026}
+ }
++
++@article{shen2026sam3dms,
++  title={{SAM3-DMS}: Decoupled Memory Selection for Multi-target Video Segmentation of {SAM3}},
++  author={Shen, Ruiqi and Liu, Chang and Ding, Henghui},
++  journal={arXiv preprint arXiv:2601.09699},
++  year={2026}
++}
+--- CRF-SAM3_v18_Overleaf_20261008/qualitative_supplement.tex	2026-11-18 10:51:00.310085000 +0000
++++ CRF-SAM3_v19_Overleaf_20261119/qualitative_supplement.tex	2026-11-18 16:24:20.834503804 +0000
+@@ -3,11 +3,18 @@
+ \usepackage{graphicx}
+ \usepackage{amsmath}
+ \usepackage[colorlinks=true,allcolors=blue]{hyperref}
+-\title{CRF-SAM3: Real Qualitative Evidence}
+-\author{Supplementary visualization material}
++\title{CRF-SAM3: Supplementary Material}
++\author{Anonymous Submission}
+ \date{}
+ \begin{document}
+ \maketitle
++\section*{Training labels and candidate caches}
++\paragraph{Category targets for the grounder.} The concept loss $\mathcal{L}_{\mathrm{cat}}$ requires a category label $c^{\star}$ for each training expression. On Ref-Youtube-VOS, $c^{\star}$ is the annotated object category. ReVOS does not provide object categories, so for its training split we query Qwen3.7-Plus once per expression with the complete referring expression and up to three temporally ordered training frames on which the ground-truth target box is drawn, and ask for a single JSON field \texttt{category}. The returned names are normalized before training. Because these boxes are derived from ground-truth masks, the labels are used only as training targets; they are never computed for validation or test videos and are not used by any reported inference run.
++
++\paragraph{Concepts for the verifier training caches.} Verifier training candidates are generated offline with the same SAM3 recall procedure as at inference ($K_r=24$, $K_{\mathrm{keep}}=7$). For MeViS, Ref-DAVIS17, and Ref-Youtube-VOS, the cache is prompted with concepts produced by a prompt-based Qwen3-VL concept extractor on the training videos; for ReVOS, it is prompted with the category labels above. Candidates are then labelled by their sequence-level IoU with the ground-truth tube (main paper, Sec.~3.3). Since the verifier consumes only candidate tubes and the expression, its training does not depend on the grounder.
++
++\clearpage
++\section*{Real qualitative evidence}
+ \noindent All examples use the completed ReVOS validation run. Historical predictions and scores are kept separate from a frozen-SAM3 recall replay performed for visualization. Each selected replay tube matches the historical prediction pixel-for-pixel over the complete sequence. This does not certify the unarchived historical masks of unselected candidates. Reported J\&F values are full-sequence metrics. Case selection is diagnostic and illustrative, not statistical sampling.
+ \begin{figure}[h]
+ \centering

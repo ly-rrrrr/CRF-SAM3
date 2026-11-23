@@ -1,0 +1,16 @@
+% Figure: original Ground vs. Ground v2 (training)
+\caption{\textbf{Original Ground vs.\ Ground v2 (training).}
+\textbf{(a)} The original Ground grounds the expression \emph{before} the LLM reads it:
+visual tokens $V$ come from the vision encoder and the expression feature $T$ from a word-embedding
+lookup followed by a lightweight encoder (\ding{172}); eight queries are decoded but only the best-matching
+one $R_{k^*}$ is supervised (\ding{173}); every non-target token is an equally weighted negative and only
+target-visible frames are used (\ding{174}); the heatmap $p$ then rescales all visual and deepstack tokens
+(\ding{175}) before a frozen LLM produces the category word $\hat{c}$ (\ding{176}).
+\textbf{(b)} Ground v2 runs a single forward pass over $q$, the frames, two $\langle\mathrm{TGT}\rangle$ tokens and $\hat{c}$.
+A hook on LLM layer $L$ reads the expression states $E_L$, visual states $V_L$ and the query seed $q_0$,
+i.e.\ features computed after the model has read the whole sentence (\ding{172}), and a single-query decoder
+predicts the heatmap $p$ (\ding{173}). $\mathcal{L}_{\mathrm{mask}}$ (BCE + Dice) up-weights objects of other categories
+($\times3$), ignores other instances of the same category, and is also applied to target-absent frames (\ding{174}).
+Two summaries of $\mathrm{sg}(p)$ (weighted mean and top-$k$ mean) pass through a zero-initialised MLP and are
+added to the $\langle\mathrm{TGT}\rangle$ states only (\ding{175}); layers $L{+}1$--$36$ then generate $\hat{c}$.
+LoRA adapts the LLM (\ding{176}); the vision encoder stays frozen. $p$ is also passed to SAM3 recall.}
