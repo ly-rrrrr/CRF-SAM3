@@ -29,9 +29,9 @@ referring expression + video frames
 | `Sa2VA-main/crf_sam3_*/` | Evaluation summaries and selected supporting records |
 | `Sa2VA/data/video_datas/` | Dataset layout documentation |
 | `论文代理/` | Paper figures and analysis |
-| `experiments/` | 2026-11 follow-up packages: Ground v2, heatmap-seeded recall, Verify re-eval, VideoRefer zero-shot (standalone) |
+| `experiments/` | 2026-11 new mainline implementation: Ground v2, heatmap point seeds, unified `crf_sam3_v2` pipeline (standalone) |
 
-See [PAPER_EVIDENCE_MAP.md](PAPER_EVIDENCE_MAP.md) for source and result entry points, and [RESULTS.md](RESULTS.md) for the 2026-11 follow-up results.
+See [PAPER_EVIDENCE_MAP.md](PAPER_EVIDENCE_MAP.md) for source and result entry points.
 
 ## Training and Inference
 

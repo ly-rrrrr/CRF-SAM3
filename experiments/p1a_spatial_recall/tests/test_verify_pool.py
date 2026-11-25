@@ -132,6 +132,8 @@ def build(tmp: Path):
 
 
 def test_verify_pool(tmp_path):
+    for _m in ("crf_sam3_demo", "run_crf_sam3_dataset", "run_crf_sam3_refytros_dataset", "run_crf_sam3_revos_dataset"):
+        sys.modules.pop(_m, None)  # fake repos of other tests
     repo, root, pools, pts = build(tmp_path)
     out = tmp_path / "out"
     cwd = os.getcwd()
