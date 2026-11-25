@@ -1,5 +1,0 @@
-2026-11-23: Six OVIS/train/a3f0cb28 expressions failed in SAM3 fill_holes_in_mask_scores -> connected_components_triton, shape (1,1,2160,3840), CUDA invalid argument.
-Local changes only: p1a/run_p1a.py now logs full tracebacks; p1a/sam3_ops.py installs a process-local fallback on this exact RuntimeError to SAM3's connected_components_cpu, transfers labels/counts back to the original device, and remembers failing shapes.
-SAM3-DMS source, ground_v2, model weights, prompts, thresholds and candidate budgets unchanged. Existing completed point results retained. Fallback applies only to shapes that fail the original implementation.
-Full traceback: runs/verify_v2/diagnose_points.log
-Completion run: runs/verify_v2/completion_pipeline.log
