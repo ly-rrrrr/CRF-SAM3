@@ -1,4 +1,4 @@
-# RESULTS：关键结果汇总（截至 2026-11-23）
+# RESULTS：关键结果汇总（截至 2026-11-25）
 
 论文主结果（v19 稿件依据）见 [README.md](README.md#recorded-results) 与 [PAPER_EVIDENCE_MAP.md](PAPER_EVIDENCE_MAP.md)。本文件汇总 2026-11 之后围绕“候选池质量”的后续实验，代码在 [experiments/](experiments/)。
 
@@ -48,8 +48,40 @@ ReVOS 内部验证集 1,041 条（A = 旧 Ground，E = v2，E′ = v2 推理时�
 
 来源：`experiments/ground_v2/runs/pool_revos/report.md`、`experiments/p1a_spatial_recall/runs/revos_v2/summary.md`。
 
-## 3. 进行中 / 未完成
+## 3. 最终 J&F：扩展候选池上的 Verify（ReVOS valid，官方 eval_revos.py）
 
-- **最终 J&F（扩展池上的 Verify）**：`experiments/p1a_spatial_recall/scripts/verify_v2.sh`，行 old / v2 / v2_point。20 条检查：19/20 与论文选择一致，概率最大差 0.093（bf16 logit 量化噪声）。全量待服务器运行。
+| 候选池 | Referring J&F | Reasoning J&F | Overall J | Overall F | Overall J&F |
+|---|---:|---:|---:|---:|---:|
+| 论文结果（原流程，含 backup 词） | 64.92 | 54.56 | 57.20 | 62.28 | 59.74 |
+| 旧词池（复现，无 backup 词） | 65.05 | 54.36 | 57.18 | 62.23 | 59.71 |
+| v2 词池 | 64.54 | 56.63 | 58.34 | 62.83 | 60.59 |
+| **v2 词池 + 热力图点种子** | **66.17** | **58.58** | **59.86** | **64.90** | **62.38** |
+
+- 5,822 条全部打分，无缺失；v2_point 与 v2 选择不同 908 条，均选中点种子轨迹。
+- 6 条 OVIS/train/a3f0cb28 表达式原先因 SAM3 Triton 连通域 CUDA 错误失败，已在 `p1a/sam3_ops.py` 加该错误的 CPU 回退后补齐。
+
+来源：`experiments/p1a_spatial_recall/runs/verify_v2/compare.md`。
+
+## 4. Ref-YouTube-VOS：帧错位修复 + 新主线（`experiments/refytvos_frame_fix/`、`experiments/crf_sam3_v2/`）
+
+帧错位：旧写法按文件名写掩码，732/834 条表达式、3,516/22,046 帧（15.9%）被写成别帧的掩码；受影响帧逐帧 J 31.25 vs 正常帧 71.07。ReVOS 仅 0.61% 帧受影响。
+
+新主线（`run_v2.sh refytvos`，Ground v2 借用 ReVOS 训练的权重，跨域）：
+
+| 结果 | J | F | J&F（表达式级） | J&F（视频级） |
+|---|---:|---:|---:|---:|
+| 论文主线（帧错位） | 64.27 | 66.57 | 65.42 | 68.17 |
+| Ground v2 词（无点种子） | 68.10 | 71.77 | 69.94 | 72.62 |
+| **Ground v2 词 + 热力图点种子** | **69.96** | **74.05** | **72.01** | **75.07** |
+
+- 候选池 Recall@0.5 85.85% → 92.93%；池内最好候选平均 J 75.46 → 81.28（实际选出结果的 J 为 69.96，差距在 Verify）。
+- 拆解：大部分提升来自帧对齐修复；与 v1 换了词的 241 条上，跨域 v2 词（55.62）不如 v1 词（57.93），点种子救回到 65.28。帧修复后的 v1 基线估计约 72–73，因此跨域 Ground v2 本身几乎没有净增益，需按数据集训练。
+- 241 条换词样本上的候选词选择：反向打分（noisy-channel）各准则 56–58，理想上限 67.95（`crf_sam3_v2/runs/noisy_channel/report.md`）。
+
+来源：`experiments/crf_sam3_v2/runs/refytvos_gv2revos/summary.md`、`experiments/refytvos_frame_fix/runs/check/report.md`。
+
+## 5. 进行中 / 未完成
+
+- Ref-YTVOS 按数据集训练的 Ground v2（`ground_v2/gv2/build_refytvos.py`）及新主线重跑。
+- Ground 候选词重排（`crf_sam3_v2/v2/ground_rerank.py`，从 top-K 候选词中选一个，`WORD_SCORE=yesno|rev`）。
 - **VideoRefer-7B 零样本 Verify**：`experiments/videorefer_zeroshot_verify/`，只做过 CPU 冒烟测试。
-

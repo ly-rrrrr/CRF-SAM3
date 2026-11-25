@@ -1,0 +1,131 @@
+data ready: train (600, 16, 24, 64, 3) (288s), device cpu
+params 0.95M
+step 100/4000 rec 0.07539 pred1 0.07326 pred2 0.07250 lat 0.01112 (44s)
+step 200/4000 rec 0.01269 pred1 0.01310 pred2 0.01382 lat 0.00713 (87s)
+step 300/4000 rec 0.00313 pred1 0.00421 pred2 0.00556 lat 0.00661 (129s)
+step 400/4000 rec 0.00145 pred1 0.00273 pred2 0.00448 lat 0.00724 (173s)
+step 500/4000 rec 0.00101 pred1 0.00249 pred2 0.00396 lat 0.00703 (215s)
+step 600/4000 rec 0.00088 pred1 0.00237 pred2 0.00413 lat 0.00748 (257s)
+step 700/4000 rec 0.00079 pred1 0.00237 pred2 0.00384 lat 0.00713 (299s)
+step 800/4000 rec 0.00077 pred1 0.00245 pred2 0.00407 lat 0.00734 (341s)
+step 900/4000 rec 0.00067 pred1 0.00217 pred2 0.00361 lat 0.00663 (382s)
+step 1000/4000 rec 0.00068 pred1 0.00242 pred2 0.00402 lat 0.00770 (421s)
+eval @ 1000: recon 31.79 dB | dt=1/30 (trained): model/copy 0.965 | dt=1/15 (trained): model/copy 0.938 | dt=1/60 (never seen): model/copy 0.971
+step 1100/4000 rec 0.00057 pred1 0.00232 pred2 0.00393 lat 0.00782 (466s)
+step 1200/4000 rec 0.00057 pred1 0.00225 pred2 0.00393 lat 0.00765 (506s)
+step 1300/4000 rec 0.00045 pred1 0.00175 pred2 0.00314 lat 0.00623 (549s)
+step 1400/4000 rec 0.00041 pred1 0.00196 pred2 0.00336 lat 0.00723 (589s)
+step 1500/4000 rec 0.00050 pred1 0.00220 pred2 0.00360 lat 0.00780 (630s)
+step 1600/4000 rec 0.00045 pred1 0.00229 pred2 0.00375 lat 0.00853 (671s)
+step 1700/4000 rec 0.00039 pred1 0.00205 pred2 0.00356 lat 0.00809 (711s)
+step 1800/4000 rec 0.00034 pred1 0.00180 pred2 0.00306 lat 0.00700 (752s)
+step 1900/4000 rec 0.00032 pred1 0.00181 pred2 0.00311 lat 0.00738 (790s)
+step 2000/4000 rec 0.00028 pred1 0.00185 pred2 0.00317 lat 0.00744 (827s)
+eval @ 2000: recon 36.57 dB | dt=1/30 (trained): model/copy 0.885 | dt=1/15 (trained): model/copy 0.823 | dt=1/60 (never seen): model/copy 0.907
+step 2100/4000 rec 0.00026 pred1 0.00166 pred2 0.00296 lat 0.00667 (869s)
+step 2200/4000 rec 0.00031 pred1 0.00190 pred2 0.00344 lat 0.00754 (907s)
+step 2300/4000 rec 0.00025 pred1 0.00175 pred2 0.00318 lat 0.00712 (946s)
+step 2400/4000 rec 0.00024 pred1 0.00186 pred2 0.00311 lat 0.00739 (988s)
+step 2500/4000 rec 0.00023 pred1 0.00175 pred2 0.00293 lat 0.00688 (1027s)
+step 2600/4000 rec 0.00022 pred1 0.00151 pred2 0.00282 lat 0.00640 (1064s)
+step 2700/4000 rec 0.00022 pred1 0.00167 pred2 0.00314 lat 0.00709 (1105s)
+step 2800/4000 rec 0.00021 pred1 0.00166 pred2 0.00285 lat 0.00672 (1145s)
+step 2900/4000 rec 0.00019 pred1 0.00155 pred2 0.00274 lat 0.00638 (1186s)
+step 3000/4000 rec 0.00020 pred1 0.00162 pred2 0.00287 lat 0.00672 (1223s)
+eval @ 3000: recon 37.44 dB | dt=1/30 (trained): model/copy 0.975 | dt=1/15 (trained): model/copy 0.830 | dt=1/60 (never seen): model/copy 1.113
+step 3100/4000 rec 0.00017 pred1 0.00156 pred2 0.00265 lat 0.00619 (1269s)
+step 3200/4000 rec 0.00018 pred1 0.00162 pred2 0.00268 lat 0.00642 (1309s)
+step 3300/4000 rec 0.00018 pred1 0.00162 pred2 0.00282 lat 0.00650 (1349s)
+step 3400/4000 rec 0.00016 pred1 0.00139 pred2 0.00253 lat 0.00583 (1391s)
+step 3500/4000 rec 0.00016 pred1 0.00156 pred2 0.00280 lat 0.00642 (1426s)
+step 3600/4000 rec 0.00016 pred1 0.00146 pred2 0.00277 lat 0.00626 (1465s)
+step 3700/4000 rec 0.00016 pred1 0.00149 pred2 0.00270 lat 0.00622 (1506s)
+step 3800/4000 rec 0.00016 pred1 0.00150 pred2 0.00270 lat 0.00625 (1547s)
+step 3900/4000 rec 0.00015 pred1 0.00142 pred2 0.00243 lat 0.00569 (1589s)
+step 4000/4000 rec 0.00015 pred1 0.00155 pred2 0.00272 lat 0.00635 (1628s)
+{
+ "recon_psnr": 38.532448930142024,
+ "rollout": {
+  "dt=1/30 (trained)": {
+   "steps": 12,
+   "dt": 0.03333333333333333,
+   "model_mse_mean": 0.004783648316030546,
+   "model_psnr_final": 21.19915107473161,
+   "model_psnr_step1": 30.17519602883821,
+   "copy_mse_mean": 0.005781931147794239,
+   "copy_psnr_final": 20.48710278344025,
+   "copy_psnr_step1": 30.47830478152482,
+   "linear_mse_mean": 0.01022246169789772,
+   "linear_psnr_final": 17.653722018171155,
+   "linear_psnr_step1": 30.34670709649471,
+   "model_vs_copy_mse": 0.8273443930330214,
+   "model_vs_linear_mse": 0.4679546333750821
+  },
+  "dt=1/15 (trained)": {
+   "steps": 6,
+   "dt": 0.06666666666666667,
+   "model_mse_mean": 0.005030382133554667,
+   "model_psnr_final": 21.644313762375837,
+   "model_psnr_step1": 25.37790038894171,
+   "copy_mse_mean": 0.006643224546375374,
+   "copy_psnr_final": 20.28505377495025,
+   "copy_psnr_step1": 25.28088729621973,
+   "linear_mse_mean": 0.01259335632979249,
+   "linear_psnr_final": 17.193077342225024,
+   "linear_psnr_step1": 23.990161060341354,
+   "model_vs_copy_mse": 0.7572199461930436,
+   "model_vs_linear_mse": 0.3994472960043335
+  },
+  "dt=1/60 (never seen)": {
+   "steps": 24,
+   "dt": 0.016666666666666666,
+   "model_mse_mean": 0.004993473643783848,
+   "model_psnr_final": 20.542271104262863,
+   "model_psnr_step1": 34.551674320481105,
+   "copy_mse_mean": 0.005483220507509638,
+   "copy_psnr_final": 20.422642271516057,
+   "copy_psnr_step1": 36.32913272091538,
+   "linear_mse_mean": 0.009074365870977394,
+   "linear_psnr_final": 17.866933060491906,
+   "linear_psnr_step1": 38.647400368482515,
+   "model_vs_copy_mse": 0.9106826247357646,
+   "model_vs_linear_mse": 0.5502834814887186
+  }
+ },
+ "probes": {
+  "trained": {
+   "camera_R2_from_g [s,omega,bx,by]": [
+    -0.013021469116210938,
+    -0.11022305488586426,
+    -0.00905454158782959,
+    -0.018636465072631836
+   ],
+   "camera_R2_from_g_and_m [s,omega,bx,by]": [
+    -0.13712537288665771,
+    -0.4274343252182007,
+    -0.4503765106201172,
+    -0.25575125217437744
+   ],
+   "object_AUC_from_|m|": 0.47829740609537824,
+   "object_frames": 256
+  },
+  "untrained": {
+   "camera_R2_from_g [s,omega,bx,by]": [
+    -0.040192246437072754,
+    -0.08723831176757812,
+    -0.0028676986694335938,
+    0.0014636516571044922
+   ],
+   "camera_R2_from_g_and_m [s,omega,bx,by]": [
+    -0.7778267860412598,
+    -0.5890865325927734,
+    -0.4769158363342285,
+    -0.2920280694961548
+   ],
+   "object_AUC_from_|m|": 0.4940205406972322,
+   "object_frames": 256
+  }
+ },
+ "train_seconds": 1639.4176902770996
+}
+done -> runs/v1_cpu

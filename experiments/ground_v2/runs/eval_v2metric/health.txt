@@ -1,0 +1,8 @@
+== gv2_revos: 235 train logs, 4 eval logs, last step 2340
+  loss       first 20% avg 0.8232 -> last 20% avg 0.1748  [down]
+  loss_mask  first 20% avg 0.7533 -> last 20% avg 0.1579  [down]
+  loss_cat   first 20% avg 0.1399 -> last 20% avg 0.0338  [down]
+  grad_norm  median 1.936, max 32.528, >10x median: 1
+  eval_loss  500:0.4182, 1000:0.3596, 1500:0.3209, 2000:0.3213  (best at step 1500)
+
+curves -> runs/eval_v2metric/train_curves.png
