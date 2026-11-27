@@ -1,9 +1,0 @@
-{
-  "purpose": "Peak-GPU-memory preflight for the ReVOS DMS recall24 -> keep7 pipeline.",
-  "samples": [
-    {
-      "video_id": "TAO/val/Charades/YPQ97",
-      "exp_id": 0
-    }
-  ]
-}
