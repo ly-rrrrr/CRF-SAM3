@@ -107,6 +107,7 @@ REVOS_RUNNER = textwrap.dedent('''
         return out
     def _encode_mask_to_rle(b):
         r = mu.encode(np.asfortranarray(b.astype(np.uint8))); r["counts"] = r["counts"].decode(); return r
+    def _resolve_prompt_template(t): return 'x'
 ''')
 
 
@@ -171,6 +172,15 @@ def call(argv):
     cwd = os.getcwd()
     try:
         return mainline.main(argv)
+    finally:
+        os.chdir(cwd)
+
+
+def call_main(fn, argv):
+    """Run fn(argv) and restore the cwd (build_pipeline chdirs into the repo)."""
+    cwd = os.getcwd()
+    try:
+        return fn(argv)
     finally:
         os.chdir(cwd)
 
@@ -301,6 +311,54 @@ def test_recall_cache_limit():
     list(r2.recall_all_instances_stream("v", "dog"))
     list(r2.recall_all_instances_stream("w", "cup"))
     assert R.n == 3
+
+
+def test_mevis_davis():
+    """MeViS (valid_u, RLE json, meta without height/width) and DAVIS (meta_expressions/valid, PNGs)."""
+    from pycocotools import mask as mu
+
+    def rle(m):
+        r = mu.encode(np.asfortranarray(m.astype(np.uint8)))
+        r["counts"] = r["counts"].decode()
+        return r
+
+    for name in ("mevis", "davis17"):
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            repo = fake_repo(d)
+            root = d / name
+            split = "valid_u" if name == "mevis" else "valid"
+            write_video(root / split / "JPEGImages" / "v")
+            exps = {k: {"exp": v, "anno_id": [7], "obj_id": 1} for k, v in EXPRS.items()}
+            meta = {"videos": {"v": {"frames": FR, "expressions": exps}}}
+            mp = root / split / "meta_expressions.json" if name == "mevis" else root / "meta_expressions" / split / "meta_expressions.json"
+            mp.parent.mkdir(parents=True, exist_ok=True)
+            mp.write_text(json.dumps(meta))
+            (root / split / "mask_dict.json").write_text(json.dumps({"7": [rle(right_at(t)) for t in range(T)]}))
+            ad = root / split / "Annotations" / "v"
+            ad.mkdir(parents=True)
+            for t, f in enumerate(FR):
+                Image.fromarray(right_at(t).astype(np.uint8)).save(ad / f"{f}.png")
+            write_ground(d, "v", EXPRS)
+            sam3_ops.SAM3Session = FakeSession
+            out = d / "out"
+            call(["run", "--dataset", name, "--repo", str(repo), "--config", str(repo / "cfg.yaml"),
+                  "--data-root", str(root), "--categories", str(d / "cats.json"), "--heat-dir", str(d / "heat"),
+                  "--out", str(out), "--gt"])
+            r = json.loads((out / "scores.jsonl").read_text().splitlines()[0])
+            assert r["final_selected"] == [1000] and r["pool_j_final"] == 1.0, (name, r)
+            try:
+                call(["export", "--dataset", name, "--data-root", str(root), "--out", str(out)])
+            except SystemExit as e:
+                assert e.code == 0, (name, e.code)
+            if name == "mevis":
+                pm = json.loads((out / "final" / "results.json").read_text())["v"]["0"]["prediction_masks"]
+                for t in range(T):
+                    assert ((mu.decode(dict(pm[t], counts=pm[t]["counts"].encode())) > 0) == right_at(t)).all(), t
+            else:
+                for t, f in enumerate(FR):
+                    m = np.array(Image.open(out / "final" / "Annotations" / "v" / "0" / f"{f}.png")) > 0
+                    assert (m == right_at(t)).all(), f
 
 
 if __name__ == "__main__":

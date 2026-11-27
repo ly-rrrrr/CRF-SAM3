@@ -134,7 +134,46 @@ class ReVOS(Dataset):
         return self.pred_path(out, row, vid, eid).is_file()
 
 
-DATASETS = {"refytvos": RefYTVOS, "revos": ReVOS}
+class DAVIS17(RefYTVOS):
+    """<root>/<split>/JPEGImages/<vid>/<frame>.jpg, meta <root>/meta_expressions/<split>/meta_expressions.json;
+    output PNGs like Ref-YTVOS, scored by tools/eval/eval_davis_png.py."""
+    name = "davis17"
+    default_meta = "meta_expressions.json"
+    eval_json = "evaluation_results_davis_png.json"
+
+    @property
+    def meta_path(self) -> Path:
+        return self.root / "meta_expressions" / self.split / self.meta_file
+
+    def gt_loader(self):
+        from p1a.common import PaletteGT
+
+        return PaletteGT(str(self.root / self.split / "Annotations"), str(self.meta_path))
+
+
+class MeViS(ReVOS):
+    """<root>/<split>/JPEGImages/<vid>/<frame>.jpg (split valid_u); output RLE json like ReVOS, merged by
+    `export` into results.json for tools/eval/eval_mevis.py."""
+    name = "mevis"
+    default_meta = "meta_expressions.json"
+    eval_json = "mevis_valu.json"
+
+    @property
+    def meta_path(self) -> Path:
+        return self.root / self.split / self.meta_file
+
+    def video_dir(self, vid: str) -> str:
+        return str(self.root / self.split / "JPEGImages" / vid)
+
+    def gt_loader(self):
+        from p1a.common import ReVOSGT
+
+        return ReVOSGT(str(self.root / self.split / "mask_dict.json"), str(self.meta_path))
+
+
+DATASETS = {"refytvos": RefYTVOS, "revos": ReVOS, "davis17": DAVIS17, "mevis": MeViS}
+RLE_SETS = ("revos", "mevis")   # per-expression RLE json -> results.json; the others write PNGs
+DEFAULT_SPLIT = {"refytvos": "valid", "revos": "valid", "davis17": "valid", "mevis": "valid_u"}
 
 
 # ----------------------------------------------------------------------------- helpers
@@ -182,6 +221,44 @@ def masks_of(tubes: Dict[int, Dict[int, np.ndarray]], ids: List[int]) -> Dict[in
         for t, m in tubes.get(o, {}).items():
             out.setdefault(int(t), {})[o] = m
     return out
+
+
+def point_seeds(a, pipe, video_path: str, cands: Dict[int, Dict[int, np.ndarray]], heat: Path,
+                pos_of: Dict[str, int], category: str, offload: bool):
+    """Heatmap point seeds (step 3 of the module doc). Shared by inference (run) and the Verify
+    training caches (v2.verify_cache), so both build the candidate pool the same way.
+    Returns (new tubes [{pos: bool mask}], info for the log record)."""
+    from p1a.common import tube_iou
+    from p1a.sam3_ops import SAM3Session
+    from p1a.seeds import select_seeds
+
+    new: List[Dict[int, np.ndarray]] = []
+    info: Dict = {}
+    if not heat.is_file():
+        raise FileNotFoundError(f"Required Ground heatmap missing: {heat}")
+    R, grid, merge, fidx = load_heat(heat, pos_of)
+    sel = select_seeds(R, grid, fidx, cands, merge=merge, agg=a.agg, abs_thr=a.abs_thr,
+                       rel_thr=a.rel_thr, coverage_thr=a.coverage_thr, budget=a.budget)
+    blobs = sorted(sel["uncovered"], key=lambda b: -b.mass)[: a.budget]
+    info.update(n_blobs=len(sel["blobs"]), n_uncovered=len(sel["uncovered"]), seeds=[b.to_json() for b in blobs])
+    if blobs:
+        pts = []
+        with SAM3Session(pipe.sam3_recall.predictor, video_path, offload) as sess:
+            sess.warm_text = category or None
+            base = list(cands.values())
+            for b in blobs:
+                t = b.frame_idx
+                for pt in b.peaks:
+                    if len(new) >= a.max_new:
+                        break
+                    if on_any(pt, [tb[t] for tb in base + new if t in tb]):
+                        continue
+                    tube = sess.track_seed(t, points=[pt], labels=[1])
+                    if tube and not any(tube_iou(tube, o) > a.dup_iou for o in base + new):
+                        new.append({int(f): _bool(m) for f, m in tube.items()})
+                        pts.append({"frame": t, "point": [float(x) for x in pt]})
+        info["point_info"] = pts
+    return new, info
 
 
 def word_coverage(categories: str, ds: Dataset, videos: Dict) -> tuple:
@@ -238,7 +315,7 @@ def build_pipeline(a):
     os.chdir(a.repo)
     import crf_sam3_demo as demo
     from run_crf_sam3_dataset import load_config
-    from run_crf_sam3_refytros_dataset import _resolve_prompt_template
+    from run_crf_sam3_revos_dataset import _resolve_prompt_template  # superset: also maps yesno_images
 
     cfg = load_config(a.config)
     m, vt, dc = cfg["model"], cfg.get("visual_tube", {}), cfg.get("discrimination", {})
@@ -299,9 +376,7 @@ def run(a) -> None:
 
     pipe, demo, offload = build_pipeline(a)
     from run_crf_sam3_dataset import _infer_video_hw
-    from p1a.common import list_frames, tube_iou, video_j
-    from p1a.sam3_ops import SAM3Session
-    from p1a.seeds import select_seeds
+    from p1a.common import list_frames, video_j
     import torch
 
     gt_loader = ds.gt_loader() if a.gt else None
@@ -328,34 +403,9 @@ def run(a) -> None:
             rec = {"key": key, "video_id": vid, "exp_id": str(eid), "expression": expr, "category": category,
                    "num_targets": k, "cand_ids": sorted(cands), "words_selected": words_sel}
 
-            new: List[Dict[int, np.ndarray]] = []
             heat = Path(a.heat_dir) / vid / f"{eid}.npz"
-            if heat.is_file():
-                R, grid, merge, fidx = load_heat(heat, pos_of)
-                sel = select_seeds(R, grid, fidx, cands, merge=merge, agg=a.agg, abs_thr=a.abs_thr,
-                                   rel_thr=a.rel_thr, coverage_thr=a.coverage_thr, budget=a.budget)
-                blobs = sorted(sel["uncovered"], key=lambda b: -b.mass)[: a.budget]
-                rec.update(n_blobs=len(sel["blobs"]), n_uncovered=len(sel["uncovered"]), seeds=[b.to_json() for b in blobs])
-                if blobs:
-                    info = []
-                    with SAM3Session(pipe.sam3_recall.predictor, video_path, offload) as sess:
-                        sess.warm_text = category or None
-                        base = list(cands.values())
-                        for b in blobs:
-                            t = b.frame_idx
-                            for pt in b.peaks:
-                                if len(new) >= a.max_new:
-                                    break
-                                if on_any(pt, [tb[t] for tb in base + new if t in tb]):
-                                    continue
-                                tube = sess.track_seed(t, points=[pt], labels=[1])
-                                if tube and not any(tube_iou(tube, o) > a.dup_iou for o in base + new):
-                                    new.append({int(f): _bool(m) for f, m in tube.items()})
-                                    info.append({"frame": t, "point": [float(x) for x in pt]})
-                    rec["point_info"] = info
-            else:
-                rec["no_heatmap"] = True
-
+            new, info = point_seeds(a, pipe, video_path, cands, heat, pos_of, category, offload)
+            rec.update(info)
             pids = [POINT_BASE + i for i in range(len(new))]
             if new:
                 pm = masks_of(dict(zip(pids, new)), pids)
@@ -411,7 +461,7 @@ def export(a) -> int:
     out = Path(a.out)
     videos = ds.videos()
     rc = 0
-    if a.dataset != "revos":
+    if a.dataset not in RLE_SETS:
         for row in ROWS:
             miss = [f"{v}/{e}" for v, d in videos.items() for e in d["expressions"]
                     if not ds.is_written(out, row, v, e, [str(x) for x in d["frames"]])]
@@ -432,7 +482,14 @@ def export(a) -> int:
                     res.setdefault(vid, {})[eid] = json.loads(p.read_text(encoding="utf-8"))
                 else:
                     miss.append(f"{vid}/{eid}")
-                    empty = encode_rle(np.zeros((int(v["height"]), int(v["width"])), bool))
+                    if "height" in v and "width" in v:
+                        hw = (int(v["height"]), int(v["width"]))
+                    else:
+                        from PIL import Image
+                        from p1a.common import frame_path
+                        with Image.open(frame_path(ds.video_dir(vid), frames[0])) as im:
+                            hw = (im.size[1], im.size[0])
+                    empty = encode_rle(np.zeros(hw, bool))
                     res.setdefault(vid, {})[eid] = {"video_id": vid, "exp_id": eid, "exp": info.get("exp", ""),
                                                     "frames": frames, "prediction_masks": [empty] * len(frames)}
         d = out / row
@@ -451,6 +508,8 @@ def _row(dataset: str, name: str, d: Dict) -> str:
     if dataset == "revos":
         return (f"| {name} | {d['referring']['JF']:.2f} | {d['reason']['JF']:.2f} | {d['overall']['J']:.2f} | "
                 f"{d['overall']['F']:.2f} | **{d['overall']['JF']:.2f}** |")
+    if dataset == "mevis":
+        return f"| {name} | {d['J']:.2f} | {d['F']:.2f} | **{d['J&F']:.2f}** |"
     e, v = d["overall_expression_level"], d["overall_video_level"]
     return f"| {name} | {e['J']:.2f} | {e['F']:.2f} | **{e['J&F']:.2f}** | {v['J&F']:.2f} |"
 
@@ -461,8 +520,11 @@ def summary(a) -> None:
     if a.dataset == "revos":
         head = ["# ReVOS valid（官方 eval_revos.py）", "",
                 "| 结果 | Referring J&F | Reasoning J&F | Overall J | Overall F | Overall J&F |", "|---|---|---|---|---|---|"]
+    elif a.dataset == "mevis":
+        head = ["# MeViS valid_u（eval_mevis.py）", "", "| 结果 | J | F | J&F |", "|---|---|---|---|"]
     else:
-        head = ["# Ref-YouTube-VOS valid（eval_refytros_png.py）", "",
+        title = "Ref-DAVIS17 valid（eval_davis_png.py）" if a.dataset == "davis17" else "Ref-YouTube-VOS valid（eval_refytros_png.py）"
+        head = [f"# {title}", "",
                 "| 结果 | J | F | J&F（表达式级） | J&F（视频级） |", "|---|---|---|---|---|"]
     L = list(head)
     rows = [tuple(x.split("=", 1)) for x in a.ref] + [(NAMES[r], str(out / r / ds_cls.eval_json)) for r in ROWS]
@@ -490,23 +552,14 @@ def summary(a) -> None:
     print("\n".join(L))
 
 
-def main(argv=None):
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("step", choices=["run", "export", "summary"])
-    ap.add_argument("--dataset", required=True, choices=sorted(DATASETS))
-    ap.add_argument("--data-root", default="")
-    ap.add_argument("--split", default="valid")
-    ap.add_argument("--meta-file", default="")
-    ap.add_argument("--out", required=True)
+def add_pool_args(ap) -> None:
+    """Arguments that decide the candidate pool. Shared with v2.verify_cache: same defaults at train and test."""
     ap.add_argument("--repo", default="")
     ap.add_argument("--config", default="")
     ap.add_argument("--categories", default="", help="Ground v2 category json (gv2.predict --output-json)")
     ap.add_argument("--heat-dir", default="", help="Ground v2 heatmap npz dir (gv2.predict --heat-dir)")
-    ap.add_argument("--allow-missing-words", action="store_true")
-    ap.add_argument("--adapter", default="", help="override the yaml's Verify LoRA")
     ap.add_argument("--base-mllm", default="")
     ap.add_argument("--sam3-checkpoint", default="")
-    ap.add_argument("--num-tube-frames", type=int, default=0, help="0 = the yaml's value")
     ap.add_argument("--keep-backup", action="store_true", help="allow the repo's backup words when recall is empty")
     ap.add_argument("--recall-cache-gb", type=float, default=4.0, help="0 = off")
     ap.add_argument("--agg", default="max")
@@ -516,10 +569,25 @@ def main(argv=None):
     ap.add_argument("--budget", type=int, default=2)
     ap.add_argument("--max-new", type=int, default=3)
     ap.add_argument("--dup-iou", type=float, default=0.7)
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("step", choices=["run", "export", "summary"])
+    ap.add_argument("--dataset", required=True, choices=sorted(DATASETS))
+    ap.add_argument("--data-root", default="")
+    ap.add_argument("--split", default="", help="default: valid (MeViS: valid_u)")
+    ap.add_argument("--meta-file", default="")
+    ap.add_argument("--out", required=True)
+    add_pool_args(ap)
+    ap.add_argument("--allow-missing-words", action="store_true")
+    ap.add_argument("--adapter", default="", help="override the yaml's Verify LoRA")
+    ap.add_argument("--num-tube-frames", type=int, default=0, help="0 = the yaml's value")
     ap.add_argument("--gt", action="store_true", help="log candidate-pool recall against the GT")
     ap.add_argument("--limit", type=int, default=0, help="first N videos")
     ap.add_argument("--ref", action="append", default=[], help="summary: 'name=evaluation json' of another run")
     a = ap.parse_args(argv)
+    a.split = a.split or DEFAULT_SPLIT[a.dataset]
     for k in ("data_root", "heat_dir", "out", "config", "repo", "categories"):
         if getattr(a, k):
             setattr(a, k, str(Path(getattr(a, k)).resolve()))
