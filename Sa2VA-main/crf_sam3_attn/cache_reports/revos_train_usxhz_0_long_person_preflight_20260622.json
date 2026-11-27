@@ -1,9 +1,0 @@
-{
-  "purpose": "OOM preflight for a 901-frame ReVOS person sample under DMS recall24 -> keep7.",
-  "samples": [
-    {
-      "video_id": "TAO/test/Charades/USXHZ",
-      "exp_id": 0
-    }
-  ]
-}
