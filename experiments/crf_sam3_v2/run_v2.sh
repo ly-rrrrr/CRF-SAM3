@@ -5,6 +5,7 @@
 # 放法：crf_sam3_v2/、ground_v2/、p1a_spatial_recall/ 放在同一个上级目录（就是你现在的「论文」目录结构），
 # 在 crf_sam3_v2/ 下运行：
 #   bash run_v2.sh test                      # CPU 自检，约 1 分钟
+#   bash run_v2.sh audit                     # 只读审计已构造的训练集（帧对齐、mask_dict 顺序、Ground jsonl、Verify 缓存），AUDIT_ARGS=--leak 加泄漏检查
 #   bash run_v2.sh inventory                 # 只读盘点（数据量、缓存、权重、磁盘），只用 CPU，结果在 runs/inventory.md
 #   GPU=2 LIMIT=3 bash run_v2.sh refytvos    # 试跑：只跑前 3 个视频（Ground v2 没训好时会先训练，见下）
 #   GPU=2 bash run_v2.sh refytvos            # 全流程：训练 Ref-YTVOS 的 Ground v2（GPU=2,3 时两卡训练）→ 热力图（约 30 分钟）
@@ -26,7 +27,7 @@ cd "$(dirname "$0")"
 HERE=$(pwd)
 GV2=$(cd "${GV2:-../ground_v2}" && pwd)
 P1A=$(cd "${P1A:-../p1a_spatial_recall}" && pwd)
-source "$GV2/scripts/env.sh"                 # PY REPO MODEL REVOS_ROOT RUN ...
+source "$HERE/scripts/server_env.sh"                 # PY REPO MODEL REVOS_ROOT RUN ...
 export CUDA_VISIBLE_DEVICES=${GPU:-${CUDA_VISIBLE_DEVICES:-0}}
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export PYTHONPATH="$HERE:$P1A${PYTHONPATH:+:$PYTHONPATH}"
@@ -56,14 +57,18 @@ case "$DS" in
     VP=$P1A/runs/verify_v2/v2_point/revos_valid_official.json
     [ -f "$VP" ] && REFS+=(--ref "上一轮拼接实验（旧词池 ∪ v2 词池 + 点种子）=$VP") ;;
   test)
-    $PY "$HERE/tests/test_mainline.py" && $PY "$HERE/tests/test_inventory.py" && $PY "$HERE/tests/test_ground_rerank.py" \
+    $PY "$HERE/tests/test_mainline.py" && $PY "$HERE/tests/test_inventory.py" && $PY "$HERE/tests/test_ground_rerank.py" && $PY "$HERE/tests/test_audit_trainsets.py" \
       && (cd "$GV2" && CUDA_VISIBLE_DEVICES= $PY tests/test_build_refytvos.py)
+    exit $? ;;
+  audit)                                     # 只读审计已构造的训练集，只用 CPU，结果在 runs/audit/trainsets.md
+    CUDA_VISIBLE_DEVICES= $PY "$HERE/tools/audit_trainsets.py" --repo "$REPO" --revos-root "$REVOS_ROOT" \
+      --gv2 "$GV2" --out "$HERE/runs/audit" ${AUDIT_ARGS:-}
     exit $? ;;
   inventory)                                 # 只读盘点，只用 CPU，结果在 runs/inventory.md
     CUDA_VISIBLE_DEVICES= $PY "$HERE/tools/inventory.py" --repo "$REPO" --revos-root "$REVOS_ROOT" \
       --gv2 "$GV2" --p1a "$P1A" --out "$HERE/runs/inventory.md"
     exit $? ;;
-  *) echo "用法: bash run_v2.sh refytvos|revos [all|ground|heat|run|eval]   或   bash run_v2.sh test|inventory"; exit 1 ;;
+  *) echo "用法: bash run_v2.sh refytvos|revos [all|ground|heat|run|eval]   或   bash run_v2.sh test|inventory|audit"; exit 1 ;;
 esac
 OUT=${OUT:-$HERE/runs/$DS}
 abs() { case "$1" in /*) echo "$1" ;; *) echo "$HERE/$1" ;; esac; }   # 相对路径一律按 crf_sam3_v2/ 解释

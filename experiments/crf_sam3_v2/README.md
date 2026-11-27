@@ -1,4 +1,62 @@
-# crf_sam3_v2：新主线，一个入口跑完
+# crf_sam3_v2：CRF-SAM3 主线和完整训练流程
+
+两个入口：
+- `run_full.sh`：**完整流程**，从官方原始数据开始，依次构造训练集、训练两段模型、在四个验证集上评测（2026-11-26 新增，见下一节）。
+- `run_v2.sh`：单个数据集的主线推理，以及只读的审计和盘点（之前的用法，见后文）。
+
+## 完整流程（run_full.sh）
+
+只读 `video_datas/` 和 `$REPO`，从不修改它们。所有产物都写在 `crf_sam3_v2/runs/` 下。规则见 `docs/training_set_spec.md`。
+
+| 阶段 | 命令 | 做什么 | 资源 |
+|---|---|---|---|
+| 0 | `bash run_full.sh test` | 假数据自检（7 组） | CPU |
+| 1 | `bash run_full.sh splits` | holdout：v1 Ground 的 val 视频原样保留，其余视频按 10%（seed 42）补齐；ReVOS / Ref-YTVOS 分两折 | CPU |
+| 2a | `bash run_full.sh ground-data` | Ground 训练数据（ReVOS + Ref-YTVOS），全量和两折各一份，Sa2VA 式 repeats | CPU |
+| 2b | `bash run_full.sh ground-train` | 训练三份 Ground v2：`full`、`cf0`（没见过第 0 折）、`cf1`；配方同 ReVOS v2 | 2 卡 |
+| 3 | `bash run_full.sh ground-infer` | 每个视频用没见过它的那份 Ground 出词和热力图（训练集、holdout、四个验证集） | 2 卡并行 |
+| 4 | `bash run_full.sh cache` | 四个数据集的 Verify 训练缓存，候选池和推理一样（DMS 24/7 + 点种子），J 用评测口径 | 2 卡分片 |
+| 5 | `bash run_full.sh verify-train` | Verify 四数据集联合训练，一份权重，Sa2VA 式 repeats | 2 卡 |
+| 6 | `bash run_full.sh eval` | 四个验证集推理 + 官方评测，结果在 `runs/eval/<数据集>/summary.md` | 2 卡 |
+
+- 每个阶段都能断点续跑，重跑同一条命令会跳过已完成的部分。Verify 训练会从最近的 checkpoint 接着训。
+- 默认用 GPU 2、3（`GPUS=2,3`）。`ONLY=refytvos,revos` 只跑部分数据集。
+- 试跑：`LIMIT=2 bash run_full.sh cache` 让每个分片只做 2 个视频；`GROUND_MAX_STEPS=20`、`VERIFY_MAX_STEPS=20` 让训练只跑 20 步。
+- 第 2a 步有两道门槛，不过就停下、不训练：
+  - Ref-YTVOS 目标和 PNG 比对，IoU < 0.9 的帧超过 0.5%；
+  - ReVOS 的 API 类别记录和 meta 的表达式文本对不上。
+
+### 和论文旧流程不同的地方（都是为了训练和推理同口径）
+
+| 项 | 旧做法 | 现在 |
+|---|---|---|
+| mask_dict 表达式顺序 | json 原顺序（DAVIS 298 条、Ref-YTVOS 40 条取错 GT） | Sa2VA 加载器的顺序，用 `v2/gt.py` 统一取 |
+| 候选的 J | GT 为空的帧不进分母 | 评测口径：所有帧都算，空对空记 1 |
+| 正负阈值 | MeViS 0.2/0.05，其余 0.5/0.1 | 四个数据集统一 0.5/0.1；多目标按「和任一单个目标的 J」打标签 |
+| 没有正样本的表达式 | force_pos 硬选一个当正样本 | 不进训练缓存，记在 `done_*.jsonl` 里（status = no_positive） |
+| 缓存里的词 | prompt 提取器的词、ReVOS 的 API 类别 | 交叉拟合的 Ground v2 词 + 点种子，和推理一样 |
+| Verify 提示词 | 推理时只有 ReVOS 用训练时的提示词 | 四个数据集都用 `yesno_images` + train_aligned 提示词，F = 4 |
+| 联合配比 | MeViS 1 / DAVIS 4 / Ref-YTVOS 2，没有 ReVOS | 按 Sa2VA 换算，由实际条数算出（`v2/mix.py`） |
+| 帧数上限 | 部分数据集跳过 300 帧以上的视频 | 不设上限；显存不够的记 status = oom |
+
+### 代码
+
+| 阶段 | 文件 |
+|---|---|
+| 取 GT、算 J、打标签 | `v2/gt.py` |
+| 划分 | `tools/make_splits.py` |
+| Ground 数据 | `v2/build_ground.py`，repeats 在 `v2/mix.py` |
+| Ground 推理任务分配 | `tools/ground_infer_plan.py`（训练用 `../ground_v2/gv2/train.py`，推理用 `gv2/predict.py`，都用服务器上的版本） |
+| 统一的主线 yaml | `tools/make_mainline_yaml.py` |
+| Verify 缓存 | `v2/verify_cache.py`（点种子和推理共用 `v2/mainline.py::point_seeds`） |
+| Verify 训练配置 | `tools/make_verify_config.py` |
+| Verify 双卡训练 | `v2/train_verify_ddp.py`（包装仓库的 `crf_sam3_attn` 模型和数据集，不改仓库） |
+| 推理和评测 | `v2/mainline.py`（四个数据集） |
+
+---
+
+# 单数据集主线（run_v2.sh）
+
 
 之前的实验是一段一段拼起来的：先导热力图，再单独跑点种子，再单独打分，Ref-YTVOS 还借用了 ReVOS 训练的 Ground v2。
 这个包把它们合成一条主线，**所有数据集用同一份代码**，每个数据集用**自己训练的** Ground v2。
@@ -46,6 +104,7 @@
 ```bash
 bash run_v2.sh test                      # 1. CPU 自检，约 1 分钟
 bash run_v2.sh inventory                 # 只读盘点：各数据集训练集规模、Ground/Verify 实际用了多少、已有权重和磁盘，结果在 runs/inventory.md
+bash run_v2.sh audit                     # 只读审计已构造的训练集：帧对齐、mask_dict 表达式顺序（PNG 判定）、Ground jsonl、Verify 缓存标签；AUDIT_ARGS=--leak 加跨数据集泄漏检查。结果在 runs/audit/trainsets.md
 
 # Ref-YouTube-VOS
 GPU=2,3 bash run_v2.sh refytvos ground   # 2. 训练 Ref-YTVOS 的 Ground v2（两卡，和 ReVOS 那次同一套超参）；只有一张卡就写 GPU=2

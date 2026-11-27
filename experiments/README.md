@@ -4,14 +4,14 @@
 
 | 目录 | 内容 |
 |---|---|
-| [`crf_sam3_v2/`](crf_sam3_v2/) | **新主线入口** `run_v2.sh <dataset>`：Ground v2 出词（可选 top-K 候选词重排，`WORD_SCORE=yesno\|rev`）→ 仓库原版 CRFSAM3Pipeline（无 backup 词）→ 热力图点种子补轨迹 → 同一个 Verify 选前 num_targets |
+| [`crf_sam3_v2/`](crf_sam3_v2/) | **新主线**。`run_full.sh`：从官方数据开始的完整流程（划分 → Ground 训练数据 → Ground v2 交叉拟合训练 → 出词/热力图 → Verify 缓存 → Verify 四数据集联合 DDP 训练 → 四个验证集评测）；`run_v2.sh <dataset>`：单数据集主线推理（Ground v2 出词 → CRFSAM3Pipeline，无 backup 词 → 热力图点种子 → 同一 Verify 选前 num_targets）。服务器用法以 `SERVER_README.md` 为准 |
 | [`ground_v2/`](ground_v2/) | Ground v2：Qwen3-VL-4B 全 36 层 LoRA，第 12 层特征出热力图（summary detach），原分辨率；数据构建（ReVOS、Ref-YTVOS）、训练、评估、出词、`recall_pool` |
 | [`p1a_spatial_recall/`](p1a_spatial_recall/) | 热力图点种子 → SAM3 追踪补候选（ReVOS / Ref-YTVOS），以及扩展候选池上的 Verify 打分（`verify_pool.py`） |
 | [`refytvos_frame_fix/`](refytvos_frame_fix/) | Ref-YTVOS 掩码按帧位置写出（修复按文件名写导致的帧错位）及检查工具 |
 
 ## 运行
 
-新主线：`bash crf_sam3_v2/run_v2.sh refytvos|revos [all|ground|heat|run|eval]`，单元测试 `bash crf_sam3_v2/run_v2.sh test`，详见各包 README。
+完整流程：`bash crf_sam3_v2/run_full.sh test|splits|ground-data|ground-train|ground-infer|cache|verify-train|eval|all`；单数据集推理：`bash crf_sam3_v2/run_v2.sh refytvos|revos [all|ground|heat|run|eval]`。详见各包 README。
 
 ## 不放进 git 的内容
 

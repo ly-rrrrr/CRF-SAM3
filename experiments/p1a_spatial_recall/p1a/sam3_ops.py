@@ -50,6 +50,28 @@ def _prepend(path: str):
 
 def build_predictor(dms_repo: str, checkpoint: str, gpu: int = 0):
     with _prepend(dms_repo):
+        import importlib
+        cc = importlib.import_module("sam3.perflib.connected_components")
+        if not getattr(cc, "_p1a_safe_installed", False):
+            original = cc.connected_components
+            failed_shapes = set()
+
+            def safe_components(mask):
+                key = (str(mask.device), tuple(mask.shape))
+                if key not in failed_shapes:
+                    try:
+                        return original(mask)
+                    except RuntimeError as exc:
+                        if "Triton Error [CUDA]: invalid argument" not in str(exc):
+                            raise
+                        failed_shapes.add(key)
+                        print(f"[sam3_ops] connected-components CUDA failure for {key}; "
+                              "using SAM3's CPU connected-components fallback", flush=True)
+                labels, counts = cc.connected_components_cpu(mask.cpu())
+                return labels.to(mask.device), counts.to(mask.device)
+
+            cc.connected_components = safe_components
+            cc._p1a_safe_installed = True
         from sam3.model_builder import build_sam3_video_predictor
 
         return build_sam3_video_predictor(gpus_to_use=[gpu], checkpoint_path=checkpoint)

@@ -205,6 +205,8 @@ def main():
         try:
             _run_one(a, n, len(samples), s, vid, eid, key, cats, alt, modes, gt_loader, sessions, out, res_path)
         except Exception as e:  # not written to results.jsonl, so a re-run retries it
+            import traceback
+            traceback.print_exc()
             n_err += 1
             print(f"[error] {key}: {type(e).__name__}: {e}", flush=True)
             sessions.close()
